@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/getninjas/ninja-gaiden/issues"
   },
-  "homepage": "https://github.com/getninjas/ninja-gaiden#readme"
+  "homepage": "https://github.com/getninjas/ninja-gaiden#readme",
+  "devDependencies": {
+    "node-sass": "^3.10.1"
+  }
 }
