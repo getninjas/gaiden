@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "ninja-gaiden.css",
+	"sources": [
+		"../../src/sass/ninja-gaiden.scss",
+		"../../src/sass/settings/_colors.scss",
+		"../../src/sass/tools/mixins/_clearfix.scss",
+		"../../src/sass/components/_button.scss",
+		"../../src/sass/generic/_reset.scss"
+	],
+	"mappings": "AGEA,AAAA,OAAO,AAAC,CACN,OAAO,CAAE,YAAa,CACvB,ACFD,AAAA,CAAC,AAAC,CACA,MAAM,CAAE,CAAE,CACV,OAAO,CAAE,CAAE,CACX,UAAU,CAAE,UAAW,CACxB,AJAD,AAAA,IAAI,AAAC,CACH,SAAS,CAAE,IAAK,CACjB",
+	"names": []
+}
