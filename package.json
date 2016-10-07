@@ -4,7 +4,9 @@
   "description": "Styleguide for GetNinjas projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "config": "npm set progress=false && exit 1",
+    "sass": "node-sass -o ./dist/stylesheets/ -r ./src/sass/ ./dist/stylesheets/ninja-gaiden.css"
   },
   "repository": {
     "type": "git",
