@@ -1,0 +1,9 @@
+// TODO: temp
+
+@function clearfix() {
+  &::after,
+  &::before {
+    content: "";
+    clear: both;
+  }
+}
