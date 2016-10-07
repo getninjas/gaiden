@@ -1,6 +1,6 @@
 // TODO: temp
 
-@function clearfix() {
+@mixin clearfix() {
   &::after,
   &::before {
     content: "";
