@@ -2,4 +2,11 @@
 
 .button {
   display: inline-block;
+  -webkit-transition: all ease-in 1s;
+  transition: all ease-in 1s;
+  color: #ffffff;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+
+  display: flex;
 }

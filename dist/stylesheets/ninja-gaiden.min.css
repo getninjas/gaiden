@@ -1,1 +1,1 @@
-.button{display:inline-block}*{margin:0;padding:0;box-sizing:border-box}body{font-size:16px}
+.button{display:inline-block;transition:all 1s ease-in;color:#fff;border-radius:10px;display:flex}*{margin:0;padding:0;box-sizing:border-box}body{font-size:16px}

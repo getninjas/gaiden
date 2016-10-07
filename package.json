@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "config": "npm set progress=false && exit 1",
     "sass": "node-sass --output-style compressed -o ./dist/stylesheets/ --include-path ./src/sass/ --source-map true -r ./src/sass/ ./dist/stylesheets/ninja-gaiden.css",
-    "cssnano": "cssnano ./dist/stylesheets/ninja-gaiden.css ./dist/stylesheets/ninja-gaiden.min.css"
+    "cssnano": "cssnano --replace true --autoprefixer.browsers \"ie > 8, last 4 versions, > 1% in BR\"  ./dist/stylesheets/ninja-gaiden.css ./dist/stylesheets/ninja-gaiden.min.css"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/getninjas/ninja-gaiden#readme",
   "devDependencies": {
+    "autoprefixer": "^6.5.0",
     "cssnano-cli": "^1.0.5",
-    "node-sass": "^3.10.1"
+    "node-sass": "^3.10.1",
+    "postcss-cli": "^2.6.0"
   }
 }
