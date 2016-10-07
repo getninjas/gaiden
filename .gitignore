@@ -1,1 +1,16 @@
+# npm
+
 node_modules/
+npm-debug.log
+
+# general
+
+.git
+CVS
+.svn
+.hg
+.lock-wscript
+.wafpickle-N
+*.swp
+.DS_Store
+._*
