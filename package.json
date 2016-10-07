@@ -1,0 +1,23 @@
+{
+  "name": "ninja-gaiden",
+  "version": "1.0.0",
+  "description": "Styleguide for GetNinjas projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getninjas/ninja-gaiden.git"
+  },
+  "keywords": [
+    "styleguide",
+    "css"
+  ],
+  "author": "GetNinjas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/getninjas/ninja-gaiden/issues"
+  },
+  "homepage": "https://github.com/getninjas/ninja-gaiden#readme"
+}
