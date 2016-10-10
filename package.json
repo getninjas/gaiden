@@ -13,7 +13,7 @@
     "build:dev": "build:dev:css",
     "build:prod": "build:prod:css",
     "build:js": "npm run lint && npm run babel",
-    "build": "build:css"
+    "watch": "npm run clear && nodemon -x \"npm run build:dev\""
   },
   "bin": {
     "build:dev:css": "./bin/build/dev/css.js",
@@ -41,6 +41,7 @@
     "cssnano-cli": "^1.0.5",
     "eslint": "^3.7.1",
     "node-sass": "^3.10.1",
+    "nodemon": "^1.11.0",
     "postcss-cli": "^2.6.0"
   }
 }
