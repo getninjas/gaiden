@@ -1,18 +1,21 @@
 {
-  "name": "ninja-gaiden",
+  "name": "style-gaiden",
   "version": "1.0.0",
   "description": "Styleguide for GetNinjas projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "config": "npm set progress=false && exit 1",
+    "clear": "rm -rf ./dist/*",
     "sass": "node-sass --output-style compressed -o ./dist/stylesheets/ --include-path ./src/sass/ --source-map true -r ./src/sass/ ./dist/stylesheets/ninja-gaiden.css",
-    "cssnano": "cssnano --replace true --autoprefixer.browsers \"ie > 8, last 4 versions, > 1% in BR\"  ./dist/stylesheets/ninja-gaiden.css ./dist/stylesheets/ninja-gaiden.min.css",
+    "cssnano": "cssnano --replace true --autoprefixer.browsers \"> 0.1% in BR, not ie 8\" --safe --sourcemap ./dist/stylesheets/ninja-gaiden.css ./dist/stylesheets/ninja-gaiden.min.css",
     "mqpacker": "mqpacker -s ./dist/stylesheets/ninja-gaiden.min.css ./dist/stylesheets/ninja-gaiden.min.css",
+
     "babel": "babel --babelrc true -d ./dist/javascripts ./src/javascripts",
     "lint": "eslint ./src/javascripts",
     "uglify": "uglifyjs ./dist/javascripts/*.js -o ./dist/javascripts/app.js",
-    "build:css": "npm run sass && npm run cssnano && npm run mqpacker",
+
+    "build:css": "npm run clear && npm run sass && npm run cssnano && npm run mqpacker",
     "build:js": "npm run lint && npm run babel"
   },
   "repository": {

@@ -8,5 +8,35 @@
   -webkit-border-radius: 10px;
   border-radius: 10px;
 
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flex;
   display: flex;
+
+  background-image: -webkit-linear-gradient(to top, red, blue);
+  background-image: -moz-linear-gradient(to top, red, blue);
+  background-image: -ms-linear-gradient(to top, red, blue);
+  background-image: linear-gradient(to top, red, blue);
+
+  background: hsl(134, 50%, 50%);
+
+  background: linear-gradient(to bottom, #ffe500 0%, #ffe500 50%, #121 50%, #121 100%);
+
+  transition: color 500ms ease;
+  opacity: .5;
+
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=50);
+
+  /* Netscape */
+  -moz-opacity: 0.5;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.5;
+
+  /* Good browsers */
+  opacity: 0.5;
 }
