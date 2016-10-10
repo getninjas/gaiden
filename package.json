@@ -8,7 +8,9 @@
     "config": "npm set progress=false && exit 1",
     "sass": "node-sass --output-style compressed -o ./dist/stylesheets/ --include-path ./src/sass/ --source-map true -r ./src/sass/ ./dist/stylesheets/ninja-gaiden.css",
     "cssnano": "cssnano --replace true --autoprefixer.browsers \"ie > 8, last 4 versions, > 1% in BR\"  ./dist/stylesheets/ninja-gaiden.css ./dist/stylesheets/ninja-gaiden.min.css"
+    "babel": "babel --babelrc true -d ./dist/javascripts ./src/javascripts",
     "mqpacker": "mqpacker -s ./dist/stylesheets/ninja-gaiden.min.css ./dist/stylesheets/ninja-gaiden.min.css"
+
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,8 @@
   "homepage": "https://github.com/getninjas/ninja-gaiden#readme",
   "devDependencies": {
     "autoprefixer": "^6.5.0",
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
     "css-mqpacker": "^5.0.1",
     "cssnano-cli": "^1.0.5",
     "node-sass": "^3.10.1",
