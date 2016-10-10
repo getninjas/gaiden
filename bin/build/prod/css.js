@@ -6,7 +6,7 @@ const sourceDir = "./src/sass/";
 const outputDir = "./dist/stylesheets";
 const compiledFile = `${outputDir}/ninja-gaiden.css`;
 const browserSupport = "> 0.1% in BR, not ie 8";
-const minifiedFile = "./dist/stylesheets/ninja-gaiden.min.css";
+const minifiedFile = `${outputDir}/ninja-gaiden.min.css`;
 
 const options = {
   sass: ` --include-path ${sourceDir} \

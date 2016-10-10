@@ -10,11 +10,14 @@
     "babel": "babel --babelrc true -d ./dist/javascripts ./src/javascripts",
     "lint": "eslint ./src/javascripts",
     "uglify": "uglifyjs ./dist/javascripts/*.js -o ./dist/javascripts/app.js",
+    "build:dev": "build:dev:css",
+    "build:prod": "build:prod:css",
     "build:js": "npm run lint && npm run babel",
     "build": "build:css"
   },
   "bin": {
-    "build:css": "./bin/build/css.js"
+    "build:dev:css": "./bin/build/dev/css.js",
+    "build:prod:css": "./bin/build/prod/css.js"
   },
   "repository": {
     "type": "git",
