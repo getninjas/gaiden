@@ -42,6 +42,7 @@
     "eslint": "^3.7.1",
     "node-sass": "^3.10.1",
     "nodemon": "^1.11.0",
-    "postcss-cli": "^2.6.0"
+    "postcss-cli": "^2.6.0",
+    "sass-lint": "^1.9.1"
   }
 }

@@ -14,3 +14,6 @@ CVS
 *.swp
 .DS_Store
 ._*
+
+# application
+build/*

@@ -1,42 +1,36 @@
-// TODO: temp
+/*
+ * TODO: temp
+ */
+
+$white: #fff;
+$green: hsl(134, 50%, 50%);
 
 .button {
-  display: inline-block;
+  display: flex;
   -webkit-transition: all ease-in 1s;
   transition: all ease-in 1s;
-  color: #ffffff;
+  color: $white;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flex;
-  display: flex;
-
-  background-image: -webkit-linear-gradient(to top, red, blue);
-  background-image: -moz-linear-gradient(to top, red, blue);
-  background-image: -ms-linear-gradient(to top, red, blue);
-  background-image: linear-gradient(to top, red, blue);
-
-  background: hsl(134, 50%, 50%);
-
-  background: linear-gradient(to bottom, #ffe500 0%, #ffe500 50%, #121 50%, #121 100%);
-
-  transition: color 500ms ease;
-  opacity: .5;
+  background: $green;
+  background-image: linear-gradient(to top, $white, $green);
 
   /* IE 8 */
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';
 
   /* IE 5-7 */
   filter: alpha(opacity=50);
 
   /* Netscape */
-  -moz-opacity: 0.5;
+  -moz-opacity: .5;
 
   /* Safari 1.x */
-  -khtml-opacity: 0.5;
+  -khtml-opacity: .5;
 
   /* Good browsers */
-  opacity: 0.5;
+  opacity: .5;
+
+  &__blocked {
+    display: block;
+  }
 }
