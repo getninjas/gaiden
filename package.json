@@ -4,8 +4,8 @@
   "description": "Styleguide for GetNinjas projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "config": "npm set progress=false && npm link && exit 1",
+    "test": "echo \"Error: no test specified\"",
+    "config": "npm config set progress=false && npm link",
     "clear": "rm -rf ./dist/*",
     "babel": "babel --babelrc true -d ./dist/javascripts ./src/javascripts",
     "lint": "eslint ./src/javascripts",
