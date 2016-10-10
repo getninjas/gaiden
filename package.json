@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "config": "npm set progress=false && exit 1",
     "sass": "node-sass --output-style compressed -o ./dist/stylesheets/ --include-path ./src/sass/ --source-map true -r ./src/sass/ ./dist/stylesheets/ninja-gaiden.css",
-    "cssnano": "cssnano --replace true --autoprefixer.browsers \"ie > 8, last 4 versions, > 1% in BR\"  ./dist/stylesheets/ninja-gaiden.css ./dist/stylesheets/ninja-gaiden.min.css"
+    "cssnano": "cssnano --replace true --autoprefixer.browsers \"ie > 8, last 4 versions, > 1% in BR\"  ./dist/stylesheets/ninja-gaiden.css ./dist/stylesheets/ninja-gaiden.min.css",
     "babel": "babel --babelrc true -d ./dist/javascripts ./src/javascripts",
     "mqpacker": "mqpacker -s ./dist/stylesheets/ninja-gaiden.min.css ./dist/stylesheets/ninja-gaiden.min.css"
 
