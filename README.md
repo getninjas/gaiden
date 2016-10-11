@@ -1,2 +1,2 @@
-# ninja-gaiden
+# gaiden
 GetNinjas Styleguide
