@@ -13,7 +13,9 @@
     "build:dev": "build:dev:css",
     "build:prod": "build:prod:css",
     "build:js": "npm run lint && npm run babel",
-    "watch": "npm run clear && nodemon -x \"npm run build:dev\""
+    "watch": "npm run clear && nodemon -x \"npm run build:dev\"",
+    "version": "npm run build:dev && git add -A dist",
+    "postversion": "rm -rf build/temp"
   },
   "bin": {
     "build:dev:css": "./bin/build/dev/css.js",
