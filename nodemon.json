@@ -1,0 +1,8 @@
+{
+  "restartable": "r",
+  "verbose": "true",
+  "colours": "true",
+  "ignoreRoot": "true",
+  "ext": "js scss",
+  "watch": ["./src/"]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "gaiden",
+  "version": "1.0.0",
+  "description": "Styleguide for GetNinjas projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "config": "npm config set progress=false && npm link",
+    "clear": "rm -rf ./dist/*",
+    "babel": "babel --babelrc true -d ./dist/javascripts ./src/javascripts",
+    "lint": "eslint ./src/javascripts",
+    "uglify": "uglifyjs ./dist/javascripts/*.js -o ./dist/javascripts/app.js",
+    "build:dev": "build:dev:css",
+    "build:prod": "build:prod:css",
+    "build:js": "npm run lint && npm run babel",
+    "watch": "npm run clear && nodemon -x \"npm run build:dev\""
+  },
+  "bin": {
+    "build:dev:css": "./bin/build/dev/css.js",
+    "build:prod:css": "./bin/build/prod/css.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getninjas/gaiden.git"
+  },
+  "keywords": [
+    "styleguide",
+    "css"
+  ],
+  "author": "GetNinjas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/getninjas/gaiden/issues"
+  },
+  "homepage": "https://github.com/getninjas/gaiden#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "babel-cli": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "css-mqpacker": "^5.0.1",
+    "cssnano-cli": "^1.0.5",
+    "eslint": "^3.7.1",
+    "node-sass": "^3.10.1",
+    "postcss-cli": "^2.6.0",
+    "sass-lint": "^1.9.1"
+  }
+}
