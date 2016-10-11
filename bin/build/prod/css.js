@@ -2,8 +2,8 @@
 
 const shelljs = require('shelljs');
 
-const sourceDir = "./src/sass/";
-const outputDir = "./dist/";
+const sourceDir = "./src/sass";
+const outputDir = "./dist";
 const compiledFile = `${outputDir}/ninja-gaiden.css`;
 const browserSupport = "> 0.1% in BR, not ie 8";
 const minifiedFile = `${outputDir}/ninja-gaiden.min.css`;
