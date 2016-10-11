@@ -2,7 +2,7 @@
 
 const shelljs = require('shelljs');
 
-const sourceDir = "./src/sass/";
+const sourceDir = "./src/scss";
 const outputDir = "./build/stylesheets";
 const minifiedFile = `${outputDir}/ninja-gaiden.min.css`;
 
@@ -12,7 +12,7 @@ const options = {
     --sourceComments true \
     -o ${outputDir}`,
   sasslint: `-c ./sass-lint.yml \
-    src/sass/**/*.scss -v -q`
+    ${sourceDir}/**/*.scss -v -q`
 }
 
 const sassLintExec = shelljs.exec(`sass-lint ${options.sasslint}`);

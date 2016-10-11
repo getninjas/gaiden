@@ -2,8 +2,8 @@
 
 const shelljs = require('shelljs');
 
-const sourceDir = "./src/sass/";
-const outputDir = "./dist/";
+const sourceDir = "./src/scss";
+const outputDir = "./dist";
 const compiledFile = `${outputDir}/ninja-gaiden.css`;
 const browserSupport = "> 0.1% in BR, not ie 8";
 const minifiedFile = `${outputDir}/ninja-gaiden.min.css`;
@@ -19,7 +19,7 @@ const options = {
     --sourcemap`,
   mqpacker: `-s`,
   sasslint: `-c ./sass-lint.yml \
-    src/sass/**/*.scss -v`
+    ${sourceDir}/**/*.scss -v`
 }
 
 const sassLintExec = shelljs.exec(`sass-lint ${options.sasslint}`);
