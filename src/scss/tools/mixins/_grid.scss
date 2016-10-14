@@ -8,26 +8,11 @@
     $grid_size: calc-grid-size($breakpoint);
 
     @if $index == 0 {
-      .container {
-        max-width: $grid_size + 0px;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        @include clearfix();
-      }
-
+      @include generate-grid-container($grid_size);
       @include generate-grid-columns($breakpoint, $key);
     } @else {
-
       @media screen and (min-width: $grid_size - 1px) {
-        .container {
-          max-width: $grid_size + 0px;
-          width: 100%;
-          margin-left: auto;
-          margin-right: auto;
-          @include clearfix();
-        }
-
+        @include generate-grid-container($grid_size);
         @include generate-grid-columns($breakpoint, $key);
       }
     }
@@ -49,10 +34,20 @@
       width: percentage($calcSize / $grid_size);
       margin-left: $gutter / 2 + 0px;
       margin-right: $gutter / 2 + 0px;
-      float: left;
     }
   }
 }
+
+@mixin generate-grid-container($grid_size) {
+  .container {
+    max-width: $grid_size + 0px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    @include flexbox;
+    @include flex-direction(row);
+  }
+};
 
 @function calc-grid-size($breakpoint) {
   $columns: map-get($breakpoint, columns);
