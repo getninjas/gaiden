@@ -1,9 +1,13 @@
 // TODO: temp
 @import "settings/colors";
+@import "settings/grid";
 @import "tools/mixins/clearfix";
+@import "tools/mixins/grid";
 @import "components/button";
 @import "generic/reset";
 
 body {
   font-size: 16px;
 }
+
+@include generate-grid($defaultBreakpoints);
