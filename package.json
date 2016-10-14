@@ -5,17 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
+    "version": "npm run build:prod && git add -A dist",
+    "postversion": "git push && git push --tags",
     "config": "npm config set progress=false && npm config set git-tag-version=true && npm link",
-    "clear": "rm -rf ./dist/*",
+    "clear": "rm -rf ./build/*",
     "babel": "babel --babelrc true -d ./dist/javascripts ./src/javascripts",
     "lint": "eslint ./src/javascripts",
     "uglify": "uglifyjs ./dist/javascripts/*.js -o ./dist/javascripts/app.js",
     "build:dev": "build:dev:css",
     "build:prod": "build:prod:css",
     "build:js": "npm run lint && npm run babel",
-    "version": "npm run build:prod && git add -A dist",
-    "postversion": "git push && git push --tags",
-    "watch": "npm run clear && nodemon -x \"npm run build:dev\""
+    "watch:css": "onchange \"src/scss\" -- build:dev:css",
+    "watch": "npm run clear && FORCE_COLOR=1 npm-run-all -p watch:css"
   },
   "bin": {
     "build:dev:css": "./bin/build/dev/css.js",
@@ -42,7 +43,13 @@
     "css-mqpacker": "^5.0.1",
     "cssnano-cli": "^1.0.5",
     "eslint": "^3.7.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
     "node-sass": "^3.10.1",
+    "npm-run-all": "^3.1.0",
+    "onchange": "^3.0.2",
     "postcss-cli": "^2.6.0",
     "sass-lint": "^1.9.1"
   }
