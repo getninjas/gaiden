@@ -2,17 +2,16 @@
   $index: 0;
   @each $key, $breakpoint in $breakpoints {
     $gutter: map-get($breakpoint, gutter);
-    $final_gutter: $gutter / 2;
     $columns: map-get($breakpoint, columns);
-    $column_size: map-get($breakpoint, column_size);
-    $grid_size: calc-grid-size($breakpoint);
+    $columnSize: map-get($breakpoint, columnSize);
+    $gridSize: calc-grid-size($breakpoint);
 
     @if $index == 0 {
-      @include generate-grid-container($grid_size);
+      @include generate-grid-container($gridSize);
       @include generate-grid-columns($breakpoint, $key);
     } @else {
-      @media screen and (min-width: $grid_size - 1px) {
-        @include generate-grid-container($grid_size);
+      @media screen and (min-width: $gridSize - 1px) {
+        @include generate-grid-container($gridSize);
         @include generate-grid-columns($breakpoint, $key);
       }
     }
@@ -22,37 +21,36 @@
 
 @mixin generate-grid-columns($breakpoint, $key) {
   $gutter: map-get($breakpoint, gutter);
-  $grid_size: calc-grid-size($breakpoint);
+  $gridSize: calc-grid-size($breakpoint);
   $columns: map-get($breakpoint, columns);
-  $column_size: map-get($breakpoint, column_size);
-  $final_gutter: percentage(($gutter / 2) / $grid_size);
+  $columnSize: map-get($breakpoint, columnSize);
 
   @for $i from 1 through $columns {
-    $calcSize: (($column_size + $gutter) * $i) - $gutter;
+    $calcSize: (($columnSize + $gutter) * $i) - $gutter;
 
     .col-#{$key}-#{$i} {
-      width: percentage($calcSize / $grid_size);
-      margin-left: $gutter / 2 + 0px;
-      margin-right: $gutter / 2 + 0px;
+      width: percentage($calcSize / $gridSize);
+      margin-left: ( $gutter / 2 ) + px;
+      margin-right: ( $gutter / 2 ) + px;
     }
   }
 }
 
-@mixin generate-grid-container($grid_size) {
+@mixin generate-grid-container($gridSize) {
   .container {
-    max-width: $grid_size + 0px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     @include flexbox;
     @include flex-direction(row);
+    width: 100%;
+    max-width: $gridSize + px;
+    margin-left: auto;
+    margin-right: auto;
   }
 };
 
 @function calc-grid-size($breakpoint) {
   $columns: map-get($breakpoint, columns);
-  $column_size: map-get($breakpoint, column_size);
+  $columnSize: map-get($breakpoint, columnSize);
   $gutter: map-get($breakpoint, gutter);
 
-  @return ($gutter + $column_size) * $columns;
+  @return ($gutter + $columnSize) * $columns;
 };
