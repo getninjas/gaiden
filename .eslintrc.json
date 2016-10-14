@@ -6,6 +6,6 @@
     "import"
   ],
   "rules": {
-    "indent": ["error", 2]
+    "indent": 2
   }
 }
