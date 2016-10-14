@@ -1,9 +1,11 @@
-// TODO: temp
+@mixin clearfix {
+  &::before,
+  &::after {
+    display: table;
+    content: '';
+  }
 
-@mixin clearfix() {
-  &::after,
-  &::before {
-    content: "";
+  &::after {
     clear: both;
   }
 }

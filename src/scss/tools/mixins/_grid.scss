@@ -1,0 +1,56 @@
+@mixin generate-grid($breakpoints) {
+  $index: 0;
+  @each $key, $breakpoint in $breakpoints {
+    $gutter: map-get($breakpoint, gutter);
+    $columns: map-get($breakpoint, columns);
+    $columnSize: map-get($breakpoint, columnSize);
+    $gridSize: calc-grid-size($breakpoint);
+
+    @if $index == 0 {
+      @include generate-grid-container($gridSize);
+      @include generate-grid-columns($breakpoint, $key);
+    } @else {
+      @media screen and (min-width: $gridSize - 1px) {
+        @include generate-grid-container($gridSize);
+        @include generate-grid-columns($breakpoint, $key);
+      }
+    }
+    $index: $index + 1;
+  }
+};
+
+@mixin generate-grid-columns($breakpoint, $key) {
+  $gutter: map-get($breakpoint, gutter);
+  $gridSize: calc-grid-size($breakpoint);
+  $columns: map-get($breakpoint, columns);
+  $columnSize: map-get($breakpoint, columnSize);
+
+  @for $i from 1 through $columns {
+    $calcSize: (($columnSize + $gutter) * $i) - $gutter;
+
+    .col-#{$key}-#{$i} {
+      width: percentage($calcSize / $gridSize);
+      margin-left: ( $gutter / 2 ) + px;
+      margin-right: ( $gutter / 2 ) + px;
+    }
+  }
+}
+
+@mixin generate-grid-container($gridSize) {
+  .container {
+    @include flexbox;
+    @include flex-direction(row);
+    width: 100%;
+    max-width: $gridSize + px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+};
+
+@function calc-grid-size($breakpoint) {
+  $columns: map-get($breakpoint, columns);
+  $columnSize: map-get($breakpoint, columnSize);
+  $gutter: map-get($breakpoint, gutter);
+
+  @return ($gutter + $columnSize) * $columns;
+};
