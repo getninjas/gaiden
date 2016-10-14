@@ -12,7 +12,7 @@ const options = {
     --sourceComments true \
     -o ${outputDir}`,
   sasslint: `-c ./sass-lint.yml \
-    ${sourceDir}/**/*.scss -v -q`
+    ${sourceDir}/**/**/*.scss -v -q`
 }
 
 const sassLintExec = shelljs.exec(`sass-lint ${options.sasslint}`);
