@@ -44,6 +44,14 @@
     max-width: $gridSize + px;
     margin-left: auto;
     margin-right: auto;
+
+    .no-flexbox & {
+      @include clearfix();
+
+      [class^='col'] {
+        float: left;
+      }
+    }
   }
 };
 
@@ -54,3 +62,4 @@
 
   @return ($gutter + $columnSize) * $columns;
 };
+
