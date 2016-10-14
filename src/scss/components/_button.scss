@@ -1,0 +1,36 @@
+/*
+ * TODO: temp
+ */
+
+$white: #fff;
+$green: hsl(134, 50%, 50%);
+
+.button {
+  display: flex;
+  -webkit-transition: all ease-in 1s;
+  transition: all ease-in 1s;
+  color: $white;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: $green;
+  background-image: linear-gradient(to top, $white, $green);
+
+  /* IE 8 */
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';
+
+  /* IE 5-7 */
+  filter: alpha(opacity=50);
+
+  /* Netscape */
+  -moz-opacity: .5;
+
+  /* Safari 1.x */
+  -khtml-opacity: .5;
+
+  /* Good browsers */
+  opacity: .5;
+
+  &__blocked {
+    display: block;
+  }
+}

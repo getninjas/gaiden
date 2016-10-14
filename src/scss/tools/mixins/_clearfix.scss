@@ -1,0 +1,9 @@
+// TODO: temp
+
+@mixin clearfix() {
+  &::after,
+  &::before {
+    content: "";
+    clear: both;
+  }
+}
