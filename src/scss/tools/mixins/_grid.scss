@@ -22,19 +22,32 @@
 @mixin generate-grid-columns($breakpoint, $key) {
   $gutter: map-get($breakpoint, gutter);
   $gridSize: calc-grid-size($breakpoint);
+  $gutterDiv: $gutter / 2;
   $columns: map-get($breakpoint, columns);
   $columnSize: map-get($breakpoint, columnSize);
 
   [class*='col-#{$key}'] {
-    margin-left: ( $gutter / 2 ) + px;
-    margin-right: ( $gutter / 2 ) + px;
+    margin-left: percentage($gutterDiv, $gridSize);
+    margin-right: percentage($gutterDiv, $gridSize);
+  }
+
+  [class*="col-"] {
+    @include flex-shrink(0);
   }
 
   @for $i from 1 through $columns {
     $calcSize: (($columnSize + $gutter) * $i) - $gutter;
+    $pushCalcSize: (($columnSize + $gutter) * $i) + $gutterDiv;
 
     .col-#{$key}-#{$i} {
       width: percentage($calcSize / $gridSize);
+    }
+
+    @if $i < $columns {
+      .col-push-#{$i},
+      .col-push-#{$key}-#{$i} {
+        margin-left: $pushCalcSize + px;
+      }
     }
   }
 }
@@ -43,6 +56,7 @@
   .container {
     @include flexbox;
     @include flex-direction(row);
+
     width: 100%;
     max-width: $gridSize + px;
     margin-left: auto;
