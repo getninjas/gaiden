@@ -45,13 +45,22 @@
     }
 
     @if $i < $columns {
-      .col-push-#{$i},
-      .col-push-#{$key}-#{$i} {
-        margin-left: $pushCalcSize + px;
-      }
+      @include generate-grid-push($breakpoint, $key, $i);
     }
   }
-}
+};
+
+@mixin generate-grid-push($breakpoint, $key, $index) {
+  $columnSize: map-get($breakpoint, columnSize);
+  $gutter: map-get($breakpoint, gutter);
+  $calcPushSize: (($columnSize + $gutter) * $index) + ($gutter / 2);
+  $gridSize: calc-grid-size($breakpoint);
+
+  .col-push-#{$index},
+  .col-push-#{$key}-#{$index} {
+    margin-left: percentage($gridSize);
+  }
+};
 
 @mixin generate-grid-container($gridSize) {
   .container {
