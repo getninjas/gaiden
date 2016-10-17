@@ -27,8 +27,8 @@
   $columnSize: map-get($breakpoint, columnSize);
 
   [class*='col-#{$key}'] {
-    margin-left: percentage($gutterDiv, $gridSize);
-    margin-right: percentage($gutterDiv, $gridSize);
+    margin-left: percentage($gutterDiv / $gridSize);
+    margin-right: percentage($gutterDiv / $gridSize);
   }
 
   [class*="col-"] {
