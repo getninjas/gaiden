@@ -25,13 +25,16 @@
   $columns: map-get($breakpoint, columns);
   $columnSize: map-get($breakpoint, columnSize);
 
+  [class*='col-#{$key}'] {
+    margin-left: ( $gutter / 2 ) + px;
+    margin-right: ( $gutter / 2 ) + px;
+  }
+
   @for $i from 1 through $columns {
     $calcSize: (($columnSize + $gutter) * $i) - $gutter;
 
     .col-#{$key}-#{$i} {
       width: percentage($calcSize / $gridSize);
-      margin-left: ( $gutter / 2 ) + px;
-      margin-right: ( $gutter / 2 ) + px;
     }
   }
 }
@@ -46,9 +49,9 @@
     margin-right: auto;
 
     .no-flexbox & {
-      @include clearfix();
+      @include clearfix;
 
-      [class^='col'] {
+      [class*='col-'] {
         float: left;
       }
     }
