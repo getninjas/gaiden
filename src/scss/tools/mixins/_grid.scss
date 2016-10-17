@@ -32,7 +32,7 @@
     margin-right: percentage($gutterDiv / $gridSize);
   }
 
-  [class*="col-"] {
+  [class*='col-'] {
     @include flex-shrink(0);
   }
 
