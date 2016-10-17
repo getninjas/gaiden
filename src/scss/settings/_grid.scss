@@ -1,3 +1,6 @@
+// WARNING: order by grid size (gutter + columnSize) * columns
+// TODO: sort breakpoints by grid size
+
 $defaultBreakpoints: (
   small:  ( gutter: 16, columns: 6,  columnSize: 44 ),
   medium: ( gutter: 16, columns: 12, columnSize: 48 ),
