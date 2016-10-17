@@ -7,12 +7,12 @@
     $columnSize: map-get($breakpoint, columnSize);
     $gridSize: calc-grid-size($breakpoint);
 
-      @include generate-grid-container($gridSize);
     @if $index == 1 {
+      @include generate-grid-container($breakpoint, $breakpoints);
       @include generate-grid-columns($breakpoint, $key);
     } @else {
       @media screen and (min-width: $gridSize - 1px) {
-        @include generate-grid-container($gridSize);
+        @include generate-grid-container($breakpoint, $breakpoints);
         @include generate-grid-columns($breakpoint, $key);
       }
     }
@@ -62,10 +62,16 @@
   }
 };
 
-@mixin generate-grid-container($gridSize) {
+@mixin generate-grid-container($breakpoint, $breakpoints) {
+  $index: index(map-values($breakpoints), $breakpoint);
+  $breakpointsLength: length($breakpoints);
+  $breakpoint: if($index < $breakpointsLength, get-breakpoint($breakpoints, $index + 1), get-breakpoint($breakpoints, $index));
+  $gridSize: calc-grid-size($breakpoint);
+
   .container {
-    @include flexbox;
     @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include flexbox;
 
     width: 100%;
     max-width: $gridSize + px;
@@ -80,6 +86,10 @@
       }
     }
   }
+};
+
+@function get-breakpoint($breakpoints, $index) {
+  @return nth(map-values($breakpoints), $index);
 };
 
 @function calc-grid-size($breakpoint) {
