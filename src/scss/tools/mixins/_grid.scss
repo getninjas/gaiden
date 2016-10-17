@@ -1,13 +1,14 @@
 @mixin generate-grid($breakpoints) {
-  $index: 0;
+  $index: 1;
+
   @each $key, $breakpoint in $breakpoints {
     $gutter: map-get($breakpoint, gutter);
     $columns: map-get($breakpoint, columns);
     $columnSize: map-get($breakpoint, columnSize);
     $gridSize: calc-grid-size($breakpoint);
 
-    @if $index == 0 {
       @include generate-grid-container($gridSize);
+    @if $index == 1 {
       @include generate-grid-columns($breakpoint, $key);
     } @else {
       @media screen and (min-width: $gridSize - 1px) {
