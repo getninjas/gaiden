@@ -51,6 +51,7 @@
     "npm-run-all": "^3.1.0",
     "onchange": "^3.0.2",
     "postcss-cli": "^2.6.0",
+    "reset-css": "^2.2.0",
     "sass-lint": "^1.9.1"
   }
 }
