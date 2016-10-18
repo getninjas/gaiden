@@ -1,0 +1,9 @@
+$defaultBreakpoints: (
+  small:  ( columns: 12, size: 360  ),
+  medium: ( columns: 12, size: 768  ),
+  normal: ( columns: 12, size: 960  ),
+  large:  ( columns: 12, size: 1200 )
+);
+
+$gridGutter: 30;
+
