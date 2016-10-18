@@ -3,7 +3,7 @@
 @mixin clearfix() {
   &::after,
   &::before {
-    content: "";
+    content: '';
     clear: both;
   }
 }

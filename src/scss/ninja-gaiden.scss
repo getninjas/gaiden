@@ -1,8 +1,7 @@
-// TODO: temp
-@import "settings/colors";
-@import "tools/mixins/clearfix";
-@import "components/button";
-@import "generic/reset";
+@import 'settings/colors';
+@import 'generic/reset';
+@import 'tools/mixins/clearfix';
+@import 'components/button';
 
 body {
   font-size: 16px;
