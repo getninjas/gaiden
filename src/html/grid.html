@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Gaiden | GetNinjas Styleguide</title>
+    <link rel="stylesheet" href="//stylesheets/ninja-gaiden.css">
+
+    <style>
+      .links-list {
+        list-style: none;
+      }
+
+      .links-list li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      .container {
+        counter-reset: section;
+        margin-top: 15px;
+      }
+
+      [class^=col-] {
+        min-height: 100px;
+        background-color: #ccc;
+        color: #F00;
+        position: relative;
+      }
+
+      [class^=col-]:before {
+        counter-increment: section;
+        content: counter(section);
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        line-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="links-list">
+        <li><a href="index.html">home</a></li>
+        <li><a href="grid.html">grid</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="col-small-1 col-large-2"></div>
+      <div class="col-small-1 col-large-2"></div>
+      <div class="col-small-1 col-large-2"></div>
+      <div class="col-small-1 col-large-2"></div>
+      <div class="col-small-1 col-large-2"></div>
+      <div class="col-small-1 col-large-2"></div>
+    </div>
+
+    <div class="container">
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-3"></div>
+      <div class="col-small-1 col-large-1"></div>
+    </div>
+
+    <div class="container">
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+    </div>
+
+    <div class="container">
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+    </div>
+
+
+    <div class="container">
+      <div class="col-small-5 col-medium-5 col-large-8"></div>
+      <div class="col-small-1 col-medium-7 col-large-4"></div>
+    </div>
+
+    <div class="container">
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+      <div class="col-small-1 col-large-1"></div>
+    </div>
+
+    <div class="container">
+      <div class="col-small-1 col-large-2"></div>
+      <div class="col-small-1 col-large-2"></div>
+      <div class="col-small-1 col-large-2"></div>
+      <div class="col-small-1 col-large-2"></div>
+      <div class="col-small-1 col-large-2"></div>
+      <div class="col-small-1 col-large-2"></div>
+    </div>
+
+    <div class="container">
+      <div class="col-small-1 col-large-3"></div>
+      <div class="col-small-1 col-large-3"></div>
+      <div class="col-small-1 col-large-3"></div>
+      <div class="col-small-1 col-large-3"></div>
+    </div>
+
+    <div class="container">
+      <div class="col-small-1 col-large-4"></div>
+      <div class="col-small-1 col-large-4"></div>
+      <div class="col-small-1 col-large-4"></div>
+    </div>
+
+    <div class="container">
+      <div class="col-small-1 col-large-6"></div>
+      <div class="col-small-1 col-large-6"></div>
+    </div>
+
+    <div class="container">
+      <div class="col-small-1 col-large-12"></div>
+    </div>
+
+  </body>
+</html>
