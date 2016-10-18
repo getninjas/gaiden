@@ -10,7 +10,12 @@ rules:
   no-vendor-prefixes: 0
   no-color-literals: 2
   no-color-keywords: 2
-  no-duplicate-properties: 1
+  no-duplicate-properties:
+    - 1
+    -
+      exclude:
+        - display
+        - background-image
   quotes:
     - 2
     -
