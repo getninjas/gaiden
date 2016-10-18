@@ -1,6 +1,9 @@
 # File Options
 files:
-  include: 'src/sass/**/*.scss'
+  include:
+    - 'src/scss/*.scss'
+    - 'src/scss/**/*.scss'
+
 # Rule Configuration
 rules:
   no-transition-all: 0

@@ -18,8 +18,7 @@ const options = {
     --safe \
     --sourcemap`,
   mqpacker: `-s`,
-  sasslint: `-c ./sass-lint.yml \
-    ${sourceDir}/**/**/*.scss -v`
+  sasslint: `-c ./sass-lint.yml -v`
 }
 
 const sassLintExec = shelljs.exec(`sass-lint ${options.sasslint}`);

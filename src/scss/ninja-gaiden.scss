@@ -1,10 +1,10 @@
 @import "settings/colors";
 @import "settings/grid";
+@import "generic/reset";
 @import "tools/mixins/flex";
 @import "tools/mixins/clearfix";
 @import "tools/mixins/grid";
 @import "components/button";
-@import "generic/reset";
 
 body {
   font-size: 16px;
