@@ -47,10 +47,6 @@
     .col-#{$key}-#{$i} {
       width: percentage(($i / $columns) + ($gutterRatio / ($columns / $i)) - $gutterRatio);
     }
-
-    @if $i < $columns {
-      @include generate-grid-push($breakpoint, $gutter, $key, $i);
-    }
   }
 };
 
