@@ -1,5 +1,6 @@
-@mixin gradient($gradientName, $palette: $gradients) {
-  $gradient: map-get($palette, $gradientName);
+@mixin gradient($colorName, $palette: $colors) {
+  $firstColor: get-color($colorName, $palette: $palette);
+  $lastColor: get-color($colorName, $key: darker, $palette: $palette);
 
-  @include linear-gradient(110deg, nth($gradient, 1), nth($gradient, 2));
+  @include linear-gradient(110deg, $firstColor, $lastColor);
 };
