@@ -59,6 +59,6 @@
     "onchange": "^3.0.2",
     "postcss-cli": "^2.6.0",
     "reset-css": "^2.2.0",
-    "sass-lint": "^1.9.1"
+    "sass-lint": "git+ssh://git@github.com:sasstools/sass-lint#feature/disable-linters"
   }
 }

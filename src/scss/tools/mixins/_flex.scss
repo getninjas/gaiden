@@ -3,6 +3,7 @@
 // * https://github.com/mastastealth/sass-flex-mixin/
 
 @mixin flexbox {
+  // sass-lint:disable-block no-duplicate-properties
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -65,6 +66,6 @@
 @mixin flex-shrink($int: 1) {
   -webkit-flex-shrink: $int;
   -moz-flex-shrink: $int;
-  -ms-flex-negative: $int;
+  -ms-flex-negative: $int; //sass-lint:disable-line no-misspelled-properties
   flex-shrink: $int;
 }
