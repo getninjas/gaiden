@@ -1,0 +1,9 @@
+{
+  "sites": {
+    "gaiden_css": {
+      "glob": "src/scss/**/*.{css,scss,md}",
+      "dest": "docs/css",
+      "parent": "gaiden_css"
+    }
+  }
+}
