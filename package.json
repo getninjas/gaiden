@@ -18,7 +18,7 @@
     "watch:css": "onchange \"src/scss\" -- build:dev:css",
     "watch:html": "onchange \"src/html/\" -- build:dev:html",
     "watch": "npm-run-all -p watch:css watch:html",
-    "browsersync": "browser-sync start -s 'build' -f 'build/*' --directory --cors --no-open",
+    "browsersync": "browser-sync start --config browser-sync.js",
     "dev": "npm run clear && FORCE_COLOR=1 npm-run-all -p build:dev browsersync watch"
   },
   "bin": {
