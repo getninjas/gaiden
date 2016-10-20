@@ -1,3 +1,22 @@
+/**
+  * @parent gaiden_css.variables
+  * @stylesheet colors.css Colors
+  *
+  * There are different colors that can be used:
+  * @iframe ../../demo/variables/colors/demo.html
+  *
+  *
+**/
+
+/**
+  * @styles gradients Gradients
+  *
+  * An some gradients defined
+  *
+  * @iframe ../../demo/variables/colors/gradients/demo.html
+  *
+**/
+
 $colors: (
   air: ( base: #fff),
   blackNeutral: ( base: rgba(#000, .8) ),
