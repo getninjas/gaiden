@@ -1,0 +1,6 @@
+@mixin gradient($colorName, $palette: $colors) {
+  $firstColor: get-color($colorName, $palette: $palette);
+  $lastColor: get-color($colorName, $key: darker, $palette: $palette);
+
+  @include linear-gradient(110deg, $firstColor, $lastColor);
+};

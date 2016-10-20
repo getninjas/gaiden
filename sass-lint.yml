@@ -1,3 +1,7 @@
+# General Options
+options:
+  cache-config: true
+
 # File Options
 files:
   include:
