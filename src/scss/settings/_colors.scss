@@ -1,3 +1,18 @@
-// TODO: temp
+$colors: (
+  air: ( base: #fff),
+  blackNeutral: ( base: rgba(#000, .8) ),
+  breeze: ( base: #eff4fa, darker: #c9d7e8 ),
+  punch: ( base: #1393f6, darker: #88c6f6 ),
+  serious: ( base: #1272d5, darker: #004183 ),
+  warning: ( base: #ffd600, darker: #e7ab0c ),
+  reward: ( base: #40d879, darker: #26a656 ),
+  rewardType: ( base: #5ebd66, darker: #5ebd66 ),
+  bloody: ( base: #b24141, darker: #6d0909 ),
+  grayNeutral: ( base: #536e7b, darker: #36474e ),
+  recusaGray: ( base: #e7e7e7 ),
+  offWhite: ( base: #eceff1 )
+);
 
-$fontSize: 16px;
+@function get-color($color, $key: base, $palette: $colors) {
+  @return map-get(map-get($palette, $color), $key);
+};
