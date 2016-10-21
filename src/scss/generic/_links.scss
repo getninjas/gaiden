@@ -1,0 +1,9 @@
+
+a {
+  color: get-color(punch);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

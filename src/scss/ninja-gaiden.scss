@@ -1,15 +1,25 @@
 @import 'settings/colors';
 @import 'settings/grid';
-@import 'generic/reset';
+@import 'settings/base_font';
 @import 'tools/mixins/flex';
 @import 'tools/mixins/clearfix';
 @import 'tools/mixins/grid';
 @import 'tools/mixins/linear_gradient';
 @import 'tools/mixins/gradient';
+@import 'tools/mixins/font_family';
+@import 'tools/mixins/media';
+@import 'generic/reset';
+@import 'generic/links';
+@import 'generic/heading';
 @import 'components/button';
 
 body {
-  font-size: 16px;
+  font: {
+    size: 16px;
+    family: 'Lato', Arial, sans-serif;
+    weight: 400;
+  }
+  color: get-color(blackNeutral);
 }
 
 @include generate-grid($defaultBreakpoints);

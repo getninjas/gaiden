@@ -1,0 +1,52 @@
+
+h1,
+h2,
+h3,
+h4 {
+  color: get-color(blackNeutral, darker);
+  font-family: font-family('Lato Black');
+
+  small {
+    font-family: font-family('Lato Light Italic');
+  }
+}
+
+h1 {
+  @include media(small) {
+    font-size: 32px;
+  }
+
+  font-size: 24px;
+
+  small {
+    @include media(small) {
+      font-size: 32px;
+    }
+
+    font-size: 20px;
+  }
+}
+
+h2 {
+  @include media(small) {
+    font-size: 24px;
+
+    small {
+      font-size: 18px;
+    }
+  }
+
+  font-size: 18px;
+}
+
+h3 {
+  @include media(small) {
+    font-size: 20px;
+  }
+
+  font-size: 16px;
+
+  small {
+    font-size: 16px;
+  }
+}
