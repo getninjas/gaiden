@@ -54,7 +54,7 @@
 @mixin generate-grid-container($breakpoint, $breakpoints, $gutterPercentage) {
   $breakpointsLength: length($breakpoints);
   $index: index(map-values($breakpoints), $breakpoint);
-  $nextBreakpoint: if($index < $breakpointsLength, get-breakpoint($breakpoints, $index + 1), get-breakpoint($breakpoints, $index));
+  $nextBreakpoint: if($index < $breakpointsLength, get-breakpoint-index($breakpoints, $index + 1), get-breakpoint-index($breakpoints, $index));
   $nextGridSize: map-get($nextBreakpoint, size);
   $gridSize: map-get($breakpoint, size);
   $gridPadding: $gutterPercentage / 2;
@@ -81,8 +81,12 @@
   }
 };
 
-@function get-breakpoint($breakpoints, $index) {
+@function get-breakpoint-index($breakpoints, $index) {
   @return nth(map-values($breakpoints), $index);
+};
+
+@function get-breakpoint($name, $breakpoints: $defaultBreakpoints) {
+  @return map-get(map-get($breakpoints, $name), size);
 };
 
 @function calc-grid-max-size($breakpoints) {

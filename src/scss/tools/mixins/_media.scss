@@ -1,0 +1,7 @@
+
+@mixin media($name, $startPoint: min) {
+
+  @media screen and (#{$startPoint}-width: get-breakpoint($name) + px) {
+    @content;
+  }
+}
