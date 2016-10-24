@@ -1,0 +1,23 @@
+ul.colors,
+ul.gradients {
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    width: 31%;
+    padding: .75%;
+
+    &::after, &::before {
+      width: 100%;
+      display: block;
+    }
+
+    &::before {
+      height: 50px;
+      content: "";
+      margin: 0 auto 5px;
+      border-radius: 4px;
+    }
+  }
+}
