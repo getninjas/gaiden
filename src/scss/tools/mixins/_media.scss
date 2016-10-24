@@ -1,7 +1,7 @@
 
-@mixin media($name, $startPoint: min) {
+@mixin media($name, $startPoint: min, $value: get-breakpoint($name)) {
 
-  @media screen and (#{$startPoint}-width: get-breakpoint($name) + px) {
+  @media screen and (#{$startPoint}-width: $value + px) {
     @content;
   }
 }
