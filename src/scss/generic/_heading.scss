@@ -2,20 +2,32 @@
 h1,
 h2,
 h3,
-h4 {
-  color: get-color(blackNeutral, darker);
-  font-family: font-family('Lato Black');
+h4,
+h5,
+.page-title,
+.section-title,
+.container-title,
+.card-title,
+.info-title {
+  color: get-color(blackNeutral);
+  font: {
+    weight: 900;
+  };
 
   small {
-    font-family: font-family('Lato Light Italic');
+    display: block;
+    font-style: italic;
+    font-weight: 300;
   }
 }
 
-h1 {
+h1,
+.page-title {
   @include media(small) {
-    font-size: 32px;
+    font-size: 36px;
   }
 
+  margin-bottom: 8px;
   font-size: 24px;
 
   small {
@@ -23,30 +35,69 @@ h1 {
       font-size: 32px;
     }
 
+    margin-top: 8px;
     font-size: 20px;
   }
 }
 
-h2 {
+h2,
+.section-title {
   @include media(small) {
     font-size: 24px;
 
     small {
-      font-size: 18px;
+      font-size: 22px;
     }
   }
 
-  font-size: 18px;
-}
+  margin-bottom: 4px;
+  font-size: 14px;
 
-h3 {
-  @include media(small) {
+  small {
+    margin-top: 4px;
     font-size: 20px;
   }
+}
 
+h3,
+.container-title {
+  @include media(small) {
+    font-size: 18px;
+  }
+
+  margin-bottom: 4px;
   font-size: 16px;
 
   small {
-    font-size: 16px;
+    margin-top: 4px;
+    font-size: 14px;
+  }
+}
+
+h4,
+.card-title {
+  font: {
+    weight: 700;
+    size: 16px;
+  }
+  margin-bottom: 4px;
+
+  small {
+    margin-top: 4px;
+    font-size: 14px;
+  }
+}
+
+h5,
+.info-title {
+  font: {
+    weight: 700;
+    size: 14px;
+  }
+  margin-bottom: 4px;
+
+  small {
+    margin-top: 4px;
+    font-size: 12px;
   }
 }
