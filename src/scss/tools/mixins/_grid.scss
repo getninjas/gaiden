@@ -10,7 +10,7 @@
       @include generate-grid-container($breakpoint, $breakpoints, $gutter);
       @include generate-grid-columns($breakpoint, $key, $gutter);
     } @else {
-      @media screen and (min-width: $gridSize - 1px) {
+      @include media-gt(small, $value: $gridSize - 1px) {
         @include generate-grid-container($breakpoint, $breakpoints, $gutter);
         @include generate-grid-columns($breakpoint, $key, $gutter);
       }
