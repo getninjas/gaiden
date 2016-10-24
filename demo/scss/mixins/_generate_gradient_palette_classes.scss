@@ -1,0 +1,18 @@
+@mixin generate_gradient_palette_classes($gradients, $colors: $colors) {
+  @each $key, $gradient in $gradients {
+    $color: map-get($colors, nth($gradient, 1));
+
+    $firstColor:  map-get($color, nth($gradient, 2));
+    $secondColor: map-get($color, nth($gradient, 3));
+
+    .#{$key} {
+      &::before {
+        @include gradient($key);
+      }
+
+      &::after {
+        content: "@#{$key}/#{$firstColor}/#{$secondColor}";
+      }
+    }
+  }
+};
