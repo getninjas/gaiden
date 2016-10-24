@@ -1,0 +1,4 @@
+@import "src/scss/settings/colors";
+@import "mixins/generate_color_palette_classes";
+
+@include generate_color_palette_classes($colors);

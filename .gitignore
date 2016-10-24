@@ -15,3 +15,5 @@ CVS
 
 # application
 build/*
+docs/*
+demo/css
