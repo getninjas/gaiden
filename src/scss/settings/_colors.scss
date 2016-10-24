@@ -32,6 +32,18 @@ $colors: (
   offWhite: (base: #eceff1)
 );
 
+$gradients: (
+  wind: (breeze base darker),
+  sky:  (punch lighter base),
+  ocean: (serious base darker),
+  golden: (warning base darker),
+  field: (reward base darker),
+  jungle: (reward base darker),
+  heart: (bloody base darker),
+  night: (rastaGray base darker)
+);
+
+
 @function get-color($color, $key: base, $palette: $colors) {
   @return map-get(map-get($palette, $color), $key);
 };
