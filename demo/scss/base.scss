@@ -1,3 +1,10 @@
+@import "src/scss/settings/base_font";
+@import "src/scss/tools/mixins/font_family";
+
+* {
+  font-family: font-family();
+}
+
 ul.colors,
 ul.gradients {
   margin: 0;
