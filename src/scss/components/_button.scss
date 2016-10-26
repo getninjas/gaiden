@@ -1,36 +1,73 @@
-/*
- * TODO: temp
- */
+/**
+  * @parent gaiden_css.components
+  * @stylesheet buttons.css Buttons
+  *
+  * Some description here
+  *
+*/
 
-$white: #fff;
-$green: hsl(134, 50%, 50%);
+/**
+  * @styles sizes Sizes
+  *
+  * Some description here
+  * @demo ../../demo/components/buttons/sizes/demo.html 262
+**/
 
-.button {
-  display: flex;
-  -webkit-transition: all ease-in 1s;
-  transition: all ease-in 1s;
-  color: $white;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: $green;
-  background-image: linear-gradient(to top, $white, $green);
+/**
+  * @styles buttons_hc High Contrast
+  *
+  * Some description here
+  * @demo ../../demo/components/buttons/hc/demo.html
+**/
 
-  /* IE 8 */
-  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';
+/**
+  * @styles buttons_mc Medium Contrast
+  *
+  * Some description here
+  * @demo ../../demo/components/buttons/mc/demo.html
+**/
 
-  /* IE 5-7 */
-  filter: alpha(opacity=50);
+/**
+  * @styles buttons_raised Raised
+  *
+  * Some description here
+  * @demo ../../demo/components/buttons/raised/demo.html
+**/
 
-  /* Netscape */
-  -moz-opacity: .5;
+/**
+  * @styles buttons_outline Outline
+  *
+  * Some description here
+  * @demo ../../demo/components/buttons/outline/demo.html
+**/
 
-  /* Safari 1.x */
-  -khtml-opacity: .5;
+/**
+  * @styles buttons_lc Low Contrast
+  *
+  * Some description here
+  * @demo ../../demo/components/buttons/lc/demo.html
+**/
 
-  /* Good browsers */
-  opacity: .5;
+.btn {
+  display: inline-block;
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  border: 0;
+  letter-spacing: .3px;
+  cursor: pointer;
 
-  &__blocked {
-    display: block;
+  &--text {
+    color: get-color(punch);
+    font-size: 13px;
+    font-weight: 700;
   }
+
+  &[disabled] {
+    opacity: .3;
+  }
+
+  @include generate-button-types;
+  @include generate-button-sizes;
 }

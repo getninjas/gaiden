@@ -1,0 +1,60 @@
+// Sizes
+
+$buttonSizes: (
+  mini: (
+    defaultSizes: (width: 29, height: 15),
+    size: (width: 160, height: 34),
+    fontSize: 12
+  ),
+
+  small: (
+    defaultSizes: (width: 42, height: 16),
+    size: (width: 174, height: 40),
+    fontSize: 13
+  ),
+
+  regular: (
+    defaultSizes: (width: 59, height: 16),
+    size: (width: 161, height: 48),
+    fontSize: 14
+  ),
+
+  big: (
+    defaultSizes: (width: 105, height: 16),
+    size: (width: 260, height: 60),
+    fontSize: 16
+  )
+);
+
+//ColorConfig (color: <color-name>[, key: <color-key-name> ][, opacity: <color-opacity> ])
+
+// Types
+$buttonTypes: (
+  high-contrast: (
+    normal: (color: punch),
+    hover:  (color: serious),
+    color:  (color: air)
+  ),
+  low-contrast: (
+    normal: (color: recusaGray),
+    hover:  (color: blackNeutral, opacity: .2),
+    color:  (color: blackNeutral, opacity: .5)
+  ),
+  medium-contrast: (
+    normal: (color: serious),
+    hover:  (color: serious, key: darker),
+    color:  (color: air)
+  ),
+  outline: (
+    normal: (color: air),
+    hover:  (color: punch, opacity: .1),
+    border: (color: punch),
+    color:  (color: punch)
+  ),
+  raised: (
+    normal: (color: punch),
+    hover:  (color: serious),
+    color:  (color: air),
+    shadow: (color: blackNeutral, opacity: .6)
+  )
+);
