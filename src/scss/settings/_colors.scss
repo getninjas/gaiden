@@ -42,8 +42,3 @@ $gradients: (
   heart: (bloody base darker),
   night: (rastaGray base darker)
 );
-
-
-@function get-color($color, $key: base, $palette: $colors) {
-  @return map-get(map-get($palette, $color), $key);
-};
