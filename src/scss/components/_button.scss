@@ -99,6 +99,11 @@
     opacity: .3;
   }
 
+  &--fluid {
+    display: block;
+    width: 100%;
+  }
+
   @include generate-button-types;
   @include generate-button-sizes;
 }
