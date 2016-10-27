@@ -94,12 +94,6 @@
   cursor: pointer;
   background-color: transparent;
 
-  &--text {
-    color: get-color(punch);
-    font-size: 13px;
-    font-weight: 700;
-  }
-
   &[disabled] {
     opacity: .3;
   }
