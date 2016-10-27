@@ -1,32 +1,25 @@
 // Sizes
-
 $buttonSizes: (
   mini: (
-    defaultSizes: (width: 29, height: 15),
-    size: (width: 160, height: 34),
-    fontSize: 12
+    fontSize: 12,
+    padding: (10 20)
   ),
 
   small: (
-    defaultSizes: (width: 42, height: 16),
-    size: (width: 174, height: 40),
-    fontSize: 13
+    fontSize: 13,
+    padding: (11 22)
   ),
 
   regular: (
-    defaultSizes: (width: 59, height: 16),
-    size: (width: 161, height: 48),
-    fontSize: 14
+    fontSize: 14,
+    padding: (16 32)
   ),
 
   big: (
-    defaultSizes: (width: 105, height: 16),
-    size: (width: 260, height: 60),
-    fontSize: 16
+    fontSize: 16,
+    padding: (21 42)
   )
 );
-
-//ColorConfig (color: <color-name>[, key: <color-key-name> ][, opacity: <color-opacity> ])
 
 // Types
 $buttonTypes: (
