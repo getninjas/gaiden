@@ -93,6 +93,7 @@
   letter-spacing: .3px;
   cursor: pointer;
   background-color: transparent;
+  transition: background-color .2s;
 
   &[disabled] {
     opacity: .3;
