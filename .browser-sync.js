@@ -13,13 +13,13 @@
  |
  */
 module.exports = {
-    ui: false,
-    files: "build/*",
-    server: {
-        baseDir: "build",
-        directory: true
-    },
-    port: 3000,
-    open: false,
-    cors: true
+  ui: false,
+  files: "build/*",
+  server: {
+    baseDir: "build",
+    directory: true
+  },
+  port: 3000,
+  open: false,
+  cors: true
 };
