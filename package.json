@@ -9,16 +9,19 @@
     "postversion": "git push && git push --tags",
     "config": "npm config set progress=false && npm config set git-tag-version=true && npm link",
     "clear": "rm -rf ./build/*",
-    "build:prod": "build:prod:css && documentjs",
-    "build:dev": "build:dev:css && documentjs",
+    "build:prod": "build:prod:html && build:prod:css && documentjs",
+    "build:dev": "build:dev:html && build:dev:css && documentjs",
     "watch:css": "onchange \"src/scss\" -- build:dev:css",
-    "watch": "npm-run-all -p watch:css",
+    "watch:html": "onchange \"src/html/\" -- build:dev:html",
+    "watch": "npm-run-all -p watch:css watch:html",
     "browsersync": "browser-sync start --config .browser-sync.js",
     "dev": "npm run clear && FORCE_COLOR=1 npm-run-all -p build:dev browsersync watch"
   },
   "bin": {
     "build:dev:css": "./bin/build/dev/css.js",
-    "build:prod:css": "./bin/build/prod/css.js"
+    "build:dev:html": "./bin/build/dev/html.js",
+    "build:prod:css": "./bin/build/prod/css.js",
+    "build:prod:html": "./bin/build/prod/html.js"
   },
   "repository": {
     "type": "git",
