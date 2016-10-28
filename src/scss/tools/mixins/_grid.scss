@@ -18,6 +18,21 @@
     }
     $index: $index + 1;
   }
+
+  /* no-flexbox fallback
+   *
+   * Just add this class to the body and use some
+   * lib, like modernizr, to append it
+   */
+  .container {
+    .no-flexbox & {
+      @include clearfix;
+
+      [class*='col-'] {
+        float: left;
+      }
+    }
+  }
 };
 
 @mixin generate-grid-columns($breakpoint, $key, $gutter) {
@@ -71,14 +86,6 @@
     margin-right: auto;
     padding-left: percentage($gridPadding / $gridSize);
     padding-right: percentage($gridPadding / $gridSize);
-
-    .no-flexbox & {
-      @include clearfix;
-
-      [class*='col-'] {
-        float: left;
-      }
-    }
   }
 };
 
