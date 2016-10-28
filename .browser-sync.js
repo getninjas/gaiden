@@ -19,7 +19,7 @@ module.exports = {
     baseDir: "build",
     directory: true
   },
-  port: 3000,
+  port: 8000,
   open: false,
   cors: true
 };
