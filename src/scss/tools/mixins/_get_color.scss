@@ -2,6 +2,7 @@
   @if type-of($color) == 'map' {
     @return get-color($color...);
   }
-  $colorFromPalette: map-get(map-get($palette, $color), $key);
+
+  $colorFromPalette: map-deep-get($palette, $color, $key);
   @return if($opacity < 1, rgba($colorFromPalette, $opacity), $colorFromPalette);
 };
