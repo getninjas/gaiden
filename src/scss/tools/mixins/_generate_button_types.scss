@@ -1,8 +1,8 @@
 @mixin generate-button-types($buttonTypesList: $buttonTypes) {
   @each $key, $buttonType in $buttonTypesList {
     &--#{$key} {
-      @if map-has-key($buttonType, normal) {
-        background-color: get-color(map-get($buttonType, normal));
+      @if map-has-key($buttonType, default) {
+        background-color: get-color(map-get($buttonType, default));
       }
 
       @if map-has-key($buttonType, border) {

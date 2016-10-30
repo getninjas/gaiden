@@ -24,37 +24,37 @@ $buttonSizes: (
 // Types
 $buttonTypes: (
   high-contrast: (
-    normal: (color: punch),
+    default: (color: punch),
     hover:  (color: serious),
     color:  (color: air)
   ),
   high-contrast-reversed: (
-    normal: (color: air, opacity: .9),
+    default: (color: air, opacity: .9),
     hover:  (color: air),
     color:  (color: punch)
   ),
   low-contrast: (
-    normal: (color: recusaGray),
+    default: (color: recusaGray),
     hover:  (color: blackNeutral, opacity: .2),
     color:  (color: blackNeutral, opacity: .5)
   ),
   low-contrast-reversed: (
-    normal: (color: blackNeutral, opacity: .1),
+    default: (color: blackNeutral, opacity: .1),
     hover:  (color: blackNeutral, opacity: .14),
     color:  (color: air)
   ),
   medium-contrast: (
-    normal: (color: serious),
+    default: (color: serious),
     hover:  (color: serious, key: darker),
     color:  (color: air)
   ),
   medium-contrast-reversed: (
-    normal: (color: blackNeutral, opacity: .25),
+    default: (color: blackNeutral, opacity: .25),
     hover:  (color: blackNeutral, opacity: .3),
     color:  (color: air)
   ),
   outline: (
-    normal: (color: air),
+    default: (color: air),
     hover:  (color: punch, opacity: .1),
     border: (color: punch),
     color:  (color: punch)
@@ -65,13 +65,13 @@ $buttonTypes: (
     color:  (color: air)
   ),
   raised: (
-    normal: (color: punch),
+    default: (color: punch),
     hover:  (color: serious),
     color:  (color: air),
     shadow: (color: blackNeutral, opacity: .2)
   ),
   raised-reversed: (
-    normal: (color: air, opacity: .9),
+    default: (color: air, opacity: .9),
     hover:  (color: air),
     color:  (color: punch),
     shadow: (color: blackNeutral, opacity: .2)
