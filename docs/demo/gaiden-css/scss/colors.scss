@@ -1,4 +1,5 @@
 @import "src/scss/settings/colors";
+@import 'src/scss/tools/mixins/map_deep_get';
 @import "mixins/generate_color_palette_classes";
 
 @include generate_color_palette_classes($colors);
