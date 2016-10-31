@@ -79,43 +79,96 @@ $buttonSizes: (
 **/
 $buttonTypes: (
   high-contrast: (
-    default: (background: punch, color: air),
-    hover: (background: serious)
+    default: (
+      background: punch,
+      textColor: air
+    ),
+    hover: (
+      background: serious
+    )
   ),
   high-contrast-reversed: (
-    default: (background: (color: air, opacity: .9), color: punch),
-    hover: (background: air)
+    default: (
+      background: (color: air, opacity: .9),
+      textColor: punch
+    ),
+    hover: (
+      background: air
+    )
   ),
   low-contrast: (
-    default: (background: recusaGray, color: (color: blackNeutral, opacity: .5)),
-    hover: (background: (color: blackNeutral, opacity: .2))
+    default: (
+      background: recusaGray,
+      textColor: (color: blackNeutral, opacity: .5)
+    ),
+    hover: (
+      background: (color: blackNeutral, opacity: .2)
+    )
   ),
   low-contrast-reversed: (
-    default: (background: (color: blackNeutral, opacity: .1), color: air),
-    hover: (background: (color: blackNeutral, opacity: .14))
+    default: (
+      background: (color: blackNeutral, opacity: .1),
+      textColor: air
+    ),
+    hover: (
+      background: (color: blackNeutral, opacity: .14)
+    )
   ),
   medium-contrast: (
-    default: (background: serious, color: air),
-    hover: (background: (color: serious, key: darker))
+    default: (
+      background: serious,
+      textColor: air
+    ),
+    hover: (
+      background: (color: serious, key: darker)
+    )
   ),
   medium-contrast-reversed: (
-    default: (background: (color: blackNeutral, opacity: .25), color: air),
-    hover:  (background: (color: blackNeutral, opacity: .3))
+    default: (
+      background: (color: blackNeutral, opacity: .25),
+      textColor: air
+    ),
+    hover: (
+      background: (color: blackNeutral, opacity: .3)
+    )
   ),
   outline: (
-    default: (background: air, border: punch, color: punch),
-    hover:  (background: (color: punch, opacity: .1))
+    default: (
+      background: air,
+      border: punch,
+      textColor: punch
+    ),
+    hover: (
+      background: (color: punch, opacity: .1)
+    )
   ),
   outline-reversed: (
-    default: (border: air, color: air),
-    hover: (background: (color: air, opacity: .12))
+    default: (
+      border: air,
+      textColor: air
+    ),
+    hover: (
+      background: (color: air, opacity: .12)
+    )
   ),
   raised: (
-    default: (background: punch, color: air, shadow: (color: blackNeutral, opacity: .2)),
-    hover:  (background: serious)
+    default: (
+      background: punch,
+      textColor: air,
+      shadow: (color: blackNeutral, opacity: .2)
+    ),
+    hover: (
+      background: serious
+    )
   ),
   raised-reversed: (
-    default: (background: (color: air, opacity: .9), shadow: (color: blackNeutral, opacity: .2), color: punch),
-    hover:  (background: air)
+    default: (
+      background: (color: air, opacity: .9),
+      shadow: (color: blackNeutral, opacity: .2),
+      textColor: punch
+    ),
+    hover: (
+      background: air
+    )
   )
 );

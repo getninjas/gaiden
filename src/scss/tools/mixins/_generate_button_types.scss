@@ -1,12 +1,12 @@
 @mixin generate-button-types($buttonTypesList: $buttonTypes) {
   @each $key, $buttonType in $buttonTypesList {
     &--#{$key} {
-      @include generate-button-types-properties($buttonType, default);
+      @include _generate-button-types-properties($buttonType, default);
 
       @if map-has-key($buttonType, hover) {
         &:not([disabled]) {
           &:hover {
-            @include generate-button-types-properties($buttonType, hover);
+            @include _generate-button-types-properties($buttonType, hover);
           }
         }
       }
@@ -14,7 +14,7 @@
   }
 };
 
-@mixin generate-button-types-properties($buttonType, $key) {
+@mixin _generate-button-types-properties($buttonType, $key) {
   @if map-has-key($buttonType, $key) {
     $buttonTypeConfig: map-get($buttonType, $key);
 
@@ -26,8 +26,8 @@
       border: solid 1px get-color(map-get($buttonTypeConfig, border));
     }
 
-    @if map-has-key($buttonTypeConfig, color) {
-      color: get-color(map-get($buttonTypeConfig, color));
+    @if map-has-key($buttonTypeConfig, textColor) {
+      color: get-color(map-get($buttonTypeConfig, textColor));
     }
 
     @if map-has-key($buttonTypeConfig, shadow) {
