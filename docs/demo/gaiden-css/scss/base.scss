@@ -5,12 +5,14 @@
 @import "src/scss/tools/mixins/font_family";
 
 body {
+  padding: 20px;
   &.reversed {
     background-color: get-color(punch);
   }
 }
 
 * {
+  box-sizing: border-box;
   font-family: font-family();
 }
 
