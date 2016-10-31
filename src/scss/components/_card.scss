@@ -1,0 +1,27 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.card.css Card
+  *
+  * @demo ../../demo/components/card/demo.html
+**/
+
+.card {
+  padding: 18px 21px;
+  background-color: get-color(air);
+  border-radius: 6px;
+
+  &__header {
+    line-height: 1.2;
+  }
+
+  &__content {
+    color: get-color(blackNeutral);
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 12px;
+  }
+
+  &__footer {
+    margin-top: 20px;
+  }
+}
