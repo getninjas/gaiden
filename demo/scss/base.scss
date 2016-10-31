@@ -1,3 +1,19 @@
+@import "src/scss/settings/colors";
+@import "src/scss/settings/base_font";
+@import 'src/scss/tools/mixins/map_deep_get';
+@import 'src/scss/tools/mixins/get_color';
+@import "src/scss/tools/mixins/font_family";
+
+body {
+  &.reversed {
+    background-color: get-color(punch);
+  }
+}
+
+* {
+  font-family: font-family();
+}
+
 ul.colors,
 ul.gradients {
   margin: 0;

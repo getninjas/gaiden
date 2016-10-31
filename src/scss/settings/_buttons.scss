@@ -1,0 +1,174 @@
+/**
+  * @parent gaiden_css.settings
+  * @stylesheet gaiden_css.settings.buttons.css Buttons
+  *
+**/
+
+/**
+*  @parent gaiden_css.configs
+*  @typedef {{}} gaiden_css.configs.button_size_config ButtonSizeConfig
+*  @option {Number} fontSize Defines font size for button.
+*  @option {Map<Number>} padding Defines padding for button and first value of map is `top/bottom` and second is `left/right`.
+*
+*  @body
+*    ## Using
+*      $buttonSizeConfig: (
+*        fontSize: 16,
+*        padding: (10 15)
+*      );
+**/
+
+/**
+  * @styles buttons_size Add new button size
+  *
+  * To add new button you need to define a `[gaiden_css.configs.button_size_config]` and append it
+  * in `$buttonSizes` map.
+**/
+
+$buttonSizes: (
+  mini: (
+    fontSize: 12,
+    padding: (10 20)
+  ),
+
+  small: (
+    fontSize: 13,
+    padding: (11 22)
+  ),
+
+  regular: (
+    fontSize: 14,
+    padding: (16 32)
+  ),
+
+  big: (
+    fontSize: 16,
+    padding: (21 42)
+  )
+);
+
+/**
+*  @parent gaiden_css.configs
+*  @typedef {{}} gaiden_css.configs.button_type_config ButtonTypeConfig
+*  @option {color|ColorConfig} background Defines button's background color
+*  @option {color|ColorConfig} padding Defines button's shadow color
+*  @option {color|ColorConfig} border Defines button's border color
+*  @option {color|ColorConfig} textColor Defines button's textColor
+*
+*  @body
+*    ## Using
+*    `default` is a key for button state.
+*
+*     If you want to see how define [gaiden_css.configs.color_config] click at this link.
+*
+*      $buttonTypeConfig: (
+*        default: (
+*         background: (color: punch, opacity: .9), //using ColorConfig
+*         textColor: air,
+*         shadow: serious,
+*         border: blackNeutral
+*        )
+*      );
+**/
+
+/**
+  * @styles buttons_types Add new button type
+  *
+  * If you need to create new button type just configure a `[gaiden_css.configs.button_type_config]`
+  * with some states and properties.
+**/
+$buttonTypes: (
+  high-contrast: (
+    default: (
+      background: punch,
+      textColor: air
+    ),
+    hover: (
+      background: serious
+    )
+  ),
+  high-contrast-reversed: (
+    default: (
+      background: (color: air, opacity: .9),
+      textColor: punch
+    ),
+    hover: (
+      background: air
+    )
+  ),
+  low-contrast: (
+    default: (
+      background: recusaGray,
+      textColor: (color: blackNeutral, opacity: .5)
+    ),
+    hover: (
+      background: (color: blackNeutral, opacity: .2)
+    )
+  ),
+  low-contrast-reversed: (
+    default: (
+      background: (color: blackNeutral, opacity: .1),
+      textColor: air
+    ),
+    hover: (
+      background: (color: blackNeutral, opacity: .14)
+    )
+  ),
+  medium-contrast: (
+    default: (
+      background: serious,
+      textColor: air
+    ),
+    hover: (
+      background: (color: serious, key: darker)
+    )
+  ),
+  medium-contrast-reversed: (
+    default: (
+      background: (color: blackNeutral, opacity: .25),
+      textColor: air
+    ),
+    hover: (
+      background: (color: blackNeutral, opacity: .3)
+    )
+  ),
+  outline: (
+    default: (
+      background: air,
+      border: punch,
+      textColor: punch
+    ),
+    hover: (
+      background: (color: punch, opacity: .1)
+    )
+  ),
+  outline-reversed: (
+    default: (
+      border: air,
+      textColor: air
+    ),
+    hover: (
+      background: (color: air, opacity: .12)
+    )
+  ),
+  raised: (
+    default: (
+      background: punch,
+      textColor: air,
+      shadow: (color: blackNeutral, opacity: .2)
+    ),
+    hover: (
+      background: serious
+    )
+  ),
+  raised-reversed: (
+    default: (
+      background: (color: air, opacity: .9),
+      shadow: (color: blackNeutral, opacity: .2),
+      textColor: punch
+    ),
+    hover: (
+      background: air
+    )
+  )
+);

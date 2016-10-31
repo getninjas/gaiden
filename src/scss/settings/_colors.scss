@@ -1,11 +1,29 @@
 /**
-  * @parent gaiden_css.variables
-  * @stylesheet colors.css Colors
+  * @parent gaiden_css.settings
+  * @stylesheet gaiden_css.settings.colors.css Colors
   *
   * There are different colors that can be used:
   * @iframe ../../demo/variables/colors/demo.html
   *
   *
+**/
+
+/**
+*  @parent gaiden_css.configs
+*  @typedef {{}} gaiden_css.configs.color_config ColorConfig
+*  @option {String} color Name of color key at `Palette Map`
+*  @option {String} key Name of color key modifier at `Palette Map`
+*  @option {Number} opacity Alpha number for color rgba method
+*  @option {Map} palette Define color palette map
+*
+*  @body
+*    ## Using
+*       $colorConfig: (
+*         color: punch,
+*         opacity: .8,
+*         key: darker,
+*         palette: (punch: (base: #1393f6))
+*       );
 **/
 
 /**
@@ -19,7 +37,7 @@
 
 $colors: (
   air: (base: #fff),
-  blackNeutral: (base: #333),
+  blackNeutral: (base: rgba(0, 0, 0, .8)),
   breeze: (base: #eff4fa, darker: #c9d7e8),
   punch: (base: #1393f6, lighter: #21c1ff),
   serious: (base: #1272d5, darker: #004183),
@@ -42,8 +60,3 @@ $gradients: (
   heart: (bloody base darker),
   night: (rastaGray base darker)
 );
-
-
-@function get-color($color, $key: base, $palette: $colors) {
-  @return map-get(map-get($palette, $color), $key);
-};
