@@ -32,6 +32,29 @@
         float: left;
       }
     }
+
+    /*
+     * container--fluid modifier
+     */
+    &--fluid {
+      width: 100%;
+      max-width: inherit;
+    }
+  }
+
+  /*
+   * Adding flex-shring, display flex and col-centered helper to columns
+   */
+  [class*='col-'] {
+    @include flex-shrink(0);
+    display: flex;
+
+    &.col-centered {
+      margin: {
+        right: auto;
+        left: auto;
+      }
+    }
   }
 };
 
@@ -41,27 +64,13 @@
   $gutterRatio: $gutter / $gridSize;
 
   [class*='col-#{$key}-'] {
-    margin-right: percentage($gutterRatio);
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &.col-centered {
-      margin: {
-        right: auto;
-        left: auto;
-      }
-    }
-  }
-
-  [class*='col-'] {
-    @include flex-shrink(0);
+    margin-right: percentage($gutterRatio / 2);
+    margin-left: percentage($gutterRatio / 2);
   }
 
   @for $i from 1 through $columns {
     .col-#{$key}-#{$i} {
-      width: percentage(($i / $columns) + ($gutterRatio / ($columns / $i)) - $gutterRatio);
+      width: percentage(($i / $columns) - $gutterRatio);
     }
   }
 };
@@ -77,13 +86,16 @@
     @include flex-direction(row);
     @include flex-wrap(wrap);
     @include flexbox;
-
+    margin: {
+      right: auto;
+      left: auto;
+    }
+    padding: {
+      right: 0;
+      left: 0;
+    }
     width: 100%;
     max-width: $gridSize + px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: percentage($gridPadding / $gridSize);
-    padding-right: percentage($gridPadding / $gridSize);
   }
 };
 
