@@ -13,10 +13,9 @@ const options = {
     --output-style expanded \
     --sourceComments true \
     -o ${docsDir} \
-    --recursive `,
-  documentjs: ` --forceBuild=true \
-    --debug --watch=false`
+    --recursive `
 }
 
 shelljs.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
 shelljs.exec(`documentjs`);
+shelljs.cp('./build/stylesheets/ninja-gaiden.css', `${docsDir}/`)
