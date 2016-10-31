@@ -1,6 +1,6 @@
 /**
   * @parent gaiden_css.components
-  * @stylesheet buttons.css Buttons
+  * @stylesheet gaiden_css.components.buttons.css Buttons
 **/
 
 /**
@@ -67,6 +67,12 @@
   * @styles buttons_reversed_raised Reversed Raised
   *
   * @demo ../../demo/components/buttons/reversed/raised/demo.html
+**/
+
+/**
+  * @styles buttons_fluid Fluid
+  *
+  * @demo ../../demo/components/buttons/fluid/demo.html
 **/
 
 .btn {
