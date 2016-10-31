@@ -14,12 +14,12 @@
  */
 module.exports = {
   ui: false,
-  files: "build/*",
+  files: "/docs",
   server: {
-    baseDir: "build",
+    baseDir: "docs",
     directory: true
   },
-  port: 8001,
+  port: 8000,
   open: false,
   cors: true
 };
