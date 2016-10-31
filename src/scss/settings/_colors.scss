@@ -9,6 +9,24 @@
 **/
 
 /**
+*  @parent gaiden_css.configs
+*  @typedef {{}} gaiden_css.configs.color_config ColorConfig
+*  @option {String} color Name of color key at `Palette Map`
+*  @option {String} key Name of color key modifier at `Palette Map`
+*  @option {Number} opacity Alpha number for color rgba method
+*  @option {Map} palette Define color palette map
+*
+*  @body
+*    ## Using
+*       $colorConfig: (
+*         color: punch,
+*         opacity: .8,
+*         key: darker,
+*         palette: (punch: (base: #1393f6))
+*       );
+**/
+
+/**
   * @styles gradients Gradients
   *
   * An some gradients defined

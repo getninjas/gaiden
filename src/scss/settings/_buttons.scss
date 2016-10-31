@@ -1,4 +1,30 @@
-// Sizes
+/**
+  * @parent gaiden_css.settings
+  * @stylesheet gaiden_css.settings.buttons.css Buttons
+  *
+**/
+
+/**
+*  @parent gaiden_css.configs
+*  @typedef {{}} gaiden_css.configs.button_size_config ButtonSizeConfig
+*  @option {Number} fontSize Defines font size for button.
+*  @option {Map<Number>} padding Defines padding for button and first value of map is `top/bottom` and second is `left/right`.
+*
+*  @body
+*    ## Using
+*      $buttonSizeConfig: (
+*        fontSize: 16,
+*        padding: (10 15)
+*      );
+**/
+
+/**
+  * @styles buttons_size Add new button size
+  *
+  * To add new button you need to define a `[gaiden_css.configs.button_size_config]` and append it
+  * in `$buttonSizes` map.
+**/
+
 $buttonSizes: (
   mini: (
     fontSize: 12,
@@ -21,7 +47,36 @@ $buttonSizes: (
   )
 );
 
-// Types
+/**
+*  @parent gaiden_css.configs
+*  @typedef {{}} gaiden_css.configs.button_type_config ButtonTypeConfig
+*  @option {color|ColorConfig} background Defines button's background color
+*  @option {color|ColorConfig} padding Defines button's shadow color
+*  @option {color|ColorConfig} border Defines button's border color
+*  @option {color|ColorConfig} textColor Defines button's textColor
+*
+*  @body
+*    ## Using
+*    `default` is a key for button state.
+*
+*     If you want to see how define [gaiden_css.configs.color_config] click at this link.
+*
+*      $buttonTypeConfig: (
+*        default: (
+*         background: (color: punch, opacity: .9), //using ColorConfig
+*         textColor: air,
+*         shadow: serious,
+*         border: blackNeutral
+*        )
+*      );
+**/
+
+/**
+  * @styles buttons_types Add new button type
+  *
+  * If you need to create new button type just configure a `[gaiden_css.configs.button_type_config]`
+  * with some states and properties.
+**/
 $buttonTypes: (
   high-contrast: (
     default: (background: punch, color: air),
@@ -64,7 +119,3 @@ $buttonTypes: (
     hover:  (background: air)
   )
 );
-
-
-
-
