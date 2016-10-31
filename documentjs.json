@@ -1,8 +1,12 @@
 {
+  "siteDefaults": {
+    "watch": "true",
+    "debug": "false"
+  },
   "sites": {
     "gaiden_css": {
       "glob": "src/scss/**/*.{css,scss,md}",
-      "dest": "docs/css",
+      "dest": "docs/gaiden-css",
       "parent": "gaiden_css"
     }
   }
