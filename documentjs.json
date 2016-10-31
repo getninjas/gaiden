@@ -1,7 +1,7 @@
 {
   "siteDefaults": {
-    "watch": "true",
-    "debug": "false"
+    "debug": true,
+    "forceBuild": false
   },
   "sites": {
     "gaiden_css": {
