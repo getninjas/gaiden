@@ -24,56 +24,47 @@ $buttonSizes: (
 // Types
 $buttonTypes: (
   high-contrast: (
-    default: (color: punch),
-    hover:  (color: serious),
-    color:  (color: air)
+    default: (background: punch, color: air),
+    hover: (background: serious)
   ),
   high-contrast-reversed: (
-    default: (color: air, opacity: .9),
-    hover:  (color: air),
-    color:  (color: punch)
+    default: (background: (color: air, opacity: .9), color: punch),
+    hover: (background: air)
   ),
   low-contrast: (
-    default: (color: recusaGray),
-    hover:  (color: blackNeutral, opacity: .2),
-    color:  (color: blackNeutral, opacity: .5)
+    default: (background: recusaGray, color: (color: blackNeutral, opacity: .5)),
+    hover: (background: (color: blackNeutral, opacity: .2))
   ),
   low-contrast-reversed: (
-    default: (color: blackNeutral, opacity: .1),
-    hover:  (color: blackNeutral, opacity: .14),
-    color:  (color: air)
+    default: (background: (color: blackNeutral, opacity: .1), color: air),
+    hover: (background: (color: blackNeutral, opacity: .14))
   ),
   medium-contrast: (
-    default: (color: serious),
-    hover:  (color: serious, key: darker),
-    color:  (color: air)
+    default: (background: serious, color: air),
+    hover: (background: (color: serious, key: darker))
   ),
   medium-contrast-reversed: (
-    default: (color: blackNeutral, opacity: .25),
-    hover:  (color: blackNeutral, opacity: .3),
-    color:  (color: air)
+    default: (background: (color: blackNeutral, opacity: .25), color: air),
+    hover:  (background: (color: blackNeutral, opacity: .3))
   ),
   outline: (
-    default: (color: air),
-    hover:  (color: punch, opacity: .1),
-    border: (color: punch),
-    color:  (color: punch)
+    default: (background: air, border: punch, color: punch),
+    hover:  (background: (color: punch, opacity: .1))
   ),
   outline-reversed: (
-    hover:  (color: air, opacity: .12),
-    border: (color: air),
-    color:  (color: air)
+    default: (border: air, color: air),
+    hover: (background: (color: air, opacity: .12))
   ),
   raised: (
-    default: (color: punch),
-    hover:  (color: serious),
-    color:  (color: air),
-    shadow: (color: blackNeutral, opacity: .2)
+    default: (background: punch, color: air, shadow: (color: blackNeutral, opacity: .2)),
+    hover:  (background: serious)
   ),
   raised-reversed: (
-    default: (color: air, opacity: .9),
-    hover:  (color: air),
-    color:  (color: punch),
-    shadow: (color: blackNeutral, opacity: .2)
+    default: (background: (color: air, opacity: .9), shadow: (color: blackNeutral, opacity: .2), color: punch),
+    hover:  (background: air)
   )
 );
+
+
+
+
