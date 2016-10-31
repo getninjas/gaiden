@@ -1,2 +1,6 @@
 //sass-lint:disable-all
 @import './node_modules/reset-css/_reset';
+
+* {
+  box-sizing: border-box;
+}
