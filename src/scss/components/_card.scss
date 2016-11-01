@@ -6,9 +6,13 @@
 **/
 
 .card {
-  padding: 18px 21px;
+  padding: 20px;
   background-color: get-color(air);
   border-radius: 6px;
+
+  @include media-gt(small) {
+    padding: 30px;
+  }
 
   &__header {
     line-height: 1.2;
