@@ -11,13 +11,14 @@
     "clear": "rm -rf ./build/*",
     "build:prod": "build:prod:html && build:prod:css",
     "build:dev": "build:dev:html && build:dev:css",
-    "watch:css": "onchange \"src/scss\" \"docs/demo\" -- build:dev:css",
+    "watch:css": "onchange \"src/scss\" -- build:dev:css",
     "watch:html": "onchange \"src/html\" -- build:dev:html",
     "watch:docs": "onchange \"docs/demo\" -- build:docs:dev",
-    "watch": "npm-run-all -p watch:css watch:html watch:docs",
+    "watch:build": "onchange \"build/stylesheets\" -- build:docs:dev",
+    "watch": "npm-run-all -p watch:css watch:html watch:docs watch:build",
     "browsersync": "browser-sync start --config .browser-sync.js",
     "browsersync:docs": "browser-sync start --config .browser-sync-docs.js",
-    "dev": "npm run clear && FORCE_COLOR=1 npm-run-all -p build:dev browsersync browsersync:docs watch && build:docs:dev"
+    "dev": "npm run clear && FORCE_COLOR=1 npm-run-all -p build:dev browsersync browsersync:docs watch"
   },
   "bin": {
     "build:dev:css": "./bin/build/dev/css.js",
