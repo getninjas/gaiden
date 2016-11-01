@@ -10,12 +10,51 @@
       @include generate-grid-container($breakpoint, $breakpoints, $gutter);
       @include generate-grid-columns($breakpoint, $key, $gutter);
     } @else {
-      @include media-gt(small, $value: $gridSize - 1px) {
+      $previousBreakpoint: map-get(get-breakpoint-by-index($breakpoints, $index - 1), size);
+      @include media-gt(small, $value: $previousBreakpoint) {
         @include generate-grid-container($breakpoint, $breakpoints, $gutter);
         @include generate-grid-columns($breakpoint, $key, $gutter);
       }
     }
     $index: $index + 1;
+  }
+
+  /* no-flexbox fallback
+   *
+   * Just add this class to the body and use some
+   * lib, like modernizr, to append it
+   */
+  .container {
+    .no-flexbox & {
+      @include clearfix;
+
+      [class*='col-'] {
+        float: left;
+      }
+    }
+
+    /*
+     * container--fluid modifier
+     */
+    &--fluid {
+      width: 100%;
+      max-width: inherit;
+    }
+  }
+
+  /*
+   * Adding flex-shring, display flex and col-centered helper to columns
+   */
+  [class*='col-'] {
+    @include flex-shrink(0);
+    display: flex;
+
+    &.col-centered {
+      margin: {
+        right: auto;
+        left: auto;
+      }
+    }
   }
 };
 
@@ -25,27 +64,13 @@
   $gutterRatio: $gutter / $gridSize;
 
   [class*='col-#{$key}-'] {
-    margin-right: percentage($gutterRatio);
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &.col-centered {
-      margin: {
-        right: auto;
-        left: auto;
-      }
-    }
-  }
-
-  [class*='col-'] {
-    @include flex-shrink(0);
+    margin-right: percentage($gutterRatio / 2);
+    margin-left: percentage($gutterRatio / 2);
   }
 
   @for $i from 1 through $columns {
     .col-#{$key}-#{$i} {
-      width: percentage(($i / $columns) + ($gutterRatio / ($columns / $i)) - $gutterRatio);
+      width: percentage(($i / $columns) - $gutterRatio);
     }
   }
 };
@@ -54,8 +79,6 @@
 @mixin generate-grid-container($breakpoint, $breakpoints, $gutterPercentage) {
   $breakpointsLength: length($breakpoints);
   $index: index(map-values($breakpoints), $breakpoint);
-  $nextBreakpoint: if($index < $breakpointsLength, get-breakpoint-index($breakpoints, $index + 1), get-breakpoint-index($breakpoints, $index));
-  $nextGridSize: map-get($nextBreakpoint, size);
   $gridSize: map-get($breakpoint, size);
   $gridPadding: $gutterPercentage / 2;
 
@@ -63,25 +86,20 @@
     @include flex-direction(row);
     @include flex-wrap(wrap);
     @include flexbox;
-
-    width: 100%;
-    max-width: $nextGridSize + px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: percentage($gridPadding / $gridSize);
-    padding-right: percentage($gridPadding / $gridSize);
-
-    .no-flexbox & {
-      @include clearfix;
-
-      [class*='col-'] {
-        float: left;
-      }
+    margin: {
+      right: auto;
+      left: auto;
     }
+    padding: {
+      right: 0;
+      left: 0;
+    }
+    width: 100%;
+    max-width: $gridSize + px;
   }
 };
 
-@function get-breakpoint-index($breakpoints, $index) {
+@function get-breakpoint-by-index($breakpoints, $index) {
   @return nth(map-values($breakpoints), $index);
 };
 
