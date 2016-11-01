@@ -1,2 +1,11 @@
 //sass-lint:disable-all
 @import './node_modules/reset-css/_reset';
+
+em {
+  font-style: italic;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
