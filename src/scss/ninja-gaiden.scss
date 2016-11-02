@@ -18,5 +18,7 @@
 @import 'generic/heading';
 @import 'generic/body';
 @import 'components/button';
+@import 'components/picture';
+@import 'components/rating';
 
 @include generate-grid($defaultBreakpoints);
