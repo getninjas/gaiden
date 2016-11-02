@@ -1,0 +1,53 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css_components.media_box Media Box
+  *
+  * ## Fluid
+  * @demo /demo/gaiden-css/components/media_box/demo.html
+  *
+  * ## Using Grid System
+  * @demo /demo/gaiden-css/components/media_box/using_grid_system/demo.html
+**/
+
+.media-box {
+  @include flexbox;
+
+  color: get-color((color: blackNeutral, opacity: .6));
+
+  &__header,
+  &__rating {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    color: get-color(punch);
+
+    small {
+      font-weight: 700;
+      font-size: 12px;
+      font-style: normal;
+      color: get-color((color: blackNeutral, opacity: .6));
+    }
+  }
+
+  &__sidebar,
+  &__content {
+    @include flexbox;
+
+    vertical-align: top;
+
+    .no-flexbox & {
+      display: table-cell;
+    }
+  }
+
+  &__sidebar {
+    @include flex-shrink(0);
+
+    padding-right: 15px;
+  }
+
+  &__content {
+    @include flex-wrap(wrap);
+  }
+}

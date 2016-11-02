@@ -47,7 +47,7 @@
    */
   [class*='col-'] {
     @include flex-shrink(0);
-    display: flex;
+    @include flexbox;
 
     &.col-centered {
       margin: {
