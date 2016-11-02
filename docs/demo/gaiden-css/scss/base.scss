@@ -6,7 +6,6 @@
 
 body {
   padding: 20px;
-  font-size: 14px;
   &.reversed {
     background-color: get-color(punch);
   }
@@ -19,6 +18,7 @@ body {
 
 ul.colors,
 ul.gradients {
+  font-size: 14px;
   margin: 0;
   padding: 0;
 
