@@ -1,0 +1,44 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.page-banner.css Page Banner
+**/
+
+/**
+  * @styles Page Banner
+  *
+  * @demo
+  *
+  * <section class="page-banner" role="banner">
+  *   <img src="http://placehold.it/900x600" class="page-banner__image" role="img">
+  *   <header class="page-banner__content" role="sectionhead">
+  *     <h1 arial-level="1" role="heading">Encontre os melhores Pedreiros da sua Região</h1>
+  *   </header>
+  * </section>
+**/
+
+.page-banner {
+  @include flexbox;
+  @include flex-direction(row);
+  @include media-gt(small) {
+    height: 576px;
+  }
+
+  width: 100%;
+  height: 430px;
+
+  &__content {
+    @include flexbox;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: -100%;
+    z-index: 1;
+
+    [class*='-title'] {
+      color: get-color(air);
+    }
+  }
+}
