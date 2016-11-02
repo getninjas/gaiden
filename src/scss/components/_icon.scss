@@ -3,6 +3,10 @@
   margin: 2px 20px 0;
   vertical-align: top;
 
+  img {
+    max-width: 100%;
+  }
+
   &--small {
     margin: {
       right: 7px;
