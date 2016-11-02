@@ -21,5 +21,8 @@
 @import 'components/media_box';
 @import 'components/picture';
 @import 'components/rating';
+@import 'components/card';
+@import 'components/icon';
+@import 'components/hint';
 
 @include generate-grid($defaultBreakpoints);

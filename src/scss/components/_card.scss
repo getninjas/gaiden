@@ -1,0 +1,38 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.card.css Card
+  *
+  * ## Fluid
+  * @demo demo/gaiden-css/components/card/demo.html
+  *
+  * ## Using Grid System
+  * @demo demo/gaiden-css/components/card/using-grid-system/demo.html 260
+**/
+
+.card {
+  padding: 20px;
+  background-color: get-color(air);
+  border-radius: 6px;
+
+  @include media-gt(small) {
+    padding: 30px;
+  }
+
+  &__header {
+    [class*='-title'],
+    [class*='__title'] {
+      color: get-color(blackNeutral);
+    }
+  }
+
+  &__content {
+    color: get-color((color: blackNeutral, opacity: .6));
+    font-size: 14px;
+  }
+
+  &__footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: get-color((color: blackNeutral, opacity: .78));
+  }
+}
