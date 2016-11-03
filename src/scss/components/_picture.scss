@@ -7,22 +7,35 @@
   }
 
   &--cover {
+    @include media-gt(small) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 94%, 0 85%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 94%, 0 85%);
+    }
+    @include media-gt(medium) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 78%, 50% 97%, 0 78%);
+      clip-path: polygon(0 0, 100% 0, 100% 78%, 50% 97%, 0 78%);
+    }
+    @include media-gt(large) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 77%, 50% 94%, 0 77%);
+      clip-path: polygon(0 0, 100% 0, 100% 77%, 50% 94%, 0 77%);
+    }
+
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 94%, 0 80%);
     clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%);
 
     &::before,
     &::after {
       width: 70%;
-      height: 120px;
+      height: 220px;
       position: absolute;
       bottom: 0;
       content: '';
       background-color: get-color(air);
-      clip: rect(0, 2000px, 100px, 0);
+      clip: rect(0, 6000px, 220px, 0);
       transform-origin: center;
       z-index: 1;
     }
@@ -35,10 +48,10 @@
         transform: rotate(9deg) translateY(100px);
       }
       @include media-gt(large) {
-        transform: rotate(7deg) translateY(99px);
+        transform: rotate(4deg) translateY(90%);
       }
 
-      left: 0;
+      left: -10px;
       transform: rotate(18deg) translateY(103px);
     }
 
@@ -50,10 +63,10 @@
         transform: rotate(-9deg) translateY(100px);
       }
       @include media-gt(large) {
-        transform: rotate(-7deg) translateY(99px);
+        transform: rotate(-4deg) translateY(90%);
       }
 
-      right: 0;
+      right: -10px;
       transform: rotate(-18deg) translateY(103px);
     }
 
