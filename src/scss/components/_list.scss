@@ -1,3 +1,19 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.list List
+  *
+  * ## Fluid
+  * @demo /demo/gaiden-css/components/list/demo.html
+  *
+  * ## Using Grid System
+  * @demo /demo/gaiden-css/components/list/using_grid_system/demo.html
+  *
+  * ## Stacked
+  * @demo /demo/gaiden-css/components/list/stacked/demo.html
+  *
+  * ## Stacked + Grid System
+  * @demo /demo/gaiden-css/components/list/stacked/using_grid_system/demo.html
+**/
 .list {
   @include flex-direction(row);
   @include flex-wrap(wrap);
