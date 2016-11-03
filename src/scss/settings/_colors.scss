@@ -3,9 +3,7 @@
   * @stylesheet gaiden_css.settings.colors.css Colors
   *
   * There are different colors that can be used:
-  * @iframe demo/gaiden-css/variables/colors/demo.html
-  *
-  *
+  * @iframe demo/gaiden-css/variables/colors/demo.html 360
 **/
 
 /**
@@ -31,13 +29,12 @@
   *
   * An some gradients defined
   *
-  * @iframe demo/gaiden-css/variables/colors/gradients/demo.html
-  *
+  * @iframe demo/gaiden-css/variables/colors/gradients/demo.html 260
 **/
 
 $colors: (
   air: (base: #fff),
-  blackNeutral: (base: rgba(0, 0, 0, .8)),
+  blackNeutral: (base: #333),
   breeze: (base: #eff4fa, darker: #c9d7e8),
   punch: (base: #1393f6, lighter: #21c1ff),
   serious: (base: #1272d5, darker: #004183),
