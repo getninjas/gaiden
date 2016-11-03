@@ -8,19 +8,20 @@
 .brand {
   @include flexbox;
   @include flex-direction(row);
+  @include flex-shrink(0);
 
   color: get-color(air);
-  text-shadow: 0 0 20px get-color((color: air, opacity: 0));
-  transition: text-shadow ease .2s;
 
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: none;
-    text-shadow: 0 0 45px get-color((color: air, opacity: .5));
+  .no-flexbox & {
+    display: inline-block;
+  }
+
+  &__link {
+    display: inline-block;
   }
 
   &__image {
+    display: inline-block;
     margin-right: 5px;
     vertical-align: top;
 
@@ -31,24 +32,23 @@
   }
 
   &__name {
-    margin-bottom: 0;
+    display: inline-block;
     color: get-color(air);
     font: {
-      weight: 800;
+      weight: 700;
       size: 20px;
     };
     letter-spacing: 1px;
+    line-height: .8;
 
     small {
       display: block;
-      margin-top: 0;
       font: {
         size: 12px;
         weight: 400;
         style: normal;
       };
       text-transform: uppercase;
-      text-align: justify;
     }
 
     .no-flexbox & {
