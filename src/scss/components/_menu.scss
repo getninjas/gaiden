@@ -1,0 +1,40 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.menu.css Menu
+  *
+  * @demo demo/gaiden-css/components/menu/demo.html
+**/
+
+.menu {
+  @include flexbox;
+  @include flex-direction(row);
+  @include flex-shrink(0);
+  padding: 24px;
+  justify-content: space-between;
+
+  .no-flexbox & {
+    @include clearfix;
+  }
+
+  &--over {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  &__brand {
+    justify-content: flex-start;
+
+    .no-flexbox & {
+      float: left;
+    }
+  }
+
+  &__options {
+    justify-content: flex-end;
+
+    .no-flexbox & {
+      float: right;
+    }
+  }
+}

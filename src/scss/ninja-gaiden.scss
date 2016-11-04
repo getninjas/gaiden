@@ -26,5 +26,6 @@
 @import 'components/hint';
 @import 'components/page-banner';
 @import 'components/brand';
+@import 'components/menu';
 
 @include generate-grid($defaultBreakpoints);
