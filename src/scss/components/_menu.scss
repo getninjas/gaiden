@@ -16,6 +16,10 @@
     @include clearfix;
   }
 
+  &--centered {
+    justify-content: center;
+  }
+
   &--over {
     width: 100%;
     position: absolute;

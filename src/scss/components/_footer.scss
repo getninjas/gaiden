@@ -1,0 +1,39 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.footer.css Footer
+  *
+  * @demo demo/gaiden-css/components/footer/demo.html
+**/
+
+.footer {
+  @include flexbox;
+  @include flex-direction(column);
+
+  background-color: get-color((color: blackNeutral, opacity: .9));
+
+  &__company-info {
+    background-color: get-color(blackNeutral);
+  }
+
+  &__link {
+    color: get-color(air);
+    font: {
+      size: 11px;
+      weight: 700;
+    };
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  &__phone {
+    font: {
+      size: 18px;
+      weight: 700;
+    };
+    color: get-color(air);
+
+    .hint__icon {
+      margin-right: 10px;
+    }
+  }
+}
