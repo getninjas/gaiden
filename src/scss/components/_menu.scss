@@ -7,8 +7,12 @@
 
 .menu {
   @include flexbox;
-  @include flex-direction(row);
   @include flex-shrink(0);
+  @include flex-direction(column);
+  @include media-gt(small) {
+    @include flex-direction(row);
+  }
+
   padding: 24px;
   justify-content: space-between;
 
