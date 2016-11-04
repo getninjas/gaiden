@@ -1,0 +1,13 @@
+//sass-lint:disable no-duplicate-properties
+@mixin backgrounds($backgroundMap: ()) {
+
+  @if $backgroundMap {
+    @each $bg in $backgroundMap {
+      $bg: -moz-linear-gradient($bg);
+      background-image: -webkit-linear-gradient($bg);
+      background-image: -o-linear-gradient($bg);
+      background-image: -ms-linear-gradient($bg);
+      background-image: linear-gradient($bg);
+    }
+  }
+}
