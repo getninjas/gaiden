@@ -1,4 +1,9 @@
 body {
+  @include media-gt(medium) {
+    margin: 0 0 map-deep-get($footerSize, mini, size);
+  }
+
+  margin: 0 0 map-deep-get($footerSize, large, size);
   font: {
     size: 16px;
     family: font-family('Lato');
