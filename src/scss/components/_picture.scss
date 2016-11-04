@@ -15,10 +15,34 @@
     clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%);
 
     &::before {
+      @include media-gt(small) {
+        @include backgrounds(
+          (
+            (10deg, get-color(air) 10%, transparent 10.2%),
+            (-10deg, get-color(air) 10%, transparent 10.2%)
+          )
+        );
+      }
+      @include media-gt(medium) {
+        @include backgrounds(
+          (
+            (7deg, get-color(air) 12%, transparent 12.2%),
+            (-7deg, get-color(air) 12%, transparent 12.2%)
+          )
+        );
+      }
+      @include media-gt(large) {
+        @include backgrounds(
+          (
+            (4deg, get-color(air) 12%, transparent 12.2%),
+            (-4deg, get-color(air) 12%, transparent 12.2%)
+          )
+        );
+      }
       @include backgrounds(
         (
-          (5deg, white 19%, transparent 19.2%),
-          (-5deg, white 19%, transparent 19.2%)
+          (32deg, get-color(air) 14%, transparent 14.2%),
+          (-32deg, get-color(air) 14%, transparent 14.2%)
         )
       );
       position: absolute;
@@ -27,6 +51,7 @@
       bottom: 0;
       left: 0;
       content: '';
+      z-index: 2;
     }
 
     .picture__image {
