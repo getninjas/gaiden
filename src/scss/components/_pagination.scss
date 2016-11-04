@@ -1,0 +1,52 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.pagination.css Pagination
+  *
+  * @demo demo/gaiden-css/components/pagination/demo.html
+  *
+  * ## With disabled item
+  * @demo demo/gaiden-css/components/pagination/disabled/demo.html
+  *
+  * ## With active item
+  * @demo demo/gaiden-css/components/pagination/active/demo.html
+**/
+
+.pagination {
+  &__item {
+    display: inline-block;
+
+    & + & {
+      margin-left: 3px;
+    }
+
+    a {
+      display: block;
+      padding: 6px 10px;
+      width: 100%;
+      height: 100%;
+      border: solid 1px get-color((color: blackNeutral, opacity: .2));
+      border-radius: 6px;
+    }
+
+    &-jump {
+      display: inline-block;
+      padding: 6px 5px;
+      border: 0;
+    }
+
+    &--disabled {
+      opacity: .3;
+    }
+
+    &--active,
+    &:hover {
+      &:not(.pagination__item--disabled) {
+        a {
+          color: get-color(air);
+          background-color: get-color(punch);
+          border-color: get-color(punch);
+        }
+      }
+    }
+  }
+}
