@@ -7,19 +7,6 @@
   }
 
   &--cover {
-    @include media-gt(small) {
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 94%, 0 85%);
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 94%, 0 85%);
-    }
-    @include media-gt(medium) {
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 78%, 50% 97%, 0 78%);
-      clip-path: polygon(0 0, 100% 0, 100% 78%, 50% 97%, 0 78%);
-    }
-    @include media-gt(large) {
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 77%, 50% 94%, 0 77%);
-      clip-path: polygon(0 0, 100% 0, 100% 77%, 50% 94%, 0 77%);
-    }
-
     width: 100%;
     height: 100%;
     position: relative;
@@ -27,47 +14,44 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 94%, 0 80%);
     clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%);
 
-    &::before,
-    &::after {
-      width: 70%;
-      height: 220px;
-      position: absolute;
-      bottom: 0;
-      content: '';
-      background-color: get-color(air);
-      clip: rect(0, 6000px, 220px, 0);
-      transform-origin: center;
-      z-index: 1;
-    }
-
     &::before {
       @include media-gt(small) {
-        transform: rotate(11deg) translateY(109px);
+        @include backgrounds(
+          (
+            (10deg, get-color(air) 10%, transparent 10.2%),
+            (-10deg, get-color(air) 10%, transparent 10.2%)
+          )
+        );
       }
       @include media-gt(medium) {
-        transform: rotate(9deg) translateY(100px);
+        @include backgrounds(
+          (
+            (7deg, get-color(air) 12%, transparent 12.2%),
+            (-7deg, get-color(air) 12%, transparent 12.2%)
+          )
+        );
       }
       @include media-gt(large) {
-        transform: rotate(4deg) translateY(90%);
+        @include backgrounds(
+          (
+            (4deg, get-color(air) 12%, transparent 12.2%),
+            (-4deg, get-color(air) 12%, transparent 12.2%)
+          )
+        );
       }
-
-      left: -10px;
-      transform: rotate(18deg) translateY(103px);
-    }
-
-    &::after {
-      @include media-gt(small) {
-        transform: rotate(-11deg) translateY(109px);
-      }
-      @include media-gt(medium) {
-        transform: rotate(-9deg) translateY(100px);
-      }
-      @include media-gt(large) {
-        transform: rotate(-4deg) translateY(90%);
-      }
-
-      right: -10px;
-      transform: rotate(-18deg) translateY(103px);
+      @include backgrounds(
+        (
+          (32deg, get-color(air) 14%, transparent 14.2%),
+          (-32deg, get-color(air) 14%, transparent 14.2%)
+        )
+      );
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      z-index: 2;
     }
 
     .picture__image {
