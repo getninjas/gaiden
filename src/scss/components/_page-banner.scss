@@ -1,0 +1,33 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.page-banner.css Page Banner
+  *
+  * @demo demo/gaiden-css/components/page-banner/demo.html
+**/
+
+.page-banner {
+  @include flexbox;
+  @include flex-direction(row);
+  @include media-gt(small) {
+    height: 576px;
+  }
+
+  width: 100%;
+  height: 430px;
+
+  &__content {
+    @include flexbox;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: -100%;
+    z-index: 1;
+
+    [class*='-title'] {
+      color: get-color(air);
+    }
+  }
+}

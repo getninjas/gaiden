@@ -9,13 +9,14 @@
     "postversion": "git push && git push --tags",
     "config": "npm config set progress=false && npm config set git-tag-version=true && npm link",
     "clear": "rm -rf ./build/*",
-    "build:prod": "build:prod:html && build:prod:css",
-    "build:dev": "build:dev:html && build:dev:css",
+    "build:prod": "build:prod:html && build:prod:image && build:prod:css",
+    "build:dev": "build:dev:html && build:dev:image && build:dev:css",
     "watch:css": "onchange \"src/scss\" -- build:dev:css",
     "watch:html": "onchange \"src/html\" -- build:dev:html",
     "watch:docs": "onchange \"docs/demo\" -- build:docs:dev",
+    "watch:image": "onchange \"src/images\" -- build:dev:image",
     "watch:build": "onchange \"build/stylesheets\" -- build:docs:dev",
-    "watch": "npm-run-all -p watch:css watch:html watch:docs watch:build",
+    "watch": "npm-run-all -p watch:css watch:html watch:docs watch:image watch:build",
     "browsersync": "browser-sync start --config .browser-sync.js",
     "browsersync:docs": "browser-sync start --config .browser-sync-docs.js",
     "dev": "npm run clear && FORCE_COLOR=1 npm-run-all -p build:dev browsersync browsersync:docs watch"
@@ -23,8 +24,10 @@
   "bin": {
     "build:dev:css": "./bin/build/dev/css.js",
     "build:dev:html": "./bin/build/dev/html.js",
+    "build:dev:image": "./bin/build/dev/image.js",
     "build:prod:css": "./bin/build/prod/css.js",
     "build:prod:html": "./bin/build/prod/html.js",
+    "build:prod:image": "./bin/build/prod/image.js",
     "build:docs:dev": "./bin/docs/dev/documentjs.js",
     "build:docs:prod": "./bin/docs/prod/documentjs.js"
   },

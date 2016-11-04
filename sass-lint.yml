@@ -24,6 +24,9 @@ rules:
   no-debug: 1
   no-ids: 2
   no-important: 1
+  nesting-depth:
+    - 1
+    - max-depth: 3
   hex-notation:
     - 2
     -

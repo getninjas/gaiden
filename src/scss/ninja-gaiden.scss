@@ -13,6 +13,7 @@
 @import 'tools/mixins/gradient';
 @import 'tools/mixins/font_family';
 @import 'tools/mixins/media';
+@import 'tools/mixins/multiple_gradients';
 @import 'generic/reset';
 @import 'generic/links';
 @import 'generic/heading';
@@ -25,6 +26,8 @@
 @import 'components/icon';
 @import 'components/hint';
 @import 'components/pagination';
+@import 'components/page-banner';
+@import 'components/brand';
 @import 'components/list';
 
 @include generate-grid($defaultBreakpoints);

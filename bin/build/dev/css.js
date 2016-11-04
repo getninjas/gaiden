@@ -8,6 +8,7 @@ const minifiedFile = `${outputDir}/ninja-gaiden.min.css`;
 
 const options = {
   sass: ` --include-path ${sourceDir} \
+    --source-map true -r \
     --output-style expanded \
     --sourceComments true \
     -o ${outputDir}`,

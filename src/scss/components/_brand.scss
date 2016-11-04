@@ -1,0 +1,58 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.brand.css Brand
+  *
+  * @demo demo/gaiden-css/components/brand/demo.html
+**/
+
+.brand {
+  @include flexbox;
+  @include flex-direction(row);
+  @include flex-shrink(0);
+
+  color: get-color(air);
+
+  .no-flexbox & {
+    display: inline-block;
+  }
+
+  &__link {
+    display: inline-block;
+  }
+
+  &__image {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: top;
+
+    .no-flexbox & {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__name {
+    display: inline-block;
+    color: get-color(air);
+    font: {
+      weight: 700;
+      size: 20px;
+    };
+    letter-spacing: 1px;
+    line-height: .8;
+
+    small {
+      display: block;
+      font: {
+        size: 12px;
+        weight: 400;
+        style: normal;
+      };
+      text-transform: uppercase;
+    }
+
+    .no-flexbox & {
+      display: inline-block;
+    }
+  }
+}

@@ -13,6 +13,9 @@
   @include media-gt(small) {
     padding: 30px;
   }
+  padding: 20px;
+  background-color: get-color(air);
+  border-radius: 6px;
 
   padding: 20px;
   background-color: get-color(air);
