@@ -1,0 +1,80 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.list List
+  *
+  * ## Fluid
+  * @demo /demo/gaiden-css/components/list/demo.html
+  *
+  * ## Links List (Fluid)
+  * @demo /demo/gaiden-css/components/list/links_list/demo.html
+  *
+  * ## Using Grid System
+  * @demo /demo/gaiden-css/components/list/using_grid_system/demo.html
+  *
+  * ## Stacked
+  * @demo /demo/gaiden-css/components/list/stacked/demo.html
+  *
+  * ## Stacked + Grid System
+  * @demo /demo/gaiden-css/components/list/stacked/using_grid_system/demo.html
+**/
+.list {
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include flexbox;
+
+  .no-flexbox & {
+    @include clearfix;
+  }
+
+  &--link {
+    color: get-color(punch);
+
+    .list__item {
+      padding: {
+        right: 12px;
+        left: 12px;
+      };
+
+      &:hover {
+        padding-left: 14px;
+        color: get-color(serious);
+      }
+
+      &::before {
+        content:  '›';
+      }
+    }
+  }
+
+  &--stacked {
+    display: block;
+
+    .list__item {
+      display: block;
+      width: auto;
+      float: none;
+
+      &::before {
+        margin-right: 2px;
+      }
+    }
+  }
+
+  &__item {
+    @include flex-shrink(0);
+    @include flexbox;
+
+    padding: 8px 0;
+    width: 25%;
+    transition: padding-left .25s, color .25s;
+
+    .no-flexbox & {
+      float: left;
+    }
+
+    &::before {
+      margin-right: 5px;
+      transition: all .25s;
+    }
+  }
+}

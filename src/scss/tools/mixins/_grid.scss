@@ -4,7 +4,7 @@
   @each $key, $breakpoint in $breakpoints {
     $columns: map-get($breakpoint, columns);
     $gridSize: map-get($breakpoint, size);
-    $gutter: calc-gutter-percentage($breakpoints) * $gridSize;
+    $gutter: calc-gutter-percentage($breakpoints);
 
     @if $index == 1 {
       @include generate-grid-container($breakpoint, $breakpoints, $gutter);
@@ -61,26 +61,24 @@
 @mixin generate-grid-columns($breakpoint, $key, $gutter) {
   $columns: map-get($breakpoint, columns);
   $gridSize: map-get($breakpoint, size);
-  $gutterRatio: $gutter / $gridSize;
 
   [class*='col-#{$key}-'] {
-    margin-right: percentage($gutterRatio / 2);
-    margin-left: percentage($gutterRatio / 2);
+    margin-right: percentage($gutter / 2);
+    margin-left: percentage($gutter / 2);
   }
 
   @for $i from 1 through $columns {
     .col-#{$key}-#{$i} {
-      width: percentage(($i / $columns) - $gutterRatio);
+      width: percentage(($i / $columns) - $gutter);
     }
   }
 };
 
 
-@mixin generate-grid-container($breakpoint, $breakpoints, $gutterPercentage) {
+@mixin generate-grid-container($breakpoint, $breakpoints, $gutter) {
   $breakpointsLength: length($breakpoints);
   $index: index(map-values($breakpoints), $breakpoint);
   $gridSize: map-get($breakpoint, size);
-  $gridPadding: $gutterPercentage / 2;
 
   .container {
     @include flex-direction(row);
@@ -91,8 +89,8 @@
       left: auto;
     }
     padding: {
-      right: 0;
-      left: 0;
+      right: percentage($gutter / 2);
+      left: percentage($gutter / 2);
     }
     width: 100%;
     max-width: $gridSize + px;

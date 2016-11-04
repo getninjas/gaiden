@@ -25,5 +25,6 @@
 @import 'components/icon';
 @import 'components/hint';
 @import 'components/pagination';
+@import 'components/list';
 
 @include generate-grid($defaultBreakpoints);
