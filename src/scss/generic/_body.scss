@@ -1,5 +1,5 @@
 body {
-  @include media-gt(medium) {
+  @include media(medium) {
     margin: 0 0 map-deep-get($footerSize, mini, size);
   }
 

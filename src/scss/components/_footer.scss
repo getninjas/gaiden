@@ -8,10 +8,10 @@
 .footer {
   @include flexbox;
   @include flex-direction(column);
-  @include media-gt(small) {
+  @include media(small) {
     text-align: inherit;
   }
-  @include media-gt(medium) {
+  @include media(medium) {
     max-height: map-deep-get($footerSize, mini, size);
   }
 
@@ -33,7 +33,7 @@
   }
 
   &__company-disclaimer {
-    @include media-gt(medium) {
+    @include media(medium) {
       text-align: inherit;
     }
 
@@ -52,7 +52,7 @@
   }
 
   &__brand {
-    @include media-gt(medium) {
+    @include media(medium) {
       justify-content: flex-end;
       margin-top: inherit;
     }
@@ -66,7 +66,7 @@
     }
 
     .no-flexbox & {
-      @include media-gt(medium) {
+      @include media(medium) {
         text-align: right;
       }
 
@@ -76,7 +76,7 @@
 
   &__social-bar {
     @include flexbox;
-    @include media-gt(medium) {
+    @include media(medium) {
       justify-content: inherit;
     }
 
@@ -84,7 +84,7 @@
     justify-content: center;
 
     .no-flexbox & {
-      @include media-gt(medium) {
+      @include media(medium) {
         margin: 0;
       }
 
@@ -108,7 +108,7 @@
 
   &__link,
   &__phone {
-    @include media-gt(medium) {
+    @include media(medium) {
       padding: inherit;
     }
 

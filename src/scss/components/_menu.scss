@@ -9,7 +9,7 @@
   @include flexbox;
   @include flex-shrink(0);
   @include flex-direction(column);
-  @include media-gt(small) {
+  @include media(small) {
     @include flex-direction(row);
   }
 
