@@ -15,7 +15,7 @@
     clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%);
 
     &::before {
-      @include media-gt(small) {
+      @include media(small) {
         @include backgrounds(
           (
             (10deg, get-color(air) 10%, transparent 10.2%),
@@ -23,7 +23,7 @@
           )
         );
       }
-      @include media-gt(medium) {
+      @include media(medium) {
         @include backgrounds(
           (
             (7deg, get-color(air) 12%, transparent 12.2%),
@@ -31,7 +31,7 @@
           )
         );
       }
-      @include media-gt(large) {
+      @include media(large) {
         @include backgrounds(
           (
             (4deg, get-color(air) 12%, transparent 12.2%),

@@ -11,7 +11,7 @@
       @include generate-grid-columns($breakpoint, $key, $gutter);
     } @else {
       $previousBreakpoint: map-get(get-breakpoint-by-index($breakpoints, $index - 1), size);
-      @include media-gt(small, $value: $previousBreakpoint) {
+      @include media(small, $value: $previousBreakpoint) {
         @include generate-grid-container($breakpoint, $breakpoints, $gutter);
         @include generate-grid-columns($breakpoint, $key, $gutter);
       }
