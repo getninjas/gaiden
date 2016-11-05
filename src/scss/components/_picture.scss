@@ -41,8 +41,8 @@
       }
       @include backgrounds(
         (
-          (32deg, get-color(air) 14%, transparent 14.2%),
-          (-32deg, get-color(air) 14%, transparent 14.2%)
+          (20deg, get-color(air) 12%, transparent 12.2%),
+          (-20deg, get-color(air) 12%, transparent 12.2%)
         )
       );
       position: absolute;
