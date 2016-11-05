@@ -10,7 +10,7 @@
 **/
 
 .card {
-  @include media-gt(small) {
+  @include media(small) {
     padding: 30px;
   }
   padding: 20px;

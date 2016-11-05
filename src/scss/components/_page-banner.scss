@@ -8,7 +8,7 @@
 .page-banner {
   @include flexbox;
   @include flex-direction(row);
-  @include media-gt(small) {
+  @include media(small) {
     height: 576px;
   }
 
