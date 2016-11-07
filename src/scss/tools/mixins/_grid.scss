@@ -1,10 +1,12 @@
 @mixin generate-grid($breakpoints) {
   $index: 1;
+  $gutter: calc-gutter-percentage($breakpoints);
+
+  @include generate-grid-common-rules($gutter);
 
   @each $key, $breakpoint in $breakpoints {
     $columns: map-get($breakpoint, columns);
     $gridSize: map-get($breakpoint, size);
-    $gutter: calc-gutter-percentage($breakpoints);
 
     @if $index == 1 {
       @include generate-grid-container($breakpoint, $breakpoints, $gutter);
@@ -18,7 +20,9 @@
     }
     $index: $index + 1;
   }
+};
 
+@mixin generate-grid-common-rules($gutter) {
   /* no-flexbox fallback
    *
    * Just add this class to the body and use some
