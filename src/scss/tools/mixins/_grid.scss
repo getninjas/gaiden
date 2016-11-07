@@ -29,6 +29,22 @@
    * lib, like modernizr, to append it
    */
   .container {
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include flexbox;
+
+    margin: {
+      right: auto;
+      left: auto;
+    }
+
+    padding: {
+      right: percentage($gutter / 2);
+      left: percentage($gutter / 2);
+    }
+
+    width: 100%;
+
     .no-flexbox & {
       @include clearfix;
 
@@ -93,18 +109,6 @@
   $gridSize: map-get($breakpoint, size);
 
   .container {
-    @include flex-direction(row);
-    @include flex-wrap(wrap);
-    @include flexbox;
-    margin: {
-      right: auto;
-      left: auto;
-    }
-    padding: {
-      right: percentage($gutter / 2);
-      left: percentage($gutter / 2);
-    }
-    width: 100%;
     max-width: $gridSize + px;
   }
 };
