@@ -75,6 +75,10 @@
     margin-left: percentage($gutter / 2);
   }
 
+  .hide-#{$key} {
+    display: none;
+  }
+
   @for $i from 1 through $columns {
     .col-#{$key}-#{$i} {
       width: percentage(($i / $columns) - $gutter);
