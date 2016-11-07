@@ -1,0 +1,151 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.footer.css Footer
+  *
+  * @demo demo/gaiden-css/components/footer/demo.html 500
+**/
+
+.footer {
+  @include flexbox;
+  @include flex-direction(column);
+  @include media(small) {
+    text-align: inherit;
+  }
+  @include media(medium) {
+    max-height: map-deep-get($footerSize, mini, size);
+  }
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-height: map-deep-get($footerSize, large, size);
+  background-color: get-color((color: blackNeutral, opacity: .9));
+  text-align: center;
+
+  &__company-info {
+    padding: {
+      top: 24px;
+      bottom: 24px;
+    };
+    background-color: get-color(blackNeutral);
+  }
+
+  &__company-disclaimer {
+    @include media(medium) {
+      text-align: inherit;
+    }
+
+    margin: 0 auto;
+    padding: {
+      right: 20px;
+      left: 20px;
+    };
+    color: get-color((color: air, opacity: .5));
+    text-align: center;
+    font: {
+      weight: 300;
+      size: 11px;
+    }
+    letter-spacing: .3px;
+  }
+
+  &__brand {
+    @include media(medium) {
+      justify-content: flex-end;
+      margin-top: inherit;
+    }
+
+    margin-top: 24px;
+    justify-content: center;
+
+    a {
+      font-size: 22px;
+      color: get-color((color: air, opacity: .8));
+    }
+
+    .no-flexbox & {
+      @include media(medium) {
+        text-align: right;
+      }
+
+      text-align: center;
+    }
+  }
+
+  &__social-bar {
+    @include flexbox;
+    @include media(medium) {
+      justify-content: inherit;
+    }
+
+    width: 100%;
+    justify-content: center;
+
+    .no-flexbox & {
+      @include media(medium) {
+        margin: 0;
+      }
+
+      margin: 0 auto;
+      width: auto;
+    }
+
+    li {
+      margin-left: 30px;
+      line-height: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      .no-flexbox & {
+        float: left;
+      }
+    }
+  }
+
+  &__link,
+  &__phone {
+    @include media(medium) {
+      padding: inherit;
+    }
+
+    padding: {
+      top: 20px;
+      bottom: 20px;
+    }
+    width: 100%;
+    text-align: center;
+  }
+
+  &__link {
+    display: block;
+    color: get-color(air);
+    font: {
+      size: 11px;
+      weight: 400;
+    };
+    text-transform: uppercase;
+  }
+
+  &__phone {
+    @include flexbox;
+    justify-content: center;
+    font: {
+      size: 18px;
+      weight: 400;
+    };
+    color: get-color(air);
+
+    .no-flexbox & {
+      margin: 0 auto;
+      width: auto;
+    }
+
+    .hint__icon {
+      margin-right: 10px;
+    }
+  }
+}

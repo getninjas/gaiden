@@ -23,7 +23,7 @@ h5,
 
 h1,
 .page-title {
-  @include media-gt(small) {
+  @include media(small) {
     font-size: 36px;
   }
 
@@ -31,7 +31,7 @@ h1,
   font-size: 24px;
 
   small {
-    @include media-gt(small) {
+    @include media(small) {
       font-size: 18px;
     }
 
@@ -42,7 +42,7 @@ h1,
 
 h2,
 .section-title {
-  @include media-gt(small) {
+  @include media(small) {
     font-size: 24px;
 
     small {
@@ -61,7 +61,7 @@ h2,
 
 h3,
 .container-title {
-  @include media-gt(small) {
+  @include media(small) {
     font-size: 18px;
   }
 
