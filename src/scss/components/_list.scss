@@ -30,12 +30,16 @@
     color: get-color(punch);
 
     .list__item {
+      @include flex-wrap(nowrap);
+
       padding: {
         right: 12px;
         left: 12px;
       };
 
-      &:hover {
+      &:hover,
+      &:active,
+      &:focus {
         padding-left: 14px;
         color: get-color(serious);
       }
@@ -62,7 +66,6 @@
 
   &__item {
     @include flex-shrink(0);
-    @include flex-wrap(nowrap);
     @include flexbox;
 
     padding: 8px 0;
@@ -76,6 +79,11 @@
     &::before {
       margin-right: 5px;
       transition: all .25s;
+    }
+
+    &[class*='col-'] {
+      padding-left: inherit;
+      padding-right: inherit;
     }
   }
 }
