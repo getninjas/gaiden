@@ -67,10 +67,11 @@
   }
 
   /*
-   * Adding flex-shring, display flex and col-centered helper to columns
+   * Adding flex-shring, flex-wrap, display flex and col-centered helper to columns
    */
   [class*='col-'] {
     @include flex-shrink(0);
+    @include flex-wrap(wrap);
     @include flexbox;
 
     &.col-centered {
