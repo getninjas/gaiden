@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="35px" viewBox="0 0 34 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>52338DE5-EE9D-4884-AAFD-E659BC1672C0</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <circle id="path-1" cx="15" cy="15.2024104" r="15"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="34" height="34">
+            <rect x="-2" y="-1.79758961" width="34" height="34" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.8">
+        <g id="RODAPE" transform="translate(-717.000000, -103.000000)">
+            <g id="Group-10" transform="translate(572.000000, 105.000000)">
+                <g id="Group-9" transform="translate(147.000000, 0.000000)">
+                    <g id="Group-6">
+                        <use id="Oval-1" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="4" opacity="0.2" xlink:href="#path-1"></use>
+                        <path d="M12.9380952,22.5036302 L15.6700952,22.5036302 L15.6700952,14.9995479 L17.7195952,14.9995479 L18.1249286,12.6547933 L15.6700952,12.6547933 L15.6700952,10.9557054 C15.6700952,10.4079731 16.0242619,9.83287928 16.5304286,9.83287928 L17.9255952,9.83287928 L17.9255952,7.48812468 L16.2157619,7.48812468 C13.5404286,7.5957358 12.9907619,9.14516913 12.9430952,10.7726831 L12.9380952,12.6547933 L11.5714286,12.6547933 L11.5714286,14.9995479 L12.9380952,14.9995479 L12.9380952,22.5036302 Z" id="Fill-4" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
