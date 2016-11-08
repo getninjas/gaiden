@@ -80,11 +80,6 @@
       }
     }
   }
-
-  .col--content-centered {
-    justify-content: center;
-    text-align: center;
-  }
 };
 
 @mixin generate-grid-columns($breakpoint, $key, $gutter) {
@@ -106,6 +101,7 @@
     }
   }
 };
+
 
 @mixin generate-grid-container($breakpoint, $breakpoints, $gutter) {
   $breakpointsLength: length($breakpoints);
