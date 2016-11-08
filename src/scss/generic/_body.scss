@@ -1,9 +1,4 @@
 body {
-  @include media(medium) {
-    margin: 0 0 map-deep-get($footerSize, mini, size);
-  }
-
-  margin: 0 0 map-deep-get($footerSize, large, size);
   font: {
     size: 16px;
     family: font-family('Lato');
@@ -11,4 +6,12 @@ body {
   };
   line-height: 1.3;
   color: get-color(blackNeutral);
+
+  .sticky & {
+    @include media(medium) {
+      margin: 0 0 map-deep-get($footerSize, mini, size);
+    }
+
+    margin: 0 0 map-deep-get($footerSize, large, size);
+  }
 }
