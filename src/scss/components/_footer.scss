@@ -21,7 +21,6 @@
   bottom: 0;
   left: 0;
   max-height: map-deep-get($footerSize, large, size);
-  background-color: get-color((color: blackNeutral, opacity: .9));
   text-align: center;
 
   &__company-info {
@@ -37,7 +36,7 @@
       text-align: inherit;
     }
 
-    margin: 15px auto 0 auto;
+    margin: 15px auto 0;
     padding: {
       right: 20px;
       left: 20px;
@@ -147,5 +146,9 @@
     .hint__icon {
       margin-right: 10px;
     }
+  }
+
+  &__menu {
+    background-color: get-color((color: blackNeutral, opacity: .9));
   }
 }
