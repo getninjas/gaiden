@@ -1,10 +1,12 @@
 @mixin generate-grid($breakpoints) {
   $index: 1;
+  $gutter: calc-gutter-percentage($breakpoints);
+
+  @include generate-grid-common-rules($gutter);
 
   @each $key, $breakpoint in $breakpoints {
     $columns: map-get($breakpoint, columns);
     $gridSize: map-get($breakpoint, size);
-    $gutter: calc-gutter-percentage($breakpoints);
 
     @if $index == 1 {
       @include generate-grid-container($breakpoint, $breakpoints, $gutter);
@@ -18,13 +20,31 @@
     }
     $index: $index + 1;
   }
+};
 
+@mixin generate-grid-common-rules($gutter) {
   /* no-flexbox fallback
    *
    * Just add this class to the body and use some
    * lib, like modernizr, to append it
    */
   .container {
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include flexbox;
+
+    margin: {
+      right: auto;
+      left: auto;
+    }
+
+    padding: {
+      right: percentage($gutter / 2);
+      left: percentage($gutter / 2);
+    }
+
+    width: 100%;
+
     .no-flexbox & {
       @include clearfix;
 
@@ -71,6 +91,10 @@
     margin-left: percentage($gutter / 2);
   }
 
+  .hide-#{$key} {
+    display: none;
+  }
+
   @for $i from 1 through $columns {
     .col-#{$key}-#{$i} {
       width: percentage(($i / $columns) - $gutter);
@@ -85,18 +109,6 @@
   $gridSize: map-get($breakpoint, size);
 
   .container {
-    @include flex-direction(row);
-    @include flex-wrap(wrap);
-    @include flexbox;
-    margin: {
-      right: auto;
-      left: auto;
-    }
-    padding: {
-      right: percentage($gutter / 2);
-      left: percentage($gutter / 2);
-    }
-    width: 100%;
     max-width: $gridSize + px;
   }
 };
