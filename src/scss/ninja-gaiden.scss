@@ -35,6 +35,7 @@
 @import 'components/list';
 @import 'components/menu';
 @import 'components/footer';
+@import 'components/wall';
 
 @include generate-grid($defaultBreakpoints);
 @include generate-spaces;
