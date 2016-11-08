@@ -20,9 +20,7 @@ $spaces: (
   @each $groupName, $spaceGroup in $spaces {
     @each $key, $space in $spaceGroup {
       .space-#{$groupName}-#{$key} {
-        & + & {
-          margin-top: $space + px;
-        }
+        margin-top: $space + px;
       }
     }
   }
