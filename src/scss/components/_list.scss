@@ -41,7 +41,7 @@
       }
 
       &::before {
-        content:  '›';
+        content: '›';
       }
     }
   }
@@ -62,6 +62,7 @@
 
   &__item {
     @include flex-shrink(0);
+    @include flex-wrap(nowrap);
     @include flexbox;
 
     padding: 8px 0;
