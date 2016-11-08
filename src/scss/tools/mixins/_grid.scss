@@ -12,14 +12,34 @@
       @include generate-grid-container($breakpoint, $breakpoints, $gutter);
       @include generate-grid-columns($breakpoint, $key, $gutter);
     } @else {
-      $previousBreakpoint: map-get(get-breakpoint-by-index($breakpoints, $index - 1), size);
-      @include media(small, $value: $previousBreakpoint) {
+      $previousBreakpoint: nth(map-keys($breakpoints), $index - 1);
+      @include media($previousBreakpoint) {
         @include generate-grid-container($breakpoint, $breakpoints, $gutter);
         @include generate-grid-columns($breakpoint, $key, $gutter);
-      }
+      };
     }
+
+    @include generate-grid-hide-helper($key, $breakpoints, $index);
     $index: $index + 1;
   }
+};
+
+@mixin generate-grid-hide-helper($key, $breakpoints, $index) {
+  $numberBreakpoints:  length($breakpoints);
+  $previousBreakpoint: nth(map-keys($breakpoints), max(1, $index - 1));
+  $mediaQueryConfig: (start: $previousBreakpoint, end: $key);
+
+  @if $index == 1 {
+    $mediaQueryConfig: (end: $key);
+  } @else if $index == $numberBreakpoints {
+    $mediaQueryConfig: (start: $previousBreakpoint);
+  }
+
+  @include media($mediaQueryConfig...) {
+    .hide-#{$key} {
+      display: none;
+    }
+  };
 };
 
 @mixin generate-grid-common-rules($gutter) {
@@ -91,17 +111,20 @@
     margin-left: percentage($gutter / 2);
   }
 
-  .hide-#{$key} {
-    display: none;
-  }
-
   @for $i from 1 through $columns {
     .col-#{$key}-#{$i} {
       width: percentage(($i / $columns) - $gutter);
     }
+
+    .col-push-#{$key}-#{$i} {
+      margin-left: percentage(($i / $columns) + $gutter/2);
+    }
+
+    .col-offset-#{$key}-#{$i} {
+      left: percentage(($i / $columns));
+    }
   }
 };
-
 
 @mixin generate-grid-container($breakpoint, $breakpoints, $gutter) {
   $breakpointsLength: length($breakpoints);
