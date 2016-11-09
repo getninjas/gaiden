@@ -12,7 +12,7 @@
     text-align: inherit;
   }
   @include media(medium) {
-    max-height: map-deep-get($footerSize, mini, size);
+    max-height: map-deep-get($footerSize, mini, size) + px;
   }
 
   width: 100%;
@@ -20,7 +20,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  max-height: map-deep-get($footerSize, large, size);
+  max-height: map-deep-get($footerSize, large, size) + px;
   text-align: center;
 
   &__company-info {
