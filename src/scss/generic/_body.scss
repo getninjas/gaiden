@@ -9,9 +9,9 @@ body {
 
   .sticky & {
     @include media(medium) {
-      margin: 0 0 map-deep-get($footerSize, mini, size);
+      margin-bottom: map-deep-get($footerSize, mini, size);
     }
 
-    margin: 0 0 map-deep-get($footerSize, large, size);
+    margin-bottom: map-deep-get($footerSize, large, size);
   }
 }
