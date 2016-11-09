@@ -4,7 +4,7 @@ const shelljs = require('shelljs');
 
 const sourceDir = './src/scss';
 const outputDir = './build/stylesheets';
-const minifiedFile = `${outputDir}/ninja-gaiden.min.css`;
+const minifiedFile = `${outputDir}/gaiden.min.css`;
 
 const options = {
   sass: ` --include-path ${sourceDir} \

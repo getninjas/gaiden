@@ -18,4 +18,4 @@ const options = {
 
 shelljs.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
 shelljs.exec(`documentjs`);
-shelljs.cp('./build/stylesheets/ninja-gaiden.css', `${docsDir}/`)
+shelljs.cp('./build/stylesheets/gaiden.css', `${docsDir}/`)
