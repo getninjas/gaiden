@@ -21,6 +21,7 @@
 @import 'generic/heading';
 @import 'generic/html';
 @import 'generic/body';
+@import 'generic/content-centered';
 @import 'components/button';
 @import 'components/media_box';
 @import 'components/picture';
@@ -34,6 +35,7 @@
 @import 'components/list';
 @import 'components/menu';
 @import 'components/footer';
+@import 'components/wall';
 
 @include generate-grid($defaultBreakpoints);
 @include generate-spaces;

@@ -1,0 +1,17 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.wall.css Wall
+  *
+  * @demo demo/gaiden-css/components/wall/demo.html
+**/
+
+.wall {
+  padding: {
+    top: 80px;
+    bottom: 80px;
+  }
+
+  &--highlighted {
+    background-color: get-color(breeze);
+  }
+}
