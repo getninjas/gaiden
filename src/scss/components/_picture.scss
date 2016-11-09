@@ -55,6 +55,7 @@
     }
 
     .picture__image {
+      -moz-force-broken-image-icon: 1; //sass-lint:disable-line no-misspelled-properties
       margin: auto;
       position: absolute;
       top: -9999px;
