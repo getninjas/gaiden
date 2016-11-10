@@ -1,0 +1,31 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.serives.css Services
+  *
+  * ## Services
+  * @demo demo/gaiden-css/components/services/demo.html
+**/
+.services {
+  &__title {
+    font-size: 18px;
+    color: get-color(punch);
+    text-align: center;
+    position: relative;
+  }
+  &__title:before,
+  &__title:after {
+    content: '';
+    display: block;
+    width: 39%;
+    border: 1px solid get-color(punch);
+    opacity: .2;
+    position: absolute;
+    top: 50%;
+  }
+  &__title:before {
+    left: 0;
+  }
+  &__title:after {
+    right: 0;
+  }
+}
