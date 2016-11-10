@@ -1,0 +1,26 @@
+/**
+ * @parent gaiden_css.components
+ * @stylesheet gaiden_css.components.widget.css Widget
+ *
+ * @demo demo/gaiden-css/components/widget/demo.html
+**/
+
+.widget {
+  margin: 0 auto;
+  z-index: 4;
+  border-radius: 7px;
+  border: 1px solid get-color((color: blackNeutral, opacity: .1));
+  background-color: get-color(air);
+
+  &--over-banner {
+    margin-top: -180px;
+  }
+
+  &__title {
+    margin: 14px 10%;
+    padding: 15px 0;
+    width: 100%;
+    border-bottom: 2px solid get-color((color: punch, opacity: .2));
+    text-align: center;
+  }
+}
