@@ -7,25 +7,29 @@
 **/
 .services {
   &__title {
-    font-size: 18px;
+    position: relative;
     color: get-color(punch);
     text-align: center;
-    position: relative;
-  }
-  &__title:before,
-  &__title:after {
-    content: '';
-    display: block;
-    width: 39%;
-    border: 1px solid get-color(punch);
-    opacity: .2;
-    position: absolute;
-    top: 50%;
-  }
-  &__title:before {
-    left: 0;
-  }
-  &__title:after {
-    right: 0;
+    font-size: 18px;
+
+
+    &::before,
+    &::after {
+      display: block;
+      width: 39%;
+      position: absolute;
+      top: 50%;
+      border: 1px solid get-color(punch);
+      opacity: .2;
+      content: '';
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
   }
 }
