@@ -49,5 +49,6 @@
 
   &__content {
     @include flex-wrap(wrap);
+    @include flex-direction(column);
   }
 }
