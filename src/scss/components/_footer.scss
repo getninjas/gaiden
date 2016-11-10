@@ -121,12 +121,17 @@
 
   &__link {
     display: block;
-    color: get-color(air);
+    color: get-color((color: air, opacity: .8));
     font: {
       size: 11px;
       weight: 400;
     };
     text-transform: uppercase;
+    transition: color ease .2s;
+
+    &:hover {
+      color: get-color((color: air, opacity: 1));
+    }
   }
 
   &__phone {
