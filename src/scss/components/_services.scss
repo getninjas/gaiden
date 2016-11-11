@@ -32,4 +32,31 @@
       right: 0;
     }
   }
+
+  &__item {
+    position: relative;
+    border-radius: 6px;
+
+    &__title {
+      font-size: 14px;
+      color: get-color(air);
+      text-transform: uppercase;
+      text-align: center;
+      background-color: get-color(punch);
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: 0 0 6px 6px;
+    }
+
+    &__photo {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
