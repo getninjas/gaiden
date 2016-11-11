@@ -1,6 +1,6 @@
 {
   "name": "gaiden",
-  "version": "1.0.0",
+  "version": "2.0.5",
   "description": "Styleguide for GetNinjas projects",
   "main": "index.js",
   "scripts": {
@@ -55,6 +55,6 @@
     "onchange": "^3.0.2",
     "postcss-cli": "^2.6.0",
     "reset-css": "^2.2.0",
-    "sass-lint": "git+ssh://git@github.com:sasstools/sass-lint#feature/disable-linters"
+    "sass-lint": "^1.10.2"
   }
 }

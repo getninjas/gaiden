@@ -3,6 +3,7 @@
 @import 'settings/buttons';
 @import 'settings/base_font';
 @import 'settings/footer';
+@import 'settings/spaces';
 @import 'tools/mixins/map_deep_get';
 @import 'tools/mixins/generate_button_sizes';
 @import 'tools/mixins/generate_button_types';
@@ -20,6 +21,7 @@
 @import 'generic/heading';
 @import 'generic/html';
 @import 'generic/body';
+@import 'generic/content-centered';
 @import 'components/button';
 @import 'components/media_box';
 @import 'components/picture';
@@ -34,5 +36,8 @@
 @import 'components/menu';
 @import 'components/footer';
 @import 'components/services';
+@import 'components/wall';
+@import 'components/widget';
 
 @include generate-grid($defaultBreakpoints);
+@include generate-spaces;

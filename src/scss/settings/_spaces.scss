@@ -1,0 +1,27 @@
+$spaces: (
+  section: (
+    small: 60,
+    medium: 72,
+    large: 80
+  ),
+  box: (
+    small: 24,
+    medium: 36,
+    large: 48
+  ),
+  element: (
+    small: 6,
+    medium: 12,
+    large: 16
+  )
+);
+
+@mixin generate-spaces($spaces: $spaces) {
+  @each $groupName, $spaceGroup in $spaces {
+    @each $key, $space in $spaceGroup {
+      .space-#{$groupName}-#{$key} {
+        margin-top: $space + px;
+      }
+    }
+  }
+};

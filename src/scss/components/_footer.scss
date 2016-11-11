@@ -12,7 +12,7 @@
     text-align: inherit;
   }
   @include media(medium) {
-    max-height: map-deep-get($footerSize, mini, size);
+    max-height: map-deep-get($footerSize, mini, size) + px;
   }
 
   width: 100%;
@@ -20,8 +20,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  max-height: map-deep-get($footerSize, large, size);
-  background-color: get-color((color: blackNeutral, opacity: .9));
+  max-height: map-deep-get($footerSize, large, size) + px;
   text-align: center;
 
   &__company-info {
@@ -37,7 +36,7 @@
       text-align: inherit;
     }
 
-    margin: 0 auto;
+    margin: 15px auto 0;
     padding: {
       right: 20px;
       left: 20px;
@@ -122,12 +121,17 @@
 
   &__link {
     display: block;
-    color: get-color(air);
+    color: get-color((color: air, opacity: .8));
     font: {
       size: 11px;
       weight: 400;
     };
     text-transform: uppercase;
+    transition: color ease .2s;
+
+    &:hover {
+      color: get-color((color: air, opacity: 1));
+    }
   }
 
   &__phone {
@@ -147,5 +151,9 @@
     .hint__icon {
       margin-right: 10px;
     }
+  }
+
+  &__menu {
+    background-color: get-color((color: blackNeutral, opacity: .9));
   }
 }

@@ -21,6 +21,16 @@ h5,
   }
 }
 
+.page-title,
+.section-title,
+.container-title,
+.card-title,
+.info-title {
+  &--high-contrast {
+    color: get-color(punch);
+  }
+}
+
 h1,
 .page-title {
   @include media(small) {
