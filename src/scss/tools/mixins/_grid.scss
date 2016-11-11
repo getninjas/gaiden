@@ -94,6 +94,8 @@
     @include flex-wrap(wrap);
     @include flexbox;
 
+    max-width: 100%;
+
     &.col-centered {
       margin: {
         right: auto;
