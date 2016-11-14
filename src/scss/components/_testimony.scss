@@ -1,0 +1,54 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.testimony.css Testimony
+  *
+  * ## Services
+  * @demo demo/gaiden-css/components/testimony/demo.html
+**/
+.wrap__testimony__itens {
+  float: left;
+}
+.testimony {
+  justify-content: center;
+
+  &__quote {
+    background-color: get-color(air);
+    border-radius: 10px;
+    padding: 44px 20px;
+    position: relative;
+  }
+  &__quote:after {
+    content: '';
+    border-top: 15px solid get-color(air);
+    border-right: 15px solid get-color(breeze);
+    border-bottom: 15px solid get-color(breeze);
+    border-left: 15px solid get-color(breeze);
+    position: absolute;
+    bottom: -29px;
+    left: 50%;
+    transform: translateX(-100%);
+  }
+
+  &__user {
+    &__photo {
+      float: left;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: get-color(air);
+      overflow: hidden;
+      margin-right: 10px;
+    }
+
+    &__name {
+      font-size: 14px;
+      line-height: 15px;
+      font-weight: bold;
+    }
+
+    &__location {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
