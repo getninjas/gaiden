@@ -8,32 +8,34 @@
 .wrap__testimony__itens {
   float: left;
 }
+
 .testimony {
   justify-content: center;
 
   &__quote {
-    background-color: get-color(air);
-    border-radius: 10px;
     padding: 44px 20px;
     position: relative;
-  }
-  &__quote:after {
-    content: '';
-    border-top: 15px solid get-color(air);
-    border-right: 15px solid get-color(breeze);
-    border-bottom: 15px solid get-color(breeze);
-    border-left: 15px solid get-color(breeze);
-    position: absolute;
-    bottom: -29px;
-    left: 50%;
-    transform: translateX(-100%);
+    background-color: get-color(air);
+    border-radius: 10px;
+
+    &::after {
+      position: absolute;
+      bottom: -29px;
+      left: 50%;
+      border-top: 15px solid get-color(air);
+      border-right: 15px solid get-color(breeze);
+      border-bottom: 15px solid get-color(breeze);
+      border-left: 15px solid get-color(breeze);
+      transform: translateX(-100%);
+      content: '';
+    }
   }
 
   &__user {
     &__photo {
-      float: left;
       width: 30px;
       height: 30px;
+      float: left;
       border-radius: 50%;
       background-color: get-color(air);
       overflow: hidden;
