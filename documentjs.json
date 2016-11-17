@@ -1,7 +1,4 @@
 {
-  "siteDefaults": {
-    "debug": true
-  },
   "sites": {
     "gaiden_css": {
       "glob": "src/scss/**/*.{css,scss,md}",
