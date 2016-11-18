@@ -38,7 +38,7 @@
 @import 'components/gallery';
 @import 'components/wall';
 @import 'components/widget';
-@import 'components/testimony';
+@import 'components/dialog';
 
 @include generate-grid($defaultBreakpoints);
 @include generate-spaces;
