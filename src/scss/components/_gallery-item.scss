@@ -8,7 +8,8 @@
 .gallery-item {
   width: 100%;
   position: relative;
-  border-radius: 6px;
+  overflow: hidden;
+  border-radius: $borderRadius;
   cursor: pointer;
   transition: transform .2s linear;
   will-change: transform;
@@ -22,7 +23,7 @@
     width: 100%;
     position: absolute;
     bottom: 0;
-    border-radius: 0 0 6px 6px;
+    border-radius: 0 0 $borderRadius $borderRadius;
     overflow: hidden;
 
     &::before {
