@@ -1,4 +1,8 @@
 .picture {
+  &__image {
+    display: block;
+    background-color: get-color(air);
+  }
 
   &--rounded {
     .picture__image {

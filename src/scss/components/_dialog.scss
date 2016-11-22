@@ -1,0 +1,48 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.dialog.css Dialog
+  *
+  * ## Services
+  * @demo demo/gaiden-css/components/dialog/demo.html
+**/
+.dialog {
+  justify-content: center;
+
+  &__quote {
+    padding: 44px 20px;
+    position: relative;
+    background-color: get-color(air);
+    border-radius: 10px;
+
+    &::after {
+      position: absolute;
+      bottom: -29px;
+      left: 50%;
+      border-top: 15px solid get-color(air);
+      border-right: 15px solid get-color(breeze);
+      border-bottom: 15px solid get-color(breeze);
+      border-left: 15px solid get-color(breeze);
+      transform: translateX(-100%);
+      content: '';
+    }
+  }
+
+  &__user {
+    display: flex;
+
+    &__photo {
+      margin-right: 10px;
+    }
+
+    &__name {
+      line-height: 15px;
+      font-weight: bold;
+      padding-top: 4px;
+    }
+
+    &__location {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
