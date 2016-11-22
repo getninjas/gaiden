@@ -5,10 +5,6 @@
   * ## Services
   * @demo demo/gaiden-css/components/dialog/demo.html
 **/
-.wrap__dialog__itens {
-  padding-top: 4px;
-}
-
 .dialog {
   justify-content: center;
 
@@ -33,21 +29,15 @@
 
   &__user {
     display: flex;
-    
-    &__photo {
-      border-radius: 50%;
-      background-color: get-color(air);
-      overflow: hidden;
-      margin-right: 10px;
 
-      .picture__image {
-        float: left;
-      }
+    &__photo {
+      margin-right: 10px;
     }
 
     &__name {
       line-height: 15px;
       font-weight: bold;
+      padding-top: 4px;
     }
 
     &__location {
