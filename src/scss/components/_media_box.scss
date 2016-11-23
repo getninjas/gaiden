@@ -51,5 +51,6 @@
     @include flex-wrap(wrap);
     @include flex-direction(column);
     word-break: break-word;
+    font-size: 14px;
   }
 }
