@@ -40,7 +40,7 @@
       &:hover,
       &:active,
       &:focus {
-        padding-left: 14px;
+        transform: translateX(8px);
         color: get-color(serious);
       }
 
@@ -70,7 +70,7 @@
 
     padding: 8px 0;
     width: 25%;
-    transition: padding-left .25s, color .25s;
+    transition: transform .25s, color .25s;
 
     .no-flexbox & {
       float: left;
@@ -78,7 +78,6 @@
 
     &::before {
       margin-right: 5px;
-      transition: all .25s;
     }
 
     &[class*='col-'] {
