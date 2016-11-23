@@ -14,11 +14,6 @@
 
   color: get-color((color: blackNeutral, opacity: .6));
 
-  &__header,
-  &__rating {
-    margin-bottom: 16px;
-  }
-
   &__title {
     color: get-color(punch);
 
@@ -51,5 +46,6 @@
     @include flex-wrap(wrap);
     @include flex-direction(column);
     word-break: break-word;
+    font-size: 14px;
   }
 }
