@@ -4,6 +4,7 @@
 @import 'settings/base_font';
 @import 'settings/footer';
 @import 'settings/spaces';
+@import 'settings/border';
 @import 'tools/mixins/map_deep_get';
 @import 'tools/mixins/generate_button_sizes';
 @import 'tools/mixins/generate_button_types';
@@ -35,7 +36,7 @@
 @import 'components/list';
 @import 'components/menu';
 @import 'components/footer';
-@import 'components/gallery';
+@import 'components/thumbnail';
 @import 'components/wall';
 @import 'components/widget';
 @import 'components/dialog';
