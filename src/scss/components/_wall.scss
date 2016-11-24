@@ -14,4 +14,8 @@
   &--highlighted {
     background-color: get-color(breeze);
   }
+
+  &--separator {
+    border-top: 1px solid get-color((color: serious, opacity: 0.2));
+  }
 }
