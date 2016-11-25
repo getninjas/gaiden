@@ -32,7 +32,7 @@
 
   &__name {
     display: inline-block;
-    color: get-color(air);
+    color: get-color(blackNeutral);
     font: {
       weight: 700;
       size: 20px;
@@ -47,6 +47,7 @@
         weight: 400;
         style: normal;
       };
+      color: get-color(punch);
       text-transform: uppercase;
     }
 
