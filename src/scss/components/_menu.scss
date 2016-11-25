@@ -26,8 +26,9 @@
 
   &--over {
     width: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 2;
+    background-color: get-color(air);
   }
 
   &__brand {
