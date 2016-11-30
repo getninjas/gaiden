@@ -22,7 +22,9 @@
 
   &__image {
     display: inline-block;
-    margin-right: 5px;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
     vertical-align: top;
 
     .no-flexbox & {
@@ -39,14 +41,16 @@
     };
     letter-spacing: 1px;
     line-height: .8;
+    margin-top: 2px;
 
     small {
       display: block;
       font: {
-        size: 12px;
-        weight: 400;
+        size: 10px;
+        weight: 700;
         style: normal;
       };
+      margin-top: 4px;
       color: get-color(punch);
       text-transform: uppercase;
     }

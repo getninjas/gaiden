@@ -15,7 +15,7 @@
                             <mask id="mask-2" fill="white">
                                 <use xlink:href="#path-1"></use>
                             </mask>
-                            <use id="Combined-Shape" fill="#3285C6" xlink:href="#path-1"></use>
+                            <use id="Combined-Shape" fill="#1393F6" xlink:href="#path-1"></use>
                             <g id="Group-3" mask="url(#mask-2)">
                                 <g transform="translate(6.000000, 7.000000)"></g>
                             </g>
