@@ -16,8 +16,17 @@
     }
   }
 
-  label {
+  &__input {
     display: block;
+    padding: 13px;
+    border: 1px solid get-color((color: punch, opacity: .3));
+    border-radius: 6px;
+    background-color: get-color((color: breeze, opacity: .3));
+    font-size: 14px;
+  }
+
+  label {
+    display: inline-block;
     margin-bottom: 6px;
     font-size: 13px;
     font-weight: 700;
@@ -25,24 +34,10 @@
 
   input {
     padding: 13px 11px;
-    border: 1px solid get-color((color: punch, opacity: 30));
-    border-radius: 6px;
-    background-color: get-color(breeze);
-    font-size: 14px;
     color: get-color(blackNeutral);
   }
 
   select {
-    padding: 13px;
-    height: 43px;
-    border: 1px solid get-color(punch);
-    background: get-color(breeze);
-  }
-
-  textarea {
-    border-radius: 6px;
-    padding: 13px;
-    border: 1px solid get-color(punch);
-    background: get-color(breeze);
+    min-height: 43px;
   }
 }
