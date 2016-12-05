@@ -25,7 +25,7 @@
     font-size: 14px;
   }
 
-  label {
+  &__label {
     display: inline-block;
     margin-bottom: 6px;
     font-size: 13px;
@@ -38,6 +38,6 @@
   }
 
   select {
-    min-height: 43px;
+    height: 45px;
   }
 }
