@@ -40,17 +40,17 @@
     text-align: left;
     justify-content: center;
 
-    &__photo {
+    &-photo {
       margin-right: 10px;
     }
 
-    &__name {
+    &-name {
       line-height: 15px;
       font-weight: bold;
       padding-top: 4px;
     }
 
-    &__location {
+    &-location {
       font-size: 12px;
       line-height: 15px;
     }
