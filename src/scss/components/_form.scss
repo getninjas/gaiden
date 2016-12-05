@@ -23,13 +23,32 @@
     border-radius: 6px;
     background-color: get-color((color: breeze, opacity: .3));
     font-size: 14px;
+
+    .form__field--fluid & {
+      width: 100%;
+    }
   }
 
   &__label {
     display: inline-block;
     margin-bottom: 6px;
+    color: get-color((color: blackNeutral, opacity: .8));
     font-size: 13px;
     font-weight: 700;
+  }
+
+  &__radio,
+  &__check {
+    @include flexbox;
+
+    input {
+      margin-right: 10px;
+    }
+  }
+
+  .form__radio + .form__radio,
+  .form__check + .form__check {
+    margin-top: 6px;
   }
 
   input {
