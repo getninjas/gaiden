@@ -1,0 +1,48 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.form.css Form
+  *
+  * ## Form
+  * @demo demo/gaiden-css/components/form/demo.html
+**/
+
+.form {
+
+  &__field {
+    display: block;
+
+    + .form__field {
+      margin-top: 16px;
+    }
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  input {
+    padding: 13px 11px;
+    border: 1px solid get-color((color: punch, opacity: 30));
+    border-radius: 6px;
+    background-color: get-color(breeze);
+    font-size: 14px;
+    color: get-color(blackNeutral);
+  }
+
+  select {
+    padding: 13px;
+    height: 43px;
+    border: 1px solid get-color(punch);
+    background: get-color(breeze);
+  }
+
+  textarea {
+    border-radius: 6px;
+    padding: 13px;
+    border: 1px solid get-color(punch);
+    background: get-color(breeze);
+  }
+}
