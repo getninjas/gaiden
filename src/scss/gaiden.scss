@@ -40,6 +40,7 @@
 @import 'components/wall';
 @import 'components/widget';
 @import 'components/dialog';
+@import 'components/form';
 
 @include generate-grid($defaultBreakpoints);
 @include generate-spaces;
