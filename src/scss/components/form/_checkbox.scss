@@ -45,7 +45,11 @@
   }
 
   label {
+    @include flexbox;
     margin-left: 11px;
+    align-items: center;
+    font-size: 14px;
+    color: get-color((color: blackNeutral, opacity: .6));
 
     &::before {
       width: 16px;
