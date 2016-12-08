@@ -66,6 +66,14 @@
     font-weight: 700;
   }
 
+  &__label-link {
+    margin-left: 10px;
+    font: {
+      size: 13px;
+      weight: 400;
+    };
+  }
+
   input {
     padding: 13px 11px;
     color: get-color(blackNeutral);
