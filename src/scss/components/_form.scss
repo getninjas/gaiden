@@ -8,6 +8,14 @@
 
 .form {
 
+  &__container {
+    padding: {
+      right: 10%;
+      left: 10%;
+    }
+    width: 100%;
+  }
+
   &__field {
     display: block;
 

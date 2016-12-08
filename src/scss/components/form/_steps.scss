@@ -1,0 +1,42 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.form.steps.css Form Steps
+  *
+  * ## Form Steps
+  * @demo demo/gaiden-css/components/form/steps/demo.html
+**/
+
+.form__steps {
+  @include flexbox;
+  @include flex-direction;
+  @include flex-wrap;
+  margin-left: -13%;
+  margin-right: -13%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: get-color(recusaGray);
+  border-bottom: {
+    left-radius: 6px;
+    right-radius: 6px;
+  };
+  color: get-color(rastaGray);
+  font: {
+    size: 12px;
+    weight: 400;
+  }
+
+  &-item {
+    @include flex;
+    padding: 10px;
+    text-align: center;
+    border-bottom: {
+      left-radius: 6px;
+      right-radius: 6px;
+    };
+
+    &--active {
+      background-color: get-color(air);
+      color: get-color((color: rastaGray, opacity: .5));
+    }
+  }
+}

@@ -8,77 +8,79 @@
 </head>
 
 <body>
-  <form action="#" method="post" class="form container">
-    <fieldset class="col-small-12 col-medium-8 col-normal-6 col-centered">
-      <legend class="section-title">
-        Explain what you need
-        <small>Ask free estimate, online!</small>
-      </legend>
+  <div class="container">
+    <form action="#" method="post" class="form widget col-small-12 col-medium-8 col-normal-6 col-centered">
+      <fieldset class="form__container">
+        <legend class="widget__title section-title section-title--high-contrast">
+          Explain what you need
+          <small>Ask free estimate, online!</small>
+        </legend>
 
-      <div class="form__field form__field--fluid">
-        <label class="form__label" for="name">Name</label>
-        <input type="text" name="name" id="name" value="" placeholder="Type your name" class="form__input" />
-      </div>
+        <div class="form__field form__field--fluid">
+          <label class="form__label" for="name">Name</label>
+          <input type="text" name="name" id="name" value="" placeholder="Type your name" class="form__input" />
+        </div>
 
-      <div class="form__field form__field--fluid">
-        <label class="form__label" for="service_kind">Kind of Service</label>
-        <select name="service_kind" id="service_kind" placeholder="Choose the kind of service" class="form__input form__input--invalid">
-          <option value="0">Option 1</option>
-          <option value="1">Option 2</option>
-          <option value="3">Option 3</option>
-        </select>
-        <span class="form__message form__message--invalid">Invalid service</span>
-      </div>
+        <div class="form__field form__field--fluid">
+          <label class="form__label" for="service_kind">Kind of Service</label>
+          <select name="service_kind" id="service_kind" placeholder="Choose the kind of service" class="form__input form__input--invalid">
+            <option value="0">Option 1</option>
+            <option value="1">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <span class="form__message form__message--invalid">Invalid service</span>
+        </div>
 
-      <div class="form__field form__field--fluid">
-        <label class="form__label" for="additional_info">Additional info</label>
-        <textarea id="additional_info" name="additional_info" class="form__input form__input--invalid form__text"></textarea>
-        <span class="form__message form__message--invalid">Fill the additional info</span>
-      </div>
+        <div class="form__field form__field--fluid">
+          <label class="form__label" for="additional_info">Additional info</label>
+          <textarea id="additional_info" name="additional_info" class="form__input form__input--invalid form__text"></textarea>
+          <span class="form__message form__message--invalid">Fill the additional info</span>
+        </div>
 
-      <div class="form__field">
-        <label class="form__label" for="optionals">Optionals</label>
-        <div class="form__radio">
-          <input type="radio" name="optionals" id="radio_1" value="Option 1" value="radio_1" />
-          <label for="radio_1">Option 1</label>
+        <div class="form__field">
+          <label class="form__label" for="optionals">Optionals</label>
+          <div class="form__radio">
+            <input type="radio" name="optionals" id="radio_1" value="Option 1" value="radio_1" />
+            <label for="radio_1">Option 1</label>
+          </div>
+          <div class="form__radio">
+            <input type="radio" name="optionals" id="radio_2" value="Option 2" value="radio_2" />
+            <label for="radio_2">Option 2</label>
+          </div>
+          <span class="form__message form__message--invalid">Mark some optional</span>
         </div>
-        <div class="form__radio">
-          <input type="radio" name="optionals" id="radio_2" value="Option 2" value="radio_2" />
-          <label for="radio_2">Option 2</label>
-        </div>
-        <span class="form__message form__message--invalid">Mark some optional</span>
-      </div>
 
-      <div class="form__field">
-        <label class="form__label">Checks</label>
-        <div class="form__check">
-          <input type="checkbox" name="more_optionals" id="checkbox_1" value="Option 1" />
-          <label for="more_optionals">More optionals</label>
+        <div class="form__field">
+          <label class="form__label">Checks</label>
+          <div class="form__check">
+            <input type="checkbox" name="more_optionals" id="checkbox_1" value="Option 1" />
+            <label for="more_optionals">More optionals</label>
+          </div>
+          <div class="form__check">
+            <input type="checkbox" name="more_optionals" id="checkbox_2" value="Option 2" />
+            <label for="more_optionals">More optionals</label>
+          </div>
+          <div class="form__check">
+            <input type="checkbox" name="Para qual móveis?" id="Para qual móveis?-8" value="other">
+            <label for="Para qual móveis?-8">
+              <input type="text" name="Para qual móveis?" id="Para qual móveis?">
+            </label>
+          </div>
+          <div class="form__check">
+            <input type="checkbox" name="more_optionals" id="checkbox_2" value="Option 2" />
+            <label for="more_optionals">More optionals</label>
+          </div>
+          <span class="form__message form__message--invalid">Mark some optional</span>
         </div>
-        <div class="form__check">
-          <input type="checkbox" name="more_optionals" id="checkbox_2" value="Option 2" />
-          <label for="more_optionals">More optionals</label>
-        </div>
-        <div class="form__check">
-          <input type="checkbox" name="Para qual móveis?" id="Para qual móveis?-8" value="other">
-          <label for="Para qual móveis?-8">
-            <input type="text" name="Para qual móveis?" id="Para qual móveis?">
-          </label>
-        </div>
-        <div class="form__check">
-          <input type="checkbox" name="more_optionals" id="checkbox_2" value="Option 2" />
-          <label for="more_optionals">More optionals</label>
-        </div>
-        <span class="form__message form__message--invalid">Mark some optional</span>
-      </div>
 
-      <div class="form__steps form__field">
-        <ol>
-          <li class="active" data-step="seu_pedido">1. Seu pedido</li>
-          <li data-step="seus_dados">2. Seus dados</li>
-        </ol>
-      </div>
-    </fieldset>
-  </form>
+        <div class="form__field">
+          <ol class="form__steps">
+            <li class="form__steps-item form__steps-item--active" data-step="seu_pedido">1. Seu pedido</li>
+            <li class="form__steps-item" data-step="seus_dados">2. Seus dados</li>
+          </ol>
+        </div>
+      </fieldset>
+    </form>
+  </div>
 </body>
 </html>
