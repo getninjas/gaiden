@@ -1,0 +1,19 @@
+/**
+  * @parent gaiden_css.components.form
+  * @stylesheet gaiden_css.components.form.radio.css Form Radio
+  *
+  * ## Form Checkbox
+  * @demo demo/gaiden-css/components/form/radio/demo.html
+**/
+
+.form__radio {
+  @include flexbox;
+
+  input {
+    margin-right: 10px;
+  }
+
+  & + & {
+    margin-top: 6px;
+  }
+}

@@ -37,15 +37,6 @@
     font-weight: 700;
   }
 
-  &__radio {
-    @include flexbox;
-
-    input {
-      margin-right: 10px;
-    }
-  }
-
-  .form__radio + .form__radio,
   .form__check + .form__check {
     margin-top: 6px;
   }
