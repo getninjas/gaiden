@@ -1,0 +1,15 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.form.message.css Form Message
+  *
+  * ## Form Message
+  * @demo demo/gaiden-css/components/form/message/demo.html
+**/
+
+.form__message {
+  font-size: 12px;
+
+  &--invalid {
+    color: get-color(bloody);
+  }
+}

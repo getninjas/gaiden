@@ -43,6 +43,7 @@
 @import 'components/form';
 @import 'components/form/checkbox';
 @import 'components/form/radio';
+@import 'components/form/message';
 
 @include generate-grid($defaultBreakpoints);
 @include generate-spaces;

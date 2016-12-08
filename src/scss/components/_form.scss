@@ -33,6 +33,15 @@
       outline: none;
       box-shadow: 0 0 1px 1px get-color((color: serious, opacity: .5));
     }
+
+    &--invalid {
+      border-color: get-color(bloody);
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 1px 1px get-color((color: bloody, opacity: .5));
+      }
+    }
   }
 
   &__text {

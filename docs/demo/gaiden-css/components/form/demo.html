@@ -22,16 +22,18 @@
 
       <div class="form__field form__field--fluid">
         <label class="form__label" for="service_kind">Kind of Service</label>
-        <select name="service_kind" id="service_kind" placeholder="Choose the kind of service" class="form__input">
+        <select name="service_kind" id="service_kind" placeholder="Choose the kind of service" class="form__input form__input--invalid">
           <option value="0">Option 1</option>
           <option value="1">Option 2</option>
           <option value="3">Option 3</option>
         </select>
+        <span class="form__message form__message--invalid">Invalid service</span>
       </div>
 
       <div class="form__field form__field--fluid">
         <label class="form__label" for="additional_info">Additional info</label>
-        <textarea id="additional_info" name="additional_info" class="form__input form__text"></textarea>
+        <textarea id="additional_info" name="additional_info" class="form__input form__input--invalid form__text"></textarea>
+        <span class="form__message form__message--invalid">Fill the additional info</span>
       </div>
 
       <div class="form__field">
@@ -44,6 +46,7 @@
           <input type="radio" name="optionals" id="radio_2" value="Option 2" value="radio_2" />
           <label for="radio_2">Option 2</label>
         </div>
+        <span class="form__message form__message--invalid">Mark some optional</span>
       </div>
 
       <div class="form__field">
@@ -66,6 +69,7 @@
           <input type="checkbox" name="more_optionals" id="checkbox_2" value="Option 2" />
           <label for="more_optionals">More optionals</label>
         </div>
+        <span class="form__message form__message--invalid">Mark some optional</span>
       </div>
 
       <div class="form__steps form__field">
