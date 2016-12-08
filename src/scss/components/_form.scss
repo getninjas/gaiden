@@ -35,6 +35,11 @@
     }
   }
 
+  &__text {
+    height: auto;
+    min-height: 80px;
+  }
+
   &__label {
     display: inline-block;
     margin-bottom: 6px;
