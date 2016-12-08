@@ -45,6 +45,7 @@
 @import 'components/form/radio';
 @import 'components/form/message';
 @import 'components/form/steps';
+@import 'components/form/alert-message';
 
 @include generate-grid($defaultBreakpoints);
 @include generate-spaces;

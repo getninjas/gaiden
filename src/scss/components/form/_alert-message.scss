@@ -1,0 +1,23 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.form.message.css Form Message
+  *
+  * ## Form Message
+  * @demo demo/gaiden-css/components/form/message/demo.html
+**/
+
+.form__alert-message {
+  display: inline-block;
+
+  [class*='-title'] {
+    color: get-color(punch);
+  }
+
+  small {
+    color: get-color((color: blackNeutral, opacity: .6));
+    font: {
+      size: 12px;
+      style: normal;
+    };
+  }
+}
