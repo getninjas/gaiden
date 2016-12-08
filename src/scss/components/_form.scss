@@ -19,13 +19,19 @@
   &__input {
     display: block;
     padding: 13px;
-    border: 1px solid get-color((color: punch, opacity: .3));
+    border: 1px solid get-color((color: punch, opacity: .5));
     border-radius: 6px;
     background-color: get-color(breeze);
     font-size: 14px;
 
     .form__field--fluid & {
       width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 1px 1px get-color((color: serious, opacity: .5));
     }
   }
 
