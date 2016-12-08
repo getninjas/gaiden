@@ -1,0 +1,52 @@
+/**
+  * @parent gaiden_css.components.form
+  * @stylesheet gaiden_css.components.form.checkbox.css Form Checkbox
+  *
+  * ## Form Checkbox
+  * @demo demo/gaiden-css/components/form/checkbox/demo.html
+**/
+
+.form__check {
+  position: relative;
+  padding-left: 20px;
+
+  input {
+    position: absolute;
+  }
+
+  > input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+
+    //sass-lint:disable force-pseudo-nesting
+    &:checked ~ label::before {
+      color: get-color(air);
+      background: {
+        repeat: no-repeat;
+        position: center center;
+        color: get-color(punch);
+        image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAKCAYAAABv7tTEAAAABGdBTUEAALGPC/xhBQAAAIFJREFUKBWNkMEKgCAMQCWI6NO81k92qW7d+i/p0HozRxFaDV7TtsdU536EiHiYofnR7lwSAlljgaZ6M2nw1GewCYH1Hh2KNbRxkz4qgE1gKRPUd2HkxwpRJJcFtWgYwELFHvIT0ilU6mCDXFxHMsEy3TmxLBTEb+Eh6h3PV7LCIx9f9d351AjwGwAAAABJRU5ErkJggg==');
+      }
+    }
+  }
+
+  label {
+    margin-left: 11px;
+
+    &::before {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      left: 0;
+      border: 2px solid get-color(punch);
+      border-radius: 4px;
+      background-color: get-color(breeze);
+      content: '';
+      transition: background-color .1s;
+    }
+  }
+}

@@ -41,6 +41,7 @@
 @import 'components/widget';
 @import 'components/dialog';
 @import 'components/form';
+@import 'components/form/checkbox';
 
 @include generate-grid($defaultBreakpoints);
 @include generate-spaces;
