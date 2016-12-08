@@ -1,3 +1,4 @@
+//sass-lint:disable force-pseudo-nesting
 /**
   * @parent gaiden_css.components.form
   * @stylesheet gaiden_css.components.form.radio.css Form Radio
@@ -7,13 +8,54 @@
 **/
 
 .form__radio {
-  @include flexbox;
-
-  input {
-    margin-right: 10px;
-  }
+  position: relative;
+  padding-left: 20px;
 
   & + & {
     margin-top: 16px;
+  }
+
+  input {
+    position: absolute;
+    z-index: 2;
+  }
+
+  > input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+
+    &:checked ~ label::before {
+      color: get-color(air);
+      background: {
+        repeat: no-repeat;
+        position: center center;
+        color: get-color(air);
+        image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABGdBTUEAALGPC/xhBQAAAK1JREFUKBWVUssNwjAUs0OXYIZugRiDG5972QN6R3BjDMQWnYElCq9+NDlEIqh9lyh+flaeHSKVGXF+70DbCqoj3MF4w3FxBWmO8dtobQnr7zBbRWJ+kE+w2qDhK4jEv2QfdaFRkMSp3wOfSy5ZuoVDiG8uMXJc+wUhacG8+ftW+8Cs8oFuxkQnl+Tz1BJXlsrWtn8UM0hinkVTreWSEvRQHChVCk7cMWknTvwaAzPsQwFzEPenAAAAAElFTkSuQmCC');
+      }
+    }
+
+    &:hover ~ label::before,
+    &:focus ~ label::before {
+      box-shadow: 0 0 1px 2px get-color((color: punch, opacity: .5));
+    }
+  }
+
+  label {
+    margin-left: 11px;
+
+    &::before {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      left: 0;
+      border: 2px solid get-color(punch);
+      border-radius: 50%;
+      background-color: get-color(breeze);
+      content: '';
+    }
   }
 }
