@@ -21,11 +21,6 @@
       </div>
 
       <div class="form__field form__field--fluid">
-        <label class="form__label" for="email">E-mail</label>
-        <input type="text" name="email" id="email" value="" placeholder="Type your email" class="form__input" />
-      </div>
-
-      <div class="form__field form__field--fluid">
         <label class="form__label" for="service_kind">Kind of Service</label>
         <select name="service_kind" id="service_kind" placeholder="Choose the kind of service" class="form__input">
           <option value="0">Option 1</option>
@@ -67,6 +62,17 @@
             <input type="text" name="Para qual móveis?" id="Para qual móveis?">
           </label>
         </div>
+        <div class="form__check">
+          <input type="checkbox" name="more_optionals" id="checkbox_2" value="Option 2" />
+          <label for="more_optionals">More optionals</label>
+        </div>
+      </div>
+
+      <div class="form__steps form__field">
+        <ol>
+          <li class="active" data-step="seu_pedido">1. Seu pedido</li>
+          <li data-step="seus_dados">2. Seus dados</li>
+        </ol>
       </div>
     </fieldset>
   </form>
