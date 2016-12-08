@@ -31,6 +31,7 @@
     border-radius: 6px;
     background-color: get-color(breeze);
     font-size: 14px;
+    transition: box-shadow .18s;
 
     .form__field--fluid & {
       width: 100%;
@@ -47,7 +48,7 @@
 
       &:hover,
       &:focus {
-        box-shadow: 0 0 1px 1px get-color((color: bloody, opacity: .5));
+        box-shadow: 0 0 1px 1px get-color((color: bloody, key: darker, opacity: .5));
       }
     }
   }
