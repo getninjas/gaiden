@@ -11,7 +11,7 @@
   &__field {
     display: block;
 
-    + .form__field {
+    & + & {
       margin-top: 16px;
     }
   }
