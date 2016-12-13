@@ -10,6 +10,10 @@
   display: inline-block;
   font-size: 12px;
 
+  &:empty {
+    display: none;
+  }
+
   &--invalid {
     color: get-color(bloody);
   }
