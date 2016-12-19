@@ -13,6 +13,10 @@
     style: italic;
   }
 
+  &:empty {
+    display: none;
+  }
+
   &--invalid {
     color: get-color(bloody);
   }
