@@ -27,11 +27,11 @@
   &__input {
     display: block;
     padding: 13px;
-    border: 1px solid get-color((color: punch, opacity: .5));
+    border: 1px solid get-color((color: rastaGray, opacity: .2));
     border-radius: 6px;
-    background-color: get-color(breeze);
+    background-color: get-color((color: blackNeutral, opacity: .05));
     font-size: 14px;
-    transition: box-shadow .18s;
+    transition: background-color .18s;
 
     .form__field--fluid & {
       width: 100%;
@@ -40,15 +40,16 @@
     &:hover,
     &:focus {
       outline: none;
-      box-shadow: 0 0 1px 1px get-color((color: serious, opacity: .5));
+      background-color: get-color(air);
+      border-color: get-color((color: punch, opacity: .5));
     }
 
     &--invalid {
-      border-color: get-color(bloody);
+      border-color: get-color((color: bloody, opacity: .5));
 
       &:hover,
       &:focus {
-        box-shadow: 0 0 1px 1px get-color((color: bloody, key: darker, opacity: .5));
+        border-color: get-color((color: bloody, opacity: .5));
       }
     }
   }
