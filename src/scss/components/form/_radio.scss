@@ -35,8 +35,9 @@
         repeat: no-repeat;
         position: center center;
         color: get-color(air);
-        image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABGdBTUEAALGPC/xhBQAAAK1JREFUKBWVUssNwjAUs0OXYIZugRiDG5972QN6R3BjDMQWnYElCq9+NDlEIqh9lyh+flaeHSKVGXF+70DbCqoj3MF4w3FxBWmO8dtobQnr7zBbRWJ+kE+w2qDhK4jEv2QfdaFRkMSp3wOfSy5ZuoVDiG8uMXJc+wUhacG8+ftW+8Cs8oFuxkQnl+Tz1BJXlsrWtn8UM0hinkVTreWSEvRQHChVCk7cMWknTvwaAzPsQwFzEPenAAAAAElFTkSuQmCC');
+        image: radial-gradient(circle, transparent 18%, get-color(punch) 21%);
       }
+      box-shadow: none;
     }
 
     &:focus ~ label::before {
@@ -52,11 +53,11 @@
     color: get-color((color: blackNeutral, opacity: .6));
 
     &::before {
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       position: absolute;
       left: 0;
-      border: 2px solid get-color(punch);
+      box-shadow: inset 0 0 0 1px get-color((color: rastaGray, opacity: .3));
       border-radius: 50%;
       background-color: get-color(breeze);
       content: '';
