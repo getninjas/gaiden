@@ -1,0 +1,94 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.form.css Form
+  *
+  * ## Form
+  * @demo demo/gaiden-css/components/form/demo.html
+**/
+
+.form {
+
+  &__container {
+    padding: {
+      right: 10%;
+      left: 10%;
+    }
+    width: 100%;
+  }
+
+  &__field {
+    display: block;
+
+    & + & {
+      margin-top: 16px;
+    }
+  }
+
+  &__input {
+    display: block;
+    padding: 13px;
+    border: 1px solid get-color((color: punch, opacity: .5));
+    border-radius: 6px;
+    background-color: get-color(breeze);
+    font-size: 14px;
+    transition: box-shadow .18s;
+
+    .form__field--fluid & {
+      width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 1px 1px get-color((color: serious, opacity: .5));
+    }
+
+    &--invalid {
+      border-color: get-color(bloody);
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 1px 1px get-color((color: bloody, key: darker, opacity: .5));
+      }
+    }
+  }
+
+  &__text {
+    height: auto;
+    min-height: 80px;
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: get-color((color: blackNeutral, opacity: .8));
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  &__label-link {
+    margin-left: 10px;
+    font: {
+      size: 13px;
+      weight: 400;
+    };
+  }
+
+  &__description {
+    font-size: 12px;
+    color: get-color((color: blackNeutral, opacity: .5));
+
+    &.form__field {
+      margin-top: 5px;
+    }
+  }
+
+  input {
+    padding: 13px 11px;
+    color: get-color(blackNeutral);
+  }
+
+  select {
+    height: 45px;
+  }
+}
