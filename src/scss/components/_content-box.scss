@@ -1,0 +1,40 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css_components.content-box Content Box
+  *
+  * ## Simple sample
+  * @demo /demo/gaiden-css/components/content-box/demo.html
+  *
+  * ## With price elements
+  * @demo /demo/gaiden-css/components/content-box/prices.html
+**/
+
+.content-box {
+  padding: 24px;
+  background-color: get-color(air);
+  box-shadow: 0 4px 8px 0 get-color((color: blackNeutral, opacity: .12));
+  border-radius: 6px;
+
+  &__header {
+    border-bottom: 1px solid get-color(recusaGray);
+
+    &--highlighted {
+      .content-box__title {
+        color: get-color(rastaGray);
+        font-style: italic;
+      }
+    }
+
+    &--centered {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__body {
+    margin-top: 16px;
+  }
+}
