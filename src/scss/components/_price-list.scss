@@ -1,0 +1,67 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css_components.price-list Price List
+  *
+  * ## Simple sample
+  * @demo /demo/gaiden-css/components/price-list/demo.html
+**/
+
+.price-list {
+  @include flexbox;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+
+  text-align: center;
+
+  &__item {
+    @include flex;
+    @include flex-direction(row);
+
+    padding: {
+      top: 16px;
+      bottom: 16px;
+    };
+    border-top: 1px solid get-color(recusaGray);
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    &[class*='col-'] {
+      @include flex;
+      margin: 0;
+    }
+
+    &--highlighted {
+      @include flex($fg: 0, $fs: 0, $fb: 100%);
+    }
+  }
+
+  &__label,
+  &__value,
+  &__description {
+    display: block;
+    width: 100%;
+  }
+
+  &__label {
+    font: {
+      size: 14px;
+      style: italic;
+    };
+    color: get-color((color: blackNeutral, opacity: .75));
+  }
+
+  &__value {
+    font: {
+      size: 18px;
+      style: italic;
+    }
+  }
+
+  &__description {
+    margin-top: 8px;
+    font-size: 12px;
+    color: get-color((color: blackNeutral, opacity: .5));
+  }
+}
