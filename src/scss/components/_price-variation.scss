@@ -1,0 +1,37 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css_components.price-variation Price Variation
+  *
+  * ## Simple sample
+  * @demo /demo/gaiden-css/components/price-variation/demo.html
+**/
+
+.price-variation {
+  @include flexbox;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+
+  &__item {
+    @include flex;
+    @include flex-direction(row);
+
+    padding: {
+      top: 16px;
+      bottom: 16px;
+    };
+    border-top: 1px solid get-color(recusaGray);
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    &[class*='col-'] {
+      @include flex;
+      margin: 0;
+    }
+
+    &--stacked {
+      @include flex($fg: 0, $fs: 0, $fb: 100%);
+    }
+  }
+}

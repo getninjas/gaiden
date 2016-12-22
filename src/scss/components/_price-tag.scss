@@ -1,0 +1,39 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css_components.price-tag Price Tag
+  *
+  * ## Simple sample
+  * @demo /demo/gaiden-css/components/price-tag/demo.html
+**/
+
+.price-tag {
+  text-align: center;
+
+  &__label,
+  &__value,
+  &__description {
+    display: block;
+    width: 100%;
+  }
+
+  &__label {
+    font: {
+      size: 14px;
+      style: italic;
+    };
+    color: get-color((color: blackNeutral, opacity: .75));
+  }
+
+  &__value {
+    font: {
+      size: 18px;
+      style: italic;
+    }
+  }
+
+  &__description {
+    margin-top: 8px;
+    font-size: 12px;
+    color: get-color((color: blackNeutral, opacity: .5));
+  }
+}
