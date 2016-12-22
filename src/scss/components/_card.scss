@@ -11,13 +11,11 @@
 
 .card {
   @include flex($fg: 1);
-  @include media(small) {
-    padding: 30px;
-  }
 
-  padding: 20px;
+  padding: 24px;
   background-color: get-color(air);
   border-radius: $borderRadius;
+  box-shadow: 0 4px 8px 0 get-color((color: blackNeutral, opacity: .12));
 
   &__header {
     [class*='-title'],
