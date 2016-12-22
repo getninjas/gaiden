@@ -10,7 +10,7 @@
   padding: 24px;
   background-color: get-color(air);
   box-shadow: 0 4px 8px 0 get-color((color: blackNeutral, opacity: .12));
-  border-radius: 6px;
+  border-radius: $borderRadius;
 
   &__header {
     border-bottom: 1px solid get-color(recusaGray);
