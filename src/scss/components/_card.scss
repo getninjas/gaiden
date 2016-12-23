@@ -17,10 +17,18 @@
   border-radius: $borderRadius;
   box-shadow: 0 4px 8px 0 get-color((color: blackNeutral, opacity: .12));
 
+  [class*='-title'],
+  [class*='__title'] {
+    color: get-color(blackNeutral);
+  }
+
   &__header {
+    padding-bottom: 24px;
+    border-bottom: 1px solid get-color(recusaGray);
+
     [class*='-title'],
     [class*='__title'] {
-      color: get-color(blackNeutral);
+      color: get-color(rastaGray);
     }
   }
 
