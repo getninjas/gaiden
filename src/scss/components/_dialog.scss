@@ -5,14 +5,21 @@
   * ## Services
   * @demo demo/gaiden-css/components/dialog/demo.html
 **/
+
 .dialog {
+  @include flex-direction(column);
   justify-content: center;
 
   &__quote {
-    padding: 44px 20px;
+    @include flexbox;
+    @include flex;
+    padding: 30px;
     position: relative;
     background-color: get-color(air);
     border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
 
     &::after {
       position: absolute;
@@ -28,19 +35,21 @@
   }
 
   &__user {
-    display: flex;
+    @include flexbox;
+    text-align: left;
+    justify-content: center;
 
-    &__photo {
+    &-photo {
       margin-right: 10px;
     }
 
-    &__name {
+    &-name {
       line-height: 15px;
       font-weight: bold;
       padding-top: 4px;
     }
 
-    &__location {
+    &-location {
       font-size: 12px;
       line-height: 15px;
     }
