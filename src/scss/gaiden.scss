@@ -47,6 +47,8 @@
 @import 'components/form/message';
 @import 'components/form/steps';
 @import 'components/form/alert-message';
+@import 'components/price-tag';
+@import 'components/price-variation';
 @import 'components/content-box';
 
 @include generate-grid($defaultBreakpoints);
