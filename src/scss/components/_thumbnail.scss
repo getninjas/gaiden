@@ -13,12 +13,15 @@
   transition: transform .2s linear;
   will-change: transform;
 
-  &:hover {
-    transition: transform .2s linear;
-    transform: translateY(-7px) scale(1.03);
+  &__title {
+    color: get-color(rastaGray);
   }
 
-  &__title {
+  &__description {
+    color: get-color(blackNeutral, lighter);
+  }
+
+  &__button {
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -57,9 +60,31 @@
 
   &__photo {
     width: 100%;
+    overflow: hidden;
+    border-radius: $borderRadius;
+    display: flex;
+    justify-content: center;
+    height: 170px;
+
+    img {
+      height: 170px;
+    }
+  }
+
+}
+
+.thumbnail--action {
+  &:hover {
+    transition: transform .2s linear;
+    transform: translateY(-7px) scale(1.03);
+  }
+
+  .thumbnail__photo {
+    overflow: visible;
 
     img {
       width: 100%;
+      height: auto;
     }
   }
 }
