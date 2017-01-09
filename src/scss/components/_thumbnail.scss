@@ -1,10 +1,20 @@
 /**
   * @parent gaiden_css.components
   * @stylesheet gaiden_css.components.thumbnail.css Thumbnail
-  *
-  * ## Services
-  * @demo demo/gaiden-css/components/thumbnail/demo.html
 **/
+
+/**
+  * @styles action Action
+  *
+  * @demo demo/gaiden-css/components/thumbnail/action/demo.html
+**/
+
+/**
+  * @styles simple Simple
+  *
+  * @demo demo/gaiden-css/components/thumbnail/simple/demo.html
+**/
+
 .thumbnail {
   width: 100%;
   position: relative;
