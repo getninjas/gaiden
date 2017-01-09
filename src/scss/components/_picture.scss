@@ -1,6 +1,17 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.picture.css Picture
+  *
+  * @demo demo/gaiden-css/components/picture/demo.html
+**/
+
 .picture {
+  max-width: 100%;
+
   &__image {
     display: block;
+    height: auto;
+    max-width: 100%;
     background-color: get-color(air);
   }
 
@@ -24,11 +35,9 @@
 
     .picture__image {
       -moz-force-broken-image-icon: 1; //sass-lint:disable-line no-misspelled-properties
-      margin: auto;
+      margin: 0 auto;
       position: absolute;
-      top: -9999px;
       right: -9999px;
-      bottom: -9999px;
       left: -9999px;
       min-width: 100%;
       min-height: 100%;
