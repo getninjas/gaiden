@@ -46,63 +46,56 @@
   }
 
   &--cover {
+    display: block;
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    position: relative;
     overflow: hidden;
-    content: '';
-    z-index: 2;
 
     .picture__image {
       -moz-force-broken-image-icon: 1; //sass-lint:disable-line no-misspelled-properties
-      margin: 0 auto;
-      position: absolute;
-      right: -9999px;
-      left: -9999px;
-      min-width: 100%;
-      min-height: 100%;
+      position: relative;
+      left: 50%;
+      max-width: initial;
+      transform: translateX(-50%);
     }
   }
 
   &--enveloped {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 94%, 0 80%);
-    clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%);
+    display: block;
+    position: relative;
 
     &::before {
       @include media(small) {
         @include backgrounds(
           (
-            (10deg, get-color(air) 10%, transparent 10.2%),
-            (-10deg, get-color(air) 10%, transparent 10.2%)
-          )
-        );
-      }
-      @include media(medium) {
-        @include backgrounds(
-          (
-            (7deg, get-color(air) 12%, transparent 12.2%),
-            (-7deg, get-color(air) 12%, transparent 12.2%)
+            (10deg, get-color(air) 10%, transparent 10%),
+            (-10deg, get-color(air) 10%, transparent 10%)
           )
         );
       }
       @include media(large) {
         @include backgrounds(
           (
-            (4deg, get-color(air) 12%, transparent 12.2%),
-            (-4deg, get-color(air) 12%, transparent 12.2%)
+            (6deg, get-color(air) 11%, transparent 11%),
+            (-6deg, get-color(air) 11%, transparent 11%)
           )
         );
       }
       @include backgrounds(
         (
-          (20deg, get-color(air) 12%, transparent 12.2%),
-          (-20deg, get-color(air) 12%, transparent 12.2%)
+          (8deg, get-color(air) 11%, transparent 11%),
+          (-8deg, get-color(air) 11%, transparent 11%)
         )
       );
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      content: '';
     }
   }
 }
