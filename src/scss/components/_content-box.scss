@@ -5,6 +5,9 @@
   * ## Simple sample
   * @demo /demo/gaiden-css/components/content-box/demo.html
   *
+  * ## Without body
+  * @demo /demo/gaiden-css/components/content-box/no-body.html
+  *
   * ## Highlighted
   * @demo /demo/gaiden-css/components/content-box/highlighted.html
   *
@@ -20,8 +23,6 @@
   border-radius: $borderRadius;
 
   &__header {
-    border-bottom: 1px solid get-color(recusaGray);
-
     &--highlighted {
       .content-box__title {
         color: get-color(rastaGray);
