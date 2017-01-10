@@ -14,12 +14,17 @@
 
   width: 100%;
   height: 430px;
+  position: relative;
 
   &__content {
     @include flexbox;
+    padding: {
+      top: 100px;
+      right: 30px;
+      bottom: 180px;
+      left: 30px;
+    }
     width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -27,6 +32,14 @@
 
     [class*='-title'] {
       color: get-color(air);
+    }
+  }
+
+  &__picture {
+    position: absolute;
+
+    img {
+      height: 100%;
     }
   }
 }
