@@ -23,9 +23,6 @@
   }
 
   &__header {
-    padding-bottom: 24px;
-    border-bottom: 1px solid get-color(recusaGray);
-
     [class*='-title'],
     [class*='__title'] {
       color: get-color(rastaGray);
@@ -33,14 +30,25 @@
   }
 
   &__content {
+    .card__header + & {
+      margin-top: 16px;
+    }
+
     color: get-color((color: blackNeutral, opacity: .6));
     font-size: 14px;
   }
 
   &__footer {
-    margin-top: 20px;
+    margin-top: 16px;
     font-size: 12px;
     color: get-color((color: blackNeutral, opacity: .78));
+  }
+
+  &--highlighted {
+    .card__content {
+      color: get-color(rastaGray);
+      font-style: italic;
+    }
   }
 
   .no-flexbox & {
