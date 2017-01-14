@@ -30,12 +30,12 @@
   }
 
   &__content {
+    color: get-color((color: blackNeutral, opacity: .6));
+    font-size: 14px;
+
     .card__header + & {
       margin-top: 16px;
     }
-
-    color: get-color((color: blackNeutral, opacity: .6));
-    font-size: 14px;
   }
 
   &__footer {
