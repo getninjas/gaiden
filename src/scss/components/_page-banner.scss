@@ -18,12 +18,7 @@
 
   &__content {
     @include flexbox;
-    padding: {
-      top: 100px;
-      right: 30px;
-      bottom: 180px;
-      left: 30px;
-    }
+    padding: 30px;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -43,7 +38,7 @@
     }
   }
 
-  + * {
+  + .page-banner-over {
     margin-top: -180px;
   }
 }

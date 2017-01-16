@@ -60,42 +60,4 @@
       transform: translateX(-50%);
     }
   }
-
-  &--enveloped {
-    display: block;
-    position: relative;
-
-    &::before {
-      @include media(small) {
-        @include backgrounds(
-          (
-            (10deg, get-color(air) 10%, transparent 10%),
-            (-10deg, get-color(air) 10%, transparent 10%)
-          )
-        );
-      }
-      @include media(large) {
-        @include backgrounds(
-          (
-            (6deg, get-color(air) 11%, transparent 11%),
-            (-6deg, get-color(air) 11%, transparent 11%)
-          )
-        );
-      }
-      @include backgrounds(
-        (
-          (8deg, get-color(air) 11%, transparent 11%),
-          (-8deg, get-color(air) 11%, transparent 11%)
-        )
-      );
-
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 2;
-      content: '';
-    }
-  }
 }
