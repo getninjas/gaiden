@@ -13,37 +13,27 @@
         height: 567px;
         z-index: 4;
       }
-
-      @media screen and (max-width: 419px) {
-        #gn-request-form-widget {
-          margin-top: -110px;
-        }
-      }
-
-      @media screen and (max-width: 767px) {
-        #gn-request-form-widget {
-          margin-top: -135px;
-        }
-      }
     </style>
   </head>
   <body>
     <nav class="menu menu--over">
-      <div class="brand menu__brand">
-        <a href="#" class="brand__link" tabindex="1">
-          <img src="/images/getninjas-construcao.svg" alt="Logo do GetNinjas Construção" class="brand__image">
-          <h1 class="brand__name">GetNinjas
-            <small>Construção</small>
-          </h1>
-        </a>
-      </div>
+      <div class="container">
+        <div class="brand menu__brand">
+          <a href="#" class="brand__link" tabindex="1">
+            <img src="/images/getninjas-construcao.svg" alt="Logo do GetNinjas Construção" class="brand__image">
+            <h1 class="brand__name">
+              <img src="/images/getninjas.svg" alt=""> <small>Construção</small>
+            </h1>
+          </a>
+        </div>
 
-      <div class="menu__options hide-small">
-        <a href="#" class="btn btn--small btn--outline-reversed">Quero me cadastrar como profissional</a>
+        <div class="menu__options hide-small">
+          <a href="#" class="btn btn--small btn--outline-reversed">Quero me cadastrar como profissional</a>
+        </div>
       </div>
     </nav>
 
-    <section class="page-banner" role="banner">
+    <section class="page-banner page-banner--over" role="banner">
       <picture class="picture picture--cover picture--enveloped page-banner__picture">
         <source srcset="./images/background-header-desktop.jpg" media="(min-width: 1200px)" />
         <source srcset="./images/background-header-large.jpg" media="(min-width: 960px)" />
@@ -59,7 +49,7 @@
       </header>
     </section>
 
-    <section class="container">
+    <section class="container page-banner-over">
       <div class="widget col-small-11 col-medium-10 col-large-6 col-centered">
         <h2 class="widget__title card-title card-title--high-contrast">
           Explique seu problema

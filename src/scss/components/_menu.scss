@@ -29,6 +29,10 @@
     position: fixed;
     z-index: 10;
     background-color: get-color(air);
+
+    + .page-banner .page-banner__content {
+      padding-top: 90px;
+    }
   }
 
   &__brand {
