@@ -14,20 +14,45 @@
 
   width: 100%;
   height: 430px;
+  position: relative;
 
   &__content {
     @include flexbox;
+    padding: 30px;
     width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-left: -100%;
-    z-index: 1;
+    z-index: 2;
 
     [class*='-title'] {
       color: get-color(air);
     }
+  }
+
+  &__picture {
+    position: absolute;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &--over {
+    .page-banner__content {
+      @include media(medium) {
+        padding-bottom: $pageOverMedium + px;
+      }
+
+      padding-bottom: $pageOverSmall + px;
+    }
+  }
+
+  + .page-banner-over {
+    @include media(medium) {
+      margin-top: - $pageOverMedium + px;
+    }
+
+    margin-top: - $pageOverSmall + px;
   }
 }
