@@ -1,12 +1,26 @@
 /**
   * @parent gaiden_css.components
   * @stylesheet gaiden_css.components.card.css Card
-  *
-  * ## Fluid
+**/
+
+/**
+  * @styles fluid Fluid
   * @demo demo/gaiden-css/components/card/demo.html
-  *
-  * ## Using Grid System
-  * @demo demo/gaiden-css/components/card/using-grid-system/demo.html 260
+**/
+
+/**
+  * @styles grid-system Using Grid System
+  * @demo demo/gaiden-css/components/card/using-grid-system.html
+**/
+
+/**
+  * @styles highlighted Highlighted
+  * @demo demo/gaiden-css/components/card/highlighted.html
+**/
+
+/**
+  * @styles centered Centered
+  * @demo demo/gaiden-css/components/card/centered.html
 **/
 
 .card {
@@ -17,14 +31,12 @@
   border-radius: $borderRadius;
   box-shadow: 0 4px 8px 0 get-color((color: blackNeutral, opacity: .12));
 
-  [class*='-title'],
-  [class*='__title'] {
+  &__title {
     color: get-color(blackNeutral);
   }
 
   &__header {
-    [class*='-title'],
-    [class*='__title'] {
+    .card__title {
       color: get-color(rastaGray);
     }
   }
@@ -45,7 +57,7 @@
   }
 
   &--highlighted {
-    .card__content {
+    .card__title {
       color: get-color(rastaGray);
       font-style: italic;
     }
