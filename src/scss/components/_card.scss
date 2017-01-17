@@ -10,7 +10,7 @@
 
 /**
   * @styles grid-system Using Grid System
-  * @demo demo/gaiden-css/components/card/using-grid-system/demo.html
+  * @demo demo/gaiden-css/components/card/using-grid-system.html
 **/
 
 /**
@@ -31,14 +31,12 @@
   border-radius: $borderRadius;
   box-shadow: 0 4px 8px 0 get-color((color: blackNeutral, opacity: .12));
 
-  [class*='-title'],
-  [class*='__title'] {
+  &__title {
     color: get-color(blackNeutral);
   }
 
   &__header {
-    [class*='-title'],
-    [class*='__title'] {
+    .card__title {
       color: get-color(rastaGray);
     }
   }
@@ -59,8 +57,7 @@
   }
 
   &--highlighted {
-    [class*='-title'],
-    [class*='__title'] {
+    .card__title {
       color: get-color(rastaGray);
       font-style: italic;
     }
