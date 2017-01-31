@@ -15,6 +15,7 @@
 
   padding: 24px;
   justify-content: space-between;
+  box-shadow: 0 2px 4px 0 get-color(blackNeutral, $key: darker, $opacity: .1);
 
   .no-flexbox & {
     @include clearfix;
