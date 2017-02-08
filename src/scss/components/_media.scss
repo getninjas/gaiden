@@ -1,0 +1,26 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css_components.media Media
+  *
+  * ## Simple
+  * @demo /demo/gaiden-css/components/media/simple/demo.html
+**/
+
+.media {
+  @include flexbox;
+
+  &__image {
+
+    &--mini {
+      max-height: 150px;
+    }
+  }
+
+  &__title {
+    color: get-color(rastaGray);
+  }
+
+  &__content {
+    color: get-color(blackNeutral, lighter);
+  }
+}
