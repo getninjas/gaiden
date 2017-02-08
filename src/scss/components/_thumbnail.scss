@@ -52,6 +52,7 @@
 
   &__button {
     width: 100%;
+    position: absolute;
     padding-top: 16px;
     padding-bottom: 16px;
     margin-bottom: 0;
@@ -60,7 +61,6 @@
     text-transform: uppercase;
     text-align: center;
     z-index: 1;
-    position: absolute;
   }
 
   &__photo {
