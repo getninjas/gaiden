@@ -17,11 +17,30 @@
 
 .thumbnail {
   width: 100%;
+  height: 100%;
   position: relative;
   overflow: hidden;
   border-radius: $borderRadius;
   transition: transform .2s linear;
   will-change: transform;
+
+  &--action {
+    display: flex;
+    flex-direction: column-reverse;
+
+    &:hover {
+      transition: transform .2s linear;
+      transform: translateY(-7px) scale(1.03);
+    }
+
+    .thumbnail__photo {
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+      }
+    }
+  }
 
   &__title {
     color: get-color(rastaGray);
@@ -33,68 +52,22 @@
 
   &__button {
     width: 100%;
-    position: absolute;
-    bottom: 0;
     padding-top: 16px;
     padding-bottom: 16px;
     margin-bottom: 0;
+    background-color: get-color((color: punch, opacity: .8));
     color: get-color(air);
     text-transform: uppercase;
     text-align: center;
     z-index: 1;
-
-    &::before {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: get-color((color: rastaGray, opacity: .5));
-      filter: blur(5px);
-      z-index: -2;
-      content: '';
-    }
-
-    &::after {
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      background-color: get-color((color: punch, opacity: .8));
-      content: '';
-    }
   }
 
   &__photo {
-    display: flex;
     width: 100%;
-    height: 170px;
-    justify-content: center;
-    overflow: hidden;
     border-radius: $borderRadius;
 
     img {
-      height: 100%;
-    }
-  }
-
-}
-
-.thumbnail--action {
-  &:hover {
-    transition: transform .2s linear;
-    transform: translateY(-7px) scale(1.03);
-  }
-
-  .thumbnail__photo {
-    overflow: visible;
-
-    img {
-      width: 100%;
-      height: auto;
+      width: auto;
     }
   }
 }
