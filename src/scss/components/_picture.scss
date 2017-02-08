@@ -48,10 +48,13 @@
 
     .picture__image {
       -moz-force-broken-image-icon: 1; //sass-lint:disable-line no-misspelled-properties
+      height: auto;
       position: relative;
       left: 50%;
+      min-height: 100%;
+      max-width: initial;
+      min-width: 100%;
       transform: translateX(-50%);
-      max-height: 100%;
     }
   }
 }
