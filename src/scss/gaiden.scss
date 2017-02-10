@@ -50,6 +50,7 @@
 @import 'components/form/alert-message';
 @import 'components/price-tag';
 @import 'components/price-variation';
+@import 'components/media';
 
 @include generate-grid($defaultBreakpoints);
 @include generate-spaces;
