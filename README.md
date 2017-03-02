@@ -21,9 +21,15 @@ So, after merge a PR, just execute `npm version major|minor|patch -m "Message of
 The process is:
 
 1. After merge PR on master:
+  
   1.1 `git checkout master`;
+  
   1.2 `git pull origin master`;
+
 2. run `npm version major|minor|patch -m "Message of your changes"` (important: you need to be an admin to push on master);
+
 3. Now let's publish the package on npm. You need to run `npm adduser` and have the credentials to do this;
+
   3.1 If nothing fails on `npm version` and you have the credentials of npm GetNinjas account, run `npm publish`.
+
 4. Done! Now, you can install the package on any project!
