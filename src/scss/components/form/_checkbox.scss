@@ -30,13 +30,13 @@
     opacity: 0;
 
     &:checked ~ label::before {
-      @include radial(transparent, get-color(punch), $toAngle: 26%, $fromAngle: 18%);
-
       color: get-color(air);
+      background-color: get-color(punch);
       background: {
         repeat: no-repeat;
         position: center center;
       }
+      content: '\2713';
     }
 
     &:focus ~ label::before {
@@ -60,6 +60,7 @@
       border-radius: 4px;
       background-color: get-color(breeze);
       content: '';
+      text-align: center;
     }
   }
 }
