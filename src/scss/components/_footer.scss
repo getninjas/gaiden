@@ -8,9 +8,6 @@
 .footer {
   @include flexbox;
   @include flex-direction(column);
-  @include media(small) {
-    text-align: inherit;
-  }
   @include media(medium) {
     max-height: map-deep-get($footerSize, mini, size) + px;
   }
