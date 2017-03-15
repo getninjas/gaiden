@@ -171,5 +171,14 @@ $buttonTypes: (
     hover: (
       background: air
     )
+  ),
+  greeny: (
+    default: (
+      background: reward,
+      textColor: air
+    ),
+    hover: (
+      background: rewardType
+    )
   )
 );
