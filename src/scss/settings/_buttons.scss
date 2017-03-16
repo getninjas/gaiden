@@ -180,5 +180,11 @@ $buttonTypes: (
     hover: (
       background: rewardType
     )
+  ),
+  loading: (
+    default: (
+      background: loadingGray,
+      textColor: air
+    )
   )
 );
