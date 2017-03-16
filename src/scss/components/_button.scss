@@ -111,9 +111,10 @@
   }
 
   &--loading {
+    background-color: get-color((color: rastaGray, opacity: .2));
+    font-size: 0 !important;
     position: relative;
     transition: all .3s ease;
-    font-size: 0 !important;
 
     &::before {
       animation: rotation 1s linear infinite;
