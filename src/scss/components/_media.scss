@@ -7,7 +7,7 @@
 **/
 
 .media {
-  @include flexbox;
+  display: flex;
 
   &__image {
 

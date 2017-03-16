@@ -7,12 +7,12 @@
 **/
 
 .dialog {
-  @include flex-direction(column);
+  flex-direction: column;
   justify-content: center;
 
   &__quote {
-    @include flexbox;
-    @include flex;
+    display: flex;
+    flex: 1;
     padding: 30px;
     position: relative;
     background-color: get-color(air);
@@ -35,7 +35,7 @@
   }
 
   &__user {
-    @include flexbox;
+    display: flex;
     text-align: left;
     justify-content: center;
 

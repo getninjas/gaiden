@@ -39,6 +39,10 @@
     "styleguide",
     "css"
   ],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "author": "GetNinjas",
   "license": "MIT",
   "bugs": {
@@ -46,6 +50,7 @@
   },
   "homepage": "https://github.com/getninjas/gaiden#readme",
   "devDependencies": {
+    "autoprefixer": "^6.7.7",
     "browser-sync": "^2.17.3",
     "css-mqpacker": "^5.0.1",
     "cssnano-cli": "^1.0.5",

@@ -10,7 +10,7 @@
 **/
 
 .media-box {
-  @include flexbox;
+  display: flex;
 
   color: get-color((color: blackNeutral, opacity: .6));
 
@@ -27,7 +27,7 @@
 
   &__sidebar,
   &__content {
-    @include flexbox;
+    display: flex;
 
     vertical-align: top;
 
@@ -37,14 +37,14 @@
   }
 
   &__sidebar {
-    @include flex-shrink(0);
+    flex-shrink: 0;
 
     padding-right: 15px;
   }
 
   &__content {
-    @include flex-wrap(wrap);
-    @include flex-direction(column);
+    flex-wrap: wrap;
+    flex-direction: row;
     word-break: break-word;
     font-size: 14px;
   }
