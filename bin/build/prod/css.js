@@ -5,7 +5,7 @@ const shelljs = require('shelljs');
 const sourceDir = "./src/scss";
 const outputDir = "./dist";
 const compiledFile = `${outputDir}/gaiden.css`;
-const browserSupport = "last 2 versions, safari >= 8, ie >= 9, ios >=8, android >=4";
+const browserSupport = "> 0.1% in BR, not ie 8";
 const minifiedFile = `${outputDir}/gaiden.min.css`;
 
 const options = {
