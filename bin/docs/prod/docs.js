@@ -35,6 +35,9 @@ shelljs.mv('-n', [
   `${docsDir}/*.html`,
 ], './');
 
+shelljs.mkdir('./demo');
+shelljs.mv('-n', './docs/demo/*', './demo/');
+
 shelljs.exec('$GAIDEN_LAST_TAG=$(git describe)')
 shelljs.exec('git add .');
 shelljs.exec(`git commit -m '${timestamp}: Updating docs $GAIDEN_LAST_TAG'`);
