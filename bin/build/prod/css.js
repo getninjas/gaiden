@@ -18,6 +18,7 @@ const options = {
     --safe \
     --sourcemap`,
   mqpacker: `-s`,
+  postcss: `autoprefixer -c postcss.json -o ${minifiedFile} ${compiledFile}`,
   sasslint: `-c ./sass-lint.yml -v`
 }
 
@@ -32,4 +33,5 @@ shelljs.echo('SassLint ok!');
 shelljs.exec(`node-sass ${options.sass} ${sourceDir} ${compiledFile}`);
 shelljs.exec(`mqpacker ${options.mqpacker} ${compiledFile} ${compiledFile}`);
 shelljs.exec(`cssnano ${options.cssnano} ${compiledFile} ${minifiedFile}`);
+shelljs.exec(`postcss ${options.postcss}`);
 shelljs.rm(`${compiledFile}`, `${compiledFile}.map`);
