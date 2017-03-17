@@ -29,7 +29,9 @@
     flex-direction: column-reverse;
 
     &:hover {
+      transition: -ms-transform .2s linear;
       transition: transform .2s linear;
+      -ms-transform: translateY(-7px) scale(1.03);
       transform: translateY(-7px) scale(1.03);
     }
 
