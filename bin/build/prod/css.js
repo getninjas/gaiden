@@ -8,22 +8,13 @@ const compiledFile = `${outputDir}/gaiden.css`;
 const browserSupport = "last 2 versions, safari >= 8, ie >= 9, ios >=8, android >=4";
 const minifiedFile = `${outputDir}/gaiden.min.css`;
 
-var supported = [
-    'last 2 versions',
-    'safari >= 8',
-    'ie >= 10',
-    'ff >= 20',
-    'ios 6',
-    'android 4'
-];
-
 const options = {
   sass: ` --include-path ${sourceDir} \
     --source-map true -r \
     --output-style compressed \
     -o ${outputDir}`,
   cssnano: `--replace true \
-    --autoprefixer \
+    --no-autoprefixer \
     --safe \
     --sourcemap`,
   mqpacker: `-s`,

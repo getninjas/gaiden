@@ -39,10 +39,6 @@
     "styleguide",
     "css"
   ],
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
   "author": "GetNinjas",
   "license": "MIT",
   "bugs": {
