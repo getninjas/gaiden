@@ -24,7 +24,7 @@
 **/
 
 .card {
-  @include flex($fg: 1);
+  flex: 1 1 auto;
 
   padding: 24px;
   background-color: get-color(air);
