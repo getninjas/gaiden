@@ -20,6 +20,10 @@
     color: get-color(rastaGray);
   }
 
+  &__description {
+    display: inline-table;
+  }
+
   &__content {
     color: get-color(blackNeutral, lighter);
   }
