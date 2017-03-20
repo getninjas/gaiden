@@ -7,13 +7,13 @@
 **/
 
 .price-variation {
-  @include flexbox;
-  @include flex-direction(row);
-  @include flex-wrap(wrap);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   &__item {
-    @include flex;
-    @include flex-direction(row);
+    display: flex;
+    flex-direction: row;
 
     padding: {
       top: 16px;
@@ -31,7 +31,7 @@
     }
 
     &--stacked {
-      @include flex($fg: 0, $fs: 0, $fb: 100%);
+      flex: 1 1 100vw;
     }
   }
 }
