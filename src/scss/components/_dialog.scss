@@ -12,7 +12,7 @@
 
   &__quote {
     display: flex;
-    flex: 1;
+    flex: 1 0 auto;
     padding: 30px;
     position: relative;
     background-color: get-color(air);
