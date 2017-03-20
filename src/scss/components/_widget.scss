@@ -11,15 +11,16 @@
   border-radius: 7px;
   border: 1px solid get-color((color: blackNeutral, opacity: .15));
   background-color: get-color(air);
+  position: relative;
 
   &--over-banner {
     margin-top: -180px;
   }
 
   &__title {
-    margin: 14px 10%;
+    margin: 14px auto;
     padding: 15px 0;
-    width: 100%;
+    width: 80%;
     border-bottom: 2px solid get-color((color: punch, opacity: .2));
     text-align: center;
   }
