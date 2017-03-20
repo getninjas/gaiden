@@ -11,7 +11,7 @@
 
 .media-box {
   display: flex;
-
+  flex: 1;
   color: get-color((color: blackNeutral, opacity: .6));
 
   &__title {
@@ -27,9 +27,8 @@
 
   &__sidebar,
   &__content {
-    display: flex;
-
-    vertical-align: top;
+    display: block;
+    flex: 1 1 auto;
 
     .no-flexbox & {
       display: table-cell;
@@ -38,7 +37,6 @@
 
   &__sidebar {
     flex-shrink: 0;
-
     padding-right: 15px;
   }
 
