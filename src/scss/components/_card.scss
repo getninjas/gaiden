@@ -24,12 +24,12 @@
 **/
 
 .card {
-  flex: 1 1 auto;
-
-  padding: 24px;
   background-color: get-color(air);
   border-radius: $borderRadius;
   box-shadow: 0 4px 8px 0 get-color((color: blackNeutral, opacity: .12));
+  flex: 1 1 auto;
+  padding: 24px;
+  width: inherit;
 
   &__title {
     color: get-color(blackNeutral);
