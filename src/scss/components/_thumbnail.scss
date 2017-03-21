@@ -27,6 +27,7 @@
   &--action {
     display: flex;
     flex-direction: column-reverse;
+    align-items: flex-end;
 
     &:hover {
       transition: -ms-transform .2s linear;
