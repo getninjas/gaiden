@@ -21,6 +21,14 @@
     "browsersync:docs": "browser-sync start --config .browser-sync-docs.js",
     "dev": "npm run clear && FORCE_COLOR=1 npm-run-all -p build:dev browsersync browsersync:docs watch"
   },
+  "browserslist": [
+    "last 2 versions",
+    "safari >= 7",
+    "ie >= 9",
+    "ff >= 20",
+    "ios >=7",
+    "android >=4"
+  ],
   "bin": {
     "build:dev:css": "./bin/build/dev/css.js",
     "build:dev:html": "./bin/build/dev/html.js",
