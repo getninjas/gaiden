@@ -30,7 +30,7 @@
 
     &:hover {
       transition: transform .2s linear;
-      transform: translateY(-7px) scale(-1.03) translateY(1px);
+      transform: translateY(-7px) scale(-1.03) translateZ(1px);
     }
 
     .thumbnail__photo {
