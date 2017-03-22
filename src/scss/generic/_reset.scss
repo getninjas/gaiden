@@ -12,3 +12,10 @@ em {
 strong {
   font-weight: 700;
 }
+
+select,
+input,
+button,
+textarea {
+  font-family: inherit;
+}
