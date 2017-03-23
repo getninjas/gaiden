@@ -7,7 +7,7 @@
 **/
 
 .media {
-  @include flexbox;
+  display: flex;
 
   &__image {
 
@@ -18,6 +18,10 @@
 
   &__title {
     color: get-color(rastaGray);
+  }
+
+  &__description {
+    display: inline-table;
   }
 
   &__content {

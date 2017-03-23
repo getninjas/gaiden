@@ -10,8 +10,8 @@
 **/
 
 .media-box {
-  @include flexbox;
-
+  display: flex;
+  flex: 1;
   color: get-color((color: blackNeutral, opacity: .6));
 
   &__title {
@@ -27,9 +27,8 @@
 
   &__sidebar,
   &__content {
-    @include flexbox;
-
-    vertical-align: top;
+    display: block;
+    flex: 1 1 auto;
 
     .no-flexbox & {
       display: table-cell;
@@ -37,14 +36,13 @@
   }
 
   &__sidebar {
-    @include flex-shrink(0);
-
+    flex-shrink: 0;
     padding-right: 15px;
   }
 
   &__content {
-    @include flex-wrap(wrap);
-    @include flex-direction(column);
+    flex-wrap: wrap;
+    flex-direction: row;
     word-break: break-word;
     font-size: 14px;
   }

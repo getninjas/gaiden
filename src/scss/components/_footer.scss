@@ -6,8 +6,8 @@
 **/
 
 .footer {
-  @include flexbox;
-  @include flex-direction(column);
+  display: flex;
+  flex-direction: column;
   @include media(medium) {
     max-height: map-deep-get($footerSize, mini, size) + px;
   }
@@ -75,7 +75,7 @@
   }
 
   &__social-bar {
-    @include flexbox;
+    display: flex;
     @include media(medium) {
       justify-content: inherit;
     }
@@ -136,7 +136,7 @@
   }
 
   &__phone {
-    @include flexbox;
+    display: flex;
     justify-content: center;
     font: {
       size: 18px;

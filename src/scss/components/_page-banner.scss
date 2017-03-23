@@ -6,8 +6,8 @@
 **/
 
 .page-banner {
-  @include flexbox;
-  @include flex-direction(row);
+  display: flex;
+  flex-direction: row;
   @include media(small) {
     height: 576px;
   }
@@ -17,13 +17,14 @@
   position: relative;
 
   &__content {
-    @include flexbox;
+    display: flex;
     padding: 30px;
     width: 100%;
     align-items: center;
     justify-content: center;
     text-align: center;
     z-index: 2;
+    position: relative;
 
     [class*='-title'] {
       color: get-color(air);

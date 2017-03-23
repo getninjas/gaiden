@@ -14,10 +14,11 @@ const options = {
     --output-style compressed \
     -o ${outputDir}`,
   cssnano: `--replace true \
-    --autoprefixer.browsers "${browserSupport}" \
+    --no-autoprefixer \
     --safe \
     --sourcemap`,
   mqpacker: `-s`,
+  postcss: `--use autoprefixer -o ${minifiedFile} ${compiledFile}`,
   sasslint: `-c ./sass-lint.yml -v`
 }
 
@@ -32,4 +33,5 @@ shelljs.echo('SassLint ok!');
 shelljs.exec(`node-sass ${options.sass} ${sourceDir} ${compiledFile}`);
 shelljs.exec(`mqpacker ${options.mqpacker} ${compiledFile} ${compiledFile}`);
 shelljs.exec(`cssnano ${options.cssnano} ${compiledFile} ${minifiedFile}`);
+shelljs.exec(`postcss ${options.postcss}`);
 shelljs.rm(`${compiledFile}`, `${compiledFile}.map`);

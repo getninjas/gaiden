@@ -6,9 +6,9 @@
 **/
 
 .brand {
-  @include flexbox;
-  @include flex-direction(row);
-  @include flex-shrink(0);
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
 
   color: get-color(air);
 
