@@ -1,0 +1,3 @@
+@function get-space($kind, $size, $source: $spaces) {
+  @return map-deep-get($source, $kind, $size) + px;
+}
