@@ -5,18 +5,16 @@ const shelljs = require('shelljs');
 const sourceDir = "./src/scss";
 const outputDir = "./dist";
 const compiledFile = `${outputDir}/gaiden.css`;
-const browserSupport = "> 0.1% in BR, not ie 8";
 const minifiedFile = `${outputDir}/gaiden.min.css`;
 
 const options = {
   sass: ` --include-path ${sourceDir} \
-    --source-map true -r \
     --output-style compressed \
     -o ${outputDir}`,
   cssnano: `--replace true \
     --no-autoprefixer \
     --safe \
-    --sourcemap`,
+    --sourcemap false`,
   mqpacker: `-s`,
   postcss: `--use autoprefixer -o ${minifiedFile} ${compiledFile}`,
   sasslint: `-c ./sass-lint.yml -v`
