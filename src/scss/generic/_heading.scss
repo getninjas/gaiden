@@ -1,4 +1,8 @@
-
+/**
+  * @parent gaiden_css.generic
+  * @stylesheet gaiden_css.generic.headings.css Headings
+  * @demo demo/gaiden-css/generic/headings/demo.html
+**/
 h1,
 h2,
 h3,
@@ -9,14 +13,14 @@ h5,
 .container-title,
 .card-title,
 .info-title {
-  color: get-color(blackNeutral);
+  color: get-color(rastaGray);
   font: {
-    weight: 700;
+    weight: 900;
   };
 
   small {
+    color: get-color(blackNeutral, lighter, $opacity: .5);
     display: block;
-    font-style: italic;
     font-weight: 400;
   }
 }
@@ -28,6 +32,43 @@ h5,
 .info-title {
   &--high-contrast {
     color: get-color(punch);
+  }
+}
+
+h1,
+.title {
+  @include media(medium) {
+    font-size: 24px;
+  }
+
+  @include media(large) {
+    font-size: 48px;
+  }
+
+  small {
+    @include media(medium) {
+      font-size: 18px;
+    }
+
+    @include media(large) {
+      font-size: 30px;
+    }
+
+    font-size: 16px;
+  }
+}
+
+h1,
+.title {
+  @include media(large) {
+    font-size: 48px;
+  }
+
+  small {
+    @include media(large) {
+      font-size: 18px;
+    }
+    font-size: 30px;
   }
 }
 
