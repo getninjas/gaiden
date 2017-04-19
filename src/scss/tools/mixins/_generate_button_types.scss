@@ -18,8 +18,6 @@
   @if map-has-key($buttonType, $key) {
     $buttonTypeConfig: map-get($buttonType, $key);
 
-    line-height: 1;
-
     @if map-has-key($buttonTypeConfig, background) {
       background-color: get-color(map-get($buttonTypeConfig, background));
     }
