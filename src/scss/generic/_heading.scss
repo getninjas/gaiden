@@ -8,6 +8,7 @@ h2,
 h3,
 h4,
 h5,
+h6,
 .page-title,
 .section-title,
 .container-title,
@@ -36,68 +37,50 @@ h5,
 }
 
 h1,
-.title {
-  @include media(medium) {
-    font-size: 24px;
-  }
-
-  @include media(large) {
+.page-title {
+  @include media(normal) {
     font-size: 48px;
-  }
 
-  small {
-    @include media(medium) {
-      font-size: 18px;
-    }
-
-    @include media(large) {
+    small {
       font-size: 30px;
     }
-
-    font-size: 16px;
-  }
-}
-
-h1,
-.title {
-  @include media(large) {
-    font-size: 48px;
-  }
-
-  small {
-    @include media(large) {
-      font-size: 18px;
-    }
-    font-size: 30px;
-  }
-}
-
-h1,
-.page-title {
-  @include media(small) {
-    font-size: 36px;
   }
 
   margin-bottom: 4px;
   font-size: 24px;
 
   small {
-    @include media(small) {
-      font-size: 18px;
-    }
-
     margin-top: 8px;
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 h2,
 .section-title {
-  @include media(small) {
+  @include media(normal) {
+    font-size: 36px;
+
+    small {
+      font-size: 24px;
+    }
+  }
+
+  margin-bottom: 4px;
+  font-size: 20px;
+
+  small {
+    margin-top: 4px;
+    font-size: 16px;
+  }
+}
+
+h3,
+.container-title {
+  @include media(normal) {
     font-size: 24px;
 
     small {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 
@@ -106,27 +89,13 @@ h2,
 
   small {
     margin-top: 4px;
-    font-size: 14px;
-  }
-}
-
-h3,
-.container-title {
-  @include media(small) {
-    font-size: 18px;
-  }
-
-  margin-bottom: 4px;
-  font-size: 16px;
-
-  small {
-    margin-top: 4px;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 h4,
-.card-title {
+.info-title {
+
   font: {
     weight: 700;
     size: 16px;
@@ -136,6 +105,14 @@ h4,
   small {
     margin-top: 4px;
     font-size: 14px;
+  }
+
+  @include media(normal) {
+    font-size: 20px;
+
+    small {
+      font-size: 16px;
+    }
   }
 }
 
@@ -149,6 +126,36 @@ h5,
 
   small {
     margin-top: 4px;
+    font-size: 13px;
+  }
+
+  @include media(normal) {
+    font-size: 18px;
+
+    small {
+      font-size: 14px;
+    }
+  }
+}
+
+h6,
+.info-title {
+  font: {
+    weight: 700;
+    size: 13px;
+  }
+  margin-bottom: 4px;
+
+  small {
+    margin-top: 4px;
     font-size: 12px;
+  }
+
+  @include media(normal) {
+    font-size: 16px;
+
+    small {
+      font-size: 14px;
+    }
   }
 }
