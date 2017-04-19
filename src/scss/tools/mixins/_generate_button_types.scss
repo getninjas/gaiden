@@ -31,7 +31,9 @@
     }
 
     @if map-has-key($buttonTypeConfig, shadow) {
-      box-shadow: 6px 6px 20px 0 get-color(map-get($buttonTypeConfig, shadow));
+      $shadowConfig: map-get($buttonTypeConfig, shadow);
+      $shadowColorConfig: map-get($shadowConfig, colorConfig);
+      box-shadow: map-get($shadows, map-get($shadowConfig, kind)) get-color($shadowColorConfig);
     }
   }
 };
