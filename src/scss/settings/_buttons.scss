@@ -81,10 +81,18 @@ $buttonTypes: (
   high-contrast: (
     default: (
       background: punch,
-      textColor: air
+      textColor: air,
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: normal
+      )
     ),
     hover: (
-      background: serious
+      background: serious,
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: medium
+      )
     )
   ),
   high-contrast-reversed: (
@@ -93,7 +101,11 @@ $buttonTypes: (
       textColor: punch
     ),
     hover: (
-      background: air
+      background: air,
+      shadow: (
+        colorConfig: (color: blackNeutral, opacity: .2),
+        kind: normal
+      )
     )
   ),
   low-contrast: (
@@ -156,7 +168,10 @@ $buttonTypes: (
     default: (
       background: punch,
       textColor: air,
-      shadow: (color: blackNeutral, opacity: .2)
+      shadow: (
+        colorConfig: (color: blackNeutral, opacity: .2),
+        kind: normal
+      )
     ),
     hover: (
       background: serious
@@ -165,7 +180,10 @@ $buttonTypes: (
   raised-reversed: (
     default: (
       background: (color: air, opacity: .9),
-      shadow: (color: blackNeutral, opacity: .2),
+      shadow: (
+        colorConfig: (color: blackNeutral, opacity: .2),
+        kind: normal
+      ),
       textColor: punch
     ),
     hover: (
