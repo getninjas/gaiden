@@ -89,7 +89,7 @@
 
 .btn {
   display: inline-block;
-  border-radius: $borderRadius;
+  border-radius: $borderRadiusButton;
   font-weight: 400;
   text-align: center;
   border: 0;
@@ -97,6 +97,7 @@
   text-transform: uppercase;
   cursor: pointer;
   background-color: transparent;
+  line-height: 1;
   transition: background-color .2s;
 
   &[disabled] {
