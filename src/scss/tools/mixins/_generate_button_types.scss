@@ -29,6 +29,10 @@
       border: solid 1px get-color(map-get($buttonTypeConfig, border));
     }
 
+    @if map-has-key($buttonTypeConfig, border-outline) {
+      border: solid 2px get-color(map-get($buttonTypeConfig, border-outline));
+    }
+
     @if map-has-key($buttonTypeConfig, textColor) {
       color: get-color(map-get($buttonTypeConfig, textColor));
     }
