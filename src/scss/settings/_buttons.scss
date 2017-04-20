@@ -169,7 +169,7 @@ $buttonTypes: (
   outline: (
     default: (
       background: air,
-      border-outline: punch,
+      border: (color: punch, style: outline),
       textColor: punch
     ),
     hover: (
@@ -178,12 +178,22 @@ $buttonTypes: (
   ),
   outline-reversed: (
     default: (
-      border-outline: air,
+      border: (color: air, style: outline),
       textColor: air
     ),
     hover: (
       background: (color: air, opacity: .12),
       textColor: air
+    )
+  ),
+  outline-light: (
+    default: (
+      background: air,
+      border: (color: (color: punch, opacity: .2), style: outline),
+      textColor: punch
+    ),
+    hover: (
+      border: (color: (color: punch), style: outline),
     )
   ),
   raised: (

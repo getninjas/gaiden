@@ -40,6 +40,12 @@
 **/
 
 /**
+  * @styles buttons_outline_light Outline Light
+  *
+  * @demo demo/gaiden-css/components/buttons/outline/light/demo.html
+**/
+
+/**
   * @styles buttons_reversed_raised Reversed Raised
   *
   * @demo demo/gaiden-css/components/buttons/reversed/raised/demo.html
@@ -80,8 +86,8 @@
   cursor: pointer;
   background-color: transparent;
   line-height: 1;
-  transition: background-color .2s;
-  transition-property: box-shadow, background-color;
+  transition-duration: .2s;
+  transition-property: box-shadow, background-color, border-color;
 
   &[disabled] {
     opacity: .3;
