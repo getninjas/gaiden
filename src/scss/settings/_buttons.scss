@@ -104,14 +104,23 @@ $buttonTypes: (
   ),
   high-contrast-reversed: (
     default: (
-      background: (color: air, opacity: .9),
-      textColor: punch
+      background: (color: air),
+      textColor: punch,
+      shadow: (
+        colorConfig: (color: blackNeutral,  key: darker, opacity: .2),
+        kind: normal
+      )
     ),
     hover: (
-      background: air,
       shadow: (
-        colorConfig: (color: blackNeutral, opacity: .2),
-        kind: normal
+        colorConfig: (color: blackNeutral,  key: darker, opacity: .2),
+        kind: medium
+      )
+    ),
+    active: (
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: none
       )
     )
   ),
