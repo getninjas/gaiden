@@ -8,6 +8,7 @@
           &:hover {
             @include _generate-button-types-properties($buttonType, hover);
           }
+
           &:active {
             @include _generate-button-types-properties($buttonType, active);
           }
@@ -26,11 +27,10 @@
     }
 
     @if map-has-key($buttonTypeConfig, border) {
-      border: solid 1px get-color(map-get($buttonTypeConfig, border));
-    }
-
-    @if map-has-key($buttonTypeConfig, border-outline) {
-      border: solid 2px get-color(map-get($buttonTypeConfig, border-outline));
+      $config: map-get($buttonTypeConfig, border);
+      $style: map-get($config, style);
+      $color: map-get($config, color);
+      border: get-border($style) get-color($color);
     }
 
     @if map-has-key($buttonTypeConfig, textColor) {
