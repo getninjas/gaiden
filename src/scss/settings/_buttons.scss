@@ -232,6 +232,13 @@ $buttonTypes: (
         colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: medium
       )
+    ),
+    active: (
+      background: (color: reward, key: darker),
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: none
+      )
     )
   )
 );
