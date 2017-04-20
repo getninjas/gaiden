@@ -112,6 +112,7 @@ $buttonTypes: (
       )
     ),
     hover: (
+      background: (color: air, opacity: .9),
       shadow: (
         colorConfig: (color: blackNeutral,  key: darker, opacity: .2),
         kind: medium
@@ -185,17 +186,24 @@ $buttonTypes: (
       background: punch,
       textColor: air,
       shadow: (
-        colorConfig: (color: blackNeutral, opacity: .2),
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: medium
       )
     ),
     hover: (
       background: serious
+    ),
+    active: (
+      background: serious,
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: none
+      )
     )
   ),
   raised-reversed: (
     default: (
-      background: (color: air, opacity: .9),
+      background: air,
       shadow: (
         colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: medium
@@ -203,7 +211,13 @@ $buttonTypes: (
       textColor: punch
     ),
     hover: (
-      background: air
+      background: (color: air, opacity: .9)
+    ),
+    active: (
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: none
+      )
     )
   ),
   greeny: (
