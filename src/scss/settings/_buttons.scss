@@ -105,6 +105,14 @@ $buttonTypes: (
         colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: none
       )
+    ),
+    disabled: (
+      background: (color: punch, opacity: .2),
+      textColor: (color: serious, opacity: .2),
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: none
+      )
     )
   ),
   high-contrast-reversed: (
