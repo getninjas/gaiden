@@ -36,6 +36,10 @@ $buttonSizes: (
     padding: (14 28)
   ),
 
+  small-outline: (
+    fontSize: 12,
+    padding: (12 24)
+  ),
   regular: (
     fontSize: 14,
     padding: (17 34)
@@ -45,6 +49,7 @@ $buttonSizes: (
     fontSize: 16,
     padding: (22 44)
   )
+
 );
 
 /**
@@ -164,7 +169,7 @@ $buttonTypes: (
   outline: (
     default: (
       background: air,
-      border: punch,
+      border-outline: punch,
       textColor: punch
     ),
     hover: (
@@ -173,7 +178,7 @@ $buttonTypes: (
   ),
   outline-reversed: (
     default: (
-      border: air,
+      border-outline: air,
       textColor: air
     ),
     hover: (
