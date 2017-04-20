@@ -13,6 +13,10 @@
             @include _generate-button-types-properties($buttonType, active);
           }
         }
+
+        &:disabled {
+          @include _generate-button-types-properties($buttonType, disabled);
+        }
       }
     }
   }
