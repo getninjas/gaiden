@@ -261,6 +261,14 @@ $buttonTypes: (
         colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: none
       )
+    ),
+    disabled: (
+      background: (color: rastaGray, opacity: .3),
+      textColor: air,
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: none
+      )
     )
   ),
   greeny-raised: (
