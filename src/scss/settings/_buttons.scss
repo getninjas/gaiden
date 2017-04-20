@@ -93,6 +93,10 @@ $buttonTypes: (
         colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: medium
       )
+    ),
+    active: (
+      background: serious,
+      outline: none
     )
   ),
   high-contrast-reversed: (
