@@ -96,7 +96,10 @@ $buttonTypes: (
     ),
     active: (
       background: serious,
-      outline: none
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: none
+      )
     )
   ),
   high-contrast-reversed: (
@@ -174,7 +177,7 @@ $buttonTypes: (
       textColor: air,
       shadow: (
         colorConfig: (color: blackNeutral, opacity: .2),
-        kind: normal
+        kind: medium
       )
     ),
     hover: (
@@ -185,8 +188,8 @@ $buttonTypes: (
     default: (
       background: (color: air, opacity: .9),
       shadow: (
-        colorConfig: (color: blackNeutral, opacity: .2),
-        kind: normal
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: medium
       ),
       textColor: punch
     ),
@@ -200,7 +203,35 @@ $buttonTypes: (
       textColor: air
     ),
     hover: (
-      background: rewardType
+      background: (color: reward, key: darker),
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: medium
+      ),
+    ),
+    active: (
+      background:  (color: reward, key: darker),
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: none
+      )
+    )
+  ),
+  greeny-raised: (
+    default: (
+      background: reward,
+      textColor: air,
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: medium
+      )
+    ),
+    hover: (
+      background: (color: reward, key: darker),
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: medium
+      )
     )
   )
 );
