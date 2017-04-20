@@ -90,7 +90,7 @@
   transition-property: box-shadow, background-color, border-color;
 
   &[disabled] {
-    opacity: .3;
+    cursor: not-allowed;
   }
 
   &--fluid {
