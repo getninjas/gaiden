@@ -41,6 +41,10 @@
       color: get-color(map-get($buttonTypeConfig, textColor));
     }
 
+    @if map-has-key($buttonTypeConfig, opacity) {
+      opacity: map-get($buttonTypeConfig, opacity);
+    }
+
     @if map-has-key($buttonTypeConfig, shadow) {
       $shadowConfig: map-get($buttonTypeConfig, shadow);
       $shadowColorConfig: map-get($shadowConfig, colorConfig);
