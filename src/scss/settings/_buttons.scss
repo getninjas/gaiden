@@ -136,6 +136,15 @@ $buttonTypes: (
         colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: none
       )
+    ),
+    disabled: (
+      background: (color: air),
+      textColor: (color: punch),
+      opacity: .3,
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: none
+      )
     )
   ),
   low-contrast: (
@@ -182,6 +191,14 @@ $buttonTypes: (
     ),
     hover: (
       background: (color: punch, opacity: .1)
+    ),
+    disabled: (
+      border: (color: (color: rastaGray, opacity: .3), style: outline),
+      textColor: (color: rastaGray, opacity: .3),
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: none
+      )
     )
   ),
   outline-reversed: (
@@ -192,6 +209,16 @@ $buttonTypes: (
     hover: (
       background: (color: air, opacity: .12),
       textColor: air
+    ),
+    disabled: (
+      background: (color: punch),
+      border: (color: air, style: outline),
+      textColor: (color: air),
+      opacity: .3,
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: none
+      )
     )
   ),
   outline-light: (
@@ -202,6 +229,15 @@ $buttonTypes: (
     ),
     hover: (
       border: (color: (color: punch), style: outline),
+    ),
+    disabled: (
+      opacity: .25,
+      border: (color: (color: rastaGray), style: outline),
+      textColor: (color: rastaGray),
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: none
+      )
     )
   ),
   raised: (
@@ -222,6 +258,14 @@ $buttonTypes: (
         colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: none
       )
+    ),
+    disabled: (
+      background: (color: punch, opacity: .2),
+      textColor: (color: serious, opacity: .2),
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: none
+      )
     )
   ),
   raised-reversed: (
@@ -237,6 +281,15 @@ $buttonTypes: (
       background: (color: air, opacity: .9)
     ),
     active: (
+      shadow: (
+        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
+        kind: none
+      )
+    ),
+    disabled: (
+      background: (color: air),
+      textColor: (color: punch),
+      opacity: .3,
       shadow: (
         colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: none
