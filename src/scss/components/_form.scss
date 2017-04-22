@@ -7,6 +7,37 @@
 **/
 
 .form {
+  position: relative;
+  overflow: hidden;
+
+  .envelop {
+    background: get-color(reward);
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 30px 30px 20px 30px;
+
+    &__title {
+      margin: 0;
+      text-align: center;
+      color: get-color(air);
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 900;
+    }
+  }
+
+  .svg-triangle {
+    width: 100%;
+    height: 20px;
+    margin-top: 68px;
+  }
+
+  .svg-triangle polygon {
+    fill: get-color(reward);
+    stroke: get-color(reward);
+  }
 
   &__container {
     padding: {
