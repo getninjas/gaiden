@@ -8,12 +8,18 @@
           &:hover {
             @include _generate-button-types-properties($buttonType, hover);
           }
+        }
+      }
 
+      @if map-has-key($buttonType, active) {
+        &:not([disabled]) {
           &:active {
             @include _generate-button-types-properties($buttonType, active);
           }
         }
+      }
 
+      @if map-has-key($buttonType, disabled) {
         &:disabled {
           @include _generate-button-types-properties($buttonType, disabled);
         }
@@ -45,10 +51,13 @@
       opacity: map-get($buttonTypeConfig, opacity);
     }
 
+    @if map-has-key($buttonTypeConfig, borderTopColor) {
+      border-top-color: get-color(map-get($buttonTypeConfig, borderTopColor));
+    }
+
     @if map-has-key($buttonTypeConfig, shadow) {
       $shadowConfig: map-get($buttonTypeConfig, shadow);
-      $shadowColorConfig: map-get($shadowConfig, colorConfig);
-      box-shadow: map-get($shadows, map-get($shadowConfig, kind)) get-color($shadowColorConfig);
+      box-shadow: map-get($shadows, map-get($shadowConfig, kind)) get-color((color: blackNeutral, key: darker, opacity: .2));
     }
   }
 };
