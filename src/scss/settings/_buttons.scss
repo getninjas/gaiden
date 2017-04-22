@@ -88,21 +88,18 @@ $buttonTypes: (
       background: punch,
       textColor: air,
       shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: normal
       )
     ),
     hover: (
       background: serious,
       shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: medium
       )
     ),
     active: (
       background: serious,
       shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: none
       )
     ),
@@ -110,7 +107,6 @@ $buttonTypes: (
       background: (color: punch, opacity: .2),
       textColor: (color: serious, opacity: .2),
       shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: none
       )
     )
@@ -120,20 +116,17 @@ $buttonTypes: (
       background: (color: air),
       textColor: punch,
       shadow: (
-        colorConfig: (color: blackNeutral,  key: darker, opacity: .2),
         kind: normal
       )
     ),
     hover: (
       background: (color: air, opacity: .9),
       shadow: (
-        colorConfig: (color: blackNeutral,  key: darker, opacity: .2),
         kind: medium
       )
     ),
     active: (
       shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: none
       )
     ),
@@ -142,7 +135,6 @@ $buttonTypes: (
       textColor: (color: punch),
       opacity: .3,
       shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: none
       )
     )
@@ -196,7 +188,6 @@ $buttonTypes: (
       border: (color: (color: rastaGray, opacity: .3), style: outline),
       textColor: (color: rastaGray, opacity: .3),
       shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: none
       )
     )
@@ -216,7 +207,6 @@ $buttonTypes: (
       textColor: (color: air),
       opacity: .3,
       shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
         kind: none
       )
     )
@@ -234,66 +224,45 @@ $buttonTypes: (
       opacity: .25,
       border: (color: (color: rastaGray), style: outline),
       textColor: (color: rastaGray),
-      shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
-        kind: none
-      )
+      shadow: ( kind: none )
     )
   ),
   raised: (
     default: (
       background: punch,
       textColor: air,
-      shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
-        kind: medium
-      )
+      shadow: ( kind: medium )
     ),
     hover: (
       background: serious
     ),
     active: (
       background: serious,
-      shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
-        kind: none
-      )
+      shadow: ( kind: none )
     ),
     disabled: (
       background: (color: punch, opacity: .2),
       textColor: (color: serious, opacity: .2),
-      shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
-        kind: none
-      )
+      shadow: ( kind: none )
     )
   ),
   raised-reversed: (
     default: (
       background: air,
-      shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
-        kind: medium
-      ),
+      shadow: ( kind: medium ),
       textColor: punch
     ),
     hover: (
       background: (color: air, opacity: .9)
     ),
     active: (
-      shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
-        kind: none
-      )
+      shadow: ( kind: none )
     ),
     disabled: (
       background: (color: air),
       textColor: (color: punch),
       opacity: .3,
-      shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
-        kind: none
-      )
+      shadow: ( kind: none )
     )
   ),
   greeny: (
@@ -302,50 +271,49 @@ $buttonTypes: (
       textColor: air
     ),
     hover: (
-      background: (color: reward, key: darker),
-      shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
-        kind: medium
-      ),
+      background: (color: rewardType),
+      shadow: ( kind: medium ),
     ),
     active: (
       background:  (color: reward, key: darker),
-      shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
-        kind: none
-      )
+      shadow: ( kind: none )
     ),
     disabled: (
-      background: (color: rastaGray, opacity: .3),
-      textColor: air,
-      shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
-        kind: none
-      )
+      background: (color: air, opacity: .3),
+      textColor: rastaGray
     )
   ),
   greeny-raised: (
     default: (
       background: reward,
       textColor: air,
-      shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
-        kind: medium
-      )
+      shadow: ( kind: medium )
     ),
     hover: (
-      background: (color: reward, key: darker),
-      shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
-        kind: medium
-      )
+      background: (color: rewardType)
     ),
     active: (
-      background: (color: reward, key: darker),
-      shadow: (
-        colorConfig: (color: blackNeutral, key: darker, opacity: .2),
-        kind: none
-      )
+      shadow: ( kind: none )
+    ),
+    disabled: (
+      background: (color: air, opacity: .3),
+      textColor: rastaGray,
+      shadow: ( kind: none )
+    )
+  ),
+  full-card: (
+    default: (
+      background: (color: air),
+      textColor: punch,
+      borderTopColor: recusaGray
+    ),
+    hover: (
+      background: (color: punch),
+      textColor: air,
+      borderTopColor: punch
+    ),
+    disabled: (
+      textColor: (color: rastaGray, opacity: .3)
     )
   )
 );
