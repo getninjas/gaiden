@@ -100,7 +100,7 @@
   }
 
   &__label {
-    display: inline-block;
+    display: block;
     margin-bottom: 6px;
     color: get-color((color: blackNeutral, opacity: .9));
     font-size: 15px;
@@ -109,9 +109,12 @@
 
   &__label-link {
     margin-left: 10px;
+    float: right;
+    line-height: 1.15;
     font: {
       size: 13px;
       weight: 400;
+      style: italic;
     };
   }
 
