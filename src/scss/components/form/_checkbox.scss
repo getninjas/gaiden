@@ -44,6 +44,10 @@
     &:focus ~ label::before {
       box-shadow: inset 0 0 1px 1px get-color((color: punch, opacity: .5));
     }
+
+    &[disabled] {
+      opacity: 0;
+    }
   }
 
   label {
@@ -63,6 +67,15 @@
       background-color: get-color(breeze);
       content: '';
       text-align: center;
+    }
+  }
+
+  &--disabled {
+    label {
+      opacity: .5;
+    }
+    label::before {
+      box-shadow: initial;
     }
   }
 }
