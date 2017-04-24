@@ -34,13 +34,17 @@
         repeat: no-repeat;
         position: center center;
         color: get-color(air);
-        image: radial-gradient(circle, transparent 18%, get-color(punch) 21%);
+        image: radial-gradient(circle, transparent 20%, get-color(punch) 28%);
       }
       box-shadow: none;
     }
 
     &:focus ~ label::before {
       box-shadow: 0 0 1px 1px get-color((color: punch, opacity: .5));
+    }
+
+    &[disabled] {
+      opacity: 0;
     }
   }
 
@@ -60,6 +64,15 @@
       border-radius: 50%;
       background-color: get-color(breeze);
       content: '';
+    }
+  }
+
+  &--disabled {
+    label {
+      opacity: .5;
+    }
+    label::before {
+      box-shadow: initial;
     }
   }
 }
