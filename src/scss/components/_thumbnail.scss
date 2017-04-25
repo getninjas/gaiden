@@ -33,6 +33,7 @@
 
     &:hover {
       transform: translate(0, -5px) scale(-1);
+      box-shadow: 0 -4px 8px 0 get-color((color: blackNeutral, opacity: .1));
 
       .thumbnail__button  {
         background-color: get-color(punch);
