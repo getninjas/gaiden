@@ -37,9 +37,8 @@
     }
 
     @if map-has-key($buttonTypeConfig, border) {
-      $config: map-get($buttonTypeConfig, border);
-      $style: map-get($config, style);
-      $color: map-get($config, color);
+      $style: map-deep-get($buttonTypeConfig, border, style);
+      $color: map-deep-get($buttonTypeConfig, border, color);
       border: get-border($style) get-color($color);
     }
 
@@ -56,8 +55,8 @@
     }
 
     @if map-has-key($buttonTypeConfig, shadow) {
-      $shadowConfig: map-get($buttonTypeConfig, shadow);
-      box-shadow: map-get($shadows, map-get($shadowConfig, kind)) get-color((color: blackNeutral, key: darker, opacity: .2));
+      $shadow: map-deep-get($buttonTypeConfig, shadow, kind);
+      box-shadow: map-get($shadows, $shadow) get-color((color: blackNeutral, key: darker, opacity: .2));
     }
   }
 };
