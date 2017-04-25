@@ -70,8 +70,14 @@ $buttonSizes: (
 *        default: (
 *         background: (color: punch, opacity: .9), //using ColorConfig
 *         textColor: air,
-*         shadow: serious,
+*         shadow: ( kind: normal ),
 *         border: blackNeutral
+*        ),
+*        hover: (
+*        ),
+*        active: (
+*        ),
+*        disabled: (
 *        )
 *      );
 **/
@@ -87,56 +93,40 @@ $buttonTypes: (
     default: (
       background: punch,
       textColor: air,
-      shadow: (
-        kind: normal
-      )
+      shadow: ( kind: normal )
     ),
     hover: (
       background: serious,
-      shadow: (
-        kind: medium
-      )
+      shadow: ( kind: medium )
     ),
     active: (
       background: serious,
-      shadow: (
-        kind: none
-      )
+      shadow: ( kind: none )
     ),
     disabled: (
       background: (color: punch, opacity: .2),
       textColor: (color: serious, opacity: .2),
-      shadow: (
-        kind: none
-      )
+      shadow: ( kind: none )
     )
   ),
   high-contrast-reversed: (
     default: (
       background: (color: air),
       textColor: punch,
-      shadow: (
-        kind: normal
-      )
+      shadow: ( kind: normal )
     ),
     hover: (
       background: (color: air, opacity: .9),
-      shadow: (
-        kind: medium
-      )
+      shadow: ( kind: medium )
     ),
     active: (
-      shadow: (
-        kind: none
-      )
+      shadow: ( kind: none )
     ),
     disabled: (
       background: (color: air),
       textColor: (color: punch),
       opacity: .3,
-      shadow: (
-        kind: none
-      )
+      shadow: ( kind: none )
     )
   ),
   outline: (
@@ -151,9 +141,7 @@ $buttonTypes: (
     disabled: (
       border: (color: (color: rastaGray, opacity: .3), style: outline),
       textColor: (color: rastaGray, opacity: .3),
-      shadow: (
-        kind: none
-      )
+      shadow: ( kind: none )
     )
   ),
   outline-reversed: (
@@ -170,9 +158,7 @@ $buttonTypes: (
       border: (color: air, style: outline),
       textColor: (color: air),
       opacity: .3,
-      shadow: (
-        kind: none
-      )
+      shadow: ( kind: none )
     )
   ),
   outline-light: (
