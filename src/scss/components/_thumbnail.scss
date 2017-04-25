@@ -19,7 +19,7 @@
   height: 100%;
   position: relative;
   overflow: hidden;
-  border-radius: $borderRadius;
+  border-radius: $borderRadiusButton;
   will-change: transform;
   width: 98%;
   max-height: 190px;
@@ -70,7 +70,7 @@
 
   &__photo {
     width: 100%;
-    border-radius: $borderRadius;
+    border-radius: $borderRadiusButton;
     display: block;
 
     img {
