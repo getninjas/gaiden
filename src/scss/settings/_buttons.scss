@@ -139,42 +139,6 @@ $buttonTypes: (
       )
     )
   ),
-  low-contrast: (
-    default: (
-      background: recusaGray,
-      textColor: (color: blackNeutral, opacity: .5)
-    ),
-    hover: (
-      background: (color: blackNeutral, opacity: .2)
-    )
-  ),
-  low-contrast-reversed: (
-    default: (
-      background: (color: blackNeutral, opacity: .1),
-      textColor: air
-    ),
-    hover: (
-      background: (color: blackNeutral, opacity: .14)
-    )
-  ),
-  medium-contrast: (
-    default: (
-      background: serious,
-      textColor: air
-    ),
-    hover: (
-      background: (color: serious, key: darker)
-    )
-  ),
-  medium-contrast-reversed: (
-    default: (
-      background: (color: blackNeutral, opacity: .25),
-      textColor: air
-    ),
-    hover: (
-      background: (color: blackNeutral, opacity: .3)
-    )
-  ),
   outline: (
     default: (
       background: air,
