@@ -9,8 +9,8 @@
   margin: 0 auto;
   z-index: 4;
   border-radius: 7px;
-  border: 1px solid get-color((color: blackNeutral, opacity: .15));
   background-color: get-color(air);
+  box-shadow: 0 2px 4px 0 get-color((color: blackNeutral, opacity: .15));
   position: relative;
 
   &--over-banner {
