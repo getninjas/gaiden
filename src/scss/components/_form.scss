@@ -121,12 +121,14 @@
   &__label {
     display: block;
     margin-bottom: 6px;
-    color: get-color((color: blackNeutral, opacity: .9));
+    color: get-color((color: blackNeutral, opacity: .6));
     font-size: 13px;
     font-weight: 700;
   }
 
   &__label-link {
+    @include clearfix();
+
     margin-left: 10px;
     float: right;
     line-height: 1.15;
