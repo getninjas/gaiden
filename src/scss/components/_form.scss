@@ -20,14 +20,14 @@
 }
 
 %focus-style {
-  border: 1px solid get-color((color: rastaGray));
-  background-color: get-color((color: air));
+  border: 1px solid get-color(rastaGray);
+  background-color: get-color(air);
 }
 
 .form {
 
   input {
-    padding: 10px 10px;
+    padding: 10px;
   }
 
   select {
@@ -64,7 +64,7 @@
     }
 
     &--disabled {
-      > label, span {
+      > label, > span {
         opacity: .5;
       }
     }
@@ -95,7 +95,7 @@
     }
 
     &--filled {
-      background-color: get-color((color: air));
+      background-color: get-color(air);
       border: 1px solid get-color((color: rastaGray, opacity: .1));
       color: get-color((color: blackNeutral, opacity: .8));
       font-style: normal;
