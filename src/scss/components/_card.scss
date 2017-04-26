@@ -26,7 +26,7 @@
 .card {
   background-color: get-color(air);
   border-radius: $borderRadius;
-  box-shadow: 0 4px 8px 0 get-color((color: blackNeutral, opacity: .12));
+  box-shadow: 0 2px 4px 0 get-color((color: blackNeutral, opacity: .12));
   flex: 1 1 auto;
   padding: 24px;
   width: inherit;
@@ -44,6 +44,8 @@
   &__content {
     color: get-color((color: blackNeutral, opacity: .6));
     font-size: 14px;
+    font-style: italic;
+    line-height: 1.43;
 
     .card__header + & {
       margin-top: 16px;
