@@ -16,33 +16,9 @@
 **/
 
 /**
-  * @styles buttons_mc Medium Contrast
-  *
-  * @demo demo/gaiden-css/components/buttons/mc/demo.html
-**/
-
-/**
-  * @styles buttons_raised Raised
+  * @styles buttons_raised High Contrast Raised
   *
   * @demo demo/gaiden-css/components/buttons/raised/demo.html
-**/
-
-/**
-  * @styles buttons_outline Outline
-  *
-  * @demo demo/gaiden-css/components/buttons/outline/demo.html
-**/
-
-/**
-  * @styles buttons_lc Low Contrast
-  *
-  * @demo demo/gaiden-css/components/buttons/lc/demo.html
-**/
-
-/**
-  * @styles buttons_reversed_lc Reversed Low Contrast
-  *
-  * @demo demo/gaiden-css/components/buttons/reversed/lc/demo.html
 **/
 
 /**
@@ -52,15 +28,21 @@
 **/
 
 /**
-  * @styles buttons_reversed_mc Reversed Medium Contrast
-  *
-  * @demo demo/gaiden-css/components/buttons/reversed/mc/demo.html
-**/
-
-/**
   * @styles buttons_reversed_outline Reversed Outline
   *
   * @demo demo/gaiden-css/components/buttons/reversed/outline/demo.html
+**/
+
+/**
+  * @styles buttons_outline Outline
+  *
+  * @demo demo/gaiden-css/components/buttons/outline/demo.html
+**/
+
+/**
+  * @styles buttons_outline_light Outline Light
+  *
+  * @demo demo/gaiden-css/components/buttons/outline/light/demo.html
 **/
 
 /**
@@ -78,7 +60,19 @@
 /**
   * @styles buttons_greeny Greeny
   *
-  * @demo demo/gaiden-css/components/buttons/greeny/demo.html
+  * @demo demo/gaiden-css/components/buttons/greeny/default/demo.html
+**/
+
+/**
+  * @styles buttons_greeny_raised Greeny Raised
+  *
+  * @demo demo/gaiden-css/components/buttons/greeny/raised/demo.html
+**/
+
+/**
+  * @styles buttons_full_card Full Card
+  *
+  * @demo demo/gaiden-css/components/buttons/fullcard/default/demo.html
 **/
 
 /**
@@ -89,18 +83,21 @@
 
 .btn {
   display: inline-block;
-  border-radius: $borderRadius;
-  font-weight: 400;
+  border-radius: $borderRadiusButton;
+  font-weight: 700;
   text-align: center;
   border: 0;
   letter-spacing: .3px;
   text-transform: uppercase;
   cursor: pointer;
   background-color: transparent;
-  transition: background-color .2s;
+  line-height: 1;
+  transition-duration: .2s, .2s, .2s, .3s;
+  transition-timing-function: ease-in, ease-in, ease-in, ease;
+  transition-property: border-color, box-shadow, background-color, color;
 
   &[disabled] {
-    opacity: .3;
+    cursor: not-allowed;
   }
 
   &--fluid {
@@ -131,6 +128,14 @@
       transform-origin: 0 0;
       width: 20px;
     }
+  }
+
+  &--full-card {
+    border-top: get-border(default);
+    border-bottom-right-radius: $borderRadius;
+    border-bottom-left-radius: $borderRadius;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   @include generate-button-types;
