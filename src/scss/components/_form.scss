@@ -6,7 +6,74 @@
   * @demo demo/gaiden-css/components/form/demo.html
 **/
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: get-color((color: blackNeutral, key: darker, opacity: .5));
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: get-color((color: blackNeutral, key: darker, opacity: .5));
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: get-color((color: blackNeutral, key: darker, opacity: .5));
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: get-color((color: blackNeutral, key: darker, opacity: .5));
+}
+
+%focus-style {
+  border: 1px solid get-color(rastaGray);
+  background-color: get-color(air);
+}
+
 .form {
+  overflow: hidden;
+
+  &__envelop {
+    background: get-color(reward);
+    width: 100%;
+    padding: 30px 30px 20px 30px;
+
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    color: get-color(air);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: get-weight(bolder);
+  }
+
+  &__tie {
+    width: 100%;
+    height: 20px;
+
+    polygon {
+      fill: get-color(reward);
+      stroke: get-color(reward);
+    }
+  }
+
+  input {
+    padding: 10px;
+  }
+
+  select {
+    height: 40px;
+  }
+
+
+  input[disabled],
+  select[disabled] {
+    opacity: .5;
+    background-color: get-color((color: blackNeutral, key: darker, opacity: .05));
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      border: 1px solid get-color((color: rastaGray, opacity: .2));
+    }
+  }
+
 
   &__container {
     padding: {
@@ -22,16 +89,31 @@
     & + & {
       margin-top: 16px;
     }
+
+    &--disabled {
+      > label, > span {
+        opacity: .5;
+      }
+
+      > label a {
+        display: none;
+      }
+    }
   }
 
   &__input {
     display: block;
-    padding: 13px;
-    border: 1px solid get-color((color: punch, opacity: .5));
-    border-radius: 6px;
-    background-color: get-color(breeze);
+    padding: 11px;
+    border: 1px solid get-color((color: rastaGray, opacity: .2));
+    border-radius: $borderRadiusButton;
+    background-color: get-color((color: blackNeutral, key: darker, opacity: .05));
     font-size: 14px;
-    transition: box-shadow .18s;
+    font-style: italic;
+    line-height: 1.3;
+    color: get-color((color: blackNeutral, key: darker, opacity: .5));
+    transition-duration: .15s;
+    transition-timing-function: ease-in;
+    transition-property: border-color, background-color;
 
     .form__field--fluid & {
       width: 100%;
@@ -39,16 +121,21 @@
 
     &:hover,
     &:focus {
+      @extend %focus-style;
       outline: none;
-      box-shadow: 0 0 1px 1px get-color((color: serious, opacity: .5));
+    }
+
+    &--filled {
+      background-color: get-color(air);
+      border: 1px solid get-color((color: rastaGray, opacity: .1));
+      color: get-color((color: blackNeutral, opacity: .8));
+      font-style: normal;
     }
 
     &--invalid {
-      border-color: get-color(bloody);
-
       &:hover,
       &:focus {
-        box-shadow: 0 0 1px 1px get-color((color: bloody, key: darker, opacity: .5));
+        @extend %focus-style;
       }
     }
   }
@@ -59,18 +146,23 @@
   }
 
   &__label {
-    display: inline-block;
+    display: block;
     margin-bottom: 6px;
-    color: get-color((color: blackNeutral, opacity: .9));
-    font-size: 15px;
-    font-weight: 700;
+    color: get-color((color: blackNeutral, opacity: .6));
+    font-size: 13px;
+    font-weight: get-weight(bold);
   }
 
   &__label-link {
+    @include clearfix();
+
     margin-left: 10px;
+    float: right;
+    line-height: 1.15;
     font: {
       size: 13px;
-      weight: 400;
+      weight: get-weight(normal);
+      style: italic;
     };
   }
 
@@ -81,14 +173,5 @@
     &.form__field {
       margin-top: 5px;
     }
-  }
-
-  input {
-    padding: 13px 11px;
-    color: get-color(blackNeutral);
-  }
-
-  select {
-    height: 45px;
   }
 }

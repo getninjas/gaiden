@@ -16,3 +16,4 @@ CVS
 # application
 build/*
 docs/gaiden-css
+shelljs_*
