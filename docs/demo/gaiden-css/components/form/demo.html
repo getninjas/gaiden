@@ -31,12 +31,37 @@
 
         <div class="form__field form__field--fluid space-element-large">
           <label class="form__label" for="name">Name</label>
-          <input type="text" name="name" id="name" value="" placeholder="Type your name" class="form__input" />
+          <input type="text" name="name" id="name" value="GetNinjas" placeholder="Type your name" class="form__input form__input--filled" />
         </div>
 
         <div class="form__field form__field--fluid">
           <label class="form__label" for="cep">CEP <a href="#" class="form__label-link">Don't know the CEP?</a></label>
           <input type="text" name="cep" id="cep" value="" placeholder="Type your CEP" class="form__input" />
+        </div>
+
+        <div class="form__field form__field--fluid form__field--disabled">
+          <label class="form__label" for="Postal">Postal <a href="#" class="form__label-link">Don't know the CEP?</a></label>
+          <input type="text" name="Postal" disabled id="Postal" value="" placeholder="Type your CEP" class="form__input" />
+        </div>
+
+        <div class="form__field form__field--fluid form__field--disabled">
+          <label class="form__label" for="service_kind">Disabled</label>
+          <select name="service_kind" disabled id="service_kind" placeholder="Choose the kind of service" class="form__input form__input--invalid">
+            <option value="0">Select item</option>
+            <option value="1">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <span class="form__message form__message--invalid space-element-small">Invalid service</span>
+        </div>
+
+        <div class="form__field form__field--fluid">
+          <label class="form__label" for="service_kind">Selected</label>
+          <select name="service_kind" id="service_kind" placeholder="Choose the kind of service" class="form__input form__input--invalid form__input--filled">
+            <option selected value="0">Option 1</option>
+            <option value="1">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <span class="form__message form__message--invalid space-element-small">Invalid service</span>
         </div>
 
         <div class="form__field form__field--fluid">
@@ -57,25 +82,45 @@
 
         <div class="form__field">
           <label class="form__label" for="optionals">Optionals</label>
-          <div class="form__radio">
-            <input type="radio" name="optionals" id="radio_1" value="Option 1" value="radio_1" />
+          <div class="form__radio form__radio--disabled">
+            <input type="radio" disabled name="optionals" id="radio_1" value="Option 1"/>
             <label for="radio_1">Option 1</label>
           </div>
           <div class="form__radio">
-            <input type="radio" name="optionals" id="radio_2" value="Option 2" value="radio_2" />
+            <input type="radio" checked=true name="optionals" id="radio_2" value="Option 2"/>
             <label for="radio_2">Option 2</label>
+          </div>
+          <div class="form__radio">
+            <input type="radio" name="optionals" id="radio_2" value="Option 3" />
+            <label for="radio_3">Option 3</label>
           </div>
           <span class="form__message form__message--invalid space-element-medium">Mark some optional</span>
         </div>
 
-        <div class="form__field">
+        <div class="form__field" style=" background-color: #1393f6; color: #fff;  padding: 10px;">
+          <label class="form__label" for="optionals">Optionals</label>
+          <div class="form__radio form__radio--outlined form__radio--disabled">
+            <input type="radio" disabled name="optionals1" id="radio_11" value="Option 1" />
+            <label for="radio_11">Option 1</label>
+          </div>
+          <div class="form__radio form__radio--outlined">
+            <input type="radio" checked=true name="optionals1" id="radio_21" value="Option 2"/>
+            <label for="radio_21">Option 2</label>
+          </div>
+          <div class="form__radio form__radio--outlined">
+            <input type="radio" name="optionals1" id="radio_31" value="Option 3"/>
+            <label for="radio_31">Option 3</label>
+          </div>
+        </div>
+
+        <div class="form__field form__field--disabled">
           <label class="form__label">Checks</label>
-          <div class="form__check">
-            <input type="checkbox" name="more_optionals" id="checkbox_1" value="Option 1" />
+          <div class="form__check form__check--disabled">
+            <input type="checkbox" disabled name="more_optionals" id="checkbox_1" value="Option 1" />
             <label for="more_optionals">More optionals</label>
           </div>
           <div class="form__check">
-            <input type="checkbox" name="more_optionals" id="checkbox_2" value="Option 2" />
+            <input type="checkbox" checked=true name="more_optionals" id="checkbox_2" value="Option 2" />
             <label for="more_optionals">More optionals</label>
           </div>
           <div class="form__check">
@@ -90,6 +135,24 @@
           </div>
           <span class="form__message form__message--invalid space-element-medium">Mark some optional</span>
         </div>
+
+        <div class="form__field" style=" background-color: #1393f6; color: #fff;  padding: 10px;">
+          <label class="form__label">Checks Outlined</label>
+          <div class="form__check form__check--outlined form__check--disabled">
+            <input type="checkbox" disabled name="more_optionals" id="checkbox_1" value="Option 1" />
+            <label for="checkbox_1">More optionals</label>
+          </div>
+          <div class="form__check form__check--outlined">
+            <input type="checkbox" checked=true name="more_optionals" id="checkbox_2" value="Option 2" />
+            <label for="checkbox_2">More optionals</label>
+          </div>
+          <div class="form__check form__check--outlined">
+            <input type="checkbox"  name="more_optionals" id="checkbox_3" value="Option 2" />
+            <label for="checkbox_3">More optionals</label>
+          </div>
+          <span class="form__message form__message--invalid space-element-medium">Mark some optional</span>
+        </div>
+
 
         <div class="space-box-small">
           <button type="submit" class="btn btn--regular btn--high-contrast btn--fluid">Continuar</button>
