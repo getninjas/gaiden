@@ -4,6 +4,7 @@
 @import 'settings/base_font';
 @import 'settings/footer';
 @import 'settings/spaces';
+@import 'settings/shadows';
 @import 'settings/border';
 @import 'settings/banner';
 @import 'tools/animations/rotation';
@@ -11,6 +12,8 @@
 @import 'tools/mixins/generate_button_sizes';
 @import 'tools/mixins/generate_button_types';
 @import 'tools/mixins/get_color';
+@import 'tools/mixins/get_shadow';
+@import 'tools/mixins/get_border';
 @import 'tools/mixins/get-weight';
 @import 'tools/mixins/flex';
 @import 'tools/mixins/clearfix';
