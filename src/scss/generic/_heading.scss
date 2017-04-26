@@ -117,7 +117,8 @@ h4,
 }
 
 h5,
-.info-title {
+.info-title,
+h5.info-title {
   font: {
     weight: get-weight(bold);
     size: 14px;
