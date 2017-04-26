@@ -16,14 +16,15 @@
     position: relative;
     padding: 30px 30px 20px 30px;
 
-    &__title {
-      margin: 0;
-      text-align: center;
-      color: get-color(air);
-      text-transform: uppercase;
-      font-size: 14px;
-      font-weight: 900;
-    }
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    color: get-color(air);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 900;
   }
 
   &__tie {
