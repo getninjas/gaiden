@@ -72,9 +72,10 @@
   &--disabled {
     label {
       opacity: .5;
-    }
-    label::before {
-      box-shadow: initial;
+
+      &::before {
+        box-shadow: initial;
+      }
     }
   }
 
