@@ -25,6 +25,33 @@
 }
 
 .form {
+  overflow: hidden;
+
+  &__envelop {
+    background: get-color(reward);
+    width: 100%;
+    padding: 30px 30px 20px 30px;
+
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    color: get-color(air);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: get-weight(bolder);
+  }
+
+  &__tie {
+    width: 100%;
+    height: 20px;
+
+    polygon {
+      fill: get-color(reward);
+      stroke: get-color(reward);
+    }
+  }
 
   input {
     padding: 10px;
@@ -123,7 +150,7 @@
     margin-bottom: 6px;
     color: get-color((color: blackNeutral, opacity: .6));
     font-size: 13px;
-    font-weight: 700;
+    font-weight: get-weight(bold);
   }
 
   &__label-link {
@@ -134,7 +161,7 @@
     line-height: 1.15;
     font: {
       size: 13px;
-      weight: 400;
+      weight: get-weight(normal);
       style: italic;
     };
   }
