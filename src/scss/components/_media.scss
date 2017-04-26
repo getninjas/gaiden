@@ -20,6 +20,7 @@
   &--link {
     .thumbnail__photo {
       border-radius: $borderRadius;
+      max-height: 170px;
     }
 
     .media__title,
