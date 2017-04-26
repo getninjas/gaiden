@@ -17,6 +17,17 @@
 .media {
   display: flex;
 
+  &--link {
+    .thumbnail__photo {
+      border-radius: $borderRadius;
+    }
+
+    .media__title,
+    .media__content {
+      font-size: 14px;
+    }
+  }
+
   &__image {
 
     &--mini {
