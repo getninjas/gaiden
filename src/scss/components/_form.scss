@@ -7,13 +7,11 @@
 **/
 
 .form {
-  position: relative;
   overflow: hidden;
 
   &__envelop {
     background: get-color(reward);
     width: 100%;
-    position: relative;
     padding: 30px 30px 20px 30px;
 
   }
