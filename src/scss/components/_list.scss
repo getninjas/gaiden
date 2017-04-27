@@ -55,6 +55,10 @@
       width: auto;
       float: none;
     }
+
+    &[class*='col-'] {
+      display: block;
+    }
   }
 
   &__item {
