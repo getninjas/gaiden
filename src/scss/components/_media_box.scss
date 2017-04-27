@@ -32,7 +32,6 @@
     flex-shrink: 0;
     padding-right: 15px;
     display: block;
-    flex: 1 1 auto;
 
     .no-flexbox & {
       display: table-cell;
@@ -41,9 +40,13 @@
 
   &__content {
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     word-break: break-word;
     font-size: 14px;
     display: flex;
+
+    &--card {
+      flex-direction: row;
+    }
   }
 }
