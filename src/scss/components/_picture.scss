@@ -39,6 +39,11 @@
     }
   }
 
+  &--media {
+    max-width: 30px;
+    margin-right: 12px;
+  }
+
   &--cover {
     display: block;
     width: auto;
