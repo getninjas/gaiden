@@ -15,20 +15,21 @@
     flex: 1 0 auto;
     padding: 30px;
     position: relative;
-    background-color: get-color(air);
+    background-color: get-color(breeze);
     border-radius: 10px;
     align-items: center;
     justify-content: center;
     font-style: italic;
+    color: get-color(rastaGray);
 
     &::after {
       position: absolute;
       bottom: -29px;
       left: 50%;
-      border-top: 15px solid get-color(air);
-      border-right: 15px solid get-color(breeze);
-      border-bottom: 15px solid get-color(breeze);
-      border-left: 15px solid get-color(breeze);
+      border-top: 15px solid get-color(breeze);
+      border-right: 15px solid get-color(air);
+      border-bottom: 15px solid get-color(air);
+      border-left: 15px solid get-color(air);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
       content: '';
