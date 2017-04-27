@@ -1,13 +1,14 @@
 .icon {
-  display: inline-block;
+  display: flex;
   vertical-align: top;
   font-style: italic;
+  line-height: 1;
   color: get-color((color: blackNeutral, opacity: .4));
+  align-items: center;
 
   img {
     max-width: 100%;
-    padding: 6px;
-    vertical-align: middle;
+    margin-right: 6px;
   }
 
   &--small {
