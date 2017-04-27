@@ -128,7 +128,7 @@
     &--filled {
       background-color: get-color(air);
       border: 1px solid get-color((color: rastaGray, opacity: .1));
-      color: get-color((color: blackNeutral, opacity: .8));
+      color: get-color((color: blackNeutral, key: darker, opacity: .8));
       font-style: normal;
     }
 
@@ -148,7 +148,7 @@
   &__label {
     display: block;
     margin-bottom: 6px;
-    color: get-color((color: blackNeutral, opacity: .6));
+    color: get-color((color: blackNeutral, key: darker, opacity: .6));
     font-size: 13px;
     font-weight: get-weight(bold);
   }
@@ -161,7 +161,7 @@
     line-height: 1.15;
     font: {
       size: 13px;
-      weight: get-weight(normal);
+      weight: get-weight(bold);
       style: italic;
     };
   }
