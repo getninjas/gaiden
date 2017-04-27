@@ -4,6 +4,9 @@
   *
   * ## Services
   * @demo demo/gaiden-css/components/dialog/demo.html
+  *
+  * ## Inverted
+  * @demo demo/gaiden-css/components/dialog/inverted/demo.html
 **/
 
 .dialog {
@@ -40,6 +43,7 @@
     display: flex;
     text-align: left;
     justify-content: center;
+    font-size: 12px;
 
     &-photo {
       margin-right: 10px;
@@ -48,7 +52,6 @@
     &-name {
       line-height: 15px;
       font-weight: bold;
-      padding-top: 4px;
     }
 
     &-location {
@@ -56,4 +59,19 @@
       line-height: 15px;
     }
   }
+
+  &--inverted {
+    .dialog__quote {
+      background-color: get-color(air);
+      color: get-color(rastaGray);
+
+      &::after {
+        border-top: 15px solid get-color(air);
+        border-right: 15px solid get-color(breeze);
+        border-bottom: 15px solid get-color(breeze);
+        border-left: 15px solid get-color(breeze);
+      }
+    }
+  }
+
 }
