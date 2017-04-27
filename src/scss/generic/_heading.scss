@@ -32,7 +32,7 @@ h6,
 .card-title,
 .info-title {
   &--high-contrast {
-    color: get-color(punch);
+    color: get-color(rastaGray);
   }
 }
 
@@ -117,7 +117,7 @@ h4,
 }
 
 h5,
-.info-title {
+.card-title {
   font: {
     weight: get-weight(bold);
     size: 14px;
@@ -139,7 +139,7 @@ h5,
 }
 
 h6,
-.info-title {
+.caption-title {
   font: {
     weight: get-weight(bold);
     size: 13px;
