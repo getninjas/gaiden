@@ -16,7 +16,7 @@
     display: inline-block;
 
     & + & {
-      margin-left: 3px;
+      margin-left: 2px;
     }
 
     a {
@@ -24,7 +24,7 @@
       padding: 4px 9px;
       width: 100%;
       height: 100%;
-      border: solid 1px get-color((color: serious, opacity: .2));
+      border: solid 1px get-color((color: rastaGray, opacity: .2));
       border-radius: $borderRadius;
       transition-duration: .2s, .2s, .2s;
       transition-property: background-color, color, border-color;
@@ -44,12 +44,19 @@
       cursor: not-allowed;
     }
 
-    &--active,
-    &:hover {
+    &--active {
       &:not(.pagination__item--disabled) {
         a {
           color: get-color(air);
           background-color: get-color(punch);
+          border-color: get-color(serious);
+        }
+      }
+    }
+
+    &:hover {
+      &:not(.pagination__item--disabled) {
+        a {
           border-color: get-color(serious);
         }
       }
