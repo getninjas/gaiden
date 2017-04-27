@@ -15,18 +15,22 @@
   color: get-color((color: blackNeutral, opacity: .6));
 
   &__title {
-    color: get-color(punch);
+
+    .caption-title--mini {
+      color: get-color((color: blackNeutral, key: darker, opacity: .8));
+    }
 
     small {
-      font-weight: 700;
+      color: get-color((color: blackNeutral, key: darker, opacity: .6));
+      font-weight: get-weight(bold);
       font-size: 12px;
       font-style: normal;
-      color: get-color((color: blackNeutral, opacity: .6));
     }
   }
 
-  &__sidebar,
-  &__content {
+  &__sidebar {
+    flex-shrink: 0;
+    padding-right: 15px;
     display: block;
     flex: 1 1 auto;
 
@@ -35,15 +39,11 @@
     }
   }
 
-  &__sidebar {
-    flex-shrink: 0;
-    padding-right: 15px;
-  }
-
   &__content {
     flex-wrap: wrap;
     flex-direction: row;
     word-break: break-word;
     font-size: 14px;
+    display: flex;
   }
 }
