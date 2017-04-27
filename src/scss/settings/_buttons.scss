@@ -97,7 +97,7 @@ $buttonTypes: (
     ),
     hover: (
       background: serious,
-      shadow: ( kind: medium )
+      shadow: ( kind: large  )
     ),
     active: (
       background: serious,
@@ -117,7 +117,7 @@ $buttonTypes: (
     ),
     hover: (
       background: (color: air, opacity: .9),
-      shadow: ( kind: medium )
+      shadow: ( kind: large  )
     ),
     active: (
       shadow: ( kind: none )
@@ -181,7 +181,7 @@ $buttonTypes: (
     default: (
       background: punch,
       textColor: air,
-      shadow: ( kind: medium )
+      shadow: ( kind: large  )
     ),
     hover: (
       background: serious
@@ -199,7 +199,7 @@ $buttonTypes: (
   raised-reversed: (
     default: (
       background: air,
-      shadow: ( kind: medium ),
+      shadow: ( kind: large  ),
       textColor: punch
     ),
     hover: (
@@ -222,7 +222,7 @@ $buttonTypes: (
     ),
     hover: (
       background: (color: rewardType),
-      shadow: ( kind: medium ),
+      shadow: ( kind: large  ),
     ),
     active: (
       background:  (color: reward, key: darker),
@@ -237,7 +237,7 @@ $buttonTypes: (
     default: (
       background: reward,
       textColor: air,
-      shadow: ( kind: medium )
+      shadow: ( kind: large  )
     ),
     hover: (
       background: (color: rewardType)
