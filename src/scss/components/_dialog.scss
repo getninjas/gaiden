@@ -7,6 +7,9 @@
   *
   * ## Inverted
   * @demo demo/gaiden-css/components/dialog/inverted/demo.html
+  *
+  * ## Aligned left
+  * @demo demo/gaiden-css/components/dialog/aligned-left/demo.html
 **/
 
 .dialog {
@@ -30,9 +33,9 @@
       bottom: -29px;
       left: 50%;
       border-top: 15px solid get-color(breeze);
-      border-right: 15px solid get-color(air);
-      border-bottom: 15px solid get-color(air);
-      border-left: 15px solid get-color(air);
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 15px solid transparent;
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
       content: '';
@@ -67,11 +70,20 @@
 
       &::after {
         border-top: 15px solid get-color(air);
-        border-right: 15px solid get-color(breeze);
-        border-bottom: 15px solid get-color(breeze);
-        border-left: 15px solid get-color(breeze);
       }
     }
   }
 
+  &--aligned-left {
+    .dialog__quote {
+      &::after {
+        left: 10%;
+      }
+    }
+
+    .dialog__user {
+      justify-content: initial;
+      margin-left: 7%;
+    }
+  }
 }
