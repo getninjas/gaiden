@@ -9,12 +9,7 @@
 .form__alert-message {
   display: inline-block;
 
-  [class*='-title'] {
-    color: get-color(punch);
-  }
-
   small {
-    color: get-color((color: blackNeutral, opacity: .6));
     font: {
       size: 14px;
       style: normal;
