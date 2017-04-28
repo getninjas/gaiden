@@ -10,13 +10,29 @@
 **/
 
 .media-box {
-  display: flex;
-  flex: 1;
+  display: block;
   color: get-color((color: blackNeutral, key: darker, opacity: .8));
+
+  &--action {
+    .media-box__body,
+    .media-box__content {
+      padding: 0 24px;
+    }
+
+    .btn--full-card {
+      font-size: 12px;
+      width: 100%;
+      padding: 14px 0;
+    }
+  }
 
   &__title {
     font-size: 14px;
     color: inherit;
+
+    .card__title {
+      font-size: inherit;
+    }
 
     small {
       color: get-color((color: blackNeutral, key: darker, opacity: .6));
@@ -26,13 +42,17 @@
     }
   }
 
+  &__profile {
+    display: flex;
+  }
+
   &__picture {
     min-width: 38px;
     margin-right: 10px;
   }
 
   &__rating {
-    margin-top: 4px;
+    margin-top: 8px;
   }
 
   &__sidebar {
@@ -46,6 +66,7 @@
   }
 
   &__body {
+    font-size: 14px;
     font-style: italic;
     color: get-color((color: blackNeutral, key: darker, opacity: .6));
   }
