@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
 const shelljs = require('shelljs');
+const replace = require('replace');
 
 const docsDir = './docs/gaiden-css';
 const sourceDocsDir = './docs/demo/gaiden-css/scss';
@@ -37,6 +38,22 @@ shelljs.mv('-n', [
 
 shelljs.mkdir('./demo');
 shelljs.mv('-n', './docs/demo/*', './demo/');
+
+replace({
+  regex: 'docs\/demo',
+  replacement: 'demo',
+  paths: ['.'],
+  recursive: false,
+  include: '*.html'
+});
+
+replace({
+  regex: '\/gaiden-css\/gaiden.css',
+  replacement: '\/gaiden.css',
+  paths: ['./demo/'],
+  recursive: true,
+  include: '*.html'
+});
 
 shelljs.exec('$GAIDEN_LAST_TAG=$(git describe)')
 shelljs.exec('git add . -u');
