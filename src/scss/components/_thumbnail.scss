@@ -15,7 +15,6 @@
   overflow: hidden;
   border-radius: $borderRadiusButton;
   will-change: transform;
-  margin: 0 auto;
   transition: transform .2s ease-in-out;
 
   &--action {
