@@ -2,26 +2,48 @@
   * @parent gaiden_css.components
   * @stylesheet gaiden_css_components.media Media
   *
-  * ## Simple
-  * @demo /demo/gaiden-css/components/media/simple/demo.html
+  * ## Mini
+  * @demo /demo/gaiden-css/components/media/mini/demo.html
+  *
+  * ## Default
+  * @demo /demo/gaiden-css/components/media/default/demo.html
+  *
+  *
+  * ## Link
+  * @demo /demo/gaiden-css/components/media/link/demo.html
 **/
+
 
 .media {
   display: flex;
 
+  &--link {
+    .thumbnail__photo {
+      border-radius: $borderRadius;
+      max-height: 170px;
+    }
+
+    .media__title,
+    .media__content {
+      font-size: 14px;
+    }
+  }
+
   &__image {
 
     &--mini {
-      max-height: 175px;
+      max-height: 134px;
     }
   }
 
   &__title {
     color: get-color(rastaGray);
+    width: 100%;
   }
 
   &__description {
     display: inline-table;
+    width: 100%;
   }
 
   &__content {

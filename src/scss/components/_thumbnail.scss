@@ -9,32 +9,33 @@
   * @demo demo/gaiden-css/components/thumbnail/action/demo.html
 **/
 
-/**
-  * @styles simple Simple
-  *
-  * @demo demo/gaiden-css/components/thumbnail/simple/demo.html
-**/
-
 .thumbnail {
-  width: 100%;
-  height: 100%;
+  height: initial;
   position: relative;
   overflow: hidden;
   border-radius: $borderRadius;
-  transition: transform .2s linear;
   will-change: transform;
+  transition: transform .2s ease-in-out;
 
   &--action {
     display: block;
     transform: scale(-1);
+    width: 98%;
+    box-shadow: 0 -2px 4px 0 get-color((color: blackNeutral, opacity: .1));
 
     &:hover {
-      transition: transform .2s linear;
-      transform: translateY(-7px) scale(-1.03) translateZ(1px);
+      transform: translate(0, -5px) scale(-1);
+      box-shadow: 0 -4px 8px 0 get-color((color: blackNeutral, opacity: .1));
+
+      .thumbnail__button  {
+        background-color: get-color(punch);
+        color: get-color(air);
+      }
     }
 
     .thumbnail__photo {
       transform: scale(-1);
+      max-height: 190px;
 
       img {
         width: 100%;
@@ -46,20 +47,22 @@
 
   &__button {
     width: 100%;
-    padding-top: 16px;
-    padding-bottom: 16px;
     margin-bottom: 0;
-    background-color: get-color((color: punch, opacity: .8));
-    color: get-color(air);
     text-transform: uppercase;
     text-align: center;
     z-index: 1;
     transform: scale(-1);
+    padding: 12px;
+    background-color: get-color(air);
+    font-size: 12px;
+    font-weight: get-weight(bold);
+    color: get-color(punch);
+    transition: background-color ease-in-out .2s, color ease-in-out .2s;
   }
 
   &__photo {
     width: 100%;
-    border-radius: $borderRadius;
+    border-radius: $borderRadiusButton;
     display: block;
 
     img {
