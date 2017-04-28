@@ -24,7 +24,10 @@
     .media-box__body,
     .media-box__content {
       padding: 0 24px;
-      cursor: pointer;
+    }
+
+    .media-box__body {
+      cursor: default;
     }
 
     .btn--full-card {
