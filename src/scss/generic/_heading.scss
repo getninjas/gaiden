@@ -151,16 +151,6 @@ h6,
     font-size: 12px;
   }
 
-  &--mini {
-    font-size: 12px;
-    margin-bottom: 0;
-
-    small {
-      font-size: inherit;
-      margin-top: 0;
-    }
-  }
-
   @include media(normal) {
     font-size: 16px;
 
