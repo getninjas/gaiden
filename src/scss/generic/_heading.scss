@@ -13,7 +13,8 @@ h6,
 .section-title,
 .container-title,
 .card-title,
-.info-title {
+.info-title,
+.caption-title {
   color: get-color(rastaGray);
   font: {
     weight: get-weight(bolder);
@@ -30,7 +31,8 @@ h6,
 .section-title,
 .container-title,
 .card-title,
-.info-title {
+.info-title,
+.caption-title {
   &--high-contrast {
     color: get-color(rastaGray);
   }
@@ -94,7 +96,7 @@ h3,
 }
 
 h4,
-.info-title {
+.card-title {
 
   font: {
     weight: get-weight(bold);

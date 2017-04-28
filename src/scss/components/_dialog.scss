@@ -4,6 +4,12 @@
   *
   * ## Services
   * @demo demo/gaiden-css/components/dialog/demo.html
+  *
+  * ## Inside Wall
+  * @demo demo/gaiden-css/components/dialog/inside-wall/demo.html
+  *
+  * ## Aligned left
+  * @demo demo/gaiden-css/components/dialog/aligned-left/demo.html
 **/
 
 .dialog {
@@ -15,20 +21,21 @@
     flex: 1 0 auto;
     padding: 30px;
     position: relative;
-    background-color: get-color(air);
+    background-color: get-color(breeze);
     border-radius: 10px;
     align-items: center;
     justify-content: center;
     font-style: italic;
+    color: get-color(rastaGray);
 
     &::after {
       position: absolute;
       bottom: -29px;
       left: 50%;
-      border-top: 15px solid get-color(air);
-      border-right: 15px solid get-color(breeze);
-      border-bottom: 15px solid get-color(breeze);
-      border-left: 15px solid get-color(breeze);
+      border-top: 15px solid get-color(breeze);
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 15px solid transparent;
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
       content: '';
@@ -39,6 +46,7 @@
     display: flex;
     text-align: left;
     justify-content: center;
+    font-size: 12px;
 
     &-photo {
       margin-right: 10px;
@@ -47,12 +55,49 @@
     &-name {
       line-height: 15px;
       font-weight: bold;
-      padding-top: 4px;
     }
 
     &-location {
       font-size: 12px;
       line-height: 15px;
+    }
+
+    &--centered {
+      flex-direction: column;
+      align-items: center;
+
+      .dialog__user-photo {
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
+
+      .wrap__dialog-itens {
+        text-align: center;
+      }
+    }
+  }
+
+  &--inside-wall {
+    .dialog__quote {
+      background-color: get-color(air);
+      color: get-color(rastaGray);
+
+      &::after {
+        border-top: 15px solid get-color(air);
+      }
+    }
+  }
+
+  &--aligned-left {
+    .dialog__quote {
+      &::after {
+        left: 10%;
+      }
+    }
+
+    .dialog__user {
+      justify-content: initial;
+      margin-left: 7%;
     }
   }
 }
