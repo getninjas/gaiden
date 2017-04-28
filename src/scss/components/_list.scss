@@ -18,9 +18,10 @@
   * @demo /demo/gaiden-css/components/list/stacked/using_grid_system/demo.html
 **/
 .list {
-  @include flex-direction(row);
-  @include flex-wrap(wrap);
-  @include flexbox;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  margin-left: 0;
 
   .no-flexbox & {
     @include clearfix;
@@ -28,56 +29,61 @@
 
   &--link {
     color: get-color(punch);
+    transition: transform ease-in-out .2s, background-color ease-in-out .3s;
 
     .list__item {
-      @include flex-wrap(nowrap);
-
-      padding: {
-        right: 12px;
-        left: 12px;
-      };
+      flex-wrap: nowrap;
+      cursor: pointer;
 
       &:hover,
       &:active,
       &:focus {
-        -ms-transform: translateX(8px);
-        transform: translateX(8px);
-        color: get-color(serious);
-      }
+        background-color: get-color((color: breeze, key: darker, opacity: .4));
 
-      &::before {
-        content: '›';
+        a {
+          transform: translateX(8px);
+        }
       }
     }
   }
 
   &--stacked {
     display: block;
+    width: 100%;
 
     .list__item {
-      display: block;
       width: auto;
       float: none;
+    }
 
-      &::before {
-        margin-right: 2px;
-      }
+    &[class*='col-'] {
+      display: block;
     }
   }
 
   &__item {
-    @include flex-shrink(0);
-    @include flexbox;
-
-    padding: 8px 0;
+    flex-shrink: 0;
+    display: flex;
+    color: get-color(punch);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: $borderRadiusButton;
     width: 25%;
-    transition: transform .25s, color .25s;
+    font-size: 14px;
+    transition: transform ease-in-out .2s, background-color ease-in-out .3s;
+
+    a {
+      transition: inherit;
+      padding: 5px 5px 5px 0;
+      width: calc(100% - 8px);
+    }
 
     .no-flexbox & {
       float: left;
     }
 
     &::before {
+      content: '';
       margin-right: 5px;
     }
 
