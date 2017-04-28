@@ -6,7 +6,7 @@
   color: get-color((color: blackNeutral, opacity: .4));
   align-items: center;
 
-  img {
+  &__image {
     max-width: 100%;
     margin-right: 6px;
   }
