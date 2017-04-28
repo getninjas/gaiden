@@ -16,9 +16,7 @@
 
   &__title {
 
-    .caption-title--mini {
-      color: get-color((color: blackNeutral, key: darker, opacity: .8));
-    }
+
 
     small {
       color: get-color((color: blackNeutral, key: darker, opacity: .6));
