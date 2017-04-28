@@ -5,8 +5,8 @@
   * ## Services
   * @demo demo/gaiden-css/components/dialog/demo.html
   *
-  * ## Inverted
-  * @demo demo/gaiden-css/components/dialog/inverted/demo.html
+  * ## Inside Wall
+  * @demo demo/gaiden-css/components/dialog/inside-wall/demo.html
   *
   * ## Aligned left
   * @demo demo/gaiden-css/components/dialog/aligned-left/demo.html
@@ -63,7 +63,7 @@
     }
   }
 
-  &--inverted {
+  &--inside-wall {
     .dialog__quote {
       background-color: get-color(air);
       color: get-color(rastaGray);
