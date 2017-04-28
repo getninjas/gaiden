@@ -61,6 +61,20 @@
       font-size: 12px;
       line-height: 15px;
     }
+
+    &--centered {
+      flex-direction: column;
+      align-items: center;
+
+      .dialog__user-photo {
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
+
+      .wrap__dialog-itens {
+        text-align: center;
+      }
+    }
   }
 
   &--inside-wall {
