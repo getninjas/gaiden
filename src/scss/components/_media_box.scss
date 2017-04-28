@@ -32,11 +32,6 @@
       width: 100%;
       padding: 14px 0;
     }
-
-    &:hover {
-      transform: translate(0, -5px);
-      box-shadow: get-shadow(large) get-color((color: blackNeutral, opacity: .1));
-    }
   }
 
   &__title {
