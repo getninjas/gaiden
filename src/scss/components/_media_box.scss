@@ -26,6 +26,10 @@
     }
   }
 
+  &__rating {
+    margin-top: 4px;
+  }
+
   &__sidebar {
     flex-shrink: 0;
     padding-right: 15px;
@@ -34,6 +38,11 @@
     .no-flexbox & {
       display: table-cell;
     }
+  }
+
+  &__body {
+    font-style: italic;
+    color: get-color((color: blackNeutral, key: darker, opacity: .6));
   }
 
   &__content {
