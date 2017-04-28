@@ -24,12 +24,18 @@
     .media-box__body,
     .media-box__content {
       padding: 0 24px;
+      cursor: pointer;
     }
 
     .btn--full-card {
       font-size: 12px;
       width: 100%;
       padding: 14px 0;
+    }
+
+    &:hover {
+      transform: translate(0, -5px);
+      box-shadow: get-shadow(large) get-color((color: blackNeutral, opacity: .1));
     }
   }
 
