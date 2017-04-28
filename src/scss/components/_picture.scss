@@ -52,8 +52,9 @@
       position: relative;
       left: 50%;
       min-height: 100%;
-      max-width: initial;
+      max-width: none;
       min-width: 100%;
+      -ms-transform: translateX(-50%);
       transform: translateX(-50%);
     }
   }

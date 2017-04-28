@@ -1,6 +1,6 @@
 {
   "name": "gaiden",
-  "version": "10.0.3",
+  "version": "10.2.0",
   "description": "Styleguide for GetNinjas projects",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,14 @@
     "docs": "npm run build:docs",
     "dev": "npm run clear && FORCE_COLOR=1 npm-run-all -p build:dev browsersync browsersync:docs watch"
   },
+  "browserslist": [
+    "last 2 versions",
+    "safari >= 7",
+    "ie >= 9",
+    "ff >= 20",
+    "ios >=7",
+    "android >=4"
+  ],
   "bin": {
     "build:dev:css": "./bin/build/dev/css.js",
     "build:dev:html": "./bin/build/dev/html.js",
@@ -48,10 +56,12 @@
   },
   "homepage": "https://github.com/getninjas/gaiden#readme",
   "devDependencies": {
+    "autoprefixer": "^6.7.7",
     "browser-sync": "^2.17.3",
     "css-mqpacker": "^5.0.1",
     "cssnano-cli": "^1.0.5",
     "documentjs": "^0.4.4",
+    "eslint-plugin-react": "^6.10.0",
     "node-sass": "^3.10.1",
     "npm-run-all": "^3.1.0",
     "onchange": "^3.0.2",

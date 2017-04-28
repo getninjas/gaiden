@@ -6,11 +6,11 @@
 **/
 
 .menu {
-  @include flexbox;
-  @include flex-shrink(0);
-  @include flex-direction(column);
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
   @include media(small) {
-    @include flex-direction(row);
+    flex-direction: row;
   }
 
   padding: 24px;
@@ -30,6 +30,7 @@
     position: fixed;
     z-index: 10;
     background-color: get-color(air);
+    top: 0;
 
     + .page-banner {
       .page-banner__content {

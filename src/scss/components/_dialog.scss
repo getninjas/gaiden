@@ -7,12 +7,12 @@
 **/
 
 .dialog {
-  @include flex-direction(column);
+  flex-direction: column;
   justify-content: center;
 
   &__quote {
-    @include flexbox;
-    @include flex;
+    display: flex;
+    flex: 1 0 auto;
     padding: 30px;
     position: relative;
     background-color: get-color(air);
@@ -29,13 +29,14 @@
       border-right: 15px solid get-color(breeze);
       border-bottom: 15px solid get-color(breeze);
       border-left: 15px solid get-color(breeze);
+      -ms-transform: translateX(-50%);
       transform: translateX(-50%);
       content: '';
     }
   }
 
   &__user {
-    @include flexbox;
+    display: flex;
     text-align: left;
     justify-content: center;
 

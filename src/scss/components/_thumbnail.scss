@@ -25,12 +25,12 @@
   will-change: transform;
 
   &--action {
-    display: flex;
-    flex-direction: column-reverse;
+    display: block;
+    transform: scale(-1);
 
     &:hover {
       transition: transform .2s linear;
-      transform: translateY(-7px) scale(1.03);
+      transform: translateY(-7px) scale(-1.03) translateZ(1px);
     }
 
     .thumbnail__photo {
@@ -52,11 +52,14 @@
     text-transform: uppercase;
     text-align: center;
     z-index: 1;
+    transform: scale(-1);
   }
 
   &__photo {
     width: 100%;
     border-radius: $borderRadius;
+    display: block;
+    transform: scale(-1);
 
     img {
       width: auto;
