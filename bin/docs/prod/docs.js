@@ -37,8 +37,7 @@ filesToFixPath.forEach(function(file) {
 
 shell.cp('-fr', `${docsDir}/`, './');
 
-shell.mkdir('-p', './demo/gaiden-css');
-shell.cp('-Rf', './docs/demo/gaiden-css', './demo/gaiden-css');
+shell.cp('-Rf', './docs/demo/', './demo/');
 
 const gaidenLastTag = shell.exec('git describe').stdout.replace(/\n/g, '');
 
