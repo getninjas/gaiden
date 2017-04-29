@@ -28,7 +28,9 @@ shell.cp('./dist/gaiden.min.css', './');
 
 shell.cp('-R', `${docsDir}/`, './');
 
-shell.ls('./docs/demo/*.html').forEach(function(file) {
+const htmlFiles = shell.find('./docs/demo/').filter(function(file) { return file.match(/\.html$/); });
+
+htmlFiles.forEach(function(file) {
   shell.sed('-i', 'docs\/demo\/', 'demo', file);
   shell.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden.css', file);
 });
