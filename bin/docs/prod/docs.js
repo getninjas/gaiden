@@ -21,7 +21,7 @@ const options = {
 shell.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
 shell.exec(`documentjs -f`);
 
-shell.cp('./dist/gaiden.min.css', './');
+shell.cp('-f', './dist/gaiden.min.css', './');
 
 shell.exec('git checkout -B gh-pages');
 shell.exec('git pull origin gh-pages --no-commit');
