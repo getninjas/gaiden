@@ -26,7 +26,6 @@ shelljs.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
 shelljs.exec(`documentjs $(git describe)`);
 
 shelljs.cp([
-  './dist/gaiden.min.css.map',
   './dist/gaiden.min.css',
 ], './');
 
