@@ -29,10 +29,7 @@ shelljs.cp([
   './dist/gaiden.min.css',
 ], './');
 
-shelljs.cp('-R', [
-  `${docsDir}/static`,
-  `${docsDir}/*.html`,
-], './');
+shelljs.cp('-R', `${docsDir}/`, './');
 
 replace({
   regex: 'docs\/demo',
