@@ -34,7 +34,7 @@ shell.ls('./docs/demo/*.html').forEach(function(file) {
 });
 
 shell.mkdir('./demo');
-shell.cp('-R', './docs/demo/*', './demo/');
+shell.cp('-Rf', './docs/demo/*', './demo/');
 
 shell.exec('$GAIDEN_LAST_TAG=$(git describe)')
 shell.exec('git add .');
