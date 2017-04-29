@@ -5,7 +5,7 @@ const shell = require('shelljs');
 const docsDir = './docs/gaiden-css';
 const sourceDocsDir = './docs/demo/gaiden-css/scss';
 const sourceDir = './src/scss';
-const minifiedDocsFile = `${docsDir}/gaiden.css`;
+const minifiedDocsFile = `${docsDir}/ninja-demo.css`;
 
 const timestamp = new Date().getTime();
 
@@ -23,6 +23,8 @@ shell.exec(`documentjs -f`);
 
 shell.exec('git checkout -B gh-pages');
 shell.exec('git pull origin gh-pages --no-commit');
+
+shell.cp('-f', './dist/gaiden.min.css', './gaiden.css');
 
 const filesToFixPath = shell.ls('-R', './docs/demo/').filter(function(file) {
   return file.match(/(\.html$|\.js$)/);
