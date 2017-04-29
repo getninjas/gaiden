@@ -42,7 +42,7 @@ shell.exec('git describe', function(code, stdout, stderr) {
   gaidenLastTag = stdout;
 });
 
-shell.exec('git add .');
+shell.exec('git add . -A');
 shell.exec(`git commit -am '${timestamp}: Updating docs ${gaidenLastTag}`);
 shell.exec('git push origin gh-pages');
 shell.exec('git checkout -');
