@@ -31,7 +31,8 @@ const filesToFixPath = shell.ls('-R', './docs/demo/').filter(function(file) {
 });
 
 filesToFixPath.forEach(function(file) {
-  shell.sed('-i', '.\/docs\/demo\/', '\/demo', `./docs/demo/${file}`);
+  shell.sed('-i', '\/docs\/demo\/', '\/demo', `./docs/demo/${file}`);
+  shell.sed('-i', '..\/..\/docs\/demo\/', '\/demo', `./docs/demo/${file}`);
   shell.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden.css', `./docs/demo/${file}`);
 });
 
