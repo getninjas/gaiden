@@ -18,8 +18,6 @@ const options = {
     --recursive `
 }
 
-let gaidenLastTag;
-
 shell.exec('git checkout -B gh-pages');
 shell.exec('git pull origin gh-pages --no-commit');
 
@@ -38,9 +36,7 @@ shell.ls('./docs/demo/*.html').forEach(function(file) {
 shell.mkdir('-p', './demo/gaiden-css');
 shell.cp('-Rf', './docs/demo/gaiden-css', './demo/gaiden-css');
 
-shell.exec('git describe', function(code, stdout, stderr) {
-  gaidenLastTag = stdout;
-});
+const gaidenLastTag = shell.exec('git describe').stdout;
 
 shell.exec('git add . -A');
 shell.exec(`git commit -am '${timestamp}: Updating docs ${gaidenLastTag}`);
