@@ -33,8 +33,8 @@ shell.ls('./docs/demo/*.html').forEach(function(file) {
   shell.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden.css', file);
 });
 
-shell.mkdir('./demo');
-shell.cp('-Rf', './docs/demo/*', './demo/');
+shell.mkdir('-p', './demo/gaiden-css');
+shell.cp('-Rf', './docs/demo/gaiden-css', './demo/gaiden-css');
 
 shell.exec('$GAIDEN_LAST_TAG=$(git describe)')
 shell.exec('git add .');
