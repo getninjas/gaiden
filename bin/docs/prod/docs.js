@@ -23,7 +23,7 @@ shelljs.exec('git checkout -B gh-pages');
 shelljs.exec('git pull origin gh-pages');
 
 shelljs.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
-shelljs.exec(`documentjs $(git describe)`);
+shelljs.exec(`documentjs`);
 
 shelljs.cp([
   './dist/gaiden.min.css',
