@@ -24,14 +24,12 @@ shell.exec('git pull origin gh-pages');
 shell.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
 shell.exec(`documentjs`);
 
-shell.cp([
-  './dist/gaiden.min.css',
-], './');
+shell.cp('./dist/gaiden.min.css', './');
 
 shell.cp('-R', `${docsDir}/`, './');
 
 shell.ls('./docs/demo/*.html').forEach(function(file) {
-  shell.sed('-i', 'docs\/demo', 'demo', file);
+  shell.sed('-i', 'docs\/demo\/', 'demo', file);
   shell.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden.css', file);
 });
 
