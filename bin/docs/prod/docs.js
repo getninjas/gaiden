@@ -31,20 +31,9 @@ shelljs.cp([
 
 shelljs.cp('-R', `${docsDir}/`, './');
 
-replace({
-  regex: 'docs\/demo',
-  replacement: 'demo',
-  paths: ['./docs/demo'],
-  recursive: false,
-  include: '*.html'
-});
-
-replace({
-  regex: '\/gaiden-css\/gaiden.css',
-  replacement: '\/gaiden.css',
-  paths: ['./docs/demo/'],
-  recursive: true,
-  include: '*.html'
+shelljs.ls('./docs/demo/*.html').forEach(function(file) {
+  shelljs.sed('-i', 'docs\/demo', 'demo', file);
+  shelljs.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden.css', file);
 });
 
 shelljs.mkdir('./demo');
