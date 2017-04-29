@@ -39,6 +39,6 @@ shell.cp('-Rf', './docs/demo/gaiden-css', './demo/gaiden-css');
 const gaidenLastTag = shell.exec('git describe').stdout.toString();
 
 shell.exec('git add . -A');
-shell.exec(`git commit -am '${timestamp}: Updating docs ${gaidenLastTag}'`);
+shell.exec(`git commit -m "${timestamp}: Updating docs ${gaidenLastTag}"`);
 shell.exec('git push origin gh-pages');
 shell.exec('git checkout -');
