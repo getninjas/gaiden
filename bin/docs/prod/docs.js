@@ -21,10 +21,10 @@ const options = {
 shell.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
 shell.exec(`documentjs -f`);
 
-shell.cp('-f', './dist/gaiden.min.css', './');
-
 shell.exec('git checkout -B gh-pages');
 shell.exec('git pull origin gh-pages --no-commit');
+
+shell.cp('-f', './dist/gaiden.min.css', './');
 
 const filesToFixPath = shell.ls('-R', './docs/demo/').filter(function(file) {
   return file.match(/(\.html$|\.js$)/);
