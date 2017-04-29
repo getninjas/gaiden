@@ -56,7 +56,7 @@ replace({
 });
 
 shelljs.exec('$GAIDEN_LAST_TAG=$(git describe)')
-shelljs.exec('git add . -u');
+shelljs.exec('git add .');
 shelljs.exec(`git commit -m '${timestamp}: Updating docs $GAIDEN_LAST_TAG'`);
 shelljs.exec('git push origin gh-pages');
 shelljs.exec('git checkout -');
