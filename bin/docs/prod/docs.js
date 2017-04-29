@@ -29,7 +29,7 @@ shelljs.cp([
   './dist/gaiden.min.css',
 ], './');
 
-shelljs.cp([
+shelljs.cp('-R', [
   `${docsDir}/static`,
   `${docsDir}/*.css`,
   `${docsDir}/*.html`,
