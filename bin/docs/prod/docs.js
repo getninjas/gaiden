@@ -19,7 +19,7 @@ const options = {
 }
 
 shell.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
-shell.exec(`documentjs`);
+shell.exec(`documentjs -f`);
 
 shell.cp('./dist/gaiden.min.css', './');
 
