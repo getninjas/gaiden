@@ -1,7 +1,6 @@
 #! /usr/bin/env node
 
-const shelljs = require('shelljs');
-const replace = require('replace');
+const shell = require('shelljs');
 
 const docsDir = './docs/gaiden-css';
 const sourceDocsDir = './docs/demo/gaiden-css/scss';
@@ -19,28 +18,28 @@ const options = {
     --recursive `
 }
 
-shelljs.exec('git checkout -B gh-pages');
-shelljs.exec('git pull origin gh-pages');
+shell.exec('git checkout -B gh-pages');
+shell.exec('git pull origin gh-pages');
 
-shelljs.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
-shelljs.exec(`documentjs`);
+shell.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
+shell.exec(`documentjs`);
 
-shelljs.cp([
+shell.cp([
   './dist/gaiden.min.css',
 ], './');
 
-shelljs.cp('-R', `${docsDir}/`, './');
+shell.cp('-R', `${docsDir}/`, './');
 
-shelljs.ls('./docs/demo/*.html').forEach(function(file) {
-  shelljs.sed('-i', 'docs\/demo', 'demo', file);
-  shelljs.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden.css', file);
+shell.ls('./docs/demo/*.html').forEach(function(file) {
+  shell.sed('-i', 'docs\/demo', 'demo', file);
+  shell.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden.css', file);
 });
 
-shelljs.mkdir('./demo');
-shelljs.mv('-n', './docs/demo/*', './demo/');
+shell.mkdir('./demo');
+shell.mv('-n', './docs/demo/*', './demo/');
 
-shelljs.exec('$GAIDEN_LAST_TAG=$(git describe)')
-shelljs.exec('git add .');
-shelljs.exec(`git commit -m '${timestamp}: Updating docs $GAIDEN_LAST_TAG'`);
-shelljs.exec('git push origin gh-pages');
-shelljs.exec('git checkout -');
+shell.exec('$GAIDEN_LAST_TAG=$(git describe)')
+shell.exec('git add .');
+shell.exec(`git commit -m '${timestamp}: Updating docs $GAIDEN_LAST_TAG'`);
+shell.exec('git push origin gh-pages');
+shell.exec('git checkout -');
