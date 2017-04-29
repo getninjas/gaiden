@@ -35,7 +35,7 @@ filesToFixPath.forEach(function(file) {
   shell.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden.css', `./docs/demo/${file}`);
 });
 
-shell.cp('-nfr', `${docsDir}/`, './');
+shell.cp('-fr', `${docsDir}/`, './');
 
 shell.mkdir('-p', './demo/gaiden-css');
 shell.cp('-Rf', './docs/demo/gaiden-css', './demo/gaiden-css');
