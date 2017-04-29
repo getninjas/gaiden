@@ -45,5 +45,5 @@ const gaidenLastTag = shell.exec('git describe').stdout.replace(/\n/g, '');
 
 shell.exec('git add . -A');
 shell.exec(`git commit -m "${timestamp}: Updating docs ${gaidenLastTag}"`);
-shell.exec('git push origin gh-pages');
+shell.exec('git push origin gh-pages --force');
 shell.exec('git checkout -');
