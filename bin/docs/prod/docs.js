@@ -19,7 +19,7 @@ const options = {
 }
 
 shell.exec('git checkout -B gh-pages');
-shell.exec('git pull origin gh-pages');
+shell.exec('git pull origin gh-pages --no-commit');
 
 shell.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
 shell.exec(`documentjs`);
