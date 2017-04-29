@@ -18,13 +18,13 @@ const options = {
     --recursive `
 }
 
-shell.exec('git checkout -B gh-pages');
-shell.exec('git pull origin gh-pages --no-commit');
-
 shell.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
 shell.exec(`documentjs`);
 
 shell.cp('./dist/gaiden.min.css', './');
+
+shell.exec('git checkout -B gh-pages');
+shell.exec('git pull origin gh-pages --no-commit');
 
 const filesToFixPath = shell.ls('-R', './docs/demo/').filter(function(file) {
   return file.match(/(\.html$|\.js$)/);
