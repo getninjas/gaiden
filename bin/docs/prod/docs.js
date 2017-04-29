@@ -36,9 +36,9 @@ shell.ls('./docs/demo/*.html').forEach(function(file) {
 shell.mkdir('-p', './demo/gaiden-css');
 shell.cp('-Rf', './docs/demo/gaiden-css', './demo/gaiden-css');
 
-const gaidenLastTag = shell.exec('git describe');
+const gaidenLastTag = shell.echo('git describe');
 
 shell.exec('git add .');
-shell.exec(`git commit -am '${timestamp}: Updating docs ${gaidenLastTag.output}`);
+shell.exec(`git commit -am '${timestamp}: Updating docs ${gaidenLastTag}`);
 shell.exec('git push origin gh-pages');
 shell.exec('git checkout -');
