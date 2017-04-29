@@ -31,12 +31,11 @@ const filesToFixPath = shell.ls('-R', './docs/demo/').filter(function(file) {
 });
 
 filesToFixPath.forEach(function(file) {
-  console.log(`./docs/demo/${file}`);
   shell.sed('-i', 'docs\/demo\/', 'demo', `./docs/demo/${file}`);
   shell.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden.css', `./docs/demo/${file}`);
 });
 
-shell.cp('-R', `${docsDir}`, './');
+shell.cp('-R', `${docsDir}/*`, './');
 
 shell.mkdir('-p', './demo/gaiden-css');
 shell.cp('-Rf', './docs/demo/gaiden-css', './demo/gaiden-css');
