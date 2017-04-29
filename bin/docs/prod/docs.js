@@ -36,7 +36,7 @@ shell.ls('./docs/demo/*.html').forEach(function(file) {
 shell.mkdir('-p', './demo/gaiden-css');
 shell.cp('-Rf', './docs/demo/gaiden-css', './demo/gaiden-css');
 
-const gaidenLastTag = shell.exec('git describe').stdout;
+const gaidenLastTag = shell.exec('git describe').stdout.toString();
 
 shell.exec('git add . -A');
 shell.exec(`git commit -am '${timestamp}: Updating docs ${gaidenLastTag}`);
