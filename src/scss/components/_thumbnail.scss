@@ -34,6 +34,8 @@
     }
 
     .thumbnail__photo {
+      transform: scale(-1);
+
       img {
         width: 100%;
         height: auto;
@@ -59,7 +61,6 @@
     width: 100%;
     border-radius: $borderRadius;
     display: block;
-    transform: scale(-1);
 
     img {
       width: auto;
