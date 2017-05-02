@@ -41,9 +41,9 @@ shell.ls('-R', './docs/gaiden-css/').forEach(function(file) {
 });
 
 filesToFixPath.forEach(function(file) {
-  shell.sed('-i', '\/docs\/demo\/', '\/demo', file);
-  shell.sed('-i', '..\/..\/docs\/demo\/', '\/demo', file);
-  shell.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden.css', file);
+  shell.sed('-i', '\/docs\/demo\/', '\/gaiden\/demo', file);
+  shell.sed('-i', '..\/..\/docs\/demo\/', '\/gaiden\/demo', file);
+  shell.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden\/gaiden.css', file);
 });
 
 shell.cp('-fr', `${docsDir}/`, './');
