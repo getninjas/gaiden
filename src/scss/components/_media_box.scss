@@ -43,6 +43,7 @@
 
     .card__title {
       font-size: inherit;
+      color: get-color((color: blackNeutral, key: darker, opacity: .8));
     }
 
     small {
