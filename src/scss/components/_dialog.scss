@@ -19,7 +19,7 @@
   &__quote {
     display: flex;
     flex: 1 0 auto;
-    padding: 30px;
+    padding: 24px;
     position: relative;
     background-color: get-color(breeze);
     border-radius: 10px;
@@ -27,6 +27,7 @@
     justify-content: center;
     font-style: italic;
     color: get-color(rastaGray);
+    text-align: left;
 
     &::after {
       position: absolute;
@@ -54,7 +55,7 @@
 
     &-name {
       line-height: 15px;
-      font-weight: bold;
+      font-weight: get-weight(bold);
     }
 
     &-location {
