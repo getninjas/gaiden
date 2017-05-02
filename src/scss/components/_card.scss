@@ -36,13 +36,23 @@
     padding: 24px 0 0 0;
   }
 
-
   &--action {
     cursor: pointer;
 
     &:hover {
       transform: translate(0, -5px);
       box-shadow: get-shadow(large) get-color((color: blackNeutral, opacity: .1));
+    }
+
+    .caption-title {
+      font-size: 12px;
+      margin-bottom: 0;
+      color: get-color((color: blackNeutral, key: darker, opacity: .8));
+
+      small {
+        font-size: inherit;
+        margin-top: 0;
+      }
     }
   }
 
