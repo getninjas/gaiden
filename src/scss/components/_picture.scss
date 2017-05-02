@@ -39,6 +39,13 @@
     }
   }
 
+  &--media {
+    max-width: 30px;
+    max-height: 30px;
+    width: 100%;
+    margin-right: 10px;
+  }
+
   &--cover {
     display: block;
     width: auto;
@@ -54,7 +61,6 @@
       min-height: 100%;
       max-width: none;
       min-width: 100%;
-      -ms-transform: translateX(-50%);
       transform: translateX(-50%);
     }
   }
