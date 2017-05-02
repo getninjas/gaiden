@@ -26,14 +26,24 @@ shell.exec('git pull origin gh-pages --no-commit');
 
 shell.cp('-f', './dist/gaiden.min.css', './gaiden.css');
 
-const filesToFixPath = shell.ls('-R', './docs/demo/').filter(function(file) {
-  return file.match(/(\.html$|\.js$)/);
+let filesToFixPath = [];
+
+shell.ls('-R', './docs/demo/').filter(function(file) {
+  if (file.match(/(\.html$|\.js$)/)) {
+    filesToFixPath.push(`./docs/demo/${file}`);
+  }
+});
+
+shell.ls('-R', './docs/gaiden-css/').forEach(function(file) {
+  if (file.match(/(\.html$|\.js$)/)) {
+    filesToFixPath.push(`./docs/gaiden-css/${file}`);
+  }
 });
 
 filesToFixPath.forEach(function(file) {
-  shell.sed('-i', '\/docs\/demo\/', '\/demo', `./docs/demo/${file}`);
-  shell.sed('-i', '..\/..\/docs\/demo\/', '\/demo', `./docs/demo/${file}`);
-  shell.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden.css', `./docs/demo/${file}`);
+  shell.sed('-i', '\/docs\/demo\/', '\/demo', file);
+  shell.sed('-i', '..\/..\/docs\/demo\/', '\/demo', file);
+  shell.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden.css', file);
 });
 
 shell.cp('-fr', `${docsDir}/`, './');
