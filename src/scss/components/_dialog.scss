@@ -54,7 +54,7 @@
 
     &-name {
       line-height: 15px;
-      font-weight: bold;
+      font-weight: get-weight(bold);
     }
 
     &-location {

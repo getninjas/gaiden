@@ -18,7 +18,7 @@
     color: get-color(punch);
 
     small {
-      font-weight: 700;
+      font-weight: get-weight(bold);
       font-size: 12px;
       font-style: normal;
       color: get-color((color: blackNeutral, opacity: .6));

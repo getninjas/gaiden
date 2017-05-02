@@ -10,7 +10,7 @@ em {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: get-weight(bold);
 }
 
 select,
