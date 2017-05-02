@@ -2,25 +2,69 @@
   * @parent gaiden_css.components
   * @stylesheet gaiden_css_components.media_box Media Box
   *
-  * ## Fluid
-  * @demo /demo/gaiden-css/components/media_box/demo.html
+  * ## Fluid Media Box Card with action
+  * @demo /demo/gaiden-css/components/media_box/fluid-action/demo.html
   *
-  * ## Using Grid System
+  * ## Media Box Card Using Grid System with action
+  * @demo /demo/gaiden-css/components/media_box/using_grid_system-action/demo.html
+  *
+  *
+  * ## Fluid Media Box Card
+  * @demo /demo/gaiden-css/components/media_box/fluid/demo.html
+  *
+  * ## Media Box Card Using Grid System
   * @demo /demo/gaiden-css/components/media_box/using_grid_system/demo.html
 **/
 
 .media-box {
-  display: flex;
-  flex: 1;
-  color: get-color((color: blackNeutral, opacity: .6));
+  display: block;
+  color: get-color((color: blackNeutral, key: darker, opacity: .8));
+
+  &--action {
+    .media-box__body,
+    .media-box__content {
+      padding: 0 24px;
+    }
+
+    .media-box__body {
+      cursor: default;
+    }
+
+    .btn--full-card {
+      font-size: 12px;
+      width: 100%;
+      padding: 14px 0;
+    }
+  }
 
   &__title {
+    font-size: 14px;
+    color: inherit;
+
+    .card__title {
+      font-size: inherit;
+      color: get-color((color: blackNeutral, key: darker, opacity: .8));
+    }
+
     small {
       color: get-color((color: blackNeutral, key: darker, opacity: .6));
       font-weight: get-weight(normal);
       font-size: 12px;
       font-style: normal;
     }
+  }
+
+  &__profile {
+    display: flex;
+  }
+
+  &__picture {
+    min-width: 38px;
+    margin-right: 10px;
+  }
+
+  &__rating {
+    margin-top: 8px;
   }
 
   &__sidebar {
@@ -31,6 +75,12 @@
     .no-flexbox & {
       display: table-cell;
     }
+  }
+
+  &__body {
+    font-size: 14px;
+    font-style: italic;
+    color: get-color((color: blackNeutral, key: darker, opacity: .6));
   }
 
   &__content {

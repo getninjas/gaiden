@@ -32,6 +32,9 @@
   width: inherit;
   transition: box-shadow ease-in-out .2s, transform ease-in-out .1s;
 
+  &--profile {
+    padding: 24px 0 0 0;
+  }
 
   &--action {
     cursor: pointer;
