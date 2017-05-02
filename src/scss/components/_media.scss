@@ -11,6 +11,10 @@
   *
   * ## Link
   * @demo /demo/gaiden-css/components/media/link/demo.html
+  *
+  *
+  * ## No image
+  * @demo /demo/gaiden-css/components/media/no-image/demo.html
 **/
 
 
@@ -26,6 +30,14 @@
     .media__title,
     .media__content {
       font-size: 14px;
+    }
+  }
+
+  &--no-image {
+    .media__title {
+      font-size: 16px;
+      font-style: italic;
+      color: get-color(punch);
     }
   }
 
