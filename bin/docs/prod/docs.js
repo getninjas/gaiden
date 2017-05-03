@@ -1,58 +1,114 @@
 #! /usr/bin/env node
 
-const shell = require('shelljs');
+const sh = require('shelljs');
 
-const docsDir = './docs/gaiden-css';
-const sourceDocsDir = './docs/demo/gaiden-css/scss';
-const sourceDir = './src/scss';
-const minifiedDocsFile = `${docsDir}/ninja-demo.css`;
+const validFile = (files, file) => {
+  if (sh.test('-d', file)) return;
 
-const timestamp = new Date().getTime();
+  if (file.match(/(html$|js$|css$)/)) {
+    files.push(file);
+  }
 
-const options = {
-  sass: ` --include-path ${sourceDocsDir} \
-    --include-path ${sourceDir} \
-    --output-style expanded \
-    --sourceComments true \
-    -o ${docsDir} \
-    --recursive `
+  return files;
 }
 
-shell.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
-shell.exec(`documentjs -f`);
+class DocsGenerator {
+  constructor(
+    docsDir = './docs/gaiden-css',
+    sassSourceDocsDir = './docs/demo/gaiden-css/scss',
+    sourceDir = './src/scss'
+  ) {
+    this.docFiles = [];
+    this.demoFiles = [];
 
-shell.exec('git checkout -B gh-pages');
-shell.exec('git pull origin gh-pages --no-commit');
-
-shell.cp('-f', './dist/gaiden.min.css', './gaiden.css');
-
-let filesToFixPath = [];
-
-shell.ls('-R', './docs/demo/').filter(function(file) {
-  if (file.match(/(html$|js$)/)) {
-    filesToFixPath.push(`./docs/demo/${file}`);
+    this.options = {
+      sassSourceDocsDir: sassSourceDocsDir,
+      sourceDir: sourceDir,
+      docsDir: docsDir,
+      timestamp: new Date().getTime(),
+      sass: ` --include-path ${sassSourceDocsDir} \
+        --include-path ${sourceDir} \
+        --output-style expanded \
+        --sourceComments true \
+        -o ${docsDir} \
+        --recursive `
+    }
   }
-});
 
-shell.ls('-R', './docs/gaiden-css/').forEach(function(file) {
-  if (file.match(/(html$|js$)/)) {
-    filesToFixPath.push(`./docs/gaiden-css/${file}`);
+  start() {
+    this.generateDocs();
+    this.checkoutGh();
+    this.setupFiles();
+    this.changePathNames();
+    this.fixStaticFiles();
+    this.pushDocs();
   }
-});
 
-filesToFixPath.forEach(function(file) {
-  shell.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden\/gaiden.css', file);
-  shell.sed('-i', '/\/demo\/gaiden-css\//', '/\/gaiden\/demo\/gaiden-css\//', file);
-  shell.sed('-i', '\./docs/', '/', file);
-  shell.sed('-i', '..\/docs\/demo\/', '\/gaiden\/demo\/', file);
-});
+  generateDocs() {
+    sh.exec(`documentjs -f`);
+  }
 
-shell.cp('-Rf', `${docsDir}/`, './');
-shell.cp('-Rf', './docs/demo/', './demo/');
+  checkoutGh() {
+    sh.exec('git checkout -B gh-pages');
+    sh.exec('git pull origin gh-pages --no-commit');
+  }
 
-const gaidenLastTag = shell.exec('git describe').stdout.replace(/\n/g, '');
+  setupFiles() {
+    sh.cp('-f', './dist/gaiden.min.css', './gaiden.css');
 
-shell.exec('git add . -A');
-shell.exec(`git commit -m "${timestamp}: Updating docs ${gaidenLastTag}"`);
-shell.exec('git push origin gh-pages --force');
-shell.exec('git checkout -');
+    sh.find('./docs/demo/').forEach(function(file) {
+      validFile(this.demoFiles, file);
+    }.bind(this));
+
+    sh.find(`${this.options.docsDir}`).forEach(function(file) {
+      if (file.match(/(steal|html5shiv)/g)) return;
+
+      validFile(this.docFiles, file);
+    }.bind(this));
+  }
+
+  changePathNames() {
+    sh.sed('-i', '/gaiden-css/gaiden.css', '/gaiden/gaiden.css', this.demoFiles);
+
+    sh.sed('-i', '/demo/gaiden-css/', '/gaiden/demo/gaiden-css/', this.docFiles);
+    sh.sed('-i', '/docs/', '/', this.docFiles);
+    sh.sed('-i', '../docs/demo/', '/gaiden/demo/', this.docFiles);
+
+    if (sh.test('-e', './demo/')) {
+      sh.rm('-rf', './demo/*');
+    } else {
+      sh.mkdir('./demo/');
+    }
+
+    sh.rm('-f', './*.html');
+
+    sh.mv('-f', this.docFiles, './');
+    sh.mv('-f', this.demoFiles, './demo/');
+  }
+
+  fixStaticFiles() {
+    if (!sh.test('-e', './static')) {
+      sh.mkdir('./static');
+    }
+
+    sh.mv('-f', `${this.options.docsDir}/static/html5shiv.js`, './static/');
+    sh.mv('-f', `${this.options.docsDir}/static/steal.production.js`, './static/');
+    sh.mv('-f', `${this.options.docsDir}/static/bundles`, './static/');
+    sh.mv('-f', `${this.options.docsDir}/static/fonts`, './static/');
+    sh.mv('-f', `${this.options.docsDir}/static/img`, './static/');
+    sh.mv('-f', `${this.options.docsDir}/static/templates`, './static/');
+  }
+
+  pushDocs() {
+    const gaidenLastTag = sh.exec('git describe').stdout.replace(/\n/g, '');
+
+    sh.exec('git add . -A');
+    sh.exec(`git commit -m "${this.options.timestamp}: Updating docs ${gaidenLastTag}"`);
+    sh.exec('git push origin gh-pages --force');
+    sh.exec('git checkout -');
+  }
+}
+
+const docsGenerator = new DocsGenerator();
+docsGenerator.start();
+
