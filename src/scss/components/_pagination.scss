@@ -24,7 +24,7 @@
       display: block;
       padding: 4px 9px;
       width: 100%;
-      height: 100%;
+      background-color: get-color(air);
       border: solid 1px get-color((color: rastaGray, opacity: .2));
       border-radius: $borderRadius;
       transition-duration: .2s, .2s, .2s;
