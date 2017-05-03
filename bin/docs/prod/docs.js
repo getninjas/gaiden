@@ -16,7 +16,8 @@ class DocsGenerator {
   constructor(
     docsDir = './docs/gaiden-css',
     sassSourceDocsDir = './docs/demo/gaiden-css/scss',
-    sourceDir = './src/scss'
+    sourceDir = './src/scss',
+    minifiedDocsFile = './docs/gaiden-css/ninja-demo.css'
   ) {
     this.docFiles = [];
     this.demoFiles = [];
@@ -25,6 +26,7 @@ class DocsGenerator {
       sassSourceDocsDir: sassSourceDocsDir,
       sourceDir: sourceDir,
       docsDir: docsDir,
+      minifiedDocsFile: minifiedDocsFile,
       timestamp: new Date().getTime(),
       sass: ` --include-path ${sassSourceDocsDir} \
         --include-path ${sourceDir} \
@@ -46,6 +48,7 @@ class DocsGenerator {
 
   generateDocs() {
     sh.exec(`documentjs -f`);
+    sh.exec(`node-sass ${this.options.sourceDocsDir} ${this.options.sass} ${this.options.minifiedDocsFile}`);
   }
 
   checkoutGh() {
