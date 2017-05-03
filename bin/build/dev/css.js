@@ -14,7 +14,6 @@ const options = {
     --output-style expanded \
     --sourceComments true \
     -o ${outputDir}`,
-  postcss: `--use autoprefixer -o ${docsCss} ${docsCssPrefixed}`,
   sasslint: `-c ./sass-lint.yml  -v -q`
 }
 
@@ -25,5 +24,4 @@ if (sassLintExec.code !== 0) {
 }
 
 shelljs.echo('SassLint ok!');
-shelljs.exec(`postcss ${options.postcss}`);
 shelljs.exec(`node-sass ${options.sass} ${sourceDir} ${minifiedFile}`);
