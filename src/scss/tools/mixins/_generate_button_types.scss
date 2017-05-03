@@ -56,7 +56,7 @@
 
     @if map-has-key($buttonTypeConfig, shadow) {
       $shadow: map-deep-get($buttonTypeConfig, shadow, kind);
-      box-shadow: map-get($shadows, $shadow) get-color((color: blackNeutral, key: darker, opacity: .2));
+      box-shadow: get-shadow($shadow) get-color((color: blackNeutral, key: darker, opacity: .2));
     }
   }
 };
