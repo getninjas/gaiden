@@ -29,26 +29,25 @@ shell.cp('-f', './dist/gaiden.min.css', './gaiden.css');
 let filesToFixPath = [];
 
 shell.ls('-R', './docs/demo/').filter(function(file) {
-  if (file.match(/(\.html$|\.js$)/)) {
+  if (file.match(/(html$|js$)/)) {
     filesToFixPath.push(`./docs/demo/${file}`);
   }
 });
 
 shell.ls('-R', './docs/gaiden-css/').forEach(function(file) {
-  if (file.match(/(\.html$|\.js$)/)) {
+  if (file.match(/(html$|js$)/)) {
     filesToFixPath.push(`./docs/gaiden-css/${file}`);
   }
 });
 
 filesToFixPath.forEach(function(file) {
-  shell.sed('-i', '\/docs\/demo\/', '\/gaiden\/demo', file);
-  shell.sed('-i', '\/demo\/gaiden-css\/', '\/gaiden\/demo\/gaiden-css\/', file);
-  shell.sed('-i', '..\/..\/docs\/demo\/', '\/gaiden\/demo', file);
   shell.sed('-i', '\/gaiden-css\/gaiden.css', '\/gaiden\/gaiden.css', file);
+  shell.sed('-i', '/\/demo\/gaiden-css\//', '/\/gaiden\/demo\/gaiden-css\//', file);
+  shell.sed('-i', '\./docs/', '/', file);
+  shell.sed('-i', '..\/docs\/demo\/', '\/gaiden\/demo\/', file);
 });
 
-shell.cp('-fr', `${docsDir}/`, './');
-
+shell.cp('-Rf', `${docsDir}/`, './');
 shell.cp('-Rf', './docs/demo/', './demo/');
 
 const gaidenLastTag = shell.exec('git describe').stdout.replace(/\n/g, '');
