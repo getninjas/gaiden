@@ -15,6 +15,10 @@
     background-color: get-color(breeze);
   }
 
+  &--inverted {
+    background-color: get-color(air);
+  }
+
   &--separator {
     border-top: 1px solid get-color((color: serious, opacity: .2));
   }
