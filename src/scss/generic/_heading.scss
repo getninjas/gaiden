@@ -1,23 +1,29 @@
-
+/**
+  * @parent gaiden_css.generic
+  * @stylesheet gaiden_css.generic.headings.css Headings
+  * @demo demo/gaiden-css/generic/headings/demo.html
+**/
 h1,
 h2,
 h3,
 h4,
 h5,
+h6,
 .page-title,
 .section-title,
 .container-title,
 .card-title,
-.info-title {
-  color: get-color(blackNeutral);
+.info-title,
+.caption-title {
+  color: get-color(rastaGray);
   font: {
-    weight: 700;
+    weight: get-weight(bolder);
   };
 
   small {
+    color: get-color(blackNeutral, lighter, $opacity: .5);
     display: block;
-    font-style: italic;
-    font-weight: 400;
+    font-weight: get-weight(normal);
   }
 }
 
@@ -25,69 +31,75 @@ h5,
 .section-title,
 .container-title,
 .card-title,
-.info-title {
+.info-title,
+.caption-title {
   &--high-contrast {
-    color: get-color(punch);
+    color: get-color(rastaGray);
   }
 }
 
 h1,
 .page-title {
-  @include media(small) {
-    font-size: 36px;
-  }
-
   margin-bottom: 4px;
   font-size: 24px;
 
   small {
-    @include media(small) {
-      font-size: 18px;
-    }
-
     margin-top: 8px;
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  @include media(normal) {
+    font-size: 48px;
+
+    small {
+      font-size: 30px;
+    }
   }
 }
 
 h2,
 .section-title {
-  @include media(small) {
-    font-size: 24px;
-
-    small {
-      font-size: 16px;
-    }
-  }
-
   margin-bottom: 4px;
-  font-size: 18px;
+  font-size: 20px;
 
   small {
     margin-top: 4px;
-    font-size: 14px;
+    font-size: 16px;
+  }
+
+  @include media(normal) {
+    font-size: 36px;
+
+    small {
+      font-size: 24px;
+    }
   }
 }
 
 h3,
 .container-title {
-  @include media(small) {
-    font-size: 18px;
-  }
-
   margin-bottom: 4px;
-  font-size: 16px;
+  font-size: 18px;
 
   small {
     margin-top: 4px;
-    font-size: 14px;
+    font-size: 16px;
+  }
+
+  @include media(normal) {
+    font-size: 24px;
+
+    small {
+      font-size: 18px;
+    }
   }
 }
 
 h4,
 .card-title {
+
   font: {
-    weight: 700;
+    weight: get-weight(bold);
     size: 16px;
   }
   margin-bottom: 4px;
@@ -96,18 +108,56 @@ h4,
     margin-top: 4px;
     font-size: 14px;
   }
+
+  @include media(normal) {
+    font-size: 20px;
+
+    small {
+      font-size: 16px;
+    }
+  }
 }
 
 h5,
-.info-title {
+.card-title {
   font: {
-    weight: 700;
+    weight: get-weight(bold);
     size: 14px;
   }
   margin-bottom: 4px;
 
   small {
     margin-top: 4px;
+    font-size: 13px;
+  }
+
+  @include media(normal) {
+    font-size: 18px;
+
+    small {
+      font-size: 14px;
+    }
+  }
+}
+
+h6,
+.caption-title {
+  font: {
+    weight: get-weight(bold);
+    size: 13px;
+  }
+  margin-bottom: 4px;
+
+  small {
+    margin-top: 4px;
     font-size: 12px;
+  }
+
+  @include media(normal) {
+    font-size: 16px;
+
+    small {
+      font-size: 14px;
+    }
   }
 }

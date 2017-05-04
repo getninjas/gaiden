@@ -49,6 +49,12 @@
       size: 11px;
     }
     letter-spacing: .3px;
+
+    p,
+    address {
+      width: auto;
+      display: inline-block;
+    }
   }
 
   &__brand {

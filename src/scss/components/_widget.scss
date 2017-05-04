@@ -9,8 +9,8 @@
   margin: 0 auto;
   z-index: 4;
   border-radius: 7px;
-  border: 1px solid get-color((color: blackNeutral, opacity: .15));
   background-color: get-color(air);
+  box-shadow: get-shadow(medium) get-color((color: blackNeutral, opacity: .1));
   position: relative;
 
   &--over-banner {
@@ -18,10 +18,8 @@
   }
 
   &__title {
-    margin: 14px 10%;
-    padding: 15px 0;
     width: 100%;
-    border-bottom: 2px solid get-color((color: punch, opacity: .2));
     text-align: center;
+    margin-bottom: 0;
   }
 }

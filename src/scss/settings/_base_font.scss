@@ -1,4 +1,10 @@
 //sass-lint:disable no-url-domains no-url-protocols
-@import url('//fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
+@import url('//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
 
 $baseFont: 'Lato';
+
+$fontWeight: (
+  normal: 400,
+  bold: 700,
+  bolder: 900
+)

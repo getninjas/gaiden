@@ -9,13 +9,13 @@
 **/
 
 /**
-  * @styles grid-system Using Grid System
-  * @demo demo/gaiden-css/components/card/using-grid-system.html
+  * @styles grid-system Grid
+  * @demo demo/gaiden-css/components/card/grid.html
 **/
 
 /**
-  * @styles highlighted Highlighted
-  * @demo demo/gaiden-css/components/card/highlighted.html
+  * @styles card+media Card + Media
+  * @demo demo/gaiden-css/components/card/custom.html
 **/
 
 /**
@@ -26,10 +26,39 @@
 .card {
   background-color: get-color(air);
   border-radius: $borderRadius;
-  box-shadow: 0 4px 8px 0 get-color((color: blackNeutral, opacity: .12));
+  box-shadow: get-shadow(medium) get-color((color: blackNeutral, opacity: .12));
   flex: 1 1 auto;
   padding: 24px;
   width: inherit;
+  transition: box-shadow ease-in-out .2s, transform ease-in-out .1s;
+
+  &--profile {
+    padding: 24px 0 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--action {
+    cursor: pointer;
+    position: relative;
+    padding-bottom: calc(44px + 16px);
+
+    &:hover {
+      transform: translate(0, -5px);
+      box-shadow: get-shadow(large) get-color((color: blackNeutral, opacity: .1));
+    }
+
+    .caption-title {
+      font-size: 12px;
+      margin-bottom: 0;
+      color: get-color((color: blackNeutral, key: darker, opacity: .8));
+
+      small {
+        font-size: inherit;
+        margin-top: 0;
+      }
+    }
+  }
 
   &__title {
     color: get-color(blackNeutral);
@@ -44,6 +73,7 @@
   &__content {
     color: get-color((color: blackNeutral, opacity: .6));
     font-size: 14px;
+    font-style: italic;
 
     .card__header + & {
       margin-top: 16px;
@@ -51,7 +81,6 @@
   }
 
   &__footer {
-    margin-top: 16px;
     font-size: 12px;
     color: get-color((color: blackNeutral, opacity: .78));
   }

@@ -7,12 +7,16 @@
 
 .wall {
   padding: {
-    top: 80px;
-    bottom: 80px;
+    top: 84px;
+    bottom: 84px;
   }
 
   &--highlighted {
     background-color: get-color(breeze);
+  }
+
+  &--inverted {
+    background-color: get-color(air);
   }
 
   &--separator {

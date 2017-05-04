@@ -5,6 +5,8 @@ const shelljs = require('shelljs');
 const sourceDir = './src/scss';
 const outputDir = './build/stylesheets';
 const minifiedFile = `${outputDir}/gaiden.min.css`;
+const docsCss = `docs/gaiden/gaiden.css`;
+const docsCssPrefixed = `docs/gaiden/gaiden.css`;
 
 const options = {
   sass: ` --include-path ${sourceDir} \
@@ -22,5 +24,4 @@ if (sassLintExec.code !== 0) {
 }
 
 shelljs.echo('SassLint ok!');
-
 shelljs.exec(`node-sass ${options.sass} ${sourceDir} ${minifiedFile}`);
