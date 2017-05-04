@@ -76,6 +76,8 @@ class DocsGenerator {
     sh.sed('-i', '/demo/gaiden-css/', '/gaiden/demo/gaiden-css/', this.docFiles);
     sh.sed('-i', '/docs/', '/', this.docFiles);
     sh.sed('-i', '../docs/demo/', '/gaiden/demo/', this.docFiles);
+    sh.sed('-i', 'static/bundles/static.css', 'static.css', this.docFiles);
+    sh.sed('-i', 'static/bundles/static.js', 'static.js', this.docFiles);
 
     if (sh.test('-e', './demo/')) {
       sh.rm('-rf', './demo/*');
@@ -112,6 +114,5 @@ class DocsGenerator {
   }
 }
 
-const docsGenerator = new DocsGenerator();
+docsGenerator = new DocsGenerator();
 docsGenerator.start();
-
