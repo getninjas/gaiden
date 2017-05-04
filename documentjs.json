@@ -4,6 +4,11 @@
       "glob": "src/scss/**/*.{css,scss,md}",
       "dest": "docs/gaiden-css",
       "parent": "gaiden_css"
+    },
+    "gh_pages": {
+      "glob": "src/scss/**/*.{css,scss,md}",
+      "dest": "./",
+      "parent": "gaiden_css"
     }
   }
 }
