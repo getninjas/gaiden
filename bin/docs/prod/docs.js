@@ -36,9 +36,6 @@ class DocsGenerator {
   removeFileDocs() {
     sh.rm('./*.html');
     sh.exec('rm -rf ./static');
-
-    //this.replace.run('(\/docs\/demo\/gaiden-css\/)', '\/demo\/gaiden-css\/');
-    this.replace.run('(\/docs\/demo\/gaiden-css\/)', '/gaiden\/docs\/demo\/gaiden-css\/');
   }
 
   generateDocs() {
@@ -58,8 +55,7 @@ class DocsGenerator {
 
     this.replace.run('\/gaiden-css\/gaiden\.css', '\/gaiden.css', './docs/demo/');
     this.replace.run('\/gaiden-css\/base\.css', '\/base.css', './docs/demo/');
-    this.replace.run('(\/demo\/gaiden-css\/)|(demo\/gaiden-css\/)', '\/docs\/demo\/gaiden-css\/');
-    this.replace.run('(\.\/docs\/docs)', 'docs');
+    this.replace.run('(\/docs\/demo\/gaiden-css\/)|(\/demo\/gaiden-css\/)|(demo\/gaiden-css\/)', '\/gaiden\/docs\/demo\/gaiden-css\/');
 
     sh.sed('-i', '/gaiden-css/gaiden.css', '/gaiden.css', './*.html');
   }
