@@ -56,8 +56,7 @@ class DocsGenerator {
     this.replace.run('\/gaiden-css\/gaiden\.css', '\/gaiden.css', './docs/demo/');
     this.replace.run('\/gaiden-css\/base\.css', '\/base.css', './docs/demo/');
     this.replace.run('(\/docs\/demo\/gaiden-css\/)|(\/demo\/gaiden-css\/)|(demo\/gaiden-css\/)', '\/gaiden\/docs\/demo\/gaiden-css\/');
-
-    sh.sed('-i', '/gaiden-css/gaiden.css', '/gaiden.css', './*.html');
+    this.replace.run('(\=\"\/)+([a-zA-Z]{1,}.css)', '$1gaiden\/$2');
   }
 
   pushDocs() {
