@@ -1,6 +1,9 @@
 {
   "sites": {
     "gaiden_css": {
+      "static": "./theme/static",
+      "templates": "./theme/templates",
+      "forceBuild": true,
       "glob": "src/scss/**/*.{css,scss,md}",
       "dest": "docs/gaiden-css",
       "parent": "gaiden_css"
