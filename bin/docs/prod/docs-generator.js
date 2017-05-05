@@ -1,3 +1,6 @@
+const sh = require('shelljs');
+const FileReplacePath = require('./file-replace-path');
+
 class DocsGenerator {
   constructor(
     docsDir = './docs/gaiden-css',
