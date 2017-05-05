@@ -1,0 +1,134 @@
+/**
+  * @parent gaiden_css.settings
+  * @stylesheet gaiden_css.settings.colors.css Colors
+  *
+  * There are different colors that can be used:
+  * @iframe /docs/demo/gaiden-css/variables/colors/demo.html 360
+**/
+/**
+*  @parent gaiden_css.configs
+*  @typedef {{}} gaiden_css.configs.color_config ColorConfig
+*  @option {String} color Name of color key at `Palette Map`
+*  @option {String} key Name of color key modifier at `Palette Map`
+*  @option {Number} opacity Alpha number for color rgba method
+*  @option {Map} palette Define color palette map
+*
+*  @body
+*    ## Using
+*       $colorConfig: (
+*         color: punch,
+*         opacity: .8,
+*         key: darker,
+*         palette: (punch: (base: #1393f6))
+*       );
+**/
+/**
+  * @styles gradients Gradients
+  *
+  * An some gradients defined
+  *
+  * @iframe /docs/demo/gaiden-css/variables/colors/gradients/demo.html 260
+**/
+/* line 9, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.wind::before {
+  background-color: #eff4fa;
+  background-image: -moz-linear-gradient(110deg, #eff4fa, #c9d7e8);
+  background-image: -webkit-linear-gradient(110deg, #eff4fa, #c9d7e8);
+  background-image: -o-linear-gradient(110deg, #eff4fa, #c9d7e8);
+  background-image: -ms-linear-gradient(110deg, #eff4fa, #c9d7e8);
+  background-image: linear-gradient(110deg, #eff4fa, #c9d7e8); }
+
+/* line 13, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.wind::after {
+  content: "@wind/#eff4fa/#c9d7e8"; }
+
+/* line 9, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.sky::before {
+  background-color: #21c1ff;
+  background-image: -moz-linear-gradient(110deg, #21c1ff, #1393f6);
+  background-image: -webkit-linear-gradient(110deg, #21c1ff, #1393f6);
+  background-image: -o-linear-gradient(110deg, #21c1ff, #1393f6);
+  background-image: -ms-linear-gradient(110deg, #21c1ff, #1393f6);
+  background-image: linear-gradient(110deg, #21c1ff, #1393f6); }
+
+/* line 13, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.sky::after {
+  content: "@sky/#21c1ff/#1393f6"; }
+
+/* line 9, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.ocean::before {
+  background-color: #1272d5;
+  background-image: -moz-linear-gradient(110deg, #1272d5, #004183);
+  background-image: -webkit-linear-gradient(110deg, #1272d5, #004183);
+  background-image: -o-linear-gradient(110deg, #1272d5, #004183);
+  background-image: -ms-linear-gradient(110deg, #1272d5, #004183);
+  background-image: linear-gradient(110deg, #1272d5, #004183); }
+
+/* line 13, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.ocean::after {
+  content: "@ocean/#1272d5/#004183"; }
+
+/* line 9, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.golden::before {
+  background-color: #ffd600;
+  background-image: -moz-linear-gradient(110deg, #ffd600, #e7ab0c);
+  background-image: -webkit-linear-gradient(110deg, #ffd600, #e7ab0c);
+  background-image: -o-linear-gradient(110deg, #ffd600, #e7ab0c);
+  background-image: -ms-linear-gradient(110deg, #ffd600, #e7ab0c);
+  background-image: linear-gradient(110deg, #ffd600, #e7ab0c); }
+
+/* line 13, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.golden::after {
+  content: "@golden/#ffd600/#e7ab0c"; }
+
+/* line 9, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.field::before {
+  background-color: #40d879;
+  background-image: -moz-linear-gradient(110deg, #40d879, #26a656);
+  background-image: -webkit-linear-gradient(110deg, #40d879, #26a656);
+  background-image: -o-linear-gradient(110deg, #40d879, #26a656);
+  background-image: -ms-linear-gradient(110deg, #40d879, #26a656);
+  background-image: linear-gradient(110deg, #40d879, #26a656); }
+
+/* line 13, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.field::after {
+  content: "@field/#40d879/#26a656"; }
+
+/* line 9, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.jungle::before {
+  background-color: #40d879;
+  background-image: -moz-linear-gradient(110deg, #40d879, #26a656);
+  background-image: -webkit-linear-gradient(110deg, #40d879, #26a656);
+  background-image: -o-linear-gradient(110deg, #40d879, #26a656);
+  background-image: -ms-linear-gradient(110deg, #40d879, #26a656);
+  background-image: linear-gradient(110deg, #40d879, #26a656); }
+
+/* line 13, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.jungle::after {
+  content: "@jungle/#40d879/#26a656"; }
+
+/* line 9, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.heart::before {
+  background-color: #b24141;
+  background-image: -moz-linear-gradient(110deg, #b24141, #6d0909);
+  background-image: -webkit-linear-gradient(110deg, #b24141, #6d0909);
+  background-image: -o-linear-gradient(110deg, #b24141, #6d0909);
+  background-image: -ms-linear-gradient(110deg, #b24141, #6d0909);
+  background-image: linear-gradient(110deg, #b24141, #6d0909); }
+
+/* line 13, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.heart::after {
+  content: "@heart/#b24141/#6d0909"; }
+
+/* line 9, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.night::before {
+  background-color: #536e7b;
+  background-image: -moz-linear-gradient(110deg, #536e7b, #36474e);
+  background-image: -webkit-linear-gradient(110deg, #536e7b, #36474e);
+  background-image: -o-linear-gradient(110deg, #536e7b, #36474e);
+  background-image: -ms-linear-gradient(110deg, #536e7b, #36474e);
+  background-image: linear-gradient(110deg, #536e7b, #36474e); }
+
+/* line 13, /Users/eduardomatos/projects/getninjas/gaidedocs/demo/gaiden-css/scss/mixins/_generate_gradient_palette_classes.scss */
+.night::after {
+  content: "@night/#536e7b/#36474e"; }

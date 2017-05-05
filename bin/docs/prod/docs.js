@@ -17,7 +17,6 @@ class DocsGenerator {
       sassSourceDocsDir: sassSourceDocsDir,
       sass: ` --include-path ${sassSourceDocsDir} \
         --include-path ${sourceDir} \
-        --output-style expanded \
         --sourceComments true \
         -o ${minifiedDocsFile} \
         --recursive `
@@ -38,7 +37,8 @@ class DocsGenerator {
     sh.rm('./*.html');
     sh.exec('rm -rf ./static');
 
-    this.replace.run('(\/docs\/demo\/gaiden-css\/)', '\/demo\/gaiden-css\/');
+    //this.replace.run('(\/docs\/demo\/gaiden-css\/)', '\/demo\/gaiden-css\/');
+    this.replace.run('(\/docs\/demo\/gaiden-css\/)', '/gaiden\/docs\/demo\/gaiden-css\/');
   }
 
   generateDocs() {
