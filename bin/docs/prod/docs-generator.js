@@ -63,3 +63,5 @@ class DocsGenerator {
     sh.exec('git checkout -');
   }
 }
+
+module.exports = DocsGenerator;
