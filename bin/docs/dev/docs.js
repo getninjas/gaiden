@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-const shell = require('shelljs');
+const sh = require('shelljs');
 
 const docsDir = './docs/gaiden-css';
 const sourceDocsDir = './docs/demo/gaiden-css/scss';
@@ -16,6 +16,6 @@ const options = {
     --recursive `
 }
 
-shell.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
-shell.exec(`documentjs`);
-shell.cp('./build/stylesheets/gaiden.css', `${docsDir}/`)
+sh.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
+sh.exec(`documentjs`);
+sh.cp('./build/stylesheets/gaiden.css', `${docsDir}/`)
