@@ -1,51 +1,49 @@
 #! /usr/bin/env node
 
 const sh = require('shelljs');
-
-const validFile = (files, file) => {
-  if (sh.test('-d', file)) return;
-
-  if (file.match(/(html$|js$|css$)/)) {
-    files.push(file);
-  }
-
-  return files;
-}
+const FileReplacePath = require('./file-replace-path');
 
 class DocsGenerator {
   constructor(
     docsDir = './docs/gaiden-css',
     sassSourceDocsDir = './docs/demo/gaiden-css/scss',
     sourceDir = './src/scss',
-    minifiedDocsFile = './docs/gaiden-css/ninja-demo.css'
+    minifiedDocsFile = './'
   ) {
 
     this.options = {
-      sassSourceDocsDir: sassSourceDocsDir,
-      sourceDir: sourceDir,
       docsDir: docsDir,
-      minifiedDocsFile: minifiedDocsFile,
       timestamp: new Date().getTime(),
+      sassSourceDocsDir: sassSourceDocsDir,
       sass: ` --include-path ${sassSourceDocsDir} \
         --include-path ${sourceDir} \
         --output-style expanded \
         --sourceComments true \
-        -o ${docsDir} \
+        -o ${minifiedDocsFile} \
         --recursive `
     }
+
+    this.replace = new FileReplacePath({exclude: 'node_modules,bin,src,dist'});
   }
 
-  start() {
+  run() {
+    this.removeFileDocs();
     this.generateDocs();
     this.checkoutGh();
-    this.setupFileNames();
-    this.changePathNames();
+    this.fixPaths();
     this.pushDocs();
+  }
+
+  removeFileDocs() {
+    sh.rm('./*.html');
+    sh.exec('rm -rf ./static');
+
+    this.replace.run('(\/docs\/demo\/gaiden-css\/)', '\/demo\/gaiden-css\/');
   }
 
   generateDocs() {
     sh.exec(`documentjs -f gh_pages`);
-    sh.exec(`node-sass ${this.options.sourceDocsDir} ${this.options.sass} ${this.options.minifiedDocsFile}`);
+    sh.exec(`node-sass ${this.options.sassSourceDocsDir} ${this.options.sass}`);
   }
 
   checkoutGh() {
@@ -53,12 +51,17 @@ class DocsGenerator {
     sh.exec('git pull origin gh-pages --no-commit');
   }
 
-  setupFileNames() {
-    sh.cp('-f', './dist/gaiden.min.css', './gaiden.css');
-  }
+  fixPaths() {
+    let demoFiles = [];
 
-  changePathNames() {
-    sh.sed('-i', '/gaiden-css/gaiden.css', 'gaiden.css', './*.html');
+    sh.cp('-f', './dist/gaiden.min.css', './gaiden.css');
+
+    this.replace.run('\/gaiden-css\/gaiden\.css', '\/gaiden.css', './docs/demo/');
+    this.replace.run('\/gaiden-css\/base\.css', '\/base.css', './docs/demo/');
+    this.replace.run('(\/demo\/gaiden-css\/)|(demo\/gaiden-css\/)', '\/docs\/demo\/gaiden-css\/');
+    this.replace.run('(\.\/docs\/docs)', 'docs');
+
+    sh.sed('-i', '/gaiden-css/gaiden.css', '/gaiden.css', './*.html');
   }
 
   pushDocs() {
@@ -72,4 +75,4 @@ class DocsGenerator {
 }
 
 docsGenerator = new DocsGenerator();
-docsGenerator.start();
+docsGenerator.run();
