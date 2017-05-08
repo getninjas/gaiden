@@ -92,6 +92,7 @@
     word-break: break-word;
     font-size: 14px;
     display: flex;
+    flex: 0 1 auto;
 
     &--card {
       flex-direction: row;
