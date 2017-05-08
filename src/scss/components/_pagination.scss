@@ -13,44 +13,44 @@
 
 .pagination {
   &__item {
-    display: inline-block;
     cursor: pointer;
+    display: inline-block;
 
     & + & {
       margin-left: 2px;
     }
 
     a {
-      display: block;
-      padding: 4px 9px;
-      width: 100%;
       background-color: get-color(air);
       border: solid 1px get-color((color: rastaGray, opacity: .2));
       border-radius: $borderRadius;
-      transition-duration: .2s, .2s, .2s;
-      transition-property: background-color, color, border-color;
+      cursor: inherit;
+      display: block;
       font-size: 14px;
       font-weight: get-weight(bold);
-      cursor: inherit;
+      padding: 4px 9px;
+      transition-duration: .2s, .2s, .2s;
+      transition-property: background-color, color, border-color;
+      width: 100%;
     }
 
     &-jump {
+      border: 0;
       display: inline-block;
       padding: 6px 5px;
-      border: 0;
     }
 
     &--disabled {
-      opacity: .3;
       cursor: not-allowed;
+      opacity: .3;
     }
 
     &--active {
       &:not(.pagination__item--disabled) {
         a {
-          color: get-color(air);
           background-color: get-color(punch);
           border-color: get-color(serious);
+          color: get-color(air);
         }
       }
     }
