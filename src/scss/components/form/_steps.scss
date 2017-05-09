@@ -1,11 +1,3 @@
-/**
-  * @parent gaiden_css.components
-  * @stylesheet gaiden_css.components.form.steps.css Form Steps
-  *
-  * ## Form Steps
-  * @demo demo/gaiden-css/components/form/steps/demo.html
-**/
-
 .form__steps {
   @include flex-direction;
   @include flex-wrap;
