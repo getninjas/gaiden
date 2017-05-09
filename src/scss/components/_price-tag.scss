@@ -17,11 +17,11 @@
   }
 
   &__label {
+    color: get-color((color: blackNeutral, opacity: .75));
     font: {
       size: 14px;
       style: italic;
     };
-    color: get-color((color: blackNeutral, opacity: .75));
   }
 
   &__value {
@@ -32,8 +32,8 @@
   }
 
   &__description {
-    margin-top: 8px;
-    font-size: 12px;
     color: get-color((color: blackNeutral, opacity: .5));
+    font-size: 12px;
+    margin-top: 8px;
   }
 }

@@ -6,54 +6,48 @@
 **/
 
 .footer {
-  display: flex;
-  flex-direction: column;
   @include media(medium) {
     max-height: map-deep-get($footerSize, mini, size) + px;
   }
-
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   text-align: center;
+  width: 100%;
 
   &--sticky {
-    position: absolute;
     bottom: 0;
+    justify-content: flex-end;
     left: 0;
     max-height: map-deep-get($footerSize, large, size) + px;
-    justify-content: flex-end;
+    position: absolute;
   }
 
   &__company-info {
-    padding: {
-      top: 24px;
-      bottom: 24px;
-    };
     background-color: get-color(blackNeutral);
+    padding: {
+      bottom: 24px;
+      top: 24px;
+    };
   }
 
   &__company-disclaimer {
     @include media(medium) {
       text-align: inherit;
     }
-
+    color: get-color((color: air, opacity: .5));
+    letter-spacing: .3px;
     margin: 15px auto 0;
     padding: {
-      right: 20px;
       left: 20px;
+      right: 20px;
     };
-    color: get-color((color: air, opacity: .5));
     text-align: center;
-    font: {
-      weight: 400;
-      size: 11px;
-    }
-    letter-spacing: .3px;
 
     p,
     address {
-      width: auto;
       display: inline-block;
+      width: auto;
     }
   }
 
@@ -62,32 +56,29 @@
       justify-content: flex-end;
       margin-top: inherit;
     }
-
-    margin-top: 24px;
     justify-content: center;
+    margin-top: 24px;
 
     a {
-      font-size: 22px;
       color: get-color((color: air, opacity: .8));
+      font-size: 22px;
     }
 
     .no-flexbox & {
       @include media(medium) {
         text-align: right;
       }
-
       text-align: center;
     }
   }
 
   &__social-bar {
-    display: flex;
     @include media(medium) {
       justify-content: inherit;
     }
-
-    width: 100%;
+    display: flex;
     justify-content: center;
+    width: 100%;
 
     .no-flexbox & {
       @include media(medium) {
@@ -99,8 +90,8 @@
     }
 
     li {
-      margin-left: 30px;
       line-height: 0;
+      margin-left: 30px;
 
       &:first-child {
         margin-left: 0;
@@ -117,18 +108,17 @@
     @include media(medium) {
       padding: inherit;
     }
-
     padding: {
-      top: 20px;
       bottom: 20px;
+      top: 20px;
     }
-    width: 100%;
     text-align: center;
+    width: 100%;
   }
 
   &__link {
-    display: block;
     color: get-color((color: air, opacity: .8));
+    display: block;
     font: {
       size: 11px;
       weight: 400;
@@ -142,13 +132,13 @@
   }
 
   &__phone {
+    color: get-color(air);
     display: flex;
-    justify-content: center;
     font: {
       size: 18px;
       weight: 400;
     };
-    color: get-color(air);
+    justify-content: center;
 
     .no-flexbox & {
       margin: 0 auto;

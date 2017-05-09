@@ -17,8 +17,8 @@
 **/
 
 .media-box {
-  display: block;
   color: get-color((color: blackNeutral, key: darker, opacity: .8));
+  display: block;
 
   &--action {
     .media-box__body,
@@ -31,30 +31,30 @@
     }
 
     .btn--full-card {
-      font-size: 12px;
-      width: 100%;
-      padding: 14px 0;
-      position: absolute;
       bottom: 0;
+      font-size: 12px;
       left: 0;
       margin-bottom: 0;
+      padding: 14px 0;
+      position: absolute;
+      width: 100%;
     }
   }
 
   &__title {
-    font-size: 14px;
     color: inherit;
+    font-size: 14px;
 
     .card__title {
-      font-size: inherit;
       color: get-color((color: blackNeutral, key: darker, opacity: .6));
+      font-size: inherit;
     }
 
     small {
       color: get-color((color: blackNeutral, key: darker, opacity: .6));
-      font-weight: get-weight(normal);
       font-size: 12px;
       font-style: normal;
+      font-weight: get-weight(normal);
     }
   }
 
@@ -63,8 +63,8 @@
   }
 
   &__picture {
-    min-width: 38px;
     margin-right: 10px;
+    min-width: 38px;
   }
 
   &__rating {
@@ -72,9 +72,9 @@
   }
 
   &__sidebar {
+    display: block;
     flex-shrink: 0;
     padding-right: 15px;
-    display: block;
 
     .no-flexbox & {
       display: table-cell;
@@ -82,17 +82,17 @@
   }
 
   &__body {
+    color: get-color((color: blackNeutral, key: darker, opacity: .6));
     font-size: 14px;
     font-style: italic;
-    color: get-color((color: blackNeutral, key: darker, opacity: .6));
   }
 
   &__content {
-    flex-direction: column;
-    word-break: break-word;
-    font-size: 14px;
     display: flex;
     flex: 0 1 auto;
+    flex-direction: column;
+    font-size: 14px;
+    word-break: break-word;
 
     &--card {
       flex-direction: row;

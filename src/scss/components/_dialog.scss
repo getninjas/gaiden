@@ -17,45 +17,45 @@
   justify-content: center;
 
   &__quote {
-    display: flex;
-    flex: 1 0 auto;
-    padding: 24px;
-    position: relative;
+    align-items: center;
     background-color: get-color(breeze);
     border-radius: $borderRadius;
-    align-items: center;
-    justify-content: center;
-    font-style: italic;
     color: get-color(rastaGray);
+    display: flex;
+    flex: 1 0 auto;
+    font-style: italic;
+    justify-content: center;
+    padding: 24px;
+    position: relative;
     text-align: left;
 
     &::after {
-      position: absolute;
-      bottom: -29px;
-      left: 50%;
-      border-top: 15px solid get-color(breeze);
-      border-right: 15px solid transparent;
+      -ms-transform: translateX(-50%);
       border-bottom: 15px solid transparent;
       border-left: 15px solid transparent;
-      -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+      border-right: 15px solid transparent;
+      border-top: 15px solid get-color(breeze);
+      bottom: -29px;
       content: '';
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
     }
   }
 
   &__user {
     display: flex;
-    text-align: left;
-    justify-content: center;
     font-size: 12px;
+    justify-content: center;
+    text-align: left;
 
     &-photo {
       margin-right: 10px;
     }
 
     &-name {
-      line-height: 15px;
       font-weight: get-weight(bold);
+      line-height: 15px;
     }
 
     &-location {
@@ -64,12 +64,12 @@
     }
 
     &--centered {
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
 
       .dialog__user-photo {
-        margin-right: 0;
         margin-bottom: 8px;
+        margin-right: 0;
       }
 
       .wrap__dialog-itens {

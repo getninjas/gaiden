@@ -7,12 +7,9 @@
 **/
 
 .form__steps {
-  @include flexbox;
   @include flex-direction;
   @include flex-wrap;
-  margin: 0 auto;
-  width: 100%;
-  justify-content: space-around;
+  @include flexbox;
   align-items: center;
   background-color: get-color(recusaGray);
   border-bottom: {
@@ -25,16 +22,19 @@
     size: 12px;
     weight: 400;
   }
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 100%;
 
   &-item {
     @include flex;
-    padding: 14px;
-    text-align: center;
-    line-height: 1;
     border-bottom: {
       left-radius: 6px;
       right-radius: 6px;
     };
+    line-height: 1;
+    padding: 14px;
+    text-align: center;
 
     &--active {
       background-color: get-color(air);

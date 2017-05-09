@@ -14,6 +14,9 @@ rules:
   no-vendor-prefixes: 0
   no-color-literals: 2
   no-color-keywords: 2
+  no-qualifying-elements:
+    - 1
+    - allow-element-with-attribute: true
   no-duplicate-properties: 1
   quotes:
     - 2
@@ -35,21 +38,6 @@ rules:
     - 2
     -
       size: 2
-  property-sort-order:
-    - 1
-    -
-      order:
-        - display
-        - margin
-        - padding
-        - width
-        - height
-        - position
-        - top
-        - right
-        - bottom
-        - left
-      ignore-custom-properties: true
   variable-name-format:
     - 2
     -

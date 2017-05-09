@@ -1,19 +1,19 @@
 .icon {
+  align-items: center;
+  color: get-color((color: blackNeutral, opacity: .4));
   display: flex;
   font-style: italic;
   line-height: 1;
-  color: get-color((color: blackNeutral, opacity: .4));
-  align-items: center;
 
   &__image {
-    max-width: 100%;
     margin-right: 6px;
+    max-width: 100%;
   }
 
   &--small {
     margin: {
-      right: 7px;
       left: 7px;
+      right: 7px;
     };
     width: 8px;
   }

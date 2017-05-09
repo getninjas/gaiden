@@ -3,8 +3,8 @@
     $paddingConfig: map-get($buttonSize, padding);
 
     &--#{$key} {
-      padding: nth($paddingConfig, 1) + px;
       font-size: map-get($buttonSize, fontSize) + px;
+      padding: nth($paddingConfig, 1) + px;
     }
   }
 };
