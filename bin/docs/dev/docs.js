@@ -17,5 +17,5 @@ const options = {
 }
 
 sh.exec(`node-sass ${sourceDocsDir} ${options.sass} ${minifiedDocsFile}`);
-sh.exec(`documentjs`);
+sh.exec(`documentjs gaiden_css`);
 sh.cp('./build/stylesheets/gaiden.css', `${docsDir}/`);
