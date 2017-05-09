@@ -54,13 +54,13 @@
     @include flexbox;
 
     margin: {
-      right: auto;
       left: auto;
+      right: auto;
     }
 
     padding: {
-      right: percentage($gutter / 2);
       left: percentage($gutter / 2);
+      right: percentage($gutter / 2);
     }
 
     width: 100%;
@@ -77,8 +77,8 @@
      * container--fluid modifier
      */
     &--fluid {
-      width: 100%;
       max-width: inherit;
+      width: 100%;
     }
 
     &--middle-items {
@@ -98,8 +98,8 @@
 
     &.col-centered {
       margin: {
-        right: auto;
         left: auto;
+        right: auto;
       }
     }
   }
@@ -110,8 +110,8 @@
   $gridSize: map-get($breakpoint, size);
 
   [class*='col-#{$key}-'] {
-    margin-right: percentage($gutter / 2);
     margin-left: percentage($gutter / 2);
+    margin-right: percentage($gutter / 2);
   }
 
   @for $i from 1 through $columns {

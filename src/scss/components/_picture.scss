@@ -27,10 +27,10 @@
   max-width: 100%;
 
   &__image {
+    background-color: get-color(air);
     display: block;
     height: auto;
     max-width: 100%;
-    background-color: get-color(air);
   }
 
   &--rounded {
@@ -40,26 +40,26 @@
   }
 
   &--media {
-    max-width: 30px;
-    max-height: 30px;
-    width: 100%;
     margin-right: 10px;
+    max-height: 30px;
+    max-width: 30px;
+    width: 100%;
   }
 
   &--cover {
     display: block;
-    width: auto;
-    position: relative;
     max-height: 100%;
     overflow: hidden;
+    position: relative;
+    width: auto;
 
     .picture__image {
       -moz-force-broken-image-icon: 1; //sass-lint:disable-line no-misspelled-properties
       height: auto;
-      position: relative;
       left: 50%;
       max-width: none;
       min-width: 100%;
+      position: relative;
       transform: translateX(-50%);
     }
   }

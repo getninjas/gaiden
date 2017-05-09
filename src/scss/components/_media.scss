@@ -35,9 +35,9 @@
 
   &--no-image {
     .media__title {
+      color: get-color(punch);
       font-size: 16px;
       font-style: italic;
-      color: get-color(punch);
     }
   }
 

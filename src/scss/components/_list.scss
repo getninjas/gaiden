@@ -18,9 +18,9 @@
   * @demo /demo/gaiden-css/components/list/stacked/using_grid_system/demo.html
 **/
 .list {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  display: flex;
   margin-left: 0;
 
   .no-flexbox & {
@@ -32,8 +32,8 @@
     transition: transform ease-in-out .2s, background-color ease-in-out .3s;
 
     .list__item {
-      flex-wrap: nowrap;
       cursor: pointer;
+      flex-wrap: nowrap;
 
       &:hover,
       &:active,
@@ -52,8 +52,8 @@
     width: 100%;
 
     .list__item {
-      width: auto;
       float: none;
+      width: auto;
     }
 
     &[class*='col-'] {
@@ -62,19 +62,19 @@
   }
 
   &__item {
-    flex-shrink: 0;
-    display: flex;
-    color: get-color(punch);
-    margin-top: 2px;
-    margin-bottom: 2px;
     border-radius: $borderRadiusButton;
-    width: 25%;
+    color: get-color(punch);
+    display: flex;
+    flex-shrink: 0;
     font-size: 14px;
+    margin-bottom: 2px;
+    margin-top: 2px;
     transition: transform ease-in-out .2s, background-color ease-in-out .3s;
+    width: 25%;
 
     a {
-      transition: inherit;
       padding: 5px 5px 5px 0;
+      transition: inherit;
       width: calc(100% - 8px);
     }
 

@@ -1,7 +1,13 @@
 /**
   * @parent gaiden_css.generic
   * @stylesheet gaiden_css.generic.headings.css Headings
+  *
+  * ## Tags and subtitle (small)
+  * We are using heading tags with small to simulate a description of a heading element.
   * @demo demo/gaiden-css/generic/headings/demo.html
+  *
+  * ## Using classes
+  * @demo demo/gaiden-css/generic/headings/with-class/demo.html
 **/
 h1,
 h2,
@@ -40,12 +46,12 @@ h6,
 
 h1,
 .page-title {
-  margin-bottom: 4px;
   font-size: 24px;
+  margin-bottom: 4px;
 
   small {
-    margin-top: 8px;
     font-size: 18px;
+    margin-top: 8px;
   }
 
   @include media(normal) {
@@ -59,12 +65,12 @@ h1,
 
 h2,
 .section-title {
-  margin-bottom: 4px;
   font-size: 20px;
+  margin-bottom: 4px;
 
   small {
-    margin-top: 4px;
     font-size: 16px;
+    margin-top: 4px;
   }
 
   @include media(normal) {
@@ -78,12 +84,12 @@ h2,
 
 h3,
 .container-title {
-  margin-bottom: 4px;
   font-size: 18px;
+  margin-bottom: 4px;
 
   small {
-    margin-top: 4px;
     font-size: 16px;
+    margin-top: 4px;
   }
 
   @include media(normal) {
@@ -99,14 +105,14 @@ h4,
 .card-title {
 
   font: {
-    weight: get-weight(bold);
     size: 16px;
+    weight: get-weight(bold);
   }
   margin-bottom: 4px;
 
   small {
-    margin-top: 4px;
     font-size: 14px;
+    margin-top: 4px;
   }
 
   @include media(normal) {
@@ -119,16 +125,16 @@ h4,
 }
 
 h5,
-.card-title {
+.info-title {
   font: {
-    weight: get-weight(bold);
     size: 14px;
+    weight: get-weight(bold);
   }
   margin-bottom: 4px;
 
   small {
-    margin-top: 4px;
     font-size: 13px;
+    margin-top: 4px;
   }
 
   @include media(normal) {
@@ -143,14 +149,14 @@ h5,
 h6,
 .caption-title {
   font: {
-    weight: get-weight(bold);
     size: 13px;
+    weight: get-weight(bold);
   }
   margin-bottom: 4px;
 
   small {
-    margin-top: 4px;
     font-size: 12px;
+    margin-top: 4px;
   }
 
   @include media(normal) {

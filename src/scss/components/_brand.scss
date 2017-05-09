@@ -2,15 +2,14 @@
   * @parent gaiden_css.components
   * @stylesheet gaiden_css.components.brand.css Brand
   *
-  * @demo demo/gaiden-css/components/brand/demo.html
+  * @demo ./docs/demo/gaiden-css/components/brand/demo.html
 **/
 
 .brand {
+  color: get-color(air);
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
-
-  color: get-color(air);
 
   .no-flexbox & {
     display: inline-block;
@@ -22,10 +21,10 @@
 
   &__image {
     display: inline-block;
-    width: 36px;
     height: 36px;
     margin-right: 10px;
     vertical-align: top;
+    width: 36px;
 
     .no-flexbox & {
       display: inline-block;
@@ -33,25 +32,25 @@
   }
 
   &__name {
-    display: inline-block;
     color: get-color(blackNeutral);
+    display: inline-block;
     font: {
-      weight: 700;
       size: 20px;
+      weight: 700;
     };
     letter-spacing: 1px;
     line-height: .8;
     margin-top: 2px;
 
     small {
+      color: get-color(punch);
       display: block;
       font: {
         size: 10px;
-        weight: 700;
         style: normal;
+        weight: 700;
       };
       margin-top: 4px;
-      color: get-color(punch);
       text-transform: uppercase;
     }
 

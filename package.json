@@ -1,6 +1,6 @@
 {
   "name": "gaiden",
-  "version": "11.0.1",
+  "version": "11.0.3",
   "description": "Styleguide for GetNinjas projects",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,9 @@
     "postversion": "git push && git push --tags",
     "config": "npm config set progress=false && npm config set git-tag-version=true && npm link",
     "clear": "rm -rf ./build/*",
-    "build:prod": "build:prod:html && build:prod:image && build:prod:css",
+    "build:prod": "build:prod:html && build:prod:image && build:prod:css && build:docs:prod",
     "build:dev": "build:dev:html && build:dev:image && build:dev:css",
+    "build:docs": "build:docs:prod",
     "watch:css": "onchange \"src/scss\" -- build:dev:css",
     "watch:html": "onchange \"src/html\" -- build:dev:html",
     "watch:docs": "onchange \"docs/demo\" -- build:docs:dev",
@@ -19,6 +20,7 @@
     "watch": "npm-run-all -p watch:css watch:html watch:docs watch:image watch:build",
     "browsersync": "browser-sync start --config .browser-sync.js",
     "browsersync:docs": "browser-sync start --config .browser-sync-docs.js",
+    "docs": "npm run build:docs",
     "dev": "npm run clear && FORCE_COLOR=1 npm-run-all -p build:dev browsersync browsersync:docs watch"
   },
   "browserslist": [
@@ -36,8 +38,8 @@
     "build:prod:css": "./bin/build/prod/css.js",
     "build:prod:html": "./bin/build/prod/html.js",
     "build:prod:image": "./bin/build/prod/image.js",
-    "build:docs:dev": "./bin/docs/dev/documentjs.js",
-    "build:docs:prod": "./bin/docs/prod/documentjs.js"
+    "build:docs:dev": "./bin/docs/dev/docs.js",
+    "build:docs:prod": "./bin/docs/prod/docs.js"
   },
   "repository": {
     "type": "git",
@@ -60,10 +62,11 @@
     "cssnano-cli": "^1.0.5",
     "documentjs": "^0.4.4",
     "eslint-plugin-react": "^6.10.0",
-    "node-sass": "^3.10.1",
+    "node-sass": "^3.13.1",
     "npm-run-all": "^3.1.0",
     "onchange": "^3.0.2",
     "postcss-cli": "^2.6.0",
+    "replace": "^0.3.0",
     "reset-css": "^2.2.0",
     "sass-lint": "^1.10.2"
   }
