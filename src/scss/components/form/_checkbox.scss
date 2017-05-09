@@ -8,9 +8,9 @@
 **/
 
 .form__check {
-  position: relative;
-  padding-left: 20px;
   margin-top: 10px;
+  padding-left: 20px;
+  position: relative;
 
   & + & {
     margin-top: 16px;
@@ -22,22 +22,21 @@
   }
 
   > input {
-    width: 100%;
     height: 100%;
-    position: absolute;
     left: 0;
-    z-index: 1;
     opacity: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
 
     &:checked ~ label::before {
-      color: get-color(air);
-      background-color: get-color(punch);
       background: {
-        repeat: no-repeat;
+        color: get-color(punch);
         position: center center;
+        repeat: no-repeat;
       }
-
-      content: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%3Crect%20width%3D%2220%22%20height%3D%2220%22%20rx%3D%224%22%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23FFFFFF%22%20points%3D%224%2010.802%206.002%208.763%208.181%2010.98%2014.056%205%2016%206.979%208.123%2015%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E);
+      color: get-color(air);
+      content: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%3Crect%20width%3D%2220%22%20height%3D%2220%22%20rx%3D%224%22%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23FFFFFF%22%20points%3D%224%2010.802%206.002%208.763%208.181%2010.98%2014.056%205%2016%206.979%208.123%2015%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E); //sass-lint:disable-line url-quotes
     }
 
     &:focus ~ label::before {
@@ -51,21 +50,21 @@
 
   label {
     @include flexbox;
-    margin-left: 11px;
     align-items: center;
-    font-size: 14px;
     color: get-color((color: blackNeutral, opacity: .6));
+    font-size: 14px;
+    margin-left: 11px;
 
     &::before {
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      left: 0;
-      box-shadow: inset 0 0 0 1px get-color((color: rastaGray, opacity: .3));
-      border-radius: 4px;
       background-color: get-color(breeze);
+      border-radius: 4px;
+      box-shadow: inset 0 0 0 1px get-color((color: rastaGray, opacity: .3));
       content: '';
+      height: 20px;
+      left: 0;
+      position: absolute;
       text-align: center;
+      width: 20px;
     }
   }
 
@@ -82,9 +81,9 @@
   &--outlined {
     > input {
       &:checked ~ label::before {
-        color: get-color(air);
         background-color: get-color(air);
-        content: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%3Crect%20width%3D%2220%22%20height%3D%2220%22%20rx%3D%224%22%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%231393F6%22%20points%3D%228.123%2015%204%2010.802%206.002%208.763%208.181%2010.98%2014.056%205%2016%206.979%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E);
+        color: get-color(air);
+        content: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%3Crect%20width%3D%2220%22%20height%3D%2220%22%20rx%3D%224%22%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%231393F6%22%20points%3D%228.123%2015%204%2010.802%206.002%208.763%208.181%2010.98%2014.056%205%2016%206.979%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E); //sass-lint:disable-line url-quotes
       }
 
       &:focus ~ label::before {
