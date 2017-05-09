@@ -35,7 +35,7 @@
   &--profile {
     display: flex;
     flex-direction: column;
-    padding: 24px 0 0;
+    padding-bottom: calc(44px + 16px);
   }
 
   &--action {
