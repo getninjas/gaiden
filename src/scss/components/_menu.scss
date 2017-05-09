@@ -6,16 +6,15 @@
 **/
 
 .menu {
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: column;
   @include media(small) {
     flex-direction: row;
   }
-
-  padding: 24px;
-  justify-content: space-between;
   box-shadow: 0 2px 4px 0 get-color(blackNeutral, $key: darker, $opacity: .1);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: space-between;
+  padding: 24px;
 
   .no-flexbox & {
     @include clearfix;
@@ -26,11 +25,11 @@
   }
 
   &--over {
-    width: 100%;
-    position: fixed;
-    z-index: 10;
     background-color: get-color(air);
+    position: fixed;
     top: 0;
+    width: 100%;
+    z-index: 10;
 
     + .page-banner {
       .page-banner__content {

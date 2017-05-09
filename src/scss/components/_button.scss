@@ -82,19 +82,19 @@
 **/
 
 .btn {
-  display: inline-block;
-  border-radius: $borderRadiusButton;
-  font-weight: get-weight(bold);
-  text-align: center;
-  border: 0;
-  letter-spacing: .3px;
-  text-transform: uppercase;
-  cursor: pointer;
   background-color: transparent;
+  border: 0;
+  border-radius: $borderRadiusButton;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: get-weight(bold);
+  letter-spacing: .3px;
   line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
   transition-duration: .2s, .2s, .2s, .3s;
-  transition-timing-function: ease-in, ease-in, ease-in, ease;
   transition-property: border-color, box-shadow, background-color, color;
+  transition-timing-function: ease-in, ease-in, ease-in, ease;
 
   &[disabled] {
     cursor: not-allowed;
@@ -107,7 +107,7 @@
 
   &--loading {
     background-color: get-color((color: rastaGray, opacity: .2));
-    font-size: 0 !important;
+    font-size: 0 !important; //sass-lint:disable-line no-important
     position: relative;
     transition: all .3s ease;
 
@@ -131,9 +131,9 @@
   }
 
   &--full-card {
-    border-top: get-border(default);
-    border-bottom-right-radius: $borderRadius;
     border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+    border-top: get-border(default);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
