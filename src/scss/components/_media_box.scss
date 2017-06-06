@@ -85,6 +85,7 @@
     color: get-color((color: blackNeutral, key: darker, opacity: .6));
     font-size: 14px;
     font-style: italic;
+    word-wrap: break-word;
   }
 
   &__content {
