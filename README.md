@@ -1,4 +1,7 @@
 # gaiden
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1e3706db28f946f29cc0e5e2258f479f)](https://www.codacy.com/app/eduardojmatos/gaiden?utm_source=github.com&utm_medium=referral&utm_content=getninjas/gaiden&utm_campaign=badger)
+
 GetNinjas Styleguide - https://getninjas.github.io/gaiden
 
 # Quick Start
