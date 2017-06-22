@@ -44,8 +44,8 @@
     position: relative;
 
     &:hover {
-      box-shadow: get-shadow(large) get-color((color: blackNeutral, opacity: .1));
-      transform: translate(0, -5px);
+      box-shadow: get-shadow(large) get-color((color: blackNeutral, opacity: 0.1));
+      transform: translate(0, -5px)
     }
 
     .caption-title {
