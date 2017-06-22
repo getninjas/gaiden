@@ -24,13 +24,14 @@
 **/
 
 .card {
-  background-color: get-color(air);
-  border-radius: $borderRadius;
   box-shadow: get-shadow(medium) get-color((color: blackNeutral, opacity: .12));
   flex: 1 1 auto;
   padding: 24px;
   transition: box-shadow ease-in-out .2s, transform ease-in-out .1s;
   width: inherit;
+  background-color: get-color(air);
+  border-radius: $borderRadius;
+  color: red;
 
   &--profile {
     display: flex;
