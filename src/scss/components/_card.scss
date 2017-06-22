@@ -33,6 +33,12 @@
   border-radius: $borderRadius;
   color: red;
 
+  &-no-bem {
+    -webkit-transition: all ease-in 200ms;
+    -moz-transition: all ease-in 200ms;
+    transition: all ease-in 200ms;
+  }
+
   &--profile {
     display: flex;
     flex-direction: column;
