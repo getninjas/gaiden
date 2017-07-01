@@ -14,7 +14,7 @@ const options = {
     --output-style expanded \
     --sourceComments true \
     -o ${outputDir}`,
-  sasslint: `-c ./sass-lint.yml  -v -q`
+  sasslint: `-c .sass-lint.yml  -v -q`
 }
 
 const sassLintExec = shelljs.exec(`sass-lint ${options.sasslint}`);
