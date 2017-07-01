@@ -44,6 +44,7 @@
   &__title {
     color: inherit;
     font-size: 14px;
+    width: 100%;
 
     .card__title {
       color: get-color((color: blackNeutral, key: darker, opacity: .6));
