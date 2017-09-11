@@ -7,8 +7,15 @@
 
 .wall {
   padding: {
-    bottom: 84px;
-    top: 84px;
+    bottom: map-deep-get($spaces, section, large) + px;
+    top: map-deep-get($spaces, section, large) + px;
+  }
+
+  &--condensed {
+    padding: {
+      bottom: map-deep-get($spaces, box, medium) + px;
+      top: map-deep-get($spaces, box, medium) + px;
+    }
   }
 
   &--highlighted {
