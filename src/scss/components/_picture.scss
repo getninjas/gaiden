@@ -36,6 +36,7 @@
   &--rounded {
     .picture__image {
       border-radius: 50%;
+      overflow: hidden;
     }
   }
 
