@@ -17,7 +17,12 @@ module.exports = {
   files: "/docs",
   server: {
     baseDir: "docs",
-    directory: true
+    directory: true,
+    routes: {
+      "/gaiden.css": "./docs/gaiden-css/gaiden.css",
+      "/base.css": "./docs/gaiden-css/base.css",
+      "/docs/demo/gaiden-css/images/star-full.svg": "./docs/demo/gaiden-css/images/star-full.svg"
+    }
   },
   port: 8000,
   open: false,
