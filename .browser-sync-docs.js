@@ -26,10 +26,5 @@ module.exports = {
   },
   port: 8000,
   open: false,
-  cors: true,
-  //middleware: function (req, res, next) {
-    //console.log(req);
-
-    //return next();
-  //},
+  cors: true
 };
