@@ -56,9 +56,11 @@ $buttonSizes: (
 *  @parent gaiden_css.configs
 *  @typedef {{}} gaiden_css.configs.button_type_config ButtonTypeConfig
 *  @option {color|ColorConfig} background Defines button's background color
-*  @option {color|ColorConfig} padding Defines button's shadow color
-*  @option {color|ColorConfig} border Defines button's border color
 *  @option {color|ColorConfig} textColor Defines button's textColor
+*  @option {color|ColorConfig} shadow Defines button's shadow color using map (settings/shadows)
+*  @option {color|ColorConfig} border Defines button's border color
+*  @option {color|ColorConfig} borderTopColor Defines button's border top color
+*  @option {number} opacity Defines button's opacity
 *
 *  @body
 *    ## Using
@@ -71,7 +73,8 @@ $buttonSizes: (
 *         background: (color: punch, opacity: .9), //using ColorConfig
 *         textColor: air,
 *         shadow: ( kind: normal ),
-*         border: blackNeutral
+*         border: ( color: air, style: outline ),
+*         borderTopColor: ( color: punch )
 *        ),
 *        hover: (
 *        ),
