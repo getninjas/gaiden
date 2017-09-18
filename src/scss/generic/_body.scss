@@ -2,6 +2,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
+  background-color: get-color(wall);
   color: get-color(blackNeutral);
   font: {
     family: font-family('Lato');
