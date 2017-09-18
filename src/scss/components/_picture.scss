@@ -37,7 +37,9 @@
     overflow: hidden;
 
     .picture__image {
+      background-color: get-color(recusaGray);
       border-radius: 50%;
+      overflow: hidden;
     }
   }
 
