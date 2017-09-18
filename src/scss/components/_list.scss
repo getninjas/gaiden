@@ -27,6 +27,13 @@
     @include clearfix;
   }
 
+  &.container {
+    padding: {
+      left: 0;
+      right: 0;
+    }
+  }
+
   &--link {
     color: get-color(punch);
     transition: transform ease-in-out .2s, background-color ease-in-out .3s;
