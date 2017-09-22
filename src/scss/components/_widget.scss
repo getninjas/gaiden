@@ -18,6 +18,10 @@
   }
 
   &__title {
+    @media screen and (min-width: ($breakSmall + 1) + px) {
+      font-size: 24px;
+    }
+
     margin-bottom: 0;
     text-align: center;
     width: 100%;
