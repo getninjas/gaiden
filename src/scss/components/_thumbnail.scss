@@ -20,6 +20,7 @@
   &--action {
     box-shadow: 0 -2px 4px 0 get-color((color: blackNeutral, opacity: .1));
     display: block;
+    max-height: 190px;
     transform: scale(-1);
     width: 98%;
 
