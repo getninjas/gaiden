@@ -35,7 +35,12 @@
     @include media(medium) {
       text-align: inherit;
     }
+
     color: get-color((color: air, opacity: .5));
+    font: {
+      size: 11px;
+      weight: 400;
+    };
     letter-spacing: .3px;
     margin: 15px auto 0;
     padding: {
@@ -46,6 +51,7 @@
 
     p,
     address {
+      color: get-color((color: air, opacity: .5));
       display: inline-block;
       width: auto;
     }
