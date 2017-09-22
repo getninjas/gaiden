@@ -66,6 +66,10 @@
   &__picture {
     margin-right: 10px;
     min-width: 38px;
+
+    .picture__image {
+      height: 38px;
+    }
   }
 
   &__rating {
