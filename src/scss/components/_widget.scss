@@ -18,7 +18,7 @@
   }
 
   &__title {
-    @media screen and (min-width: ($breakSmall + 1) + px) {
+    @include media(small) {
       font-size: 24px;
     }
 
