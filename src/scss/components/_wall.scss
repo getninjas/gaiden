@@ -21,7 +21,7 @@
   &--highlighted {
     background-color: get-color(breeze);
 
-    & + .wall--highlighted {
+    + .wall--highlighted {
       &[class*='space-'] {
         margin-top: 0;
       }
