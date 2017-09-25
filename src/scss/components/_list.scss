@@ -22,6 +22,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: 0;
+  width: 100%;
 
   .no-flexbox & {
     @include clearfix;
