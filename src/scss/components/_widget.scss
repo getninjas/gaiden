@@ -18,6 +18,13 @@
   }
 
   &__title {
+    @include media(small) {
+      font-size: 24px;
+    }
+
+    font-size: 20px;
+    font-style: italic;
+    font-weight: get-weight(bolder);
     margin-bottom: 0;
     text-align: center;
     width: 100%;

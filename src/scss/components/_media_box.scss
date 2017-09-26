@@ -23,6 +23,7 @@
 
   &__title {
     color: inherit;
+    flex: 1;
     font-size: 14px;
     width: 100%;
 
@@ -44,8 +45,13 @@
   }
 
   &__picture {
+    display: block;
     margin-right: 10px;
     min-width: 38px;
+
+    .picture__image {
+      height: 38px;
+    }
   }
 
   &__rating {

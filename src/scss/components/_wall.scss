@@ -20,6 +20,12 @@
 
   &--highlighted {
     background-color: get-color(breeze);
+
+    + .wall--highlighted {
+      &[class*='space-'] {
+        margin-top: 0;
+      }
+    }
   }
 
   &--inverted {
