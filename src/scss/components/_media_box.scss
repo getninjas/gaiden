@@ -19,27 +19,7 @@
 .media-box {
   color: get-color((color: blackNeutral, key: darker, opacity: .8));
   display: block;
-
-  &--action {
-    .media-box__body,
-    .media-box__content {
-      padding: 0 24px;
-    }
-
-    .media-box__body {
-      cursor: default;
-    }
-
-    .btn--full-card {
-      bottom: 0;
-      font-size: 12px;
-      left: 0;
-      margin-bottom: 0;
-      padding: 14px 0;
-      position: absolute;
-      width: 100%;
-    }
-  }
+  padding: 0 24px;
 
   &__title {
     color: inherit;
@@ -102,7 +82,7 @@
     font-size: 14px;
     word-break: break-word;
 
-    &--card {
+    &--in-row {
       flex-direction: row;
     }
   }
