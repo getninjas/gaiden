@@ -16,7 +16,7 @@ const options = {
     --safe \
     --sourcemap false`,
   mqpacker: `-s`,
-  postcss: `--use autoprefixer -o ${minifiedFile} ${compiledFile}`,
+  postcss: `--use autoprefixer ${compiledFile} -o ${minifiedFile}`,
   sasslint: `-c ./sass-lint.yml -v`
 }
 
