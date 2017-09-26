@@ -12,7 +12,7 @@
   color: get-color((color: rastaGray, opacity: .5));
   font: {
     size: 12px;
-    weight: 400;
+    weight: get-weight(normal);
   }
   justify-content: space-around;
   margin: 0 auto;
