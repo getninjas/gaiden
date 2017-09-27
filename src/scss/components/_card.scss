@@ -33,14 +33,22 @@
   border-radius: $borderRadius;
   box-shadow: get-shadow(medium) get-color((color: blackNeutral, opacity: .12));
   flex: 1 1 auto;
-  padding: 24px;
   transition: box-shadow ease-in-out .2s, transform ease-in-out .1s;
   width: inherit;
+
+  &,
+  &.media-box {
+    padding: 24px;
+  }
 
   &--profile {
     display: flex;
     flex-direction: column;
-    padding-bottom: calc(44px + 16px);
+
+    &,
+    &.media-box {
+      padding-bottom: 44 + map-deep-get($spaces, element, large) + px;
+    }
   }
 
   &--action {
