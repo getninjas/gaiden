@@ -2,8 +2,20 @@
   * @parent gaiden_css.components
   * @stylesheet gaiden_css.components.menu.css Menu
   *
-  * @demo demo/gaiden-css/components/menu/demo.html
 **/
+
+/**
+  * @styles menu_over Menu Over
+  *
+  * @demo demo/gaiden-css/components/menu/default/demo.html
+**/
+
+/**
+  * @styles menu_neutral Menu Neutral
+  *
+  * @demo demo/gaiden-css/components/menu/neutral/demo.html
+**/
+
 
 .menu {
   @include media(small) {
@@ -36,6 +48,11 @@
         padding-top: 90px;
       }
     }
+  }
+
+  &--neutral {
+    background-color: transparent;
+    box-shadow: none;
   }
 
   &__brand {
