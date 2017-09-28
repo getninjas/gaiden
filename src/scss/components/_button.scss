@@ -81,6 +81,13 @@
   * @demo demo/gaiden-css/components/buttons/loading/demo.html
 **/
 
+/**
+  * @styles buttons_rounded Rounded
+  *
+  * @demo demo/gaiden-css/components/buttons/rounded/default/demo.html
+**/
+
+
 .btn {
   background-color: transparent;
   border: 0;
@@ -136,6 +143,10 @@
     border-top: get-border(default);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+  }
+
+  &--rounded {
+    border-radius: 30px;
   }
 
   @include generate-button-types;
