@@ -17,7 +17,7 @@ const options = {
     --sourcemap false`,
   mqpacker: `-s`,
   postcss: `--use autoprefixer ${compiledFile} -o ${minifiedFile}`,
-  sasslint: `-c ./sass-lint.yml -v`
+  sasslint: `-c .sass-lint.yml -v`
 }
 
 const sassLintExec = shelljs.exec(`sass-lint ${options.sasslint}`);
