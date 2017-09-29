@@ -10,18 +10,10 @@
   * @demo demo/gaiden-css/components/menu/default/demo.html
 **/
 
-/**
-  * @styles menu_neutral Neutral
-  *
-  * @demo demo/gaiden-css/components/menu/neutral/demo.html
-**/
-
-
 .menu {
   @include media(small) {
     flex-direction: row;
   }
-  box-shadow: 0 2px 4px 0 get-color(blackNeutral, $key: darker, $opacity: .1);
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -38,6 +30,7 @@
 
   &--over {
     background-color: get-color(air);
+    box-shadow: 0 2px 4px 0 get-color(blackNeutral, $key: darker, $opacity: .1);
     position: fixed;
     top: 0;
     width: 100%;
@@ -48,11 +41,6 @@
         padding-top: 90px;
       }
     }
-  }
-
-  &--neutral {
-    background-color: transparent;
-    box-shadow: none;
   }
 
   &__brand {
