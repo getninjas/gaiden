@@ -10,7 +10,7 @@ GetNinjas Styleguide - https://getninjas.github.io/gaiden
 - Configure the build links with: `npm run config`
 
 # Run project
-To run project, just `npm run dev` on terminal!
+To run project, just `npm start` on terminal!
 
 The URL of our documents is http://localhost:8000/gaiden-css/index.html.
 

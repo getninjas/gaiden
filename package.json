@@ -21,7 +21,7 @@
     "browsersync": "browser-sync start --config .browser-sync.js",
     "browsersync:docs": "browser-sync start --config .browser-sync-docs.js",
     "docs": "npm run build:docs",
-    "dev": "npm run clear && FORCE_COLOR=1 npm-run-all -p build:dev browsersync browsersync:docs watch"
+    "start": "npm run clear && FORCE_COLOR=1 npm-run-all -p build:dev browsersync browsersync:docs watch"
   },
   "browserslist": [
     "last 2 versions",
