@@ -24,11 +24,20 @@ class DocsGenerator {
   }
 
   run() {
+    this.checkoutGh();
     this.removeFileDocs();
     this.generateDocs();
-    this.checkoutGh();
     this.fixPaths();
     this.pushDocs();
+  }
+
+  checkoutGh() {
+    sh.exec('COMMIT_DATE=$(date)');
+    sh.exec('git commit -am "Dist commit preversion: "$COMMIT_DATE');
+    sh.exec('git checkout -B gh-pages');
+    sh.exec('git merge master --no-commit');
+    sh.exec('git commit -m "Preversion from master: "$COMMIT_DATE');
+    sh.exec('git pull origin gh-pages --no-commit');
   }
 
   removeFileDocs() {
@@ -39,11 +48,6 @@ class DocsGenerator {
   generateDocs() {
     sh.exec(`documentjs -f gh_pages`);
     sh.exec(`node-sass ${this.options.sassSourceDocsDir} ${this.options.sass}`);
-  }
-
-  checkoutGh() {
-    sh.exec('git checkout -B gh-pages');
-    sh.exec('git pull origin gh-pages --no-commit');
   }
 
   fixPaths() {
