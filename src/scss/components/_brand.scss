@@ -20,11 +20,11 @@
   }
 
   &__image {
-    display: inline-block;
-    height: 36px;
-    margin-right: 10px;
+    display:inline-block;
+    height:36px;
+    margin-right:10px;
     vertical-align: top;
-    width: 36px;
+    width:36px;
 
     .no-flexbox & {
       display: inline-block;
