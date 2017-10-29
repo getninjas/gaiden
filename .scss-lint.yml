@@ -1,10 +1,5 @@
-# Default application configuration that all configurations inherit from.
+scss_files: 'src/scss/**/*.s+(c|a)ss'
 
-scss_files: '**/*.s+(c|a)ss'
-
-exclude: '**/*+(vendor)/**/*.s+(c|a)ss'
-
-# Default severity of all linters.
 severity: warning
 
 linters:
