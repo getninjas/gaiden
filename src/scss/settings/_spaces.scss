@@ -26,25 +26,25 @@
 *
 *   @body
 *   #### Section
-*     get-spaces(section, small) (60px)
-*     get-spaces(section, medium) (72px)
-*     get-spaces(section, large) (84px)
+*     get-space(section, small) (60px)
+*     get-space(section, medium) (72px)
+*     get-space(section, large) (84px)
 *
 *   #### Box
-*     get-spaces(box, small) (24px)
-*     get-spaces(box, medium) (36px)
-*     get-spaces(box, large) (48px)
+*     get-space(box, small) (24px)
+*     get-space(box, medium) (36px)
+*     get-space(box, large) (48px)
 *
 *   #### Element
-*     get-spaces(element, small) (8px)
-*     get-spaces(element, medium) (12px)
-*     get-spaces(element, large) (16px)
+*     get-space(element, small) (8px)
+*     get-space(element, medium) (12px)
+*     get-space(element, large) (16px)
 *
 *  @body
-*  # Nagative
+*  # Negative
 *  ##### To get a negative result using the helper, we need to add the operator `-` before the helper call.
 *
-*     - get-spaces(param)
+*     - get-space(param)
 *
 **/
 $spaces: (
