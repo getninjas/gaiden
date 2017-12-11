@@ -20,6 +20,32 @@
 *     .space-element-medium - 12px
 *     .space-element-large - 16px
 *
+*  @body
+*  # Helpers
+*  ##### Use the helpers to get the sizes defined in the properties such as `margin-top`
+*
+*   @body
+*   #### Section
+*     get-spaces(section, small) (60px)
+*     get-spaces(section, medium) (72px)
+*     get-spaces(section, large) (84px)
+*
+*   #### Box
+*     get-spaces(box, small) (24px)
+*     get-spaces(box, medium) (36px)
+*     get-spaces(box, large) (48px)
+*
+*   #### Element
+*     get-spaces(element, small) (8px)
+*     get-spaces(element, medium) (12px)
+*     get-spaces(element, large) (16px)
+*
+*  @body
+*  # Nagative
+*  ##### To get a negative result using the helper, we need to add the operator `-` before the helper call.
+*
+*     - get-spaces(param)
+*
 **/
 $spaces: (
   section: (
