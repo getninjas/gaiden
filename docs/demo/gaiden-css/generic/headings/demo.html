@@ -4,11 +4,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="maximum-scale=1,width=device-width,initial-scale=1,user-scalable=0">
- <link rel="stylesheet" href="/gaiden-css/gaiden.css">
+  <link rel="stylesheet" href="/gaiden-css/gaiden.css">
   <link rel="stylesheet" href="/gaiden-css/base.css">
   <style>
     nav {
       padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      font-family: "Times New Roman", Times, serif;
+      border: 1px solid #FFFFFF;
+      width: 350px;
+      height: 200px;
+      text-align: center;
+      border-collapse: collapse;
+    }
+
+    table td,
+    table th {
+      border: 1px solid #FFFFFF;
+      padding: 3px 2px;
+    }
+
+    table tbody td {
+      font-size: 13px;
+    }
+
+    table tr:nth-child(even) {
+      background: #D0E4F5;
+    }
+
+    table thead {
+      background: #0B6FA4;
+      border-bottom: 5px solid #FFFFFF;
+    }
+
+    table thead th {
+      font-size: 17px;
+      font-weight: bold;
+      color: #FFFFFF;
+      text-align: center;
+      border-left: 2px solid #FFFFFF;
+    }
+
+    table thead th:first-child {
+      border-left: none;
+    }
+
+    table tfoot {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333333;
+      background: #D0E4F5;
+      border-top: 3px solid #444444;
+    }
+
+    table tfoot td {
+      font-size: 14px;
     }
 
   </style>
@@ -16,26 +69,61 @@
 </head>
 
 <body>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th colspan="5">view</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Selector</td>
+        <th>mobile</th>
+        <th>desktop</th>
+      </tr>
+      <tr>
+        <td>h1/.page-title</td>
+        <td>24px</td>
+        <td>48px</td>
+      </tr>
+      <tr>
+        <td>h2/.section-title</td>
+        <td>20px</td>
+        <td>36px</td>
+      </tr>
+      <tr>
+        <td>h3/.container-title</td>
+        <td>18px</td>
+        <td>24px</td>
+      </tr>
+    </tbody>
+  </table>
   <h1 class="" arial-level="1" role="heading">
-    H1 - Page Title 24px
-    <small>Sub Title 18px </small>
-  </h1><br>
+    H1 - Page Title
+    <small>Sub Title</small>
+  </h1>
+  <br>
   <h2 class="" arial-level="1" role="heading">
     H2 Section Title
     <small>Sub Title</small>
-  </h2><br>
+  </h2>
+  <br>
   <h3 class="" arial-level="1" role="heading">
     H3 Container Title
     <small>Sub Title</small>
-  </h3><br>
+  </h3>
+  <br>
   <h4 class="" arial-level="1" role="heading">
     H4 Card Title
     <small>Sub Title</small>
-  </h4><br>
+  </h4>
+  <br>
   <h5 class="" arial-level="1" role="heading">
     H5 Info Title
     <small>Sub Title</small>
-  </h5><br>
+  </h5>
+  <br>
   <h6 class="" arial-level="1" role="heading">
     H6 Caption Title
     <small>Sub Title</small>
