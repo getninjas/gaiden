@@ -13,30 +13,25 @@
 
     table {
       width: 100%;
-      font-family: "Times New Roman", Times, serif;
-      border: 1px solid #FFFFFF;
-      width: 350px;
-      height: 200px;
+      font-family: "Lato", serif;
       text-align: center;
       border-collapse: collapse;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 40px;
     }
 
     table td,
     table th {
-      border: 1px solid #FFFFFF;
       padding: 3px 2px;
     }
 
-    table tbody td {
-      font-size: 13px;
-    }
-
     table tr:nth-child(even) {
-      background: #D0E4F5;
+      background: #ececec;
     }
 
     table thead {
-      background: #0B6FA4;
+      background: #536d7a;
       border-bottom: 5px solid #FFFFFF;
     }
 
@@ -57,7 +52,6 @@
       font-weight: bold;
       color: #333333;
       background: #D0E4F5;
-      border-top: 3px solid #444444;
     }
 
     table tfoot td {
@@ -72,13 +66,13 @@
   <table>
     <thead>
       <tr>
-        <th></th>
-        <th colspan="5">view</th>
+        <th>Heading/Selector</th>
+        <th colspan="5">View</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Selector</td>
+        <td></td>
         <th>mobile</th>
         <th>desktop</th>
       </tr>
@@ -96,6 +90,21 @@
         <td>h3/.container-title</td>
         <td>18px</td>
         <td>24px</td>
+      </tr>
+      <tr>
+        <td>h4/.card-title</td>
+        <td>16px</td>
+        <td>20px</td>
+      </tr>
+      <tr>
+        <td>h5/.info-title</td>
+        <td>14px</td>
+        <td>18px</td>
+      </tr>
+      <tr>
+        <td>h6/.caption-title</td>
+        <td>13px</td>
+        <td>16px</td>
       </tr>
     </tbody>
   </table>
