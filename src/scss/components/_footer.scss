@@ -159,18 +159,6 @@
     }
   }
 
-  &__item {
-    &:not(.footer__item--larger) {
-      margin-top: get-space(element, small);
-    }
-
-    &:first-child {
-      &:not(.footer__item--larger) {
-        margin-top: get-space(element, medium);
-      }
-    }
-  }
-
   &__copyright {
     background-color: get-color(recusaGray, $opacity: .4);
     color: get-color(blackNeutral, $key: darker, $opacity: .3);
