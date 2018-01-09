@@ -162,8 +162,10 @@
       margin-top: get-space(element, small);
     }
 
-    &:first-child:not(.footer__item--larger) {
-      margin-top: get-space(element, medium);
+    &:first-child {
+      &:not(.footer__item--larger) {
+        margin-top: get-space(element, medium);
+      }
     }
   }
 
