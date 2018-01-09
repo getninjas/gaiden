@@ -10,12 +10,4 @@ body {
     weight: get-weight(normal);
   };
   line-height: 1.3;
-
-  .sticky & {
-    @include media(medium) {
-      margin-bottom: map-deep-get($footerSize, mini, size) + px;
-    }
-
-    margin-bottom: map-deep-get($footerSize, large, size) + px;
-  }
 }
