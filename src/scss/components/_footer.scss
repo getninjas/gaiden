@@ -21,7 +21,7 @@
 
   &__block {
     align-content: flex-start;
-    margin-top: get_space(box, small);
+    margin-top: get-space(box, small);
 
     &--download {
       margin-left: auto;
@@ -29,7 +29,7 @@
 
     @include media(small) {
       align-content: flex-start;
-      margin-top: get_space(box, large);
+      margin-top: get-space(box, large);
     }
   }
 
@@ -50,7 +50,7 @@
     }
 
     &--line {
-      margin-top: get_space(box, small);
+      margin-top: get-space(box, small);
     }
 
     &--social {
@@ -94,7 +94,7 @@
 
             @include media(normal) {
               margin-left: 0;
-              margin-top: get_space(element, small);
+              margin-top: get-space(element, small);
             }
           }
         }
@@ -159,11 +159,11 @@
 
   &__item {
     &:not(.footer__item--larger) {
-      margin-top: get_space(element, small);
+      margin-top: get-space(element, small);
     }
 
     &:first-child:not(.footer__item--larger) {
-      margin-top: get_space(element, medium);
+      margin-top: get-space(element, medium);
     }
   }
 
