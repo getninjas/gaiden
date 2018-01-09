@@ -6,157 +6,172 @@
 **/
 
 .footer {
-  @include media(medium) {
-    max-height: map-deep-get($footerSize, mini, size) + px;
-  }
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  text-align: center;
-  width: 100%;
+  background-color: get-color(wall);
+  height: auto;
 
-  &--sticky {
-    bottom: 0;
-    justify-content: flex-end;
-    left: 0;
-    max-height: map-deep-get($footerSize, large, size) + px;
-    position: absolute;
-  }
-
-  &__company-info {
-    background-color: get-color(blackNeutral);
-    padding: {
-      bottom: 24px;
-      top: 24px;
-    };
-  }
-
-  &__company-disclaimer {
-    @include media(medium) {
-      text-align: inherit;
-    }
-
-    color: get-color((color: air, opacity: .5));
-    font: {
-      size: 11px;
-      weight: get-weight(normal);
-    };
-    letter-spacing: .3px;
-    margin: 15px auto;
-    padding: {
-      left: 20px;
-      right: 20px;
-    };
-    text-align: center;
-
-    p,
-    address {
-      color: get-color((color: air, opacity: .5));
-      display: inline-block;
-      width: auto;
-    }
-  }
-
-  &__brand {
-    @include media(medium) {
-      justify-content: flex-end;
-      margin-top: inherit;
-    }
-    justify-content: center;
-    margin-top: 24px;
-
-    a {
-      color: get-color((color: air, opacity: .8));
-      font-size: 22px;
-    }
-
-    .no-flexbox & {
-      @include media(medium) {
-        text-align: right;
-      }
-      text-align: center;
-    }
-  }
-
-  &__social-bar {
-    @include media(medium) {
-      justify-content: inherit;
-    }
-    display: flex;
-    justify-content: center;
-    width: 100%;
-
-    .no-flexbox & {
-      @include media(medium) {
-        margin: 0;
-      }
-
-      margin: 0 auto;
-      width: auto;
-    }
-
-    li {
-      line-height: 0;
-      margin-left: 30px;
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      .no-flexbox & {
-        float: left;
-      }
-    }
-  }
-
-  &__link,
-  &__phone {
-    @include media(medium) {
-      padding: inherit;
-    }
-    padding: {
-      bottom: 20px;
-      top: 20px;
-    }
-    text-align: center;
-    width: 100%;
-  }
-
-  &__link {
-    color: get-color((color: air, opacity: .8));
+  &__title {
+    color: get-color(rastaGray);
     display: block;
-    font: {
-      size: 11px;
-      weight: get-weight(normal);
-    };
+    font-size: 12px;
+    font-weight: 900;
+    text-align: left;
     text-transform: uppercase;
-    transition: color ease .2s;
+    width: 100%;
+  }
 
-    &:hover {
-      color: get-color((color: air, opacity: 1));
+  &__block {
+    align-content: flex-start;
+    margin-top: get_space(box, small);
+
+    &--download {
+      margin-left: auto;
+    }
+
+    @include media(small) {
+      align-content: flex-start;
+      margin-top: get_space(box, large);
     }
   }
 
-  &__phone {
-    color: get-color(air);
-    display: flex;
-    font: {
-      size: 18px;
-      weight: get-weight(normal);
-    };
-    justify-content: center;
+  &__list {
+    color: get-color(punch);
+    font-size: 14px;
+    text-align: left;
 
-    .no-flexbox & {
-      margin: 0 auto;
-      width: auto;
+    &--service {
+      display: inline-block;
+      margin-left: 0;
+      text-align: left;
+
+      + .footer__list--service {
+        margin-left: auto;
+        margin-right: 0;
+      }
     }
 
-    .hint__icon {
-      margin-right: 10px;
+    &--line {
+      margin-top: get_space(box, small);
+    }
+
+    &--social {
+      display: flex;
+      flex-grow: 1;
+
+      .footer__item {
+        border-radius: 50%;
+        height: 48px;
+        margin-left: 6%;
+        text-indent: -9999px;
+        width: 48px;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &--app {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+
+      .footer {
+        &__item {
+          border-radius: 4px;
+          flex-grow: 1;
+
+          a {
+            display: block;
+          }
+
+          &:last-child {
+            margin-left: 5px;
+
+            @include media(normal) {
+              margin-left: 0;
+              margin-top: get_space(element, small);
+            }
+          }
+        }
+
+        &__image {
+          width: 100%;
+
+          @include media(small) {
+            max-width: initial;
+          }
+        }
+      }
+
+      @include media(normal) {
+        flex: auto;
+        flex-direction: column;
+      }
     }
   }
 
-  &__menu {
-    background-color: get-color((color: blackNeutral, opacity: .9));
+  &__institutional {
+    border-top: 1px solid get-color(recusaGray);
+    flex-direction: column;
+    margin-top: 45px;
+    padding: 24px 16px;
+
+    .footer__image {
+      width: 112px;
+    }
+
+    &--list {
+      color: get-color(punch);
+      display: flex;
+      font-size: 12px;
+      font-weight: bold;
+      justify-content: space-between;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: right;
+      text-transform: uppercase;
+
+      @include media(small) {
+        margin: initial;
+
+        .footer__item {
+          margin: auto auto auto 20px;
+
+          &:first-child {
+            margin: auto;
+          }
+        }
+      }
+    }
+
+    @include media(small) {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 34px 0;
+    }
+  }
+
+  &__item {
+    &:not(.footer__item--larger) {
+      margin-top: get_space(element, small);
+    }
+
+    &:first-child:not(.footer__item--larger) {
+      margin-top: get_space(element, medium);
+    }
+  }
+
+  &__copyright {
+    background-color: get-color(recusaGray, $opacity: .4);
+    color: get-color(blackNeutral, $key: darker, $opacity: .3);
+    font-size: 12px;
+    padding: 8px 40px;
+    text-align: center;
   }
 }
