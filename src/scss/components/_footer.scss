@@ -38,12 +38,12 @@
     font-size: 14px;
     text-align: left;
 
-    &--service {
+    &--on-column[class*='col-'] {
       display: inline-block;
       margin-left: 0;
       text-align: left;
 
-      + .footer__list--service {
+      + & {
         margin-left: auto;
         margin-right: 0;
       }
@@ -125,7 +125,7 @@
       width: 112px;
     }
 
-    &--list {
+    &__institutional-list {
       color: get-color(punch);
       display: flex;
       font-size: 12px;
