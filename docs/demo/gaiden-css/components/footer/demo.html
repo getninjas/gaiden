@@ -12,65 +12,79 @@
 </head>
 
 <body>
-  <nav class="menu menu--over">
-    <div class="brand menu__brand">
-      <a href="#" class="brand__link" tabindex="1">
-        <img src="/demo/gaiden-css/images/getninjas-construcao.svg" alt="Logo do GetNinjas Construção" class="brand__image">
-        <h1 class="brand__name">GetNinjas <small>Construção</small>
-        </h1>
-      </a>
-    </div>
-
-    <div class="menu__options">
-      <a href="#" class="btn btn--small btn--outline-reversed">Quero me cadastrar como profissional</a>
-    </div>
-  </nav>
-
-  <section class="page-banner" role="banner">
-    <picture class="picture picture--cover page-banner__picture">
-      <source srcset="/demo/gaiden-css/images/background-header-desktop.jpg" media="(min-width: 1200px)">
-      <source srcset="/demo/gaiden-css/images/background-header-large.jpg" media="(min-width: 960px)">
-      <source srcset="/demo/gaiden-css/images/background-header-medium.jpg" media="(min-width: 768px)">
-      <source srcset="/demo/gaiden-css/images/background-header.jpg" media="(max-width: 767px)">
-      <img src="/demo/gaiden-css/images/background-header-medium.jpg" class="picture__image" alt="Imagem">
-    </picture>
-    <header class="page-banner__content" role="sectionhead">
-      <h1 class="page-title" arial-level="1" role="heading">
-        Encontre os melhores Pedreiros da sua Região
-        <small>Você nos conta o que precisa, nós selecionamos os melhores pedreiros e eles entrarão em contato com você.</small>
-      </h1>
-    </header>
-  </section>
-
-  <footer class="footer footer--sticky">
-    <nav class="footer__menu menu menu--centered">
-      <ul class="container container--middle-items">
-        <li class="col-small-12 col-normal-2"><a class="footer__link" href="#">Quem Somos</a></li>
-        <li class="col-small-12 col-normal-2"><a class="footer__link" href="#">Guia do GetNinjas</a></li>
-        <li class="col-small-12 col-normal-2"><a class="footer__link" href="#">Ajuda</a></li>
-        <li class="col-small-12 col-normal-2"><a class="footer__link" href="#">Termos de Uso</a></li>
-        <li class="col-small-12 col-normal-4"><a href="#" class="hint footer__phone"><img src="/demo/gaiden-css/images/icons/phone.svg" class="hint__icon"> <span class="hint__message">(11) 3791-7315</span></a></li>
-      </ul>
+  <footer class="footer">
+    <nav class="footer__wrapper container" role="menubar" aria-label="Menu rodapé">
+      <div class="footer__block col-small-12 col-medium-6 col-large-4">
+        <span class="footer__title">
+          Serviços
+        </span>
+        <ul class="footer__list footer__list--on-column col-small-6" role="menu" aria-label="Menu rodapé - serviços">
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Assistencia Técnica" href="https://www.getninjas.com.br/assistencia-tecnica">Assistencia Técnica</a></li>
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Aulas" href="https://www.getninjas.com.br/aulas">Aulas</a></li>
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Autos" href="https://www.getninjas.com.br/automoveis">Autos</a></li>
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Consultoria" href="https://www.getninjas.com.br/consultoria">Consultoria</a></li>
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Design e Tecnologia" href="https://www.getninjas.com.br/design-e-tecnologia">Design e Tecnologia</a></li>
+        </ul>
+        <ul class="footer__list footer__list--on-column col-small-6" role="menu" aria-label="Menu rodapé - serviços">
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Eventos" href="https://www.getninjas.com.br/eventos">Eventos</a></li>
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Moda e Beleza" href="https://www.getninjas.com.br/moda-e-beleza">Moda e Beleza</a></li>
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Reformas" href="https://www.getninjas.com.br/reformas-e-reparos">Reformas</a></li>
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Saúde" href="https://www.getninjas.com.br/saude">Saúde</a></li>
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Serviços Domésticos" href="https://www.getninjas.com.br/familia">Serviços Domésticos</a></li>
+        </ul>
+      </div>
+      <div class="footer__block col-small-12 col-medium-6 col-large-2">
+        <span class="footer__title">
+          Institucional
+        </span>
+        <ul class="footer__list" role="menu" aria-label="Menu rodapé - institucional">
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Quem Somos" href="https://www.getninjas.com.br/quem-somos">Quem Somos</a></li>
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Trabalhe Conosco" href="https://jobs.kenoby.com/getninjas" target="_blank">Trabalhe Conosco</a></li>
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Profissionais Verificados" href="http://comunicacao.getninjas.com.br/selo-ninja-verificado">Profissionais Verificados</a></li>
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Guia do GetNinjas" href="https://www.getninjas.com.br/guia" rel="noopener noreferrer">Guia do GetNinjas</a></li>
+        </ul>
+      </div>
+      <div class="footer__block col-small-12 col-medium-6 col-large-4">
+        <span class="footer__title">
+          Redes sociais
+        </span>
+        <ul class="footer__list footer__list--line footer__list--social" role="menu" aria-label="Menu rodapé - mídia social">
+          <li class="footer__item footer__item--larger" role="none">
+            <a role="menuitem" aria-label="Link para o Instagram" href="https://www.instagram.com/GetNinjas/" title="Link para o Instagram do GetNinjas." target="_blank" rel="noopener noreferrer">
+              <img class="footer__image" alt="Instagram - @GetNinjas" alt="GetNinjas" src="/demo/gaiden-css/images/icons/instagram.png">
+            </a>
+          </li>
+          <li class="footer__item footer__item--larger" role="none">
+            <a role="menuitem" aria-label="Link para o Facebook" href="https://www.facebook.com/GetNinjas/" title="Link para o Facebook do GetNinjas." target="_blank" rel="noopener noreferrer">
+              <img class="footer__image" alt="Facebook - @GetNinjas" src="/demo/gaiden-css/images/icons/facebook.png">
+            </a>
+          </li>
+          <li class="footer__item footer__item--larger" role="none">
+            <a role="menuitem" aria-label="Link para o Twitter" href="https://www.twitter.com/GetNinjas/" title="Link para o Twitter do GetNinjas." target="_blank" rel="noopener noreferrer">
+              <img class="footer__image" alt="Twitter - @GetNinjas" src="/demo/gaiden-css/images/icons/twitter.png">
+            </a>
+          </li>
+          <li class="footer__item footer__item--larger" role="none">
+            <a role="menuitem" aria-label="Link para o Youtube" href="https://www.youtube.com/channel/UCWgyIuQWHB3u88SY1hr5zZg/featured" title="Link para o Youtube do GetNinjas." target="_blank" rel="noopener noreferrer">
+              <img class="footer__image" alt="Youtube - @GetNinjas" src="/demo/gaiden-css/images/icons/youtube.png">
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
-
-    <section class="footer__company-info">
-      <div class="container container--middle-items">
-        <div class="col-small-12 col-normal-5 brand footer__brand">
-          <a href="#" class="brand__name">GetNinjas</a>
-        </div>
-        <div class="col-small-12 col-normal-7">
-          <ul class="footer__social-bar">
-            <li><a href="https://www.facebook.com/GetNinjas" class="footer__link"><img src="/demo/gaiden-css/images/icons/facebook.svg"></a></li>
-            <li><a href="https://twitter.com/getninjas" class="footer__link"><img src="/demo/gaiden-css/images/icons/twitter.svg"></a></li>
-            <li><a href="https://plus.google.com/+GetninjasBr" class="footer__link"><img src="/demo/gaiden-css/images/icons/google-plus.svg"></a></li>
-            <li><a href="https://www.linkedin.com/company/getninjas" class="footer__link"><img src="/demo/gaiden-css/images/icons/linkedin.svg"></a></li>
-          </ul>
-        </div>
-      <div class="footer__company-disclaimer" role="presentation">
-        <p>©2011-2017, GetNinjas Serviços de Internet. CNPJ 14.127.813/0001-51</p> - <address >Av. Rebouças, 2472 - Pinheiros São Paulo - SP</address>
-      </div>
-      </div>
-    </section>
+    <div class="container">
+      <ul class="footer__institutional col-small-12">
+        <li>
+          <a href="#"><img alt="GetNinjas" class="footer__image" src="/demo/gaiden-css/images/logo-getninjas.svg"></a>
+        </li>
+        <ul class="footer__institutional-list space-element-large">
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Imprensa" href="https://www.getninjas.com.br/imprensa">Imprensa</a></li>
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Ajuda" href="https://getninjas.desk.com/" target="_blank">Ajuda</a></li>
+          <li class="footer__item" role="none"><a role="menuitem" aria-label="Termos de uso" href="https://www.getninjas.com.br/termos-de-uso">Termos de uso</a></li>
+        </ul>
+      </ul>
+    </div>
+    <address role="contentinfo" class="footer__copyright">©2011-2018, GetNinjas Serviços de Internet. CNPJ 14.127.813/0001-51 - Av. Rebouças, 2472 - Pinheiros São Paulo - SP</address>
   </footer>
 </body>
 </html>

@@ -3,7 +3,6 @@
 @import 'settings/grid';
 @import 'settings/buttons';
 @import 'settings/base_font';
-@import 'settings/footer';
 @import 'settings/spaces';
 @import 'settings/shadows';
 @import 'settings/border';
@@ -12,10 +11,11 @@
 @import 'tools/mixins/map_deep_get';
 @import 'tools/mixins/generate_button_sizes';
 @import 'tools/mixins/generate_button_types';
+@import 'tools/mixins/get_border';
 @import 'tools/mixins/get_color';
 @import 'tools/mixins/get_shadow';
-@import 'tools/mixins/get_border';
-@import 'tools/mixins/get-weight';
+@import 'tools/mixins/get_space';
+@import 'tools/mixins/get_weight';
 @import 'tools/mixins/flex';
 @import 'tools/mixins/clearfix';
 @import 'tools/mixins/grid';
@@ -31,7 +31,7 @@
 @import 'generic/heading';
 @import 'generic/html';
 @import 'generic/body';
-@import 'generic/content-centered';
+@import 'generic/content_centered';
 @import 'components/button';
 @import 'components/media_box';
 @import 'components/picture';
@@ -40,7 +40,7 @@
 @import 'components/icon';
 @import 'components/hint';
 @import 'components/pagination';
-@import 'components/page-banner';
+@import 'components/page_banner';
 @import 'components/brand';
 @import 'components/list';
 @import 'components/menu';
@@ -54,9 +54,9 @@
 @import 'components/form/radio';
 @import 'components/form/message';
 @import 'components/form/steps';
-@import 'components/form/alert-message';
-@import 'components/price-tag';
-@import 'components/price-variation';
+@import 'components/form/alert_message';
+@import 'components/price_tag';
+@import 'components/price_variation';
 @import 'components/media';
 
 @include generate-grid($defaultBreakpoints);

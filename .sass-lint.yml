@@ -74,3 +74,8 @@ rules:
     - 2
     -
       convention: hyphenatedbem
+  mixins-before-declarations:
+    - 2
+    -
+      exclude:
+        - media
