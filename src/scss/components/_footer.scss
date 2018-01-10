@@ -151,11 +151,13 @@
 
       .footer__item {
         margin: auto auto auto 20px;
-
-        &:first-child {
-          margin: auto;
-        }
       }
+    }
+  }
+
+  &__item {
+    &:not(.footer__item--larger) {
+      margin-top: get-space(element, small);
     }
   }
 
