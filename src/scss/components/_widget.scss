@@ -17,10 +17,6 @@
     margin-top: -180px;
   }
 
-  &--no-vertical-grow {
-    align-self: flex-start;
-  }
-
   &__title {
     @include media(small) {
       font-size: 24px;
