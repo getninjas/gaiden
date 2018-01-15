@@ -59,6 +59,7 @@
     color: get-color((color: blackNeutral, opacity: .6));
     font-size: 14px;
     margin-left: 11px;
+    z-index: 2;
 
     &::before {
       background-color: get-color(breeze);
