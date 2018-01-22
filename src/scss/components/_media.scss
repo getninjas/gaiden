@@ -20,8 +20,11 @@
 
 .media {
   display: flex;
+  flex-direction: column;
 
   &--link {
+    flex-direction: column;
+
     .thumbnail__photo {
       border-radius: $borderRadius;
       max-height: 170px;
@@ -42,6 +45,7 @@
   }
 
   &__image {
+    width: 100%;
 
     &--mini {
       max-height: 134px;
