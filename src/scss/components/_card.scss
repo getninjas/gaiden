@@ -1,26 +1,11 @@
 /**
   * @parent gaiden_css.components
-  * @stylesheet gaiden_css.components.card.css Card
+  * @stylesheet gaiden_css.components.card.css Cards
 **/
 
 /**
-  * @styles fluid Fluid
-  * @demo demo/gaiden-css/components/card/demo.html
-**/
-
-/**
-  * @styles grid-system Grid
-  * @demo demo/gaiden-css/components/card/grid.html
-**/
-
-/**
-  * @styles card+media Card + Media
-  * @demo demo/gaiden-css/components/card/custom.html
-**/
-
-/**
-  * @styles centered Centered
-  * @demo demo/gaiden-css/components/card/centered.html
+  * @styles card-citation Card Citation
+  * @demo demo/gaiden-css/components/card/citation.html
 **/
 
 /**
@@ -82,24 +67,10 @@
     }
   }
 
-  &__title {
-    color: get-color(blackNeutral);
-  }
-
-  &__header {
-    .card__title {
-      color: get-color(rastaGray);
-    }
-  }
-
   &__content {
     color: get-color((color: blackNeutral, opacity: .6));
     font-size: 14px;
     font-style: italic;
-
-    .card__header + & {
-      margin-top: 16px;
-    }
   }
 
   &__footer {
@@ -112,9 +83,5 @@
       color: get-color(rastaGray);
       font-style: italic;
     }
-  }
-
-  .no-flexbox & {
-    width: 100%;
   }
 }
