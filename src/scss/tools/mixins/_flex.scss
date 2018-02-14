@@ -22,11 +22,6 @@
     $fgBoxflex: nth($fg, 1);
   }
 
-  -moz-box-flex: $fgBoxflex;
-  -moz-flex: $fg $fs $fb;
-  -ms-flex: $fg $fs $fb;
-  -webkit-box-flex: $fgBoxflex;
-  -webkit-flex: $fg $fs $fb;
   flex: $fg $fs $fb;
 }
 
@@ -45,7 +40,6 @@
     -webkit-box-direction: normal;
     -webkit-box-orient: horizontal;
   }
-  -moz-flex-direction: $value;
   -ms-flex-direction: $value;
   -webkit-flex-direction: $value;
   flex-direction: $value;
@@ -53,7 +47,6 @@
 
 @mixin flex-wrap($value: nowrap) {
   // No Webkit Box fallback.
-  -moz-flex-wrap: $value;
   -webkit-flex-wrap: $value;
   @if $value == nowrap {
     -ms-flex-wrap: none;
@@ -64,7 +57,6 @@
 }
 
 @mixin flex-shrink($int: 1) {
-  -moz-flex-shrink: $int;
   -ms-flex-negative: $int; //sass-lint:disable-line no-misspelled-properties
   -webkit-flex-shrink: $int;
   flex-shrink: $int;
