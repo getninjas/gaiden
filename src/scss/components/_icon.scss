@@ -1,13 +1,13 @@
 .icon {
   align-items: center;
-  color: get-color((color: blackNeutral, opacity: .4));
+  color: get-color(reward);
   display: flex;
   font-style: italic;
   line-height: 1;
 
   &__image {
     margin-right: 6px;
-    max-width: 100%;
+    max-width: 16px;
   }
 
   &--small {
