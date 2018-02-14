@@ -76,6 +76,8 @@
   &__footer {
     color: get-color((color: blackNeutral, opacity: .78));
     font-size: 12px;
+    margin-top: auto;
+    padding-top: 12px;
   }
 
   &--highlighted {

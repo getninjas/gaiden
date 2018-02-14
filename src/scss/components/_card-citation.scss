@@ -1,4 +1,9 @@
 .card-citation {
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
   &__header {
     display: flex;
     flex-direction: row;
