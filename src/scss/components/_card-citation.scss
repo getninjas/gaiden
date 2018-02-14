@@ -1,0 +1,39 @@
+.card-citation {
+  &__header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 12px;
+    justify-content: flex-start;
+  }
+
+  &__title {
+    color: get-color(blackNeutral);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: inherit;
+    font-weight: get-weight(normal);
+    margin-bottom: 0;
+
+    strong {
+      font-weight: get-weight(bold);
+    }
+
+    strong,
+    small {
+      font-size: inherit;
+      margin-right: 4px;
+      margin-top: 0;
+    }
+  }
+
+  &__text {
+    border-left: 2px solid get-color(offWhite);
+    display: block;
+    padding-left: 12px;
+  }
+
+  .link {
+    font-weight: get-weight(bold);
+  }
+}
