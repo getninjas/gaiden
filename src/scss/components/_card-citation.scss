@@ -1,8 +1,8 @@
 .card-citation {
+  align-content: space-between;
   display: flex;
   flex-direction: column;
   flex-flow: row wrap;
-  justify-content: space-between;
 
   &__header {
     display: flex;
@@ -10,6 +10,7 @@
     flex-wrap: wrap;
     font-size: 12px;
     justify-content: flex-start;
+    width: 100%;
   }
 
   &__title {
@@ -19,10 +20,6 @@
     font-size: inherit;
     font-weight: get-weight(normal);
     margin-bottom: 0;
-
-    strong {
-      font-weight: get-weight(bold);
-    }
 
     strong,
     small {
@@ -38,7 +35,7 @@
     padding-left: 12px;
   }
 
-  .link {
+  &__link {
     font-weight: get-weight(bold);
   }
 }
