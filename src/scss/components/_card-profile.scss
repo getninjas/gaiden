@@ -1,0 +1,62 @@
+.card-profile {
+  align-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+
+  &__header {
+    padding: 24px 24px 0;
+  }
+
+  &__title {
+    color: get-color(rastaGray);
+    font-size: 14px;
+    font-weight: get-weight(bold);
+    margin: 0;
+  }
+
+  &__rating {
+    color: get-color(blackNeutral, lighter);
+    font-size: 12px;
+    margin-top: 8px;
+
+    img {
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  &__content {
+    padding: 0 24px;
+  }
+
+  &__text {
+    font-style: normal;
+  }
+
+  &__highlight {
+    background-color: get-color(wall);
+    min-height: 108px;
+    padding: 16px 24px;
+  }
+
+  &__light-title {
+    color: get-color((color: rastaGray, opacity: .7));
+    font-size: 14px;
+    font-style: italic;
+    font-weight: get-weight(bold);
+  }
+
+  &__light-text {
+    color: get-color(blackNeutral, lighter);
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  &__btn {
+    font-size: 12px;
+    padding: 12px;
+    width: 100%;
+  }
+}
