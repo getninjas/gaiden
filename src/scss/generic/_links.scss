@@ -1,4 +1,5 @@
-a {
+a,
+.link {
   color: get-color(punch);
   text-decoration: none;
 
@@ -6,3 +7,4 @@ a {
     color: get-color(serious);
   }
 }
+

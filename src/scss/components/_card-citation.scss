@@ -1,0 +1,46 @@
+.card-citation {
+  align-content: space-between;
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 12px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  &__title {
+    color: get-color(blackNeutral);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: inherit;
+    font-weight: get-weight(normal);
+    margin-bottom: 0;
+
+    strong {
+      &:nth-child(1) {
+        margin-right: 4px;
+      }
+    }
+
+    small {
+      font-size: inherit;
+      margin-right: 4px;
+      margin-top: 0;
+    }
+  }
+
+  &__text {
+    border-left: 2px solid get-color(offWhite);
+    display: block;
+    padding-left: 12px;
+  }
+
+  &__link {
+    font-weight: get-weight(bold);
+  }
+}

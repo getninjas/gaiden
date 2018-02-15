@@ -16,7 +16,6 @@
 @import 'tools/mixins/get_shadow';
 @import 'tools/mixins/get_space';
 @import 'tools/mixins/get_weight';
-@import 'tools/mixins/flex';
 @import 'tools/mixins/clearfix';
 @import 'tools/mixins/grid';
 @import 'tools/mixins/linear_gradient';
@@ -37,6 +36,7 @@
 @import 'components/picture';
 @import 'components/rating';
 @import 'components/card';
+@import 'components/card-citation';
 @import 'components/icon';
 @import 'components/hint';
 @import 'components/pagination';
