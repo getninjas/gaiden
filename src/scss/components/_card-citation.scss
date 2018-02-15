@@ -21,7 +21,12 @@
     font-weight: get-weight(normal);
     margin-bottom: 0;
 
-    strong,
+    strong {
+      &:nth-child(1) {
+        margin-right: 4px;
+      }
+    }
+
     small {
       font-size: inherit;
       margin-right: 4px;
