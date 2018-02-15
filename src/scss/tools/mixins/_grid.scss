@@ -49,10 +49,9 @@
    * lib, like modernizr, to append it
    */
   .container {
-    @include flex-direction(row);
-    @include flex-wrap(wrap);
-    @include flexbox;
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: {
       left: auto;
       right: auto;
@@ -94,9 +93,9 @@
    * Adding flex-shring, flex-wrap, display flex and col-centered helper to columns
    */
   [class*='col-'] {
-    @include flex-shrink(0);
-    @include flex-wrap(wrap);
-    @include flexbox;
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
 
     max-width: 100%;
 

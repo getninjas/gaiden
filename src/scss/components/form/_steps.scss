@@ -1,7 +1,4 @@
 .form__steps {
-  @include flex-direction;
-  @include flex-wrap;
-  @include flexbox;
   align-items: center;
   background-color: get-color(recusaGray);
   border-bottom: {
@@ -10,6 +7,10 @@
   };
   box-shadow: inset 0 1px 0 0 get-color((color: blackNeutral, opacity: .05));
   color: get-color((color: rastaGray, opacity: .5));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
   font: {
     size: 12px;
     weight: get-weight(normal);
@@ -19,11 +20,11 @@
   width: 100%;
 
   &-item {
-    @include flex;
     border-bottom: {
       left-radius: 6px;
       right-radius: 6px;
     };
+    flex: 1;
     line-height: 1;
     padding: 14px;
     text-align: center;

@@ -54,9 +54,9 @@
   }
 
   label {
-    @include flexbox;
     align-items: center;
     color: get-color((color: blackNeutral, opacity: .6));
+    display: flex;
     font-size: 14px;
     margin-left: 11px;
 
