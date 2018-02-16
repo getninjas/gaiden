@@ -1,0 +1,13 @@
+.card-review {
+  &__title {
+    color: get-color(rastaGray);
+    font-size: 14px;
+    font-weight: get-weight(normal);
+  }
+
+  &__text {
+    color: get-color(blackNeutral, lighter);
+    font-size: 14px;
+    font-style: italic;
+  }
+}

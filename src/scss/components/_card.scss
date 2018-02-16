@@ -18,6 +18,11 @@
   * @demo demo/gaiden-css/components/card/profile.html
 **/
 
+/**
+  * @styles card-review Review
+  * @demo demo/gaiden-css/components/card/review.html
+**/
+
 .card {
   background-color: get-color(air);
   border: solid 1px get-color((color: recusaGray, opacity: .5));
