@@ -18,6 +18,11 @@
   * @demo demo/gaiden-css/components/card/profile.html
 **/
 
+/**
+  * @styles card-review Review
+  * @demo demo/gaiden-css/components/card/review.html
+**/
+
 .card {
   background-color: get-color(air);
   border: solid 1px get-color((color: recusaGray, opacity: .5));
@@ -30,6 +35,13 @@
   &,
   &.media-box {
     padding: 24px;
+  }
+
+  &--hover {
+    &:hover {
+      box-shadow: get-shadow(large) get-color((color: blackNeutral, opacity: .1));
+      transform: translate(0, -5px);
+    }
   }
 
   &--profile {
