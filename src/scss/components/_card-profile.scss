@@ -28,6 +28,7 @@
   }
 
   &__content {
+    margin-top: get-space(element, medium);
     padding: 0 24px;
     width: 100%;
   }
