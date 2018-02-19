@@ -20,8 +20,8 @@
   * ## On Column
   * @demo /demo/gaiden-css/components/list/on_column/demo.html
   *
-  * ## Social (social icons)
-  * @demo /demo/gaiden-css/components/list/social/demo.html
+  * ## With icons
+  * @demo /demo/gaiden-css/components/list/with_icons/demo.html
   *
   * ## App (app badges)
   * @demo /demo/gaiden-css/components/list/app/demo.html
@@ -135,7 +135,7 @@
     }
   }
 
-  &--social {
+  &--with-icons {
     display: flex;
     flex-grow: 1;
 
