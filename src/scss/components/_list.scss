@@ -16,6 +16,9 @@
   *
   * ## Stacked + Grid System
   * @demo /demo/gaiden-css/components/list/stacked/using_grid_system/demo.html
+  *
+  * ## On Column
+  * @demo /demo/gaiden-css/components/list/on_column/demo.html
 **/
 .list {
   display: flex;
@@ -98,6 +101,87 @@
     &[class*='col-'] {
       padding-left: inherit;
       padding-right: inherit;
+    }
+  }
+
+  &--on-column {
+    &[class*='col-'] {
+      display: inline-block;
+      margin-left: 0;
+
+      + & {
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .list__item {
+        width: 100%;
+      }
+    }
+  }
+
+  &--line {
+    margin-top: get-space(box, small);
+  }
+
+  &--social {
+    display: flex;
+    flex-grow: 1;
+
+    .footer__item {
+      border-radius: 50%;
+      height: 48px;
+      margin-left: 6%;
+      text-indent: -9999px;
+      width: 48px;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &--app {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+
+    .footer {
+      &__item {
+        border-radius: 4px;
+        flex-grow: 1;
+
+        a {
+          display: block;
+        }
+
+        &:last-child {
+          margin-left: 5px;
+
+          @include media(normal) {
+            margin-left: 0;
+            margin-top: get-space(element, small);
+          }
+        }
+      }
+
+      &__image {
+        width: 100%;
+
+        @include media(small) {
+          max-width: initial;
+        }
+      }
+    }
+
+    @include media(normal) {
+      flex: auto;
+      flex-direction: column;
     }
   }
 }
