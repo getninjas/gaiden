@@ -23,8 +23,8 @@
   * ## With icons
   * @demo /demo/gaiden-css/components/list/with_icons/demo.html
   *
-  * ## App (app badges)
-  * @demo /demo/gaiden-css/components/list/app/demo.html
+  * ## With row icons
+  * @demo /demo/gaiden-css/components/list/with_row_icons/demo.html
 **/
 .list {
   display: flex;
@@ -162,7 +162,7 @@
     }
   }
 
-  &--app {
+  &--with-row-icons {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
