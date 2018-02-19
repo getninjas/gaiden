@@ -121,7 +121,6 @@
 
   &--on-column {
     &[class*='col-'] {
-      display: inline-block;
       margin-left: 0;
 
       + & {
