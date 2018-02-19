@@ -20,8 +20,8 @@
   * ## On Column
   * @demo /demo/gaiden-css/components/list/on_column/demo.html
   *
-  * ## Line (inline)
-  * @demo /demo/gaiden-css/components/list/line/demo.html
+  * ## Social (social icons)
+  * @demo /demo/gaiden-css/components/list/social/demo.html
 **/
 .list {
   display: flex;
@@ -123,20 +123,21 @@
     }
   }
 
-  &--line {
-    margin-top: get-space(box, small);
-  }
-
   &--social {
     display: flex;
     flex-grow: 1;
 
-    .footer__item {
+    .list__item {
       border-radius: 50%;
       height: 48px;
       margin-left: 6%;
       text-indent: -9999px;
       width: 48px;
+
+      a {
+        padding: 0;
+        width: 100%;
+      }
 
       img {
         display: block;
