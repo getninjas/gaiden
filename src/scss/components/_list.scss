@@ -190,16 +190,13 @@
           @include media(normal) {
             margin-left: 0;
             margin-top: get-space(element, small);
+            max-width: initial;
           }
         }
       }
 
       &__image {
         width: 100%;
-
-        @include media(small) {
-          max-width: initial;
-        }
       }
     }
 
