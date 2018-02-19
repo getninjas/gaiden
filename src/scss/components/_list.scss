@@ -171,11 +171,13 @@
       &__item {
         border-radius: 4px;
         flex-grow: 1;
-        margin: 0;
-        width: 100%;
 
         a {
           display: block;
+        }
+
+        @include media(normal) {
+          width: 100%;
         }
 
         &:last-child {
