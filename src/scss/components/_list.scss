@@ -110,6 +110,15 @@
     }
   }
 
+  &__title {
+    color: get-color(rastaGray);
+    display: block;
+    font-size: 12px;
+    font-weight: get-weight(bold);
+    text-align: left;
+    text-transform: uppercase;
+  }
+
   &--on-column {
     &[class*='col-'] {
       display: inline-block;
