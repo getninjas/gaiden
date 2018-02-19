@@ -172,6 +172,10 @@
         border-radius: 4px;
         flex-grow: 1;
 
+        &::before {
+          margin-right: 0;
+        }
+
         a {
           display: block;
         }
