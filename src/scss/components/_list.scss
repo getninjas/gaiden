@@ -179,10 +179,6 @@
           display: block;
         }
 
-        @include media(normal) {
-          width: 100%;
-        }
-
         &:last-child {
           margin-left: 5px;
 
@@ -191,6 +187,10 @@
             margin-top: get-space(element, small);
             max-width: initial;
           }
+        }
+
+        @include media(normal) {
+          width: 100%;
         }
       }
 
