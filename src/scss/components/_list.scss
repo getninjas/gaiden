@@ -16,6 +16,15 @@
   *
   * ## Stacked + Grid System
   * @demo /demo/gaiden-css/components/list/stacked/using_grid_system/demo.html
+  *
+  * ## On Column
+  * @demo /demo/gaiden-css/components/list/on_column/demo.html
+  *
+  * ## With icons
+  * @demo /demo/gaiden-css/components/list/with_icons/demo.html
+  *
+  * ## With row icons
+  * @demo /demo/gaiden-css/components/list/with_row_icons/demo.html
 **/
 .list {
   display: flex;
@@ -98,6 +107,100 @@
     &[class*='col-'] {
       padding-left: inherit;
       padding-right: inherit;
+    }
+  }
+
+  &__title {
+    color: get-color(rastaGray);
+    display: block;
+    font-size: 12px;
+    font-weight: get-weight(bold);
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  &--on-column {
+    &[class*='col-'] {
+      margin-left: 0;
+
+      + & {
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .list__item {
+        width: 100%;
+      }
+    }
+  }
+
+  &--with-icons {
+    display: flex;
+    flex-grow: 1;
+
+    .list__item {
+      border-radius: 50%;
+      height: 48px;
+      margin-left: 12px;
+      text-indent: -9999px;
+      width: 48px;
+
+      a {
+        padding: 0;
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &--with-row-icons {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+
+    .list {
+      &__item {
+        border-radius: 4px;
+        flex-grow: 1;
+
+        &::before {
+          margin-right: 0;
+        }
+
+        a {
+          display: block;
+        }
+
+        &:last-child {
+          margin-left: 5px;
+
+          @include media(normal) {
+            margin-left: 0;
+            margin-top: get-space(element, small);
+          }
+        }
+
+        @include media(normal) {
+          width: 100%;
+        }
+      }
+
+      &__image {
+        max-width: 100%;
+      }
+    }
+
+    @include media(normal) {
+      flex: auto;
+      flex-direction: column;
     }
   }
 }
