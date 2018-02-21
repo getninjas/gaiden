@@ -62,4 +62,10 @@
     padding: 12px;
     width: 100%;
   }
+
+  &.card--action {
+    .card-profile__highlight {
+      padding-bottom: 57px;
+    }
+  }
 }
