@@ -2,8 +2,11 @@
   * @parent gaiden_css.components
   * @stylesheet gaiden_css.components.list List
   *
-  * ## Fluid
+  * ## Basic List (Fluid)
   * @demo /demo/gaiden-css/components/list/demo.html
+  *
+  * ## Basic List with Title (Fluid)
+  * @demo /demo/gaiden-css/components/list/with_title/demo.html
   *
   * ## Links List (Fluid)
   * @demo /demo/gaiden-css/components/list/links_list/demo.html
@@ -26,6 +29,7 @@
   * ## With row icons
   * @demo /demo/gaiden-css/components/list/with_row_icons/demo.html
 **/
+
 .list {
   display: flex;
   flex-direction: row;
@@ -33,86 +37,8 @@
   margin-left: 0;
   width: 100%;
 
-  .no-flexbox & {
-    @include clearfix;
-  }
-
-  &.container {
-    padding: {
-      left: 0;
-      right: 0;
-    }
-  }
-
-  &--link {
-    color: get-color(punch);
-    transition: transform ease-in-out .2s, background-color ease-in-out .3s;
-
-    .list__item {
-      cursor: pointer;
-      flex-wrap: nowrap;
-      padding: 5px 5px 5px 0;
-
-      a {
-        &::before {
-          content: '';
-          margin-right: 5px;
-        }
-      }
-
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: get-color((color: breeze, key: darker, opacity: .4));
-
-        a {
-          transform: translateX(8px);
-        }
-      }
-    }
-  }
-
-  &--stacked {
-    display: block;
+  &__wrapper {
     width: 100%;
-
-    .list__item {
-      float: none;
-      width: auto;
-    }
-
-    &[class*='col-'] {
-      display: block;
-    }
-  }
-
-  &__item {
-    border-radius: $borderRadiusButton;
-    color: get-color(punch);
-    display: flex;
-    flex-shrink: 0;
-    font-size: 14px;
-    margin-bottom: 8px;
-    transition: transform ease-in-out .2s, background-color ease-in-out .3s;
-    width: 25%;
-
-    a {
-      transition: inherit;
-      width: calc(100% - 8px);
-    }
-
-    .no-flexbox & {
-      float: left;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    &[class*='col-'] {
-      padding-left: inherit;
-      padding-right: inherit;
-    }
   }
 
   &__title {
@@ -123,6 +49,24 @@
     margin-bottom: 20px;
     text-align: left;
     text-transform: uppercase;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    color: get-color(punch);
+    display: flex;
+    flex-shrink: 0;
+    font-size: 14px;
+    margin-bottom: get-space(element, small);
+    width: 25%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &--on-column {
