@@ -51,10 +51,13 @@
     .list__item {
       cursor: pointer;
       flex-wrap: nowrap;
+      padding: 5px 5px 5px 0;
 
-      &::before {
-        content: '';
-        margin-right: 5px;
+      a {
+        &::before {
+          content: '';
+          margin-right: 5px;
+        }
       }
 
       &:hover,
