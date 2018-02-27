@@ -34,7 +34,7 @@ class DocsGenerator {
   checkoutGh() {
     sh.exec('COMMIT_DATE=$(date)');
     sh.exec('git commit -am "Dist commit preversion: "$COMMIT_DATE');
-    sh.exec('git branch -d gh-pages')
+    sh.exec('git branch -D gh-pages')
     sh.exec('git checkout -B gh-pages');
     sh.exec('git pull origin gh-pages --no-commit');
     sh.exec('git merge --no-commit -s ours master');
