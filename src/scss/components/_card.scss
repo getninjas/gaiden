@@ -32,6 +32,10 @@
   transition: box-shadow ease-in-out .2s, transform ease-in-out .1s;
   width: inherit;
 
+  > a {
+    width: 100%;
+  }
+
   &,
   &.media-box {
     padding: 24px;
