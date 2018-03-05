@@ -27,7 +27,7 @@ The process is:
 
   1.1 `git checkout master`;
 
-  1.2 `git pull origin master`;
+  1.2 `git pull --tags origin master`;
 
 2. run `npm version major|minor|patch -m "Message of your changes"` (important: you need to be an admin to push on master);
 
