@@ -184,7 +184,7 @@ $buttonTypes: (
     default: (
       background: punch,
       textColor: air,
-      shadow: ( kind: large  )
+      shadow: ( kind: normal )
     ),
     hover: (
       background: serious
@@ -202,7 +202,7 @@ $buttonTypes: (
   raised-reversed: (
     default: (
       background: air,
-      shadow: ( kind: large  ),
+      shadow: ( kind: normal ),
       textColor: punch
     ),
     hover: (
