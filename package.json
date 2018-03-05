@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\"",
     "preversion": "npm run build:prod",
     "version": "build:docs:prod  && git reset HEAD~1 --soft",
-    "postversion": "git push && git push --tags",
+    "postversion": "git push --tags",
     "config": "npm config set progress=false && npm config set git-tag-version=true && npm link",
     "clear": "rm -rf ./build/*",
     "build:prod": "build:prod:html && build:prod:image && build:prod:css",
