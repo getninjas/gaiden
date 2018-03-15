@@ -29,8 +29,7 @@
       font-size: 14px;
       font-weight: get-weight(bold);
       padding: 4px 9px;
-      transition-duration: .2s, .2s, .2s;
-      transition-property: background-color, color, border-color;
+      transition: background-color .2s, color .2s, border-color .2s;
       width: 100%;
     }
 
