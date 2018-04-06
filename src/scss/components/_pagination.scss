@@ -12,12 +12,15 @@
 **/
 
 .pagination {
+  font-size: 0;
+
   &__item {
     cursor: pointer;
     display: inline-block;
+    font-size: initial;
 
     & + & {
-      margin-left: 2px;
+      margin-left: 6px;
     }
 
     a {
@@ -36,6 +39,7 @@
     &-jump {
       border: 0;
       display: inline-block;
+      font-size: initial;
       padding: 6px 5px;
     }
 
