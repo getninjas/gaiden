@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
-    'airbnb-base',
-    './common.js'
+    'airbnb-base'
   ],
 
   parser: 'babel-eslint',
