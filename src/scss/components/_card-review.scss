@@ -1,7 +1,7 @@
 .card-review {
   &__title {
     color: get-color(rastaGray);
-    font-size: 14px;
+    font-size: $font-size-xxs;
     font-weight: get-weight(normal);
   }
 
@@ -10,9 +10,9 @@
   }
 
   &__text {
-    color: get-color(blackNeutral, lighter);
-    font-size: 14px;
-    font-style: italic;
+    color: get-color(color-brand-first-dark);
+    font-size: $font-size-xxs;
+    font-style: $font-style-quote;
   }
 
   &__rating {
@@ -26,8 +26,8 @@
 
   &__receiver {
     color: get-color(rastaGray);
-    font-size: 14px;
-    font-style: italic;
+    font-size: $font-size-xxs;
+    font-style: $font-style-quote;
     font-weight: get-weight(normal);
     margin-bottom: 0;
     margin-top: get-space(element, small);

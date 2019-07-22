@@ -54,10 +54,10 @@
 
   &__item {
     border-radius: 4px;
-    color: get-color(punch);
+    color: get-color(color-brand-second-dark);
     display: flex;
     flex-shrink: 0;
-    font-size: 14px;
+    font-size: $font-size-xxs;
     margin-bottom: get-space(element, small);
     transition: background-color ease-in-out .3s;
     width: 25%;
@@ -161,7 +161,7 @@
   }
 
   &--link {
-    color: get-color(punch);
+    color: get-color(color-brand-second-dark);
   }
 
   &--link,

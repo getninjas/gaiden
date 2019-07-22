@@ -11,6 +11,24 @@
 *        none: 0 0 0 0
 *      );
 **/
+$shadow-color: #000;
+$shadow-top-level-1: 0 -2px 4px 0 $shadow-color .15;
+$shadow-top-level-2: 0 -4px 12px 0 $shadow-color .12;
+$shadow-top-level-3: 0 -12px 24px 0 $shadow-color .1;
+$shadow-bottom-level-1: 0 2px 4px 0 $shadow-color .15;
+$shadow-bottom-level-2: 0 4px 12px 0 $shadow-color .12;
+$shadow-bottom-level-3: 0 12px 24px 0 $shadow-color .1;
+$shadow-offset-y-top-level-1: -2px;
+$shadow-offset-y-top-level-2: -4px;
+$shadow-offset-y-top-level-3: -12px;
+$shadow-offset-y-bottom-level-1: 2px;
+$shadow-offset-y-bottom-level-2: 4px;
+$shadow-offset-y-bottom-level-3: 12px;
+$shadow-offset-x-default: 0;
+$shadow-radius-blur-level-1: 4px;
+$shadow-radius-blur-level-2: 12px;
+$shadow-radius-blur-level-3: 24px;
+$shadow-radius-spread-default: 0;
 
 $shadows: (
   normal: 0 1px 2px 0,

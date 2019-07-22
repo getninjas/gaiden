@@ -16,13 +16,13 @@
 
   &__title {
     color: get-color(rastaGray);
-    font-size: 14px;
+    font-size: $font-size-xxs;
     font-weight: get-weight(bold);
     margin: 0;
   }
 
   &__rating {
-    color: get-color(blackNeutral, lighter);
+    color: get-color(color-brand-first-dark);
     font-size: 12px;
     margin-top: 8px;
 
@@ -38,11 +38,11 @@
   }
 
   &__text {
-    color: get-color(blackNeutral, lighter);
-    font-size: 14px;
+    color: get-color(color-brand-first-dark);
+    font-size: $font-size-xxs;
 
     &--citation {
-      font-style: italic;
+      font-style: $font-style-quote;
     }
   }
 
@@ -54,8 +54,8 @@
 
   &__light-title {
     color: get-color((color: rastaGray, opacity: .7));
-    font-size: 14px;
-    font-style: italic;
+    font-size: $font-size-xxs;
+    font-style: $font-style-quote;
     font-weight: get-weight(bold);
   }
 

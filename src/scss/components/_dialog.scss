@@ -18,12 +18,12 @@
 
   &__quote {
     align-items: center;
-    background-color: get-color(breeze);
-    border-radius: $borderRadius;
+    background-color: get-color(color-brand-second-light);
+    border-radius: $border-radius-s;
     color: get-color(rastaGray);
     display: flex;
     flex: 1 0 auto;
-    font-style: italic;
+    font-style: $font-style-quote;
     justify-content: center;
     padding: 24px;
     position: relative;
@@ -34,7 +34,7 @@
       border-bottom: 15px solid transparent;
       border-left: 15px solid transparent;
       border-right: 15px solid transparent;
-      border-top: 15px solid get-color(breeze);
+      border-top: 15px solid get-color(color-brand-second-light);
       bottom: -29px;
       content: '';
       left: 50%;
@@ -80,11 +80,11 @@
 
   &--inside-wall {
     .dialog__quote {
-      background-color: get-color(air);
+      background-color: get-color(color-brand-first-light);
       color: get-color(rastaGray);
 
       &::after {
-        border-top: 15px solid get-color(air);
+        border-top: 15px solid get-color(color-brand-first-light);
       }
     }
   }

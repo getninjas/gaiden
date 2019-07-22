@@ -23,7 +23,7 @@
 }
 
 %focus-style {
-  background-color: get-color(air);
+  background-color: get-color(color-brand-first-light);
   border: 1px solid get-color(rastaGray);
 }
 
@@ -37,8 +37,8 @@
   }
 
   &__title {
-    color: get-color(air);
-    font-size: 14px;
+    color: get-color(color-brand-first-light);
+    font-size: $font-size-xxs;
     font-weight: get-weight(bolder);
     margin: 0;
     text-align: center;
@@ -112,11 +112,11 @@
   &__input {
     background-color: get-color((color: blackNeutral, key: darker, opacity: .05));
     border: 1px solid get-color((color: rastaGray, opacity: .2));
-    border-radius: $borderRadiusButton;
+    border-radius: $border-radius-m;
     color: get-color((color: blackNeutral, key: darker, opacity: .5));
     display: block;
-    font-size: 14px;
-    font-style: italic;
+    font-size: $font-size-xxs;
+    font-style: $font-style-quote;
     line-height: 1.3;
     padding: 11px;
     transition: border-color .15s ease-in, background-color .15s ease-in;
@@ -132,7 +132,7 @@
     }
 
     &--filled {
-      background-color: get-color(air);
+      background-color: get-color(color-brand-first-light);
       border: 1px solid get-color((color: rastaGray, opacity: .1));
       color: get-color((color: blackNeutral, key: darker, opacity: .8));
       font-style: normal;

@@ -6,7 +6,7 @@
 **/
 
 .widget {
-  background-color: get-color(air);
+  background-color: get-color(color-brand-first-light);
   border-radius: 7px;
   box-shadow: get-shadow(medium) get-color((color: blackNeutral, opacity: .1));
   margin: 0 auto;
@@ -19,11 +19,11 @@
 
   &__title {
     @include media(small) {
-      font-size: 24px;
+      font-size: $font-size-m;
     }
 
-    font-size: 20px;
-    font-style: italic;
+    font-size: $font-size-s;
+    font-style: $font-style-quote;
     font-weight: get-weight(bolder);
     margin-bottom: 0;
     text-align: center;

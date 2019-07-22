@@ -24,9 +24,9 @@
 **/
 
 .card {
-  background-color: get-color(air);
+  background-color: get-color(color-brand-first-light);
   border: solid 1px get-color((color: recusaGray, opacity: .5));
-  border-radius: $borderRadius;
+  border-radius: $border-radius-s;
   box-shadow: get-shadow(medium) get-color((color: blackNeutral, opacity: .12));
   flex: 1 1 auto;
   transition: box-shadow ease-in-out .2s, transform ease-in-out .1s;
@@ -90,8 +90,8 @@
 
   &__content {
     color: get-color((color: blackNeutral, opacity: .6));
-    font-size: 14px;
-    font-style: italic;
+    font-size: $font-size-xxs;
+    font-style: $font-style-quote;
     width: 100%;
   }
 
@@ -105,7 +105,7 @@
   &--highlighted {
     .card__title {
       color: get-color(rastaGray);
-      font-style: italic;
+      font-style: $font-style-quote;
     }
   }
 }

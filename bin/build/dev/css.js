@@ -3,8 +3,8 @@
 const shelljs = require('shelljs');
 
 const sourceDir = './src/scss';
-const outputDir = './build/stylesheets';
-const minifiedFile = `${outputDir}/gaiden.css`;
+const outputDir = '../tanya/poc_gaiden';
+const minifiedFile = `${outputDir}/gaiden.min.css`;
 const docsCss = `docs/gaiden/gaiden.css`;
 const docsCssPrefixed = `docs/gaiden/gaiden.css`;
 

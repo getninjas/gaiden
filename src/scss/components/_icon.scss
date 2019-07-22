@@ -2,8 +2,8 @@
   align-items: center;
   color: get-color(reward);
   display: flex;
-  font-style: italic;
-  line-height: 1;
+  font-style: $font-style-quote;
+  line-height: $font-line-height-equal;
 
   &__image {
     margin-right: 6px;

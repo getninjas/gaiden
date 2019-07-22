@@ -3,9 +3,9 @@ body {
   -webkit-font-smoothing: antialiased;
 
   background-color: get-color(wall);
-  color: get-color(blackNeutral);
+  color: get-color(color-brand-first-medium);
   font: {
-    family: font-family('Lato');
+    family: $font-family-default;
     size: 16px;
     weight: get-weight(normal);
   };

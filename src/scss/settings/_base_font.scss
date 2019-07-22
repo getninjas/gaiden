@@ -26,10 +26,29 @@
 //sass-lint:disable no-url-domains no-url-protocols
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
 
-$baseFont: 'Lato';
+$font-family-default: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$font-line-height-xxl: 68px;
+$font-line-height-xl: 56px;
+$font-line-height-l: 40px;
+$font-line-height-m: 32px;
+$font-line-height-s: 28px;
+$font-line-height-xs: 24px;
+$font-line-height-xxs: 22px;
+$font-line-height-equal: 1;
+$font-size-xxl: 60px;
+$font-size-xl: 48px;
+$font-size-l: 32px;
+$font-size-m: 24px;
+$font-size-s: 20px;
+$font-size-xs: 16px;
+$font-size-xxs: 14px;
+$font-style-quote: italic;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 600;
 
-$fontWeight: (
-  normal: 400,
-  bold: 700,
-  bolder: 900
-)
+$font-weight: (
+  light: $font-weight-light,
+  normal: $font-weight-regular,
+  bold: $font-weight-bold
+);

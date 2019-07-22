@@ -6,7 +6,7 @@
 **/
 
 .brand {
-  color: get-color(air);
+  color: get-color(color-brand-first-light);
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
@@ -32,7 +32,7 @@
   }
 
   &__name {
-    color: get-color(blackNeutral);
+    color: get-color(color-brand-first-medium);
     display: inline-block;
     font: {
       size: 20px;
@@ -43,7 +43,7 @@
     margin-top: 2px;
 
     small {
-      color: get-color(punch);
+      color: get-color(color-brand-second-dark);
       display: block;
       font: {
         size: 10px;

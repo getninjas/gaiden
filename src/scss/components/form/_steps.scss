@@ -25,12 +25,12 @@
       right-radius: 6px;
     };
     flex: 1;
-    line-height: 1;
+    line-height: $font-line-height-equal;
     padding: 14px;
     text-align: center;
 
     &--active {
-      background-color: get-color(air);
+      background-color: get-color(color-brand-first-light);
       color: get-color(rastaGray);
     }
   }

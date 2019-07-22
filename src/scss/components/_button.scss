@@ -91,12 +91,12 @@
 .btn {
   background-color: transparent;
   border: 0;
-  border-radius: $borderRadiusButton;
+  border-radius: $border-radius-m;
   cursor: pointer;
   display: inline-block;
   font-weight: get-weight(bolder);
   letter-spacing: .3px;
-  line-height: 1;
+  line-height: $font-line-height-equal;
   text-align: center;
   text-transform: uppercase;
   transition: border-color .2s ease-in, box-shadow .2s ease-in, background-color .2s ease-in, color .3s ease;
@@ -119,10 +119,10 @@
     &::before {
       animation: rotation 1s linear infinite;
       background-color: transparent;
-      border-bottom: 3px solid get-color(air);
-      border-left: 3px solid get-color(air);
+      border-bottom: 3px solid get-color(color-brand-first-light);
+      border-left: 3px solid get-color(color-brand-first-light);
       border-radius: 15px;
-      border-right: 3px solid get-color(air);
+      border-right: 3px solid get-color(color-brand-first-light);
       border-top: 3px solid transparent;
       box-sizing: border-box;
       content: '';
@@ -136,8 +136,8 @@
   }
 
   &--full-card {
-    border-bottom-left-radius: $borderRadius;
-    border-bottom-right-radius: $borderRadius;
+    border-bottom-left-radius: $border-radius-s;
+    border-bottom-right-radius: $border-radius-s;
     border-top: get-border(default);
     border-top-left-radius: 0;
     border-top-right-radius: 0;

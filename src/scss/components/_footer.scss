@@ -34,8 +34,8 @@
   }
 
   &__list {
-    color: get-color(punch);
-    font-size: 14px;
+    color: get-color(color-brand-second-dark);
+    font-size: $font-size-xxs;
     text-align: left;
 
     &--on-column {
@@ -136,7 +136,7 @@
   }
 
   &__institutional-list {
-    color: get-color(punch);
+    color: get-color(color-brand-second-dark);
     display: flex;
     font-size: 12px;
     font-weight: get-weight(bold);

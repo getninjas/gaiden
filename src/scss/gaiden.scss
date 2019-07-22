@@ -1,4 +1,4 @@
-@import 'node_modules/reset-css/_reset'; //sass-lint:disable-line clean-import-paths
+@import 'node_modules/reset-css/reset'; //sass-lint:disable-line clean-import-paths
 @import 'settings/colors';
 @import 'settings/grid';
 @import 'settings/buttons';
@@ -61,5 +61,5 @@
 @import 'components/price_variation';
 @import 'components/media';
 
-@include generate-grid($defaultBreakpoints);
+@include generate-grid($default-breakpoints);
 @include generate-spaces;

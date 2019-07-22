@@ -7,7 +7,7 @@
 body {
   padding: 20px;
   &.reversed {
-    background-color: get-color(punch);
+    background-color: get-color(color-brand-second-dark);
   }
 }
 
@@ -18,7 +18,7 @@ body {
 
 ul.colors,
 ul.gradients {
-  font-size: 14px;
+  font-size: $font-size-xxs;
   margin: 0;
   padding: 0;
 

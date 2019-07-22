@@ -36,7 +36,7 @@
   }
 
   &--over {
-    background-color: get-color(air);
+    background-color: get-color(color-brand-first-light);
     box-shadow: 0 2px 4px 0 get-color(blackNeutral, $key: darker, $opacity: .1);
     position: fixed;
     top: 0;

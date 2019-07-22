@@ -24,12 +24,12 @@
     }
 
     a {
-      background-color: get-color(air);
+      background-color: get-color(color-brand-first-light);
       border: solid 1px get-color((color: rastaGray, opacity: .2));
-      border-radius: $borderRadius;
+      border-radius: $border-radius-s;
       cursor: inherit;
       display: block;
-      font-size: 14px;
+      font-size: $font-size-xxs;
       font-weight: get-weight(bold);
       padding: 4px 9px;
       transition: background-color .2s, color .2s, border-color .2s;
@@ -51,9 +51,9 @@
     &--active {
       &:not(.pagination__item--disabled) {
         a {
-          background-color: get-color(punch);
-          border-color: get-color(serious);
-          color: get-color(air);
+          background-color: get-color(color-brand-second-dark);
+          border-color: get-color(color-brand-second-extra-dark);
+          color: get-color(color-brand-first-light);
         }
       }
     }
@@ -61,7 +61,7 @@
     &:hover {
       &:not(.pagination__item--disabled) {
         a {
-          border-color: get-color(serious);
+          border-color: get-color(color-brand-second-extra-dark);
         }
       }
     }

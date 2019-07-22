@@ -1,10 +1,9 @@
 a,
 .link {
-  color: get-color(punch);
+  color: get-color(color-brand-second-dark);
   text-decoration: none;
 
   &:hover {
-    color: get-color(serious);
+    color: get-color(color-brand-second-extra-dark);
   }
 }
-

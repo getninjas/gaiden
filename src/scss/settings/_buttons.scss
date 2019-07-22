@@ -25,7 +25,7 @@
   * in `$buttonSizes` map.
 **/
 
-$buttonSizes: (
+$button-sizes: (
   mini: (
     fontSize: 12,
     padding: (10)
@@ -91,7 +91,7 @@ $buttonSizes: (
   * If you need to create new button type just configure a `[gaiden_css.configs.button_type_config]`
   * with some states and properties.
 **/
-$buttonTypes: (
+$button-types: (
   high-contrast: (
     default: (
       background: punch,

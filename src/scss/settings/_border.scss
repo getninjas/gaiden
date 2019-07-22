@@ -13,10 +13,18 @@
 *      );
 **/
 
-$borderRadius: 6px;
-$borderRadiusButton: 4px;
+$border-radius-none: 0;
+$border-radius-s: 4px;
+$border-radius-m: 8px;
+$border-radius-l: 16px;
+$border-radius-circle: 50%;
+$border-radius-pill: 160px;
+$border-style-default: solid;
+$border-width-none: 0;
+$border-width-thin: 1px;
+$border-width-thick: 2px;
 
 $border: (
-  default: solid 1px,
-  outline: solid 2px
+  default: $border-style-default $border-width-thin,
+  outline: $border-style-default $border-width-thick
 );
