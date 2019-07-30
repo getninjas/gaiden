@@ -7,22 +7,6 @@ const fs = require('fs');
 const sourceDir = './src/scss';
 const outputDir = './build/stylesheets';
 
-const init = () => {
-  const themeName = process.argv[2];
-
-  if (!themeName) {
-    return prepareBuildForAllThemes();
-  }
-
-  execBuild(themeName);
-}
-
-const prepareBuildForAllThemes = () => {
-  const themes = fs.readdirSync(sourceDir);
-
-  themes.forEach((theme) => execBuild(theme));
-};
-
 const execBuild = (theme) => {
   const filename = theme !== 'default' ? `gaiden.${theme}.css` : 'gaiden.css';
   const minifiedFile = `${outputDir}/${filename}`;
@@ -34,7 +18,7 @@ const execBuild = (theme) => {
     --sourceComments true \
     `,
     postcss: `--use autoprefixer ${minifiedFile} -o ${minifiedFile}`,
-    sasslint: `-c .sass-lint.yml  -v -q`
+    sasslint: '-c .sass-lint.yml  -v -q',
   };
 
   const sassLintExec = shelljs.exec(`sass-lint ${options.sasslint}`);
@@ -46,6 +30,24 @@ const execBuild = (theme) => {
   shelljs.echo('SassLint ok!');
   shelljs.exec(`node-sass ${options.sass}`);
   shelljs.exec(`postcss ${options.postcss}`);
+  return shelljs.echo('Build finished with success!')
 };
+
+
+const prepareBuildForAllThemes = () => {
+  const themes = fs.readdirSync(sourceDir);
+
+  themes.forEach(theme => execBuild(theme));
+};
+
+const init = () => {
+  const themeName = process.argv[2];
+
+  if (!themeName) {
+    return prepareBuildForAllThemes();
+  }
+
+  return execBuild(themeName);
+}
 
 init();
