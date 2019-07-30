@@ -1,0 +1,14 @@
+.rating {
+  color: get-color((color: blackNeutral, key: darker, opacity: .4));
+  font-size: 12px;
+
+  &__stars {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  &__star-item {
+    display: inline-block;
+  }
+}

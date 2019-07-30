@@ -1,0 +1,72 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.thumbnail.css Thumbnail
+**/
+
+/**
+  * @styles action Action
+  *
+  * @demo demo/gaiden-css/components/thumbnail/action/demo.html
+**/
+
+.thumbnail {
+  border-radius: $borderRadius;
+  height: initial;
+  overflow: hidden;
+  position: relative;
+  transition: transform .2s ease-in-out;
+  will-change: transform;
+
+  &--action {
+    box-shadow: 0 -2px 4px 0 get-color((color: blackNeutral, opacity: .1));
+    display: block;
+    max-height: 190px;
+    transform: scale(-1);
+    width: 98%;
+
+    &:hover {
+      box-shadow: 0 -4px 8px 0 get-color((color: blackNeutral, opacity: .1));
+      transform: translate(0, -5px) scale(-1);
+
+      .thumbnail__button  {
+        background-color: get-color(punch);
+        color: get-color(air);
+      }
+    }
+
+    .thumbnail__photo {
+      transform: scale(-1);
+
+      img {
+        height: auto;
+        max-height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &__button {
+    background-color: get-color(air);
+    color: get-color(punch);
+    font-size: 12px;
+    font-weight: get-weight(bold);
+    margin-bottom: 0;
+    padding: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    transform: scale(-1);
+    transition: background-color ease-in-out .2s, color ease-in-out .2s;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__photo {
+    border-radius: $borderRadiusButton;
+    display: block;
+    width: 100%;
+
+    img {
+      width: auto;
+    }
+  }
+}

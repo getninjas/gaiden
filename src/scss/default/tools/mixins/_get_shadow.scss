@@ -1,0 +1,3 @@
+@function get-shadow($key) {
+  @return map-deep-get($shadows, $key);
+}
