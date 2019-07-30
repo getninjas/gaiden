@@ -24,7 +24,7 @@ const execBuild = (theme) => {
     --sourcemap false',
     mqpacker: '-s',
     postcss: `--use autoprefixer ${compiledFile} -o ${minifiedFile}`,
-    sasslint: `-c .sass-lint.yml  -v -q`,
+    sasslint: '-c .sass-lint.yml  -v -q',
   };
 
   const sassLintExec = shelljs.exec(`sass-lint ${options.sasslint}`);
@@ -38,7 +38,7 @@ const execBuild = (theme) => {
   shelljs.exec(`postcss ${options.postcss}`);
   shelljs.exec(`cssnano ${options.cssnano} ${compiledFile} ${minifiedFile}`);
   shelljs.rm(`${compiledFile}`, `${compiledFile}.map`);
-  return shelljs.echo('Build finished with success!')
+  return shelljs.echo('Build finished with success!');
 };
 
 const prepareBuildForAllThemes = () => {

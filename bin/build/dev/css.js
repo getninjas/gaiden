@@ -30,7 +30,7 @@ const execBuild = (theme) => {
   shelljs.echo('SassLint ok!');
   shelljs.exec(`node-sass ${options.sass}`);
   shelljs.exec(`postcss ${options.postcss}`);
-  return shelljs.echo('Build finished with success!')
+  return shelljs.echo('Build finished with success!');
 };
 
 
