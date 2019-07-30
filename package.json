@@ -10,8 +10,8 @@
     "postversion": "git push --tags",
     "config": "npm config set progress=false && npm config set git-tag-version=true && npm link",
     "clear": "rm -rf ./build/*",
-    "build:prod": "build:prod:html && build:prod:image && build:prod:css",
-    "build:dev": "build:dev:html && build:dev:image && build:dev:css",
+    "build:prod": "npm run build:prod:html && npm run build:prod:image && npm run build:prod:css",
+    "build:dev": "npm run build:dev:html && npm run build:dev:image && npm run build:dev:css",
     "build:docs": "build:docs:prod",
     "watch:css": "onchange \"src/scss\" -- build:dev:css",
     "watch:html": "onchange \"src/html\" -- build:dev:html",
@@ -22,7 +22,15 @@
     "browsersync": "browser-sync start --config .browser-sync.js",
     "browsersync:docs": "browser-sync start --config .browser-sync-docs.js",
     "docs": "npm run build:docs",
-    "start": "npm run clear && FORCE_COLOR=1 npm-run-all -p build:dev browsersync browsersync:docs watch"
+    "start": "npm run clear && FORCE_COLOR=1 npm-run-all -p build:dev browsersync browsersync:docs watch",
+    "build:dev:css": "./bin/build/dev/css.js",
+    "build:dev:html": "./bin/build/dev/html.js",
+    "build:dev:image": "./bin/build/dev/image.js",
+    "build:prod:css": "./bin/build/prod/css.js",
+    "build:prod:html": "./bin/build/prod/html.js",
+    "build:prod:image": "./bin/build/prod/image.js",
+    "build:docs:dev": "./bin/docs/dev/docs.js",
+    "build:docs:prod": "./bin/docs/prod/docs.js"
   },
   "browserslist": [
     "last 2 versions",
@@ -33,14 +41,6 @@
     "android >=4"
   ],
   "bin": {
-    "build:dev:css": "./bin/build/dev/css.js",
-    "build:dev:html": "./bin/build/dev/html.js",
-    "build:dev:image": "./bin/build/dev/image.js",
-    "build:prod:css": "./bin/build/prod/css.js",
-    "build:prod:html": "./bin/build/prod/html.js",
-    "build:prod:image": "./bin/build/prod/image.js",
-    "build:docs:dev": "./bin/docs/dev/docs.js",
-    "build:docs:prod": "./bin/docs/prod/docs.js"
   },
   "repository": {
     "type": "git",

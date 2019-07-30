@@ -1,29 +1,51 @@
 #! /usr/bin/env node
 
 const shelljs = require('shelljs');
+const process = require('process');
+const fs = require('fs');
 
 const sourceDir = './src/scss';
 const outputDir = './build/stylesheets';
-const minifiedFile = `${outputDir}/gaiden.css`;
-const docsCss = `docs/gaiden/gaiden.css`;
-const docsCssPrefixed = `docs/gaiden/gaiden.css`;
 
-const options = {
-  sass: ` --include-path ${sourceDir} \
+const init = () => {
+  const themeName = process.argv[2];
+
+  if (!themeName) {
+    return prepareBuildForAllThemes();
+  }
+
+  execBuild(themeName);
+}
+
+const prepareBuildForAllThemes = () => {
+  const themes = fs.readdirSync(sourceDir);
+
+  themes.forEach((theme) => execBuild(theme));
+};
+
+const execBuild = (theme) => {
+  const filename = theme ? `gaiden.${theme}.css` : 'gaiden.css';
+  const minifiedFile = `${outputDir}/${filename}`;
+
+  const options = {
+    sass: `${sourceDir}/${theme}/gaiden.scss ${outputDir}/${filename} \
     --source-map true -r \
     --output-style expanded \
     --sourceComments true \
-    -o ${outputDir}`,
-  postcss: `--use autoprefixer ${minifiedFile} -o ${minifiedFile}`,
-  sasslint: `-c .sass-lint.yml  -v -q`
-}
+    `,
+    postcss: `--use autoprefixer ${minifiedFile} -o ${minifiedFile}`,
+    sasslint: `-c .sass-lint.yml  -v -q`
+  };
 
-const sassLintExec = shelljs.exec(`sass-lint ${options.sasslint}`);
+  const sassLintExec = shelljs.exec(`sass-lint ${options.sasslint}`);
 
-if (sassLintExec.code !== 0) {
-  return shelljs.error(sassLintExec.stderr);
-}
+  if (sassLintExec.code !== 0) {
+    return shelljs.error(sassLintExec.stderr);
+  }
 
-shelljs.echo('SassLint ok!');
-shelljs.exec(`node-sass ${options.sass} ${sourceDir} ${minifiedFile}`);
-shelljs.exec(`postcss ${options.postcss}`);
+  shelljs.echo('SassLint ok!');
+  shelljs.exec(`node-sass ${options.sass}`);
+  shelljs.exec(`postcss ${options.postcss}`);
+};
+
+init();
