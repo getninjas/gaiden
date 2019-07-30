@@ -26,7 +26,11 @@
     flex-direction: column;
 
     .thumbnail__photo {
+<<<<<<< HEAD
       border-radius: $border-radius;
+=======
+      border-radius: $borderRadius;
+>>>>>>> Rename theme to be the default theme
       max-height: 170px;
     }
 

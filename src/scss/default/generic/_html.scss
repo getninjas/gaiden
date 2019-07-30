@@ -1,0 +1,7 @@
+html {
+  position: relative;
+
+  &.sticky {
+    min-height: 100%;
+  }
+}

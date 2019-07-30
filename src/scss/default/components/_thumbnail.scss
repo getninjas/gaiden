@@ -10,7 +10,11 @@
 **/
 
 .thumbnail {
+<<<<<<< HEAD
   border-radius: $border-radius;
+=======
+  border-radius: $borderRadius;
+>>>>>>> Rename theme to be the default theme
   height: initial;
   overflow: hidden;
   position: relative;
@@ -61,7 +65,11 @@
   }
 
   &__photo {
+<<<<<<< HEAD
     border-radius: $border-radius-button;
+=======
+    border-radius: $borderRadiusButton;
+>>>>>>> Rename theme to be the default theme
     display: block;
     width: 100%;
 
