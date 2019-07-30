@@ -12,11 +12,7 @@ const execBuild = (theme) => {
   const minifiedFile = `${outputDir}/${filename}`;
 
   const options = {
-    sass: `${sourceDir}/${theme}/gaiden.scss ${outputDir}/${filename} \
-    --source-map true -r \
-    --output-style expanded \
-    --sourceComments true \
-    `,
+    sass: `${sourceDir}/${theme}/gaiden.scss ${outputDir}/${filename} --source-map true -r --output-style expanded --sourceComments true `,
     postcss: `--use autoprefixer ${minifiedFile} -o ${minifiedFile}`,
     sasslint: '-c .sass-lint.yml  -v -q',
   };
@@ -32,7 +28,6 @@ const execBuild = (theme) => {
   shelljs.exec(`postcss ${options.postcss}`);
   return shelljs.echo('Build finished with success!');
 };
-
 
 const prepareBuildForAllThemes = () => {
   const themes = fs.readdirSync(sourceDir);

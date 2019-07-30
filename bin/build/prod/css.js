@@ -13,15 +13,8 @@ const execBuild = (theme) => {
   const compiledFile = `${outputDir}/gaiden.${theme}.css`;
 
   const options = {
-    sass: `${sourceDir}/${theme}/gaiden.scss ${compiledFile} \
-    --source-map true -r \
-    --output-style compressed \
-    --sourceComments true \
-    `,
-    cssnano: '--replace true \
-    --no-autoprefixer \
-    --safe \
-    --sourcemap false',
+    sass: `${sourceDir}/${theme}/gaiden.scss ${compiledFile} --source-map true -r --output-style compressed --sourceComments true `,
+    cssnano: '--replace true --no-autoprefixer --safe --sourcemap false',
     mqpacker: '-s',
     postcss: `--use autoprefixer ${compiledFile} -o ${minifiedFile}`,
     sasslint: '-c .sass-lint.yml  -v -q',
