@@ -91,7 +91,11 @@
 .btn {
   background-color: transparent;
   border: 0;
+<<<<<<< HEAD
   border-radius: $border-radius-button;
+=======
+  border-radius: $borderRadiusButton;
+>>>>>>> Add new file struct
   cursor: pointer;
   display: inline-block;
   font-weight: get-weight(bolder);
@@ -101,6 +105,7 @@
   text-transform: uppercase;
   transition: border-color .2s ease-in, box-shadow .2s ease-in, background-color .2s ease-in, color .3s ease;
 
+<<<<<<< HEAD
   &__secondary--default {
     border: 2px solid get-color(color-brand-first-extra-dark);
     border-radius: 40px;
@@ -124,6 +129,8 @@
     transition: all .2s linear;
   }
 
+=======
+>>>>>>> Add new file struct
   &[disabled] {
     cursor: not-allowed;
   }
@@ -159,8 +166,13 @@
   }
 
   &--full-card {
+<<<<<<< HEAD
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
+=======
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+>>>>>>> Add new file struct
     border-top: get-border(default);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -170,5 +182,10 @@
     border-radius: 30px;
   }
 
+<<<<<<< HEAD
 
+=======
+  @include generate-button-types;
+  @include generate-button-sizes;
+>>>>>>> Add new file struct
 }

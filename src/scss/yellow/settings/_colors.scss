@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 @import '../../../../../niten-tokens/build/web/niten-tokens';
 
+=======
+>>>>>>> Add new file struct
 /**
   * @parent gaiden_css.settings
   * @stylesheet gaiden_css.settings.colors.css Colors
@@ -35,6 +38,7 @@
 **/
 
 $colors: (
+<<<<<<< HEAD
   color-brand-first-extra-dark: (base: $color-brand-first-extra-dark),
   color-brand-first-dark: (base: $color-brand-first-dark),
   color-brand-first-medium: (base: $color-brand-first-medium),
@@ -71,6 +75,8 @@ $colors: (
   color-interface-shade-dark: (base: $color-interface-shade-dark),
   color-interface-shade-medium: (base: $color-interface-shade-medium),
   color-interface-shade-light: (base: $color-interface-shade-light),
+=======
+>>>>>>> Add new file struct
   air: (base: #fff),
   blackNeutral: (base: #333, lighter: rgba(0, 0, 0, .6), darker: rgba(0, 0, 0, 1)),
   breeze: (base: #eff4fa, darker: #c9d7e8),

@@ -17,7 +17,10 @@
 **/
 
 .menu {
+<<<<<<< HEAD
   background-color: get-color(color-interface-content-light);
+=======
+>>>>>>> Add new file struct
   @include media(small) {
     flex-direction: row;
   }
@@ -26,7 +29,11 @@
   flex-direction: column;
   flex-shrink: 0;
   justify-content: space-between;
+<<<<<<< HEAD
   padding: 17px;
+=======
+  padding: 24px;
+>>>>>>> Add new file struct
 
   .no-flexbox & {
     @include clearfix;
@@ -37,9 +44,16 @@
   }
 
   &--over {
+<<<<<<< HEAD
     background-color: get-color(color-interface-content-light);
     box-shadow: 0 2px 4px 0 get-color(color-interface-shade-dark);
     position: relative;
+=======
+    background-color: get-color(air);
+    box-shadow: 0 2px 4px 0 get-color(blackNeutral, $key: darker, $opacity: .1);
+    position: fixed;
+    top: 0;
+>>>>>>> Add new file struct
     width: 100%;
     z-index: 10;
 
@@ -50,6 +64,7 @@
     }
   }
 
+<<<<<<< HEAD
   &-icon {
     cursor: pointer;
     height: 28px;
@@ -92,11 +107,15 @@
 
   &__brand {
     display: none;
+=======
+  &__brand {
+>>>>>>> Add new file struct
     justify-content: flex-start;
 
     .no-flexbox & {
       float: left;
     }
+<<<<<<< HEAD
 
     & + .menu__title {
       display: none;
@@ -105,6 +124,8 @@
     @include media(normal) {
       display: flex;
     }
+=======
+>>>>>>> Add new file struct
   }
 
   &__options {
@@ -114,6 +135,7 @@
       float: right;
     }
   }
+<<<<<<< HEAD
 
   &__link {
     display: inherit;
@@ -294,4 +316,6 @@
       }
     }
   }
+=======
+>>>>>>> Add new file struct
 }

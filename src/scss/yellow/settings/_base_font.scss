@@ -26,9 +26,15 @@
 //sass-lint:disable no-url-domains no-url-protocols
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
 
+<<<<<<< HEAD
 $base-font: 'Lato';
 
 $font-weight: (
+=======
+$baseFont: 'Lato';
+
+$fontWeight: (
+>>>>>>> Add new file struct
   normal: 400,
   bold: 700,
   bolder: 900

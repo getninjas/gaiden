@@ -66,9 +66,15 @@ $spaces: (
 );
 
 @mixin generate-spaces($spaces: $spaces) {
+<<<<<<< HEAD
   @each $group-name, $space-group in $spaces {
     @each $key, $space in $space-group {
       .space-#{$group-name}-#{$key} {
+=======
+  @each $groupName, $spaceGroup in $spaces {
+    @each $key, $space in $spaceGroup {
+      .space-#{$groupName}-#{$key} {
+>>>>>>> Add new file struct
         margin-top: $space + px;
       }
     }

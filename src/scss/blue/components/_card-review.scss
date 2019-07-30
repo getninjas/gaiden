@@ -1,0 +1,35 @@
+.card-review {
+  &__title {
+    color: get-color(rastaGray);
+    font-size: 14px;
+    font-weight: get-weight(normal);
+  }
+
+  &__content {
+    margin-top: get-space(element, medium);
+  }
+
+  &__text {
+    color: get-color(blackNeutral, lighter);
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  &__rating {
+    margin-top: get-space(element, medium);
+
+    img {
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  &__receiver {
+    color: get-color(rastaGray);
+    font-size: 14px;
+    font-style: italic;
+    font-weight: get-weight(normal);
+    margin-bottom: 0;
+    margin-top: get-space(element, small);
+  }
+}
