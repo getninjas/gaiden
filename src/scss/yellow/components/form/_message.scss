@@ -1,0 +1,13 @@
+.form__message {
+  display: inline-block;
+  font-size: 12px;
+  font-style: italic;
+
+  &:empty {
+    display: none;
+  }
+
+  &--invalid {
+    color: get-color(bloody);
+  }
+}

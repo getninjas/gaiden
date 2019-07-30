@@ -1,0 +1,272 @@
+/**
+  * @parent gaiden_css.settings
+  * @stylesheet gaiden_css.settings.buttons.css Buttons
+  *
+**/
+
+/**
+*  @parent gaiden_css.configs
+*  @typedef {{}} gaiden_css.configs.button_size_config ButtonSizeConfig
+*  @option {Number} fontSize Defines font size for button.
+*  @option {Map<Number>} padding Defines padding for button and first value of map is `top/bottom` and second is `left/right`.
+*
+*  @body
+*    ## Using
+*      $buttonSizeConfig: (
+*        fontSize: 16,
+*        padding: (10 15)
+*      );
+**/
+
+/**
+  * @styles buttons_size Add new button size
+  *
+  * To add new button you need to define a `[gaiden_css.configs.button_size_config]` and append it
+  * in `$buttonSizes` map.
+**/
+
+$buttonSizes: (
+  mini: (
+    fontSize: 12,
+    padding: (10)
+  ),
+
+  small: (
+    fontSize: 12,
+    padding: (14)
+  ),
+
+  small-outline: (
+    fontSize: 12,
+    padding: (12)
+  ),
+  regular: (
+    fontSize: 14,
+    padding: (17)
+  ),
+
+  big: (
+    fontSize: 16,
+    padding: (22)
+  )
+
+);
+
+/**
+*  @parent gaiden_css.configs
+*  @typedef {{}} gaiden_css.configs.button_type_config ButtonTypeConfig
+*  @option {color|ColorConfig} background Defines button's background color
+*  @option {color|ColorConfig} textColor Defines button's textColor
+*  @option {color|ColorConfig} shadow Defines button's shadow color using map (settings/shadows)
+*  @option {color|ColorConfig} border Defines button's border color
+*  @option {color|ColorConfig} borderTopColor Defines button's border top color
+*  @option {number} opacity Defines button's opacity
+*
+*  @body
+*    ## Using
+*    `default` is a key for button state.
+*
+*     If you want to see how define [gaiden_css.configs.color_config] click at this link.
+*
+*      $buttonTypeConfig: (
+*        default: (
+*         background: (color: punch, opacity: .9), //using ColorConfig
+*         textColor: air,
+*         shadow: ( kind: normal ),
+*         border: ( color: air, style: outline ),
+*         borderTopColor: ( color: punch )
+*        ),
+*        hover: (
+*        ),
+*        active: (
+*        ),
+*        disabled: (
+*        )
+*      );
+**/
+
+/**
+  * @styles buttons_types Add new button type
+  *
+  * If you need to create new button type just configure a `[gaiden_css.configs.button_type_config]`
+  * with some states and properties.
+**/
+$buttonTypes: (
+  high-contrast: (
+    default: (
+      background: punch,
+      textColor: air,
+      shadow: ( kind: normal )
+    ),
+    hover: (
+      background: serious,
+      shadow: ( kind: large  )
+    ),
+    active: (
+      background: serious,
+      shadow: ( kind: none )
+    ),
+    disabled: (
+      background: (color: punch, opacity: .2),
+      textColor: (color: serious, opacity: .2),
+      shadow: ( kind: none )
+    )
+  ),
+  high-contrast-reversed: (
+    default: (
+      background: (color: air),
+      textColor: punch,
+      shadow: ( kind: normal )
+    ),
+    hover: (
+      background: (color: air, opacity: .9),
+      shadow: ( kind: large  )
+    ),
+    active: (
+      shadow: ( kind: none )
+    ),
+    disabled: (
+      background: (color: air),
+      textColor: (color: punch),
+      opacity: .3,
+      shadow: ( kind: none )
+    )
+  ),
+  outline: (
+    default: (
+      background: air,
+      border: (color: punch, style: outline),
+      textColor: punch
+    ),
+    hover: (
+      background: (color: punch, opacity: .1)
+    ),
+    disabled: (
+      border: (color: (color: rastaGray, opacity: .3), style: outline),
+      textColor: (color: rastaGray, opacity: .3),
+      shadow: ( kind: none )
+    )
+  ),
+  outline-reversed: (
+    default: (
+      border: (color: air, style: outline),
+      textColor: air
+    ),
+    hover: (
+      background: (color: air, opacity: .12),
+      textColor: air
+    ),
+    disabled: (
+      background: (color: punch),
+      border: (color: air, style: outline),
+      textColor: (color: air),
+      opacity: .3,
+      shadow: ( kind: none )
+    )
+  ),
+  outline-light: (
+    default: (
+      background: air,
+      border: (color: (color: punch, opacity: .2), style: outline),
+      textColor: punch
+    ),
+    hover: (
+      border: (color: (color: punch), style: outline),
+    ),
+    disabled: (
+      opacity: .25,
+      border: (color: (color: rastaGray), style: outline),
+      textColor: (color: rastaGray),
+      shadow: ( kind: none )
+    )
+  ),
+  raised: (
+    default: (
+      background: punch,
+      textColor: air,
+      shadow: ( kind: normal )
+    ),
+    hover: (
+      background: serious
+    ),
+    active: (
+      background: serious,
+      shadow: ( kind: none )
+    ),
+    disabled: (
+      background: (color: punch, opacity: .2),
+      textColor: (color: serious, opacity: .2),
+      shadow: ( kind: none )
+    )
+  ),
+  raised-reversed: (
+    default: (
+      background: air,
+      shadow: ( kind: normal ),
+      textColor: punch
+    ),
+    hover: (
+      background: (color: air, opacity: .9)
+    ),
+    active: (
+      shadow: ( kind: none )
+    ),
+    disabled: (
+      background: (color: air),
+      textColor: (color: punch),
+      opacity: .3,
+      shadow: ( kind: none )
+    )
+  ),
+  greeny: (
+    default: (
+      background: reward,
+      textColor: air
+    ),
+    hover: (
+      background: (color: rewardType),
+      shadow: ( kind: large  ),
+    ),
+    active: (
+      background:  (color: reward, key: darker),
+      shadow: ( kind: none )
+    ),
+    disabled: (
+      background: (color: air, opacity: .3),
+      textColor: rastaGray
+    )
+  ),
+  greeny-raised: (
+    default: (
+      background: reward,
+      textColor: air,
+      shadow: ( kind: large  )
+    ),
+    hover: (
+      background: (color: rewardType)
+    ),
+    active: (
+      shadow: ( kind: none )
+    ),
+    disabled: (
+      background: (color: air, opacity: .3),
+      textColor: rastaGray,
+      shadow: ( kind: none )
+    )
+  ),
+  full-card: (
+    default: (
+      background: (color: air),
+      textColor: punch,
+      borderTopColor: recusaGray
+    ),
+    hover: (
+      background: (color: punch),
+      textColor: air,
+      borderTopColor: punch
+    ),
+    disabled: (
+      textColor: (color: rastaGray, opacity: .3)
+    )
+  )
+);

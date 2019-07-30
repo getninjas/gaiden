@@ -1,0 +1,171 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.footer.css Footer
+  *
+  * @demo demo/gaiden-css/components/footer/demo.html 500
+**/
+
+.footer {
+  background-color: get-color(wall);
+  height: auto;
+
+  &__title {
+    color: get-color(rastaGray);
+    display: block;
+    font-size: 12px;
+    font-weight: get-weight(bold);
+    text-align: left;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  &__block {
+    align-content: flex-start;
+    margin-top: get-space(box, small);
+
+    &--download {
+      margin-left: auto;
+    }
+
+    @include media(small) {
+      align-content: flex-start;
+      margin-top: get-space(box, large);
+    }
+  }
+
+  &__list {
+    color: get-color(punch);
+    font-size: 14px;
+    text-align: left;
+
+    &--on-column {
+      &[class*='col-'] {
+        display: inline-block;
+        margin-left: 0;
+        text-align: left;
+
+        + & {
+          margin-left: auto;
+          margin-right: 0;
+        }
+      }
+    }
+
+    &--line {
+      margin-top: get-space(box, small);
+    }
+
+    &--social {
+      display: flex;
+      flex-grow: 1;
+
+      .footer__item {
+        border-radius: 50%;
+        height: 48px;
+        margin-left: 6%;
+        text-indent: -9999px;
+        width: 48px;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &--app {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+
+      .footer {
+        &__item {
+          border-radius: 4px;
+          flex-grow: 1;
+
+          a {
+            display: block;
+          }
+
+          &:last-child {
+            margin-left: 5px;
+
+            @include media(normal) {
+              margin-left: 0;
+              margin-top: get-space(element, small);
+            }
+          }
+        }
+
+        &__image {
+          width: 100%;
+
+          @include media(small) {
+            max-width: initial;
+          }
+        }
+      }
+
+      @include media(normal) {
+        flex: auto;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__institutional {
+    border-top: 1px solid get-color(recusaGray);
+    flex-direction: column;
+    margin-top: 45px;
+    padding: 24px 16px;
+
+    .footer__image {
+      width: 112px;
+    }
+
+    @include media(small) {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 34px 0;
+    }
+  }
+
+  &__institutional-list {
+    color: get-color(punch);
+    display: flex;
+    font-size: 12px;
+    font-weight: get-weight(bold);
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: right;
+    text-transform: uppercase;
+
+    @include media(small) {
+      margin: initial;
+
+      .footer__item {
+        margin: auto auto auto 20px;
+      }
+    }
+  }
+
+  &__item {
+    &:not(.footer__item--larger) {
+      margin-top: get-space(element, small);
+    }
+  }
+
+  &__copyright {
+    background-color: get-color(recusaGray, $opacity: .4);
+    color: get-color(blackNeutral, $key: darker, $opacity: .3);
+    font-size: 12px;
+    padding: 8px 40px;
+    text-align: center;
+  }
+}

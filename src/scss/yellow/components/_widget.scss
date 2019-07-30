@@ -1,0 +1,32 @@
+/**
+ * @parent gaiden_css.components
+ * @stylesheet gaiden_css.components.widget.css Widget
+ *
+ * @demo demo/gaiden-css/components/widget/demo.html
+**/
+
+.widget {
+  background-color: get-color(air);
+  border-radius: 7px;
+  box-shadow: get-shadow(medium) get-color((color: blackNeutral, opacity: .1));
+  margin: 0 auto;
+  position: relative;
+  z-index: 4;
+
+  &--over-banner {
+    margin-top: -180px;
+  }
+
+  &__title {
+    @include media(small) {
+      font-size: 24px;
+    }
+
+    font-size: 20px;
+    font-style: italic;
+    font-weight: get-weight(bolder);
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+  }
+}

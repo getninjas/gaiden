@@ -1,0 +1,61 @@
+/**
+  * @parent gaiden_css.settings
+  * @stylesheet gaiden_css.settings.colors.css Colors
+  *
+  * There are different colors that can be used:
+  * @iframe demo/gaiden-css/variables/colors/demo.html 360
+**/
+
+/**
+*  @parent gaiden_css.configs
+*  @typedef {{}} gaiden_css.configs.color_config ColorConfig
+*  @option {String} color Name of color key at `Palette Map`
+*  @option {String} key Name of color key modifier at `Palette Map`
+*  @option {Number} opacity Alpha number for color rgba method
+*  @option {Map} palette Define color palette map
+*
+*  @body
+*    ## Using
+*       $colorConfig: (
+*         color: punch,
+*         opacity: .8,
+*         key: darker,
+*         palette: (punch: (base: #1393f6))
+*       );
+**/
+
+/**
+  * @styles gradients Gradients
+  *
+  * An some gradients defined
+  *
+  * @iframe demo/gaiden-css/variables/colors/gradients/demo.html 260
+**/
+
+$colors: (
+  air: (base: #fff),
+  blackNeutral: (base: #333, lighter: rgba(0, 0, 0, .6), darker: rgba(0, 0, 0, 1)),
+  breeze: (base: #eff4fa, darker: #c9d7e8),
+  punch: (base: #1393f6, lighter: #21c1ff),
+  serious: (base: #1272d5, darker: #004183),
+  warning: (base: #ffd600, darker: #e7ab0c),
+  reward: (base: #40d879, darker: #26a656),
+  rewardType: (base: #2abf62, darker: #097632),
+  bloody: (base: #b24141, darker: #6d0909),
+  rastaGray: (base: #536e7b, darker: #36474e),
+  recusaGray: (base: #e7e7e7),
+  offWhite: (base: #eceff1),
+  sand: (base: #e2d7ad),
+  wall: (base: #f9f9f9),
+);
+
+$gradients: (
+  wind: (breeze base darker),
+  sky:  (punch lighter base),
+  ocean: (serious base darker),
+  golden: (warning base darker),
+  field: (reward base darker),
+  jungle: (reward base darker),
+  heart: (bloody base darker),
+  night: (rastaGray base darker)
+);
