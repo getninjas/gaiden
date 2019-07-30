@@ -24,7 +24,7 @@ const prepareBuildForAllThemes = () => {
 };
 
 const execBuild = (theme) => {
-  const filename = theme ? `gaiden.${theme}.min.css` : 'gaiden.min.css';
+  const filename = theme !== 'default' ? `gaiden.${theme}.min.css` : 'gaiden.min.css';
   const minifiedFile = `${outputDir}/${filename}`;
   const compiledFile = `${outputDir}/gaiden.${theme}.css`;
 
