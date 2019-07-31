@@ -1,0 +1,18 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.form.message.css Form Message
+  *
+  * ## Form Message
+  * @demo demo/gaiden-css/components/form/message/demo.html
+**/
+
+.form__alert-message {
+  display: inline-block;
+
+  small {
+    font: {
+      size: 14px;
+      style: normal;
+    };
+  }
+}

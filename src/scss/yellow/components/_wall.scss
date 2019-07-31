@@ -1,0 +1,38 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.wall.css Wall
+  *
+  * @demo demo/gaiden-css/components/wall/demo.html
+**/
+
+.wall {
+  padding: {
+    bottom: map-deep-get($spaces, section, large) + px;
+    top: map-deep-get($spaces, section, large) + px;
+  }
+
+  &--condensed {
+    padding: {
+      bottom: map-deep-get($spaces, box, medium) + px;
+      top: map-deep-get($spaces, box, medium) + px;
+    }
+  }
+
+  &--highlighted {
+    background-color: get-color(breeze);
+
+    + .wall--highlighted {
+      &[class*='space-'] {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &--inverted {
+    background-color: get-color(air);
+  }
+
+  &--separator {
+    border-top: 1px solid get-color((color: serious, opacity: .2));
+  }
+}
