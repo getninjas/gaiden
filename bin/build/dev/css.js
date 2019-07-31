@@ -32,6 +32,8 @@ const execBuild = (theme) => {
 const prepareBuildForAllThemes = () => {
   const themes = fs.readdirSync(sourceDir);
 
+  themes.splice(themes.indexOf('shared'), 1);
+
   themes.forEach(theme => execBuild(theme));
 };
 
