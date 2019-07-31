@@ -6,33 +6,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "preversion": "npm run build:prod",
-    "version": "build:docs:prod  && git reset HEAD~1 --soft",
+    "version": "npm run build:docs:prod  && git reset HEAD~1 --soft",
     "postversion": "git push --tags",
     "config": "npm config set progress=false && npm config set git-tag-version=true && npm link",
     "clear": "rm -rf ./build/*",
-    "build:prod": "build:prod:html && build:prod:image && build:prod:css",
-    "build:dev": "build:dev:html && build:dev:image && build:dev:css",
-    "build:docs": "build:docs:prod",
-    "watch:css": "onchange \"src/scss\" -- build:dev:css",
-    "watch:html": "onchange \"src/html\" -- build:dev:html",
-    "watch:docs": "onchange \"docs/demo\" -- build:docs:dev",
-    "watch:image": "onchange \"src/images\" -- build:dev:image",
-    "watch:build": "onchange \"build/stylesheets\" -- build:docs:dev",
+    "build:prod": "npm run build:prod:html && npm run build:prod:image && npm run build:prod:css",
+    "build:dev": "npm run build:dev:html && npm run build:dev:image && npm run build:dev:css",
+    "build:docs": "npm run build:docs:prod",
+    "watch:css": "onchange \"src/scss\" -- npm run build:dev:css",
+    "watch:html": "onchange \"src/html\" -- npm run build:dev:html",
+    "watch:docs": "onchange \"docs/demo\" -- npm run build:docs:dev",
+    "watch:image": "onchange \"src/images\" -- npm run build:dev:image",
+    "watch:build": "onchange \"build/stylesheets\" -- npm run build:docs:dev",
     "watch": "npm-run-all -p watch:css watch:html watch:docs watch:image watch:build",
     "browsersync": "browser-sync start --config .browser-sync.js",
     "browsersync:docs": "browser-sync start --config .browser-sync-docs.js",
     "docs": "npm run build:docs",
-    "start": "npm run clear && FORCE_COLOR=1 npm-run-all -p build:dev browsersync browsersync:docs watch"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "safari >= 7",
-    "ie >= 9",
-    "ff >= 20",
-    "ios >=7",
-    "android >=4"
-  ],
-  "bin": {
+    "start": "npm run clear && FORCE_COLOR=1 npm-run-all -p build:dev browsersync browsersync:docs watch",
     "build:dev:css": "./bin/build/dev/css.js",
     "build:dev:html": "./bin/build/dev/html.js",
     "build:dev:image": "./bin/build/dev/image.js",
@@ -42,6 +32,14 @@
     "build:docs:dev": "./bin/docs/dev/docs.js",
     "build:docs:prod": "./bin/docs/prod/docs.js"
   },
+  "browserslist": [
+    "last 2 versions",
+    "safari >= 7",
+    "ie >= 9",
+    "ff >= 20",
+    "ios >=7",
+    "android >=4"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/getninjas/gaiden.git"
