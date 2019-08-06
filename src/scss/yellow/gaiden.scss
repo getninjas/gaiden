@@ -1,4 +1,5 @@
 @import 'node_modules/reset-css/reset'; //sass-lint:disable-line clean-import-paths
+@import '/node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
 @import 'settings/colors';
 @import 'settings/grid';
 @import 'settings/buttons';
