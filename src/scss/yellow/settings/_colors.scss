@@ -36,6 +36,7 @@
 
 $colors: (
   color-brand-first-extra-dark: (base: $color-brand-first-extra-dark),
+<<<<<<< HEAD
   color-brand-first-dark: (base: $color-brand-first-dark),
   color-brand-first-medium: (base: $color-brand-first-medium),
   color-brand-first-light: (base: $color-brand-first-light),
@@ -85,6 +86,43 @@ $colors: (
   offWhite: (base: #eceff1),
   sand: (base: #e2d7ad),
   wall: (base: #f9f9f9),
+=======
+  color-brand-first-dark:(base: $color-brand-first-dark),
+  color-brand-first-medium:(base: $color-brand-first-medium),
+  color-brand-first-light:(base: $color-brand-first-light),
+  color-brand-second-extra-dark:(base: $color-brand-second-extra-dark),
+  color-brand-second-dark:(base: $color-brand-second-dark),
+  color-brand-second-medium:(base: $color-brand-second-medium),
+  color-brand-second-light:(base: $color-brand-second-light),
+  color-interface-positive-extra-dark:(base: $color-interface-positive-extra-dark),
+  color-interface-positive-dark:(base: $color-interface-positive-dark),
+  color-interface-positive-medium:(base: $color-interface-positive-medium),
+  color-interface-positive-light:(base: $color-interface-positive-light),
+  color-interface-alert-extra-dark:(base: $color-interface-alert-extra-dark),
+  color-interface-alert-dark:(base: $color-interface-alert-dark),
+  color-interface-alert-medium:(base: $color-interface-alert-medium),
+  color-interface-alert-light:(base: $color-interface-alert-light),
+  color-interface-negative-extra-dark:(base: $color-interface-negative-extra-dark),
+  color-interface-negative-dark:(base: $color-interface-negative-dark),
+  color-interface-negative-medium:(base: $color-interface-negative-medium),
+  color-interface-negative-light:(base: $color-interface-negative-light),
+  color-interface-hightlight-extra-dark:(base: $color-interface-hightlight-extra-dark),
+  color-interface-hightlight-dark:(base: $color-interface-hightlight-dark),
+  color-interface-hightlight-medium:(base: $color-interface-hightlight-medium),
+  color-interface-hightlight-light:(base: $color-interface-hightlight-light),
+  color-interface-action-extra-dark:(base: $color-interface-action-extra-dark),
+  color-interface-action-dark:(base: $color-interface-action-dark),
+  color-interface-action-medium:(base: $color-interface-action-medium),
+  color-interface-action-light:(base: $color-interface-action-light),
+  color-interface-context-extra-dark:(base: $color-interface-context-extra-dark),
+  color-interface-context-dark:(base: $color-interface-context-dark),
+  color-interface-context-medium:(base: $color-interface-context-medium),
+  color-interface-context-light:(base: $color-interface-context-light),
+  color-interface-shade-extra-dark:(base: $color-interface-shade-extra-dark),
+  color-interface-shade-dark:(base: $color-interface-shade-dark),
+  color-interface-shade-medium:(base: $color-interface-shade-medium),
+  color-interface-shade-light:(base: $color-interface-shade-light),
+>>>>>>> 41db808a7e367ee82ac7fa79daa5cc8ea82fa26c
 );
 
 $gradients: (
