@@ -32,6 +32,7 @@
 @import '../shared/generic/html';
 @import '../shared/generic/body';
 @import '../shared/generic/content_centered';
+@import 'settings/links';
 @import 'components/button';
 @import 'components/media_box';
 @import 'components/picture';
@@ -62,5 +63,5 @@
 @import 'components/price_variation';
 @import 'components/media';
 
-@include generate-grid($defaultBreakpoints);
+@include generate-grid($default-breakpoints);
 @include generate-spaces;

@@ -2,7 +2,7 @@
   @each $key, $gradient in $gradients {
     $color: map-get($colors, nth($gradient, 1));
 
-    $firstColor:  map-get($color, nth($gradient, 2));
+    $first-color:  map-get($color, nth($gradient, 2));
     $secondColor: map-get($color, nth($gradient, 3));
 
     .#{$key} {
@@ -11,7 +11,7 @@
       }
 
       &::after {
-        content: "@#{$key}/#{$firstColor}/#{$secondColor}";
+        content: "@#{$key}/#{$first-color}/#{$secondColor}";
       }
     }
   }
