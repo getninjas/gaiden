@@ -1,7 +1,7 @@
-@import "src/scss/settings/colors";
-@import "src/scss/tools/mixins/gradient";
-@import 'src/scss/tools/mixins/map_deep_get';
-@import "src/scss/tools/mixins/linear_gradient";
+@import "src/scss/default/settings/colors";
+@import "src/scss/shared/tools/mixins/gradient";
+@import 'src/scss/shared/tools/mixins/map_deep_get';
+@import "src/scss/shared/tools/mixins/linear_gradient";
 @import "mixins/generate_gradient_palette_classes";
 
 @include generate_gradient_palette_classes($gradients);
