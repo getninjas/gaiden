@@ -112,11 +112,7 @@
   &__input {
     background-color: get-color((color: blackNeutral, key: darker, opacity: .05));
     border: 1px solid get-color((color: rastaGray, opacity: .2));
-<<<<<<< HEAD
     border-radius: $border-radius-button;
-=======
-    border-radius: $borderRadiusButton;
->>>>>>> Rename theme to be the default theme
     color: get-color((color: blackNeutral, key: darker, opacity: .5));
     display: block;
     font-size: 14px;

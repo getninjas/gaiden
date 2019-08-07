@@ -91,11 +91,7 @@
 .btn {
   background-color: transparent;
   border: 0;
-<<<<<<< HEAD
   border-radius: $border-radius-button;
-=======
-  border-radius: $borderRadiusButton;
->>>>>>> Rename theme to be the default theme
   cursor: pointer;
   display: inline-block;
   font-weight: get-weight(bolder);
@@ -140,13 +136,8 @@
   }
 
   &--full-card {
-<<<<<<< HEAD
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
-=======
-    border-bottom-left-radius: $borderRadius;
-    border-bottom-right-radius: $borderRadius;
->>>>>>> Rename theme to be the default theme
     border-top: get-border(default);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -155,7 +146,4 @@
   &--rounded {
     border-radius: 30px;
   }
-
-  @include generate-button-types;
-  @include generate-button-sizes;
 }

@@ -24,19 +24,11 @@
 
 
 //sass-lint:disable no-url-domains no-url-protocols
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i&display=swap');
 
 $base-font: 'Lato';
 
 $font-weight: (
-=======
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
-
-$baseFont: 'Lato';
-
-$fontWeight: (
->>>>>>> Rename theme to be the default theme
   normal: 400,
   bold: 700,
   bolder: 900

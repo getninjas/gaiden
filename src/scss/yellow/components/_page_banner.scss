@@ -43,32 +43,18 @@
   &--over {
     .page-banner__content {
       @include media(medium) {
-<<<<<<< HEAD
         padding-bottom: $page-over-medium + px;
       }
 
       padding-bottom: $page-over-small + px;
-=======
-        padding-bottom: $pageOverMedium + px;
-      }
-
-      padding-bottom: $pageOverSmall + px;
->>>>>>> Add new file struct
     }
   }
 
   + .page-banner-over {
     @include media(medium) {
-<<<<<<< HEAD
       margin-top: - $page-over-medium + px;
     }
 
     margin-top: - $page-over-small + px;
-=======
-      margin-top: - $pageOverMedium + px;
-    }
-
-    margin-top: - $pageOverSmall + px;
->>>>>>> Add new file struct
   }
 }

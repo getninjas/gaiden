@@ -6,21 +6,13 @@
 
 /**
 *  @parent gaiden_css.configs
-<<<<<<< HEAD
 *  @typedef {{}} gaiden_css.configs.button_size_config button-sizeConfig
-=======
-*  @typedef {{}} gaiden_css.configs.button_size_config ButtonSizeConfig
->>>>>>> Add new file struct
 *  @option {Number} fontSize Defines font size for button.
 *  @option {Map<Number>} padding Defines padding for button and first value of map is `top/bottom` and second is `left/right`.
 *
 *  @body
 *    ## Using
-<<<<<<< HEAD
 *      $button-sizeConfig: (
-=======
-*      $buttonSizeConfig: (
->>>>>>> Add new file struct
 *        fontSize: 16,
 *        padding: (10 15)
 *      );
@@ -30,17 +22,10 @@
   * @styles buttons_size Add new button size
   *
   * To add new button you need to define a `[gaiden_css.configs.button_size_config]` and append it
-<<<<<<< HEAD
   * in `$button-sizes` map.
 **/
 
 $button-sizes: (
-=======
-  * in `$buttonSizes` map.
-**/
-
-$buttonSizes: (
->>>>>>> Add new file struct
   mini: (
     fontSize: 12,
     padding: (10)
@@ -69,11 +54,7 @@ $buttonSizes: (
 
 /**
 *  @parent gaiden_css.configs
-<<<<<<< HEAD
 *  @typedef {{}} gaiden_css.configs.button_type_config button-type-config
-=======
-*  @typedef {{}} gaiden_css.configs.button_type_config ButtonTypeConfig
->>>>>>> Add new file struct
 *  @option {color|ColorConfig} background Defines button's background color
 *  @option {color|ColorConfig} textColor Defines button's textColor
 *  @option {color|ColorConfig} shadow Defines button's shadow color using map (settings/shadows)
@@ -87,11 +68,7 @@ $buttonSizes: (
 *
 *     If you want to see how define [gaiden_css.configs.color_config] click at this link.
 *
-<<<<<<< HEAD
 *      $button-type-config: (
-=======
-*      $buttonTypeConfig: (
->>>>>>> Add new file struct
 *        default: (
 *         background: (color: punch, opacity: .9), //using ColorConfig
 *         textColor: air,
@@ -114,11 +91,7 @@ $buttonSizes: (
   * If you need to create new button type just configure a `[gaiden_css.configs.button_type_config]`
   * with some states and properties.
 **/
-<<<<<<< HEAD
 $button-types: (
-=======
-$buttonTypes: (
->>>>>>> Add new file struct
   high-contrast: (
     default: (
       background: punch,

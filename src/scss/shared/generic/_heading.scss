@@ -27,7 +27,7 @@ h6,
   };
 
   small {
-    color: get-color(blackNeutral, lighter, $opacity: .5);
+    color: get-color(blackNeutral);
     display: block;
     font-weight: get-weight(normal);
   }
