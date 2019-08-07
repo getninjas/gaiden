@@ -70,6 +70,8 @@
     "sass-lint": "^1.10.2"
   },
   "dependencies": {
-    "@getninjas/niten-tokens": "^1.0.1-0"
+    "@getninjas/niten-tokens": "git://github.com/getninjas/niten-tokens.git",
+    "install": "^0.13.0",
+    "npm": "^6.10.3"
   }
 }
