@@ -26,7 +26,7 @@
   flex-direction: column;
   flex-shrink: 0;
   justify-content: space-between;
-  padding: 17px;
+  padding: 24px;
 
   .no-flexbox & {
     @include clearfix;
@@ -60,6 +60,10 @@
     transition: .5s ease-in-out;
     width: 32px;
 
+    @include media(normal) {
+      display: none;
+    }
+
     &__line {
       background-color: get-color(color-brand-first-extra-dark);
       border-radius: 9px;
@@ -76,12 +80,37 @@
         top: 8px;
       }
 
-      &:nth-child(2) {
+      &:nth-child(2),
+      &:nth-child(3) {
         top: 14px;
       }
 
-      &:nth-child(3) {
+      &:nth-child(4) {
         top: 20px;
+      }
+    }
+
+    &--opened {
+      .menu-icon__line {
+        &:nth-child(1) {
+          left: 50%;
+          top: 14px;
+          width: 0%;
+        }
+
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+
+        &:nth-child(4) {
+          left: 50%;
+          top: 14px;
+          width: 0%;
+        }
       }
     }
   }
@@ -91,7 +120,6 @@
   }
 
   &__brand {
-    display: none;
     justify-content: flex-start;
 
     .no-flexbox & {
@@ -117,22 +145,13 @@
 
   &__link {
     display: inherit;
-
-    @include media(normal) {
-      display: none;
-    }
   }
 
   &__title {
     color: get-color(rastaGray);
     font-size: 20px;
     font-weight: get-weight(bolder);
-    margin-left: 32px;
     text-align: left;
-
-    @include media(normal) {
-      display: none;
-    }
   }
 }
 
@@ -218,6 +237,12 @@
   &--opened {
     background-color: get-color(air);
     max-height: 165px;
+
+    .btn {
+      background-color: transparent;
+      border: 0;
+      color: get-color(color-brand-first-extra-dark);
+    }
 
     .nav__wrapper {
       min-height: 165px;
