@@ -6,11 +6,11 @@
 **/
 
 .footer {
-  background-color: get-color(wall);
+  background-color: get-color(color-interface-shade-light);
   height: auto;
 
   &__title {
-    color: get-color(rastaGray);
+    color: get-color(color-brand-first-extra-dark);
     display: block;
     font-size: 12px;
     font-weight: get-weight(bold);
@@ -34,7 +34,6 @@
   }
 
   &__list {
-    color: get-color(punch);
     font-size: 14px;
     text-align: left;
 
@@ -124,7 +123,7 @@
     padding: 24px 16px;
 
     .footer__image {
-      width: 112px;
+      width: 125px;
     }
 
     @include media(small) {
@@ -136,7 +135,6 @@
   }
 
   &__institutional-list {
-    color: get-color(punch);
     display: flex;
     font-size: 12px;
     font-weight: get-weight(bold);
@@ -162,8 +160,8 @@
   }
 
   &__copyright {
-    background-color: get-color(recusaGray, $opacity: .4);
-    color: get-color(blackNeutral, $key: darker, $opacity: .3);
+    background-color: get-color(color-interface-shade-medium);
+    color: get-color(color-interface-content-medium);
     font-size: 12px;
     padding: 8px 40px;
     text-align: center;
