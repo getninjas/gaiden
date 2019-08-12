@@ -28,9 +28,8 @@
 @import '../shared/generic/reset';
 @import '../shared/generic/links';
 @import '../shared/generic/paragraph';
-@import '../shared/generic/heading';
 @import '../shared/generic/html';
-@import '../shared/generic/body';
+@import './generic/body';
 @import '../shared/generic/content_centered';
 @import 'settings/links';
 @import 'components/button';
@@ -62,6 +61,7 @@
 @import 'components/price_tag';
 @import 'components/price_variation';
 @import 'components/media';
+@import 'generic/heading';
 
 @include generate-grid($default-breakpoints);
 @include generate-spaces;

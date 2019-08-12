@@ -21,13 +21,13 @@ h6,
 .card-title,
 .info-title,
 .caption-title {
-  color: get-color(rastaGray);
+  color: get-color(color-brand-first-extra-dark);
   font: {
     weight: get-weight(bolder);
   };
 
   small {
-    color: get-color(blackNeutral, lighter, $opacity: .5);
+    color: get-color(color-interface-content-medium);
     display: block;
     font-weight: get-weight(normal);
   }

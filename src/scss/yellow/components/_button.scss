@@ -115,13 +115,22 @@
     }
   }
 
+  &--regular,
+  &--high-contrast,
+  &--raised-reversed,
+  &--rounded,
   &__primary--default {
     background-color: get-color(color-brand-first-extra-dark);
-    border-radius: 40px;
+    border-radius: 4px;
     color: get-color(color-interface-content-light);
     font-size: 12px;
-    padding: 11px 24px;
+    padding: 17px 24px;
     transition: all .2s linear;
+
+    &:hover {
+      background-color: get-color(color-brand-first-medium);
+      color: get-color(color-interface-content-light);
+    }
   }
 
   &__clear--default {
@@ -129,6 +138,10 @@
     font-size: 12px;
     padding: 11px 24px;
     transition: all .2s linear;
+  }
+
+  &--high-contrast-reversed {
+    background-color: get-color(color-brand-first-light);
   }
 
   &[disabled] {

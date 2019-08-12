@@ -307,8 +307,8 @@
         color: get-color(punch);
 
         &:hover {
-          background: get-color((color: punch, opacity: .1));
-          color: get-color(punch);
+          background-color: get-color(color-brand-first-extra-dark);
+          color: get-color(color-brand-first-light);
         }
       }
     }
@@ -316,6 +316,10 @@
     &--rounded {
       @include media(normal) {
         border-radius: 40px;
+      }
+
+      &:hover {
+        background-color: get-color(color-brand-first-light);
       }
     }
   }
