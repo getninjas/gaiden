@@ -11,7 +11,7 @@
       }
 
       &::after {
-        content: "@#{$key}/#{$first-color}/#{$second-color}";
+        content: '@#{$key}/#{$first-color}/#{$second-color}';
       }
     }
   }
