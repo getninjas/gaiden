@@ -91,7 +91,7 @@
 .btn {
   background-color: transparent;
   border: 0;
-  border-radius: $borderRadiusButton;
+  border-radius: $border-radius-button;
   cursor: pointer;
   display: inline-block;
   font-weight: get-weight(bolder);
@@ -136,8 +136,8 @@
   }
 
   &--full-card {
-    border-bottom-left-radius: $borderRadius;
-    border-bottom-right-radius: $borderRadius;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
     border-top: get-border(default);
     border-top-left-radius: 0;
     border-top-right-radius: 0;

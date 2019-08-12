@@ -1,17 +1,17 @@
 @mixin media($start: false, $end: false) {
-  $startValue: if($start, get-breakpoint($start) + px, false);
-  $endValue: if($end, get-breakpoint($end) + px, false);
+  $start-value: if($start, get-breakpoint($start) + px, false);
+  $end-value: if($end, get-breakpoint($end) + px, false);
 
   @if ($start and $end) {
-    @media screen and (min-width:  $startValue) and (max-width: $endValue) {
+    @media screen and (min-width:  $start-value) and (max-width: $end-value) {
       @content;
     }
   } @else if ($start) {
-    @media screen and (min-width:  $startValue) {
+    @media screen and (min-width:  $start-value) {
       @content;
     }
   } @else if ($end) {
-    @media screen and (max-width:  $endValue) {
+    @media screen and (max-width:  $end-value) {
       @content;
     }
   } @else {

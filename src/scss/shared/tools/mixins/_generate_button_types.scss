@@ -1,61 +1,61 @@
-@mixin generate-button-types($buttonTypesList: $buttonTypes) {
-  @each $key, $buttonType in $buttonTypesList {
+@mixin generate-button-types($button-types-list: $button-types) {
+  @each $key, $button-type in $button-types-list {
     &--#{$key} {
-      @include _generate-button-types-properties($buttonType, default);
+      @include _generate-button-types-properties($button-type, default);
 
-      @if map-has-key($buttonType, hover) {
+      @if map-has-key($button-type, hover) {
         &:not([disabled]) {
           &:hover {
-            @include _generate-button-types-properties($buttonType, hover);
+            @include _generate-button-types-properties($button-type, hover);
           }
         }
       }
 
-      @if map-has-key($buttonType, active) {
+      @if map-has-key($button-type, active) {
         &:not([disabled]) {
           &:active {
-            @include _generate-button-types-properties($buttonType, active);
+            @include _generate-button-types-properties($button-type, active);
           }
         }
       }
 
-      @if map-has-key($buttonType, disabled) {
+      @if map-has-key($button-type, disabled) {
         &:disabled {
-          @include _generate-button-types-properties($buttonType, disabled);
+          @include _generate-button-types-properties($button-type, disabled);
         }
       }
     }
   }
 };
 
-@mixin _generate-button-types-properties($buttonType, $key) {
-  @if map-has-key($buttonType, $key) {
-    $buttonTypeConfig: map-get($buttonType, $key);
+@mixin _generate-button-types-properties($button-type, $key) {
+  @if map-has-key($button-type, $key) {
+    $button-type-config: map-get($button-type, $key);
 
-    @if map-has-key($buttonTypeConfig, background) {
-      background-color: get-color(map-get($buttonTypeConfig, background));
+    @if map-has-key($button-type-config, background) {
+      background-color: get-color(map-get($button-type-config, background));
     }
 
-    @if map-has-key($buttonTypeConfig, border) {
-      $style: map-deep-get($buttonTypeConfig, border, style);
-      $color: map-deep-get($buttonTypeConfig, border, color);
+    @if map-has-key($button-type-config, border) {
+      $style: map-deep-get($button-type-config, border, style);
+      $color: map-deep-get($button-type-config, border, color);
       border: get-border($style) get-color($color);
     }
 
-    @if map-has-key($buttonTypeConfig, textColor) {
-      color: get-color(map-get($buttonTypeConfig, textColor));
+    @if map-has-key($button-type-config, textColor) {
+      color: get-color(map-get($button-type-config, textColor));
     }
 
-    @if map-has-key($buttonTypeConfig, opacity) {
-      opacity: map-get($buttonTypeConfig, opacity);
+    @if map-has-key($button-type-config, opacity) {
+      opacity: map-get($button-type-config, opacity);
     }
 
-    @if map-has-key($buttonTypeConfig, borderTopColor) {
-      border-top-color: get-color(map-get($buttonTypeConfig, borderTopColor));
+    @if map-has-key($button-type-config, borderTopColor) {
+      border-top-color: get-color(map-get($button-type-config, borderTopColor));
     }
 
-    @if map-has-key($buttonTypeConfig, shadow) {
-      $shadow: map-deep-get($buttonTypeConfig, shadow, kind);
+    @if map-has-key($button-type-config, shadow) {
+      $shadow: map-deep-get($button-type-config, shadow, kind);
       box-shadow: get-shadow($shadow) get-color((color: blackNeutral, key: darker, opacity: .2));
     }
   }

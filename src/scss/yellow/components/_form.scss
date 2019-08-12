@@ -112,7 +112,7 @@
   &__input {
     background-color: get-color((color: blackNeutral, key: darker, opacity: .05));
     border: 1px solid get-color((color: rastaGray, opacity: .2));
-    border-radius: $borderRadiusButton;
+    border-radius: $border-radius-button;
     color: get-color((color: blackNeutral, key: darker, opacity: .5));
     display: block;
     font-size: 14px;

@@ -6,14 +6,14 @@
 
   @each $key, $breakpoint in $breakpoints {
     $columns: map-get($breakpoint, columns);
-    $gridSize: map-get($breakpoint, size);
+    $grid-size: map-get($breakpoint, size);
 
     @if $index == 1 {
       @include generate-grid-container($breakpoint, $breakpoints, $gutter);
       @include generate-grid-columns($breakpoint, $key, $gutter);
     } @else {
-      $previousBreakpoint: nth(map-keys($breakpoints), $index - 1);
-      @include media($previousBreakpoint) {
+      $previous-breakpoint: nth(map-keys($breakpoints), $index - 1);
+      @include media($previous-breakpoint) {
         @include generate-grid-container($breakpoint, $breakpoints, $gutter);
         @include generate-grid-columns($breakpoint, $key, $gutter);
       };
@@ -25,17 +25,17 @@
 };
 
 @mixin generate-grid-hide-helper($key, $breakpoints, $index) {
-  $numberBreakpoints:  length($breakpoints);
-  $previousBreakpoint: nth(map-keys($breakpoints), max(1, $index - 1));
-  $mediaQueryConfig: (start: $previousBreakpoint, end: $key);
+  $number-breakpoints:  length($breakpoints);
+  $previous-breakpoint: nth(map-keys($breakpoints), max(1, $index - 1));
+  $media-query-config: (start: $previous-breakpoint, end: $key);
 
   @if $index == 1 {
-    $mediaQueryConfig: (end: $key);
-  } @else if $index == $numberBreakpoints {
-    $mediaQueryConfig: (start: $previousBreakpoint);
+    $media-query-config: (end: $key);
+  } @else if $index == $number-breakpoints {
+    $media-query-config: (start: $previous-breakpoint);
   }
 
-  @include media($mediaQueryConfig...) {
+  @include media($media-query-config...) {
     .hide-#{$key} {
       display: none;
     }
@@ -110,7 +110,7 @@
 
 @mixin generate-grid-columns($breakpoint, $key, $gutter) {
   $columns: map-get($breakpoint, columns);
-  $gridSize: map-get($breakpoint, size);
+  $grid-size: map-get($breakpoint, size);
 
   [class*='col-#{$key}-'] {
     margin-left: percentage($gutter / 2);
@@ -133,12 +133,12 @@
 };
 
 @mixin generate-grid-container($breakpoint, $breakpoints, $gutter) {
-  $breakpointsLength: length($breakpoints);
+  $breakpoints-length: length($breakpoints);
   $index: index(map-values($breakpoints), $breakpoint);
-  $gridSize: map-get($breakpoint, size);
+  $grid-size: map-get($breakpoint, size);
 
   .container {
-    max-width: $gridSize + px;
+    max-width: $grid-size + px;
   }
 };
 
@@ -146,7 +146,7 @@
   @return nth(map-values($breakpoints), $index);
 };
 
-@function get-breakpoint($name, $breakpoints: $defaultBreakpoints) {
+@function get-breakpoint($name, $breakpoints: $default-breakpoints) {
   @return map-get(map-get($breakpoints, $name), size);
 };
 
@@ -161,5 +161,5 @@
 };
 
 @function calc-gutter-percentage($breakpoints) {
-  @return $gridGutter / calc-grid-max-size($breakpoints);
+  @return $grid-gutter / calc-grid-max-size($breakpoints);
 };
