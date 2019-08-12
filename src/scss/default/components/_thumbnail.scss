@@ -10,7 +10,7 @@
 **/
 
 .thumbnail {
-  border-radius: $borderRadius;
+  border-radius: $border-radius;
   height: initial;
   overflow: hidden;
   position: relative;
@@ -61,7 +61,7 @@
   }
 
   &__photo {
-    border-radius: $borderRadiusButton;
+    border-radius: $border-radius-button;
     display: block;
     width: 100%;
 

@@ -1,9 +1,9 @@
 //sass-lint:disable no-duplicate-properties
-@mixin radial($from, $to, $fromAngle: 0%, $toAngle: 100%) {
-  background: -moz-radial-gradient(center, circle cover, $from $fromAngle, $to $toAngle);
-  background: -webkit-gradient(radial, center center, 0, center center, $toAngle, color-stop(0%, $from), color-stop($toAngle, $to));
-  background: -webkit-radial-gradient(center, circle cover, $from $fromAngle, $to $toAngle);
-  background: -o-radial-gradient(center, circle cover, $from $fromAngle, $to $toAngle);
-  background: -ms-radial-gradient(center, circle cover, $from $fromAngle, $to $toAngle);
-  background: radial-gradient(center, circle cover, $from $fromAngle, $to $toAngle);
+@mixin radial($from, $to, $from-angle: 0%, $to-angle: 100%) {
+  background: -moz-radial-gradient(center, circle cover, $from $from-angle, $to $to-angle);
+  background: -webkit-gradient(radial, center center, 0, center center, $to-angle, color-stop(0%, $from), color-stop($to-angle, $to));
+  background: -webkit-radial-gradient(center, circle cover, $from $from-angle, $to $to-angle);
+  background: -o-radial-gradient(center, circle cover, $from $from-angle, $to $to-angle);
+  background: -ms-radial-gradient(center, circle cover, $from $from-angle, $to $to-angle);
+  background: radial-gradient(center, circle cover, $from $from-angle, $to $to-angle);
 }

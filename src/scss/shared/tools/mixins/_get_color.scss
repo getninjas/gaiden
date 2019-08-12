@@ -3,6 +3,6 @@
     @return get-color($color...);
   }
 
-  $colorFromPalette: map-deep-get($palette, $color, $key);
-  @return if($opacity < 1, rgba($colorFromPalette, $opacity), $colorFromPalette);
+  $color-from-palette: map-deep-get($palette, $color, $key);
+  @return if($opacity < 1, rgba($color-from-palette, $opacity), $color-from-palette);
 };

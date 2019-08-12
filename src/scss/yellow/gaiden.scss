@@ -60,6 +60,7 @@
 @import 'components/price_tag';
 @import 'components/price_variation';
 @import 'components/media';
+@import 'generic/heading';
 
-@include generate-grid($defaultBreakpoints);
+@include generate-grid($default-breakpoints);
 @include generate-spaces;
