@@ -101,6 +101,49 @@
   text-transform: uppercase;
   transition: border-color .2s ease-in, box-shadow .2s ease-in, background-color .2s ease-in, color .3s ease;
 
+  &__secondary--default {
+    border: 2px solid get-color(color-brand-first-extra-dark);
+    border-radius: 40px;
+    color: get-color(color-brand-first-extra-dark);
+    font-size: 12px;
+    padding: 10px 24px;
+    transition: all .2s linear;
+
+    &:hover {
+      background-color: get-color(color-brand-first-extra-dark);
+      color: get-color(color-interface-content-light);
+    }
+  }
+
+  &--regular,
+  &--high-contrast,
+  &--raised-reversed,
+  &--rounded,
+  &__primary--default {
+    background-color: get-color(color-brand-first-extra-dark);
+    border-radius: 4px;
+    color: get-color(color-interface-content-light);
+    font-size: 12px;
+    padding: 17px 24px;
+    transition: all .2s linear;
+
+    &:hover {
+      background-color: get-color(color-brand-first-medium);
+      color: get-color(color-interface-content-light);
+    }
+  }
+
+  &__clear--default {
+    color: get-color(color-interface-content-extra-dark);
+    font-size: 12px;
+    padding: 11px 24px;
+    transition: all .2s linear;
+  }
+
+  &--high-contrast-reversed {
+    background-color: get-color(color-brand-first-light);
+  }
+
   &[disabled] {
     cursor: not-allowed;
   }
@@ -146,7 +189,4 @@
   &--rounded {
     border-radius: 30px;
   }
-
-  @include generate-button-types;
-  @include generate-button-sizes;
 }
