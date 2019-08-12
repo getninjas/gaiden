@@ -1,0 +1,3 @@
+@function get-border($key) {
+  @return map-deep-get($border, $key);
+}

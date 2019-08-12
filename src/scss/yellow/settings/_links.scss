@@ -1,0 +1,9 @@
+a,
+.link {
+  color: get-color(color-brand-first-extra-dark);
+  text-decoration: none;
+
+  &:hover {
+    color: get-color(color-brand-first-medium);
+  }
+}

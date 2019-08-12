@@ -1,0 +1,15 @@
+//sass-lint:disable no-duplicate-properties
+@mixin backgrounds($background-map: ()) {
+  $vendors: (-moz- -webkit- -o- -ms- '');
+
+  @if $background-map {
+    @each $vendor in $vendors {
+      $bg-list: null;
+
+      @each $bg in $background-map {
+        $bg-list: join($bg-list, #{$vendor}linear-gradient($bg), comma);
+      };
+      background-image: $bg-list;
+    }
+  }
+}
