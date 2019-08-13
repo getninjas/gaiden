@@ -1,0 +1,3 @@
+@function get-weight($kind) {
+  @return map-deep-get($font-weight, $kind);
+}

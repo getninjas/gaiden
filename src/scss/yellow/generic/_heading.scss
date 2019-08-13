@@ -1,0 +1,169 @@
+/**
+  * @parent gaiden_css.generic
+  * @stylesheet gaiden_css.generic.headings.css Headings
+  *
+  * ## Tags and subtitle (small)
+  * We are using heading tags with small to simulate a description of a heading element.
+  * @demo demo/gaiden-css/generic/headings/demo.html
+  *
+  * ## Using classes
+  * @demo demo/gaiden-css/generic/headings/with-class/demo.html
+**/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.page-title,
+.section-title,
+.container-title,
+.card-title,
+.info-title,
+.caption-title {
+  color: get-color(color-brand-first-extra-dark);
+  font: {
+    weight: get-weight(bolder);
+  };
+
+  small {
+    color: get-color(color-interface-content-medium);
+    display: block;
+    font-weight: get-weight(normal);
+  }
+}
+
+.page-title,
+.section-title,
+.container-title,
+.card-title,
+.info-title,
+.caption-title {
+  &--high-contrast {
+    color: get-color(rastaGray);
+  }
+}
+
+h1,
+.page-title {
+  font-size: 24px;
+  margin-bottom: 4px;
+
+  small {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
+  @include media(normal) {
+    font-size: 48px;
+
+    small {
+      font-size: 30px;
+    }
+  }
+}
+
+h2,
+.section-title {
+  font-size: 20px;
+  margin-bottom: 4px;
+
+  small {
+    font-size: 16px;
+    margin-top: 4px;
+  }
+
+  @include media(normal) {
+    font-size: 36px;
+
+    small {
+      font-size: 24px;
+    }
+  }
+}
+
+h3,
+.container-title {
+  font-size: 18px;
+  margin-bottom: 4px;
+
+  small {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  @include media(normal) {
+    font-size: 24px;
+
+    small {
+      font-size: 16px;
+    }
+  }
+}
+
+h4,
+.card-title {
+
+  font: {
+    size: 16px;
+    weight: get-weight(bold);
+  }
+  margin-bottom: 4px;
+
+  small {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  @include media(normal) {
+    font-size: 20px;
+
+    small {
+      font-size: 16px;
+    }
+  }
+}
+
+h5,
+.info-title {
+  font: {
+    size: 14px;
+    weight: get-weight(bold);
+  }
+  margin-bottom: 4px;
+
+  small {
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  @include media(normal) {
+    font-size: 18px;
+
+    small {
+      font-size: 14px;
+    }
+  }
+}
+
+h6,
+.caption-title {
+  font: {
+    size: 13px;
+    weight: get-weight(bold);
+  }
+  margin-bottom: 4px;
+
+  small {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  @include media(normal) {
+    font-size: 16px;
+
+    small {
+      font-size: 14px;
+    }
+  }
+}

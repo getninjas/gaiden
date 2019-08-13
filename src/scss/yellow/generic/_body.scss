@@ -1,0 +1,17 @@
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  background-color: get-color(color-brand-first-light);
+  color: get-color(blackNeutral);
+  font: {
+    family: font-family('Lato');
+    size: 16px;
+    weight: get-weight(normal);
+  };
+  line-height: 1.3;
+}
+
+.icon__colored-black {
+  fill: $color-brand-first-extra-dark;
+}

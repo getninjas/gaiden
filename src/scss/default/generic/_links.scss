@@ -1,0 +1,10 @@
+a,
+.link {
+  color: get-color(punch);
+  text-decoration: none;
+
+  &:hover {
+    color: get-color(serious);
+  }
+}
+

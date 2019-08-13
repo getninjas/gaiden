@@ -1,0 +1,10 @@
+@mixin generate-button-sizes($button-sizes-list: $button-sizes) {
+  @each $key, $button-size in $button-sizes-list {
+    $padding-config: map-get($button-size, padding);
+
+    &--#{$key} {
+      font-size: map-get($button-size, fontSize) + px;
+      padding: nth($padding-config, 1) + px;
+    }
+  }
+};
