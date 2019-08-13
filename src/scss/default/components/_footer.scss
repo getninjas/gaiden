@@ -162,8 +162,8 @@
   }
 
   &__copyright {
-    background-color: get-color(recusaGray, $opacity: .4);
-    color: get-color(blackNeutral, $key: darker, $opacity: .3);
+    background-color: get-color(recusaGray);
+    color: get-color(blackNeutral);
     font-size: 12px;
     padding: 8px 40px;
     text-align: center;

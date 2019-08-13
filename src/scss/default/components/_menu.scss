@@ -37,7 +37,7 @@
 
   &--over {
     background-color: get-color(air);
-    box-shadow: 0 2px 4px 0 get-color(blackNeutral, $key: darker, $opacity: .1);
+    box-shadow: 0 2px 4px 0 get-color(blackNeutral);
     position: fixed;
     top: 0;
     width: 100%;
