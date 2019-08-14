@@ -55,7 +55,6 @@
 
     img {
       width: 125px;
-
       @include media(normal) {
         width: 190px;
       }

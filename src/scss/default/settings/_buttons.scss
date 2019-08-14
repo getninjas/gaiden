@@ -6,13 +6,13 @@
 
 /**
 *  @parent gaiden_css.configs
-*  @typedef {{}} gaiden_css.configs.button_size_config button-sizeConfig
+*  @typedef {{}} gaiden_css.configs.button_size_config button-size-config
 *  @option {Number} fontSize Defines font size for button.
 *  @option {Map<Number>} padding Defines padding for button and first value of map is `top/bottom` and second is `left/right`.
 *
 *  @body
 *    ## Using
-*      $button-sizeConfig: (
+*      $button-size-config: (
 *        fontSize: 16,
 *        padding: (10 15)
 *      );
