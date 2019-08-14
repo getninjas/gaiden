@@ -53,6 +53,14 @@
     line-height: .8;
     margin-top: 2px;
 
+    img {
+      width: 125px;
+
+      @include media(normal) {
+        width: 190px;
+      }
+    }
+
     small {
       color: get-color(color-interface-content-medium);
       display: block;
