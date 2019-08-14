@@ -43,8 +43,8 @@ checks:
   similar-code:
     enabled: false
 exclude_patterns:
+  - "bin"
+  - "dist"
   - "docs"
   - "node_modules"
-  - "dist"
-  - "scripts"
   - "package-lock.json"
