@@ -15,6 +15,17 @@
     display: inline-block;
   }
 
+  &__complement {
+    color: get-color(color-brand-first-medium);
+    display: none;
+    font-style: italic;
+    margin-left: 15px;
+
+    @include media(normal) {
+      display: inline-block;
+    }
+  }
+
   &__link {
     display: inline-block;
   }
@@ -32,7 +43,7 @@
   }
 
   &__name {
-    color: get-color(blackNeutral);
+    color: get-color(color-interface-content-medium);
     display: inline-block;
     font: {
       size: 20px;
@@ -42,8 +53,15 @@
     line-height: .8;
     margin-top: 2px;
 
+    img {
+      width: 125px;
+      @include media(normal) {
+        width: 190px;
+      }
+    }
+
     small {
-      color: get-color(punch);
+      color: get-color(color-interface-content-medium);
       display: block;
       font: {
         size: 10px;

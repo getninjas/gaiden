@@ -26,7 +26,7 @@
 .card {
   background-color: get-color(air);
   border: solid 1px get-color((color: recusaGray, opacity: .5));
-  border-radius: $borderRadius;
+  border-radius: $border-radius;
   box-shadow: get-shadow(medium) get-color((color: blackNeutral, opacity: .12));
   flex: 1 1 auto;
   transition: box-shadow ease-in-out .2s, transform ease-in-out .1s;

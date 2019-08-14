@@ -68,5 +68,8 @@
     "replace": "^0.3.0",
     "reset-css": "^2.2.0",
     "sass-lint": "^1.10.2"
+  },
+  "dependencies": {
+    "@getninjas/niten-tokens": "^1.1.0"
   }
 }

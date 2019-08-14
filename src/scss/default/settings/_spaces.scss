@@ -66,9 +66,9 @@ $spaces: (
 );
 
 @mixin generate-spaces($spaces: $spaces) {
-  @each $groupName, $spaceGroup in $spaces {
-    @each $key, $space in $spaceGroup {
-      .space-#{$groupName}-#{$key} {
+  @each $group-name, $space-group in $spaces {
+    @each $key, $space in $space-group {
+      .space-#{$group-name}-#{$key} {
         margin-top: $space + px;
       }
     }

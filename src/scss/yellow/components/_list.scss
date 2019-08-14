@@ -178,6 +178,7 @@
         background-color: get-color((color: breeze, key: darker, opacity: .4));
 
         a {
+          color: get-color(color-brand-first-extra-dark);
           transform: translateX(8px);
           width: 100%;
         }

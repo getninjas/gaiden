@@ -1,0 +1,20 @@
+//sass-lint:disable-all
+
+* {
+  box-sizing: border-box;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: get-weight(bold);
+}
+
+select,
+input,
+button,
+textarea {
+  font-family: inherit;
+}
