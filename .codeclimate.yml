@@ -1,5 +1,50 @@
+version: "2"
+prepare:
+  fetch:
+    - url: https://raw.githubusercontent.com/getninjas/eslint-config-getninjas/master/common.js
+      path: .eslint/common.js
+    - url: https://raw.githubusercontent.com/getninjas/eslint-config-getninjas/master/index.js
+      path: .eslint/eslint-config-getninjas.js
+    - url: https://raw.githubusercontent.com/getninjas/dotfiles/master/.sass-lint.yml
+      path: .sass-lint-codeclimate.yml
 plugins:
   eslint:
     enabled: true
     config:
-      config: .eslintrc.js
+      config: .eslintrc-codeclimate.json
+  sass-lint:
+    enabled: true
+    config:
+      config: .sass-lint-codeclimate.yml
+checks:
+  duplication:
+    enabled: true
+    config:
+      languages:
+        - javascript
+  fixme:
+    enabled: true
+  identical-code:
+    enabled: true
+  argument-count:
+    enabled: false
+  complex-logic:
+    enabled: false
+  file-lines:
+    enabled: false
+  method-complexity:
+    enabled: false
+  method-lines:
+    enabled: false
+  nested-control-flow:
+    enabled: false
+  return-statements:
+    enabled: false
+  similar-code:
+    enabled: false
+exclude_patterns:
+  - "docs"
+  - "node_modules"
+  - "dist"
+  - "scripts"
+  - "package-lock.json"
