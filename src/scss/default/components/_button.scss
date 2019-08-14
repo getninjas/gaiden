@@ -146,7 +146,4 @@
   &--rounded {
     border-radius: 30px;
   }
-
-  @include generate-button-types;
-  @include generate-button-sizes;
 }
