@@ -5,7 +5,8 @@ body {
   background-color: get-color(color-brand-first-light);
   color: get-color(blackNeutral);
   font: {
-    family: font-family('Lato');
+    // family: font-family('Lato');
+    family: font-family($base-font);
     size: 16px;
     weight: get-weight(normal);
   };

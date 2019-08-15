@@ -71,6 +71,7 @@ $colors: (
   color-interface-shade-dark: (base: $color-interface-shade-dark),
   color-interface-shade-medium: (base: $color-interface-shade-medium),
   color-interface-shade-light: (base: $color-interface-shade-light),
+  
   air: (base: $color-interface-content-light),
   blackNeutral: (base: $color-interface-content-dark, lighter: $color-interface-content-medium, darker: $color-interface-content-extra-dark),
   breeze: (base: $color-brand-second-light, darker: $color-brand-second-medium),
