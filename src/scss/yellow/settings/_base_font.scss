@@ -25,37 +25,15 @@
 
 //sass-lint:disable no-url-domains no-url-protocols
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
 
-$font-family-default: 'Source Sans Pro';
+
 $base-font: $font-family-default;
 
-$font-style-quote: italic;
-
-$size-font-xxl: 60px;
-$size-font-xl: 48px;
-$size-font-l: 32px;
-$size-font-m: 24px;
-$size-font-s: 20px;
-$size-font-xs: 16px;
-$size-font-xxs: 14px;
-
-$size-line-height-xxl: 68px;
-$size-line-height-xl: 56px;
-$size-line-height-l: 40px;
-$size-line-height-m: 32px;
-$size-line-height-s: 28px;
-$size-line-height-xs: 24px;
-$size-line-height-xxs: 22px;
-$size-line-height-equal: 1;
-
-$font-style-weight-light: 300;
-$font-style-weight-regular: 400;
-$font-style-weight-bold: 600;
-
 $font-weight: (
-  normal: 400,
-  bold: 700,
-  bolder: 900
+  light: $font-style-weight-light,
+  normal: $font-style-weight-regular,
+  bold: $font-style-weight-bold
 )
 
 

@@ -89,48 +89,66 @@
 
 
 .btn {
-  background-color: transparent;
+  // background-color: transparent;
   border: 0;
-  border-radius: $border-radius-button;
   cursor: pointer;
   display: inline-block;
-  font-weight: get-weight(bolder);
+  font-weight: get-weight($font-style-weight-bold);
   letter-spacing: .3px;
-  line-height: 1;
+  line-height: $size-line-height-equal;
   text-align: center;
   text-transform: uppercase;
   transition: border-color .2s ease-in, box-shadow .2s ease-in, background-color .2s ease-in, color .3s ease;
 
-  &__secondary--default {
-    border: 2px solid get-color(color-brand-first-extra-dark);
-    border-radius: 40px;
-    color: get-color(color-brand-first-extra-dark);
-    font-size: 12px;
-    padding: 10px 24px;
+  &__primary {
+    border-radius: $size-border-radius-pill;
     transition: all .2s linear;
 
-    &:hover {
+    &--small {
+      font-size: $size-font-xxs;
+      padding: $size-spacing-xxs $size-spacing-s;
+    }
+
+    &--default {
       background-color: get-color(color-brand-first-extra-dark);
       color: get-color(color-interface-content-light);
+
+      &:hover {
+        background-color: get-color(color-brand-first-medium);
+        color: get-color(color-interface-content-light);
+      }
     }
   }
 
+  &__secondary {
+    border-radius: $size-border-radius-pill;
+    transition: all .2s linear;        
+    
+    &--small {
+      font-size: $size-font-xxs;
+      padding: $size-spacing-xxs $size-spacing-s;
+    }
+
+    &--default {
+      background-color: $color-interface-content-light;
+      box-shadow: inset 0px 0px 0px 1px $color-brand-first-extra-dark;
+      color: get-color(color-brand-first-extra-dark);
+
+      &:hover {
+        background-color: get-color(color-brand-first-extra-dark);
+        color: get-color(color-interface-content-light);
+      }
+    }
+  }
   &--regular,
   &--high-contrast,
   &--raised-reversed,
-  &--rounded,
-  &__primary--default {
-    background-color: get-color(color-brand-first-extra-dark);
-    border-radius: 4px;
-    color: get-color(color-interface-content-light);
-    font-size: 12px;
+  &--rounded {
+    border-radius: 4px; 
+    font-size: $size-font-xxs;
     padding: 17px 24px;
     transition: all .2s linear;
-
-    &:hover {
-      background-color: get-color(color-brand-first-medium);
-      color: get-color(color-interface-content-light);
-    }
+     
   }
 
   &__clear--default {
