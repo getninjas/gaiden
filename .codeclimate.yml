@@ -11,11 +11,11 @@ plugins:
   eslint:
     enabled: true
     config:
-      config: .eslintrc-codeclimate.json
+      config: .eslintrc.json
   sass-lint:
     enabled: true
     config:
-      config: .sass-lint-codeclimate.yml
+      config: .sass-lint.yml
 checks:
   duplication:
     enabled: true
