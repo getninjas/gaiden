@@ -1,11 +1,13 @@
 {
-  "extends": "airbnb",
+  "extends": "airbnb-base",
+  "parser": "babel-eslint",
   "plugins": [
-    "react",
-    "jsx-a11y",
+    "babel",
     "import"
   ],
   "rules": {
-    "indent": 2
+    "indent": 2,
+    "`func-names": 0,
+    "curly": ["error", "all"]
   }
 }
