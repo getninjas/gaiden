@@ -7,7 +7,7 @@
   ],
   "rules": {
     "indent": 2,
-    "`func-names": 0,
+    "func-names": 0,
     "curly": ["error", "all"]
   }
 }
