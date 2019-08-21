@@ -25,6 +25,8 @@
 
 .picture {
   max-width: 100%;
+  border-radius: $size-border-radius-s;
+
 
   &__image {
     background-color: get-color(air);
