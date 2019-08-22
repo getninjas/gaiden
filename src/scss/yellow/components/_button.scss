@@ -92,7 +92,7 @@
   border: 0;
   cursor: pointer;
   display: inline-block;
-  font-weight: get-weight($font-style-weight-bold);
+  font-weight: $font-style-weight-bold;
   letter-spacing: .3px;
   line-height: $size-line-height-equal;
   text-align: center;
@@ -121,8 +121,8 @@
 
   &__secondary {
     border-radius: $size-border-radius-pill;
-    transition: all .2s linear;        
-    
+    transition: all .2s linear;
+
     &--small {
       font-size: $size-font-xxs;
       padding: $size-spacing-xxs $size-spacing-s;
@@ -164,11 +164,11 @@
   &--high-contrast,
   &--raised-reversed,
   &--rounded {
-    border-radius: $size-border-radius-s; 
+    border-radius: $size-border-radius-s;
     font-size: $size-font-xxs;
     padding: $size-spacing-xs $size-spacing-s;
     transition: all .2s linear;
-     
+
   }
 
   &__clear--default {
