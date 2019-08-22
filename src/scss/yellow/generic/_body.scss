@@ -15,3 +15,83 @@ body {
 .icon__colored-black {
   fill: $color-brand-first-extra-dark;
 }
+
+.body {
+  font-size: $size-font-xs;
+  line-height: $size-line-height-xs;
+  font-weight: $font-style-weight-regular;
+}
+
+.caption {
+  font-size: $size-font-xxs;
+  line-height: $size-line-height-xxs;
+  font-weight: $font-style-weight-regular;
+}
+
+.highlight {
+  font-weight: $font-style-weight-bold;
+
+  &--l {
+    font-size: $size-font-l;
+    line-height: $size-line-height-l;
+  }
+
+  &--m {
+    font-size: $size-font-m;
+    line-height: $size-line-height-m;
+  }
+
+  &--s {
+    font-size: $size-font-s;
+    line-height: $size-line-height-s;
+  }
+}
+
+.quote {
+  font-weight: $font-style-weight-regular;
+  font-style: $font-style-quote;
+
+  &--m {
+    font-size: $size-font-xs;
+    line-height: $size-line-height-xs;
+  }
+
+  &--s {
+    font-size: $size-font-xxs;
+    line-height: $size-line-height-xxs;
+  }
+}
+
+.text-color {
+  &--brand-first-extra-dark {
+    color: $color-brand-first-extra-dark;
+  }
+
+  &--interface-content-extra-dark {
+    color: $color-interface-content-extra-dark;
+  }
+
+  &--interface-content-dark {
+    color: $color-interface-content-dark;
+  }
+
+  &--interface-content-medium {
+    color: $color-interface-content-medium;
+  }
+
+  &--interface-content-light {
+    color: $color-interface-content-light;
+  }
+
+  &--interface-positive-extra-dark {
+    color: $color-interface-positive-extra-dark;
+  }
+
+  &--interface-alert-extra-dark {
+    color: $color-interface-alert-extra-dark;
+  }
+
+  &--interface-negative-extra-dark {
+    color: $color-interface-negative-extra-dark;
+  }
+}
