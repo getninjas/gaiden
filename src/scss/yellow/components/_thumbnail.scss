@@ -10,37 +10,36 @@
 **/
 
 .thumbnail {
-  border-bottom-right-radius: $size-border-radius-s;
-  border-bottom-left-radius: $size-border-radius-s;
+  border-bottom-right-radius: $size-border-radius-m;
+  border-bottom-left-radius: $size-border-radius-m;
   height: initial;
   overflow: hidden;
   position: relative;
-  
-  &__transition {
-    transition: transform .2s ease-in-out;
-    will-change: transform;
-  }
+  transition: transform .2s ease-in-out;
+  will-change: transform;
 
-  &__classic {
-    border-color: $color-interface-shade-dark;
-    font-weight: $font-style-weight-bold;
-    line-height: $size-line-height-equal;
+  &--action {
+    box-shadow: $shadow-bottom-level-1;
+    display: block;
+    max-height: 190px;
+    transform: scale(-1);
+    width: 98%;
 
-    &--small {
-      font-size: $size-font-xxs;
-      padding: $size-spacing-xxs $size-spacing-s;
+    &:hover {
+      box-shadow: $shadow-bottom-level-2;
+      transform: translate(0, -5px) scale(-1);
     }
-
-    &--default {
-      background-color: get-color(color-brand-first-extra-dark);
-      color: get-color(color-interface-content-light);
-
-      &:hover {
-        background-color: get-color(color-brand-first-medium);
-        color: get-color(color-interface-content-light);
+    
+    .thumbnail__photo {
+      transform: scale(-1);
+      
+      img {
+        height: auto;
+        max-height: 100%;
+        width: 100%;
       }
     }
-  }
+    }
 
   &__button {
     background-color: get-color(color-brand-first-extra-dark);
@@ -48,10 +47,10 @@
     font-size: $size-font-xxs;
     font-weight: get-weight(font-style-weight-bold);
     padding: $size-spacing-xxs;
-    position: relative;
     text-align: center;
     text-transform: uppercase;
-    top: 152px;
+    transform: scale(-1);
+    top: 156px;
     width: 100%;
     z-index: 1;
 
@@ -62,16 +61,12 @@
   }
 
   &__photo {
-    border-radius: $size-border-radius-s;
-    bottom: 30px;
+    border-radius: $size-border-radius-m;
     display: block;
-    position: relative;
     width: 100%;
 
     img {
-      border-radius: $size-border-radius-s;
       width: auto;
     }
   }
-}
-
+} 
