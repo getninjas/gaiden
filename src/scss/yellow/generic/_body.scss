@@ -95,3 +95,14 @@ body {
     color: $color-interface-negative-extra-dark;
   }
 }
+
+.body a,
+.caption a
+.quote--s a,
+.quote--l a {
+  color: $color-interface-action-dark;
+
+  &:hover {
+    color: $color-interface-action-extra-dark;
+  }
+}
