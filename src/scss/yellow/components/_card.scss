@@ -45,7 +45,6 @@
     &:hover {
       box-shadow: get-shadow(large) get-color((color: blackNeutral, opacity: .1));
       transform: translate(0, -5px);
-      height: 87%;
     }
   }
 
@@ -88,17 +87,13 @@
   }
 
   &__content {
-    color: get-color((color: blackNeutral, opacity: .6));
-    font-size: 14px;
-    font-style: italic;
     width: 100%;
   }
 
   &__footer {
-    color: get-color((color: blackNeutral, opacity: .78));
-    font-size: 12px;
     margin-top: auto;
     padding-top: 12px;
+    width: -webkit-fill-available;
   }
 
   &--highlighted {
