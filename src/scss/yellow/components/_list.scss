@@ -35,10 +35,7 @@
   flex-direction: column;
 
   &__title {
-    color: get-color(rastaGray);
     display: block;
-    font-size: 12px;
-    font-weight: get-weight(bold);
     margin-bottom: 20px;
     text-align: left;
     text-transform: uppercase;
@@ -54,10 +51,8 @@
 
   &__item {
     border-radius: 4px;
-    color: get-color(punch);
     display: flex;
     flex-shrink: 0;
-    font-size: 14px;
     margin-bottom: get-space(element, small);
     transition: background-color ease-in-out .3s;
     width: 25%;
@@ -67,6 +62,9 @@
     }
 
     a {
+      font-size: $size-font-xxs;
+      line-height: $size-line-height-xxs;
+      color: $color-interface-content-medium;
       transition: transform ease-in-out .3s;
     }
   }
