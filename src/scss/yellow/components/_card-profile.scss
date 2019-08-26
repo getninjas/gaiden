@@ -1,9 +1,15 @@
 .card-profile {
   align-content: space-between;
+  box-shadow: $shadow-bottom-level-1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0;
+  transition: all .2s linear;
+
+  &:hover {
+    box-shadow: $shadow-bottom-level-2;
+  }
 
   > div {
     width: 100%;
