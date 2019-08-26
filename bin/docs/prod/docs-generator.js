@@ -8,7 +8,6 @@ class DocsGenerator {
     sourceDir = './src/scss',
     minifiedDocsFile = './'
   ) {
-
     this.options = {
       docsDir: docsDir,
       timestamp: new Date().getTime(),
@@ -17,7 +16,7 @@ class DocsGenerator {
         --include-path ${sourceDir} \
         --sourceComments true \
         -o ${minifiedDocsFile} \
-        --recursive `
+        --recursive `,
     }
 
     this.replace = new FileReplacePath({exclude: 'node_modules,bin,src,dist'});
