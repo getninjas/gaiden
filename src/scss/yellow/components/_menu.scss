@@ -18,6 +18,7 @@
 
 .menu {
   background-color: get-color(color-interface-content-light);
+  border-bottom: 1px solid get-color(color-interface-shade-dark);
   @include media(small) {
     flex-direction: row;
   }
