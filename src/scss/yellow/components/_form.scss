@@ -31,6 +31,7 @@
     border: $size-border-width-thick $border-style-default $color-brand-first-extra-dark;
     box-shadow: $shadow-bottom-level-1;
     width: 100%;
+    z-index: 102;
   
     &__title {
       @extend .heading--s; 
@@ -109,7 +110,7 @@
     display: block;
 
     & + & {
-      margin-top: 16px;
+      margin-top: $size-spacing-s;
     }
 
     &--disabled {
