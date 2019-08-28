@@ -6,12 +6,8 @@
 **/
 
 .page-banner {
-  @include media(small) {
-    height: 576px;
-  }
   display: flex;
   flex-direction: row;
-  height: 430px;
   position: relative;
   width: 100%;
 
@@ -19,11 +15,15 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    padding: 30px;
+    padding: $size-spacing-xl 0;
     position: relative;
     text-align: center;
     width: 100%;
     z-index: 2;
+
+    @include media(normal) {
+      padding: $size-spacing-xxxl 0;
+    }
 
     [class*='-title'] {
       color: get-color(air);
@@ -38,6 +38,11 @@
     img {
       height: auto;
     }
+  }
+
+  & + .page-banner-over {
+    margin-top: -44px;
+    position: relative;
   }
 
   &--over {
@@ -56,5 +61,20 @@
     }
 
     margin-top: - $page-over-small + px;
+  }
+
+  .page-title-header {
+    color: get-color(color-brand-first-extra-dark);
+    font-size: 24px;
+
+    @include media(normal) {
+      font-size: 36px;
+    }
+
+    small {
+      color: get-color(color-interface-content-medium);
+      margin-top: $size-spacing-xxs;
+    }
+
   }
 }
