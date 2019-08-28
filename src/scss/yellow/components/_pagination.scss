@@ -26,7 +26,7 @@
     a {
       background-color: get-color(air);
       border: solid 1px get-color((color: rastaGray, opacity: .2));
-      border-radius: $border-radius;
+      border-radius: $size-border-radius-s;
       cursor: inherit;
       display: block;
       font-size: $size-font-xxs;

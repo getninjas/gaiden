@@ -1,12 +1,10 @@
 .form__steps {
-  margin-top: 0; 
   align-items: center;
   box-shadow: inset 0 1px 0 0 get-color((color: blackNeutral, opacity: .05));
   color: get-color((color: rastaGray, opacity: .5));
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   font: {
     size: 12px;
     weight: $font-style-weight-regular;
@@ -17,11 +15,11 @@
 
   &-item {
     background-color: $color-interface-shade-medium;
+    border-top: $size-border-width-thin $border-style-default $color-interface-shade-dark;
     color: $color-interface-content-medium;
+    flex: 1;
     font-size: $size-font-xxs;
     line-height: $size-line-height-xxs;
-    border-top: $size-border-width-thin $border-style-default $color-interface-shade-dark;
-    flex: 1;
     padding: $size-spacing-xxs;
     text-align: center;
 

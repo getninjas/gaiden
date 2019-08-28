@@ -26,21 +26,22 @@
   background-color: get-color(air);
   border: 1px solid get-color(rastaGray);
 }
+
 .section-form {
   .widget {
     border: $size-border-width-thick $border-style-default $color-brand-first-extra-dark;
     box-shadow: $shadow-bottom-level-1;
     width: 100%;
     z-index: 102;
-  
+
     &__title {
-      @extend .heading--s; 
+      @extend .heading--s;
       @extend .text-color--brand-first-extra-dark;
       border-bottom: 0;
       margin-bottom: 36px;
-    
+
       small {
-        @extend .subtitle--s; 
+        @extend .subtitle--s;
         @extend .text-color--interface-content-medium;
         display: block;
       }
@@ -167,7 +168,7 @@
   &__text {
     height: auto;
     min-height: 80px;
-  } 
+  }
 
   &__label {
     color: $color-interface-content-extra-dark;

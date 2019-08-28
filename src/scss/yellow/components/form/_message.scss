@@ -2,8 +2,8 @@
   display: inline-block;
   font-size: $size-font-xxs;
   font-style: normal;
-  line-height: $size-line-height-xxs;
   font-weight: $font-style-weight-regular;
+  line-height: $size-line-height-xxs;
   margin-top: $size-spacing-xxxs;
 
   &:empty {
@@ -11,6 +11,6 @@
   }
 
   &--invalid {
-    color: $color-interface-negative-extra-dark; 
+    color: $color-interface-negative-extra-dark;
   }
 }
