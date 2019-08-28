@@ -28,8 +28,6 @@
   }
 
   &__rating {
-    color: get-color(blackNeutral, lighter);
-    font-size: 12px;
     margin-top: 8px;
 
     img {
@@ -66,21 +64,20 @@
   }
 
   &__btn {
-    background-color: get-color(color-brand-first-light);
+    background-color: get-color(color-brand-first-dark);
     border: 0;
-    color: get-color(color-brand-first-extra-dark);
-    font-size: 12px;
-    font-weight: 700;
+    color: get-color(color-brand-first-light);
+    font-size: $size-font-xxs;
+    font-weight: $font-style-weight-bold;
     margin-bottom: 0;
-    padding: 12px;
+    padding: $size-spacing-xxs $size-spacing-s;
     text-align: center;
     text-transform: uppercase;
-    transition: background-color ease-in-out .2s, color ease-in-out .2s;
     width: 100%;
     z-index: 1;
 
     &:hover {
-      background-color: get-color(color-brand-first-extra-dark);
+      background-color: get-color(color-brand-first-medium);
       color: get-color(color-brand-first-light);
     }
   }

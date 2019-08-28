@@ -24,12 +24,16 @@
 
 
 //sass-lint:disable no-url-domains no-url-protocols
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i&display=swap');
+@import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
 
-$base-font: 'Lato';
+
+$base-font: $font-family-default;
 
 $font-weight: (
-  normal: 400,
-  bold: 700,
-  bolder: 900
+  light: $font-style-weight-light,
+  normal: $font-style-weight-regular,
+  bold: $font-style-weight-bold
 )
+
+

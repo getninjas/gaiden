@@ -29,8 +29,9 @@
       border-radius: $size-border-radius-s;
       cursor: inherit;
       display: block;
-      font-size: 14px;
-      font-weight: get-weight(bold);
+      font-size: $size-font-xxs;
+      font-weight: $font-style-weight-regular;
+      line-height: $size-line-height-equal;
       padding: 4px 9px;
       transition: background-color .2s, color .2s, border-color .2s;
       width: 100%;

@@ -24,19 +24,11 @@
   &__title {
     color: inherit;
     flex: 1;
-    font-size: 14px;
     width: 100%;
 
     .card__title {
       color: get-color((color: blackNeutral, key: darker, opacity: .6));
       font-size: inherit;
-    }
-
-    small {
-      color: get-color((color: blackNeutral, key: darker, opacity: .6));
-      font-size: 12px;
-      font-style: normal;
-      font-weight: get-weight(normal);
     }
   }
 

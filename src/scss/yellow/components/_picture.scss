@@ -24,6 +24,7 @@
 **/
 
 .picture {
+  border-radius: $size-border-radius-s;
   max-width: 100%;
 
   &__image {

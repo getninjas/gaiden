@@ -10,10 +10,7 @@
   height: auto;
 
   &__title {
-    color: get-color(color-brand-first-extra-dark);
     display: block;
-    font-size: 12px;
-    font-weight: get-weight(bold);
     text-align: left;
     text-transform: uppercase;
     width: 100%;
@@ -136,9 +133,10 @@
 
   &__institutional-list {
     display: flex;
-    font-size: 12px;
-    font-weight: get-weight(bold);
+    font-size: $size-font-xxs;
+    font-weight: $font-style-weight-bold;
     justify-content: space-between;
+    line-height: $size-line-height-xxs;
     padding-left: 0;
     padding-right: 0;
     text-align: right;
@@ -151,6 +149,13 @@
         margin: auto auto auto 20px;
       }
     }
+
+    a {
+      :hover {
+        color: $color-interface-content-medium;
+        display: block;
+      }
+    }
   }
 
   &__item {
@@ -161,8 +166,6 @@
 
   &__copyright {
     background-color: get-color(color-interface-shade-medium);
-    color: get-color(color-interface-content-medium);
-    font-size: 12px;
     padding: 8px 40px;
     text-align: center;
   }

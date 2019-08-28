@@ -10,7 +10,8 @@
 **/
 
 .thumbnail {
-  border-radius: $border-radius;
+  border-bottom-left-radius: $size-border-radius-m;
+  border-bottom-right-radius: $size-border-radius-m;
   height: initial;
   overflow: hidden;
   position: relative;
@@ -18,20 +19,15 @@
   will-change: transform;
 
   &--action {
-    box-shadow: 0 -2px 4px 0 get-color((color: blackNeutral, opacity: .1));
+    box-shadow: $shadow-bottom-level-1;
     display: block;
     max-height: 190px;
     transform: scale(-1);
     width: 98%;
 
     &:hover {
-      box-shadow: 0 -4px 8px 0 get-color((color: blackNeutral, opacity: .1));
+      box-shadow: $shadow-bottom-level-2;
       transform: translate(0, -5px) scale(-1);
-
-      .thumbnail__button  {
-        background-color: get-color(punch);
-        color: get-color(air);
-      }
     }
 
     .thumbnail__photo {
@@ -46,22 +42,26 @@
   }
 
   &__button {
-    background-color: get-color(air);
-    color: get-color(punch);
-    font-size: 12px;
-    font-weight: get-weight(bold);
-    margin-bottom: 0;
-    padding: 12px;
+    background-color: get-color(color-brand-first-extra-dark);
+    color: get-color(color-interface-content-light);
+    font-size: $size-font-xxs;
+    font-weight: get-weight(font-style-weight-bold);
+    padding: $size-spacing-xxs;
     text-align: center;
     text-transform: uppercase;
+    top: 156px;
     transform: scale(-1);
-    transition: background-color ease-in-out .2s, color ease-in-out .2s;
     width: 100%;
     z-index: 1;
+
+    &:hover {
+      background-color: get-color(color-brand-first-medium);
+      color: get-color(color-interface-content-light);
+    }
   }
 
   &__photo {
-    border-radius: $border-radius-button;
+    border-radius: $size-border-radius-m;
     display: block;
     width: 100%;
 

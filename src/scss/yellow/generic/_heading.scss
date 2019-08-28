@@ -167,3 +167,98 @@ h6,
     }
   }
 }
+
+.heading {
+  &--xl {
+    font-size: $size-font-xl;
+    font-weight: $font-style-weight-light;
+    line-height: $size-line-height-xl;
+
+    @include media(normal) {
+      font-size: $size-font-xxl;
+      line-height: $size-line-height-xxl;
+    }
+  }
+
+  &--l {
+    font-size: $size-font-l;
+    font-weight: $font-style-weight-light;
+    line-height: $size-line-height-l;
+
+    @include media(normal) {
+      font-size: $size-font-xl;
+      line-height: $size-line-height-xl;
+    }
+  }
+
+  &--m {
+    font-size: $size-font-m;
+    font-weight: $font-style-weight-light;
+    line-height: $size-line-height-m;
+
+    @include media(normal) {
+      font-size: $size-font-l;
+      line-height: $size-line-height-l;
+    }
+  }
+
+  &--s {
+    font-size: $size-font-s;
+    font-weight: $font-style-weight-light;
+    line-height: $size-line-height-s;
+
+    @include media(normal) {
+      font-size: $size-font-m;
+      line-height: $size-line-height-m;
+    }
+  }
+
+  &--xs {
+    font-size: $size-font-xs;
+    font-weight: $font-style-weight-regular;
+    line-height: $size-line-height-xs;
+  }
+}
+
+.heading--xl,
+.heading--l,
+.heading--m,
+.heading--s {
+  strong {
+    font-weight: $font-style-weight-regular;
+  }
+}
+
+.subtitle {
+  font-weight: $font-style-weight-regular;
+
+  &--l {
+    font-size: $size-font-s;
+    line-height: $size-line-height-s;
+
+    @include media(normal) {
+      font-size: $size-font-m;
+      line-height: $size-line-height-m;
+    }
+  }
+
+  &--m {
+    font-size: $size-font-xs;
+    line-height: $size-line-height-xs;
+
+    @include media(normal) {
+      font-size: $size-font-s;
+      line-height: $size-line-height-s;
+    }
+  }
+
+  &--s {
+    font-size: $size-font-xxs;
+    line-height: $size-line-height-xxs;
+
+    @include media(normal) {
+      font-size: $size-font-xs;
+      line-height: $size-line-height-xs;
+    }
+  }
+}

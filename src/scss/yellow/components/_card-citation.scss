@@ -16,11 +16,8 @@
   }
 
   &__title {
-    color: get-color(blackNeutral);
     display: flex;
     flex-wrap: wrap;
-    font-size: inherit;
-    font-weight: get-weight(normal);
     margin-bottom: 0;
     width: 100%;
 
@@ -31,7 +28,6 @@
     }
 
     small {
-      font-size: inherit;
       margin-right: 4px;
       margin-top: 0;
     }
@@ -40,9 +36,5 @@
   &__text {
     display: block;
     padding-left: 12px;
-  }
-
-  &__link {
-    font-weight: get-weight(bold);
   }
 }

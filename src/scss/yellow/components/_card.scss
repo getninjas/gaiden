@@ -82,27 +82,21 @@
 
     .btn--full-card {
       bottom: 0;
-      font-size: 12px;
       left: 0;
       margin-bottom: 0;
-      padding: 14px 0;
       position: absolute;
       width: 100%;
     }
   }
 
   &__content {
-    color: get-color((color: blackNeutral, opacity: .6));
-    font-size: 14px;
-    font-style: italic;
     width: 100%;
   }
 
   &__footer {
-    color: get-color((color: blackNeutral, opacity: .78));
-    font-size: 12px;
     margin-top: auto;
     padding-top: 12px;
+    width: -webkit-fill-available;
   }
 
   &--highlighted {

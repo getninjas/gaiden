@@ -5,13 +5,106 @@ body {
   background-color: get-color(color-brand-first-light);
   color: get-color(blackNeutral);
   font: {
-    family: font-family('Lato');
-    size: 16px;
-    weight: get-weight(normal);
+    family: $font-family-default;
+    size: $size-font-xs;
+    weight: $font-style-weight-regular;
   };
-  line-height: 1.3;
+  line-height: $size-line-height-xxs;
 }
 
 .icon__colored-black {
   fill: $color-brand-first-extra-dark;
+}
+
+.body {
+  font-size: $size-font-xs;
+  font-weight: $font-style-weight-regular;
+  line-height: $size-line-height-xs;
+}
+
+.caption {
+  font-size: $size-font-xxs;
+  font-weight: $font-style-weight-regular;
+  line-height: $size-line-height-xxs;
+}
+
+.highlight {
+  font-weight: $font-style-weight-bold;
+
+  &--l {
+    font-size: $size-font-l;
+    line-height: $size-line-height-l;
+  }
+
+  &--m {
+    font-size: $size-font-m;
+    line-height: $size-line-height-m;
+  }
+
+  &--s {
+    font-size: $size-font-s;
+    line-height: $size-line-height-s;
+  }
+}
+
+.quote {
+  font-style: $font-style-quote;
+  font-weight: $font-style-weight-regular;
+
+  &--m {
+    font-size: $size-font-xs;
+    line-height: $size-line-height-xs;
+  }
+
+  &--s {
+    font-size: $size-font-xxs;
+    line-height: $size-line-height-xxs;
+  }
+}
+
+.text-color {
+  &--brand-first-extra-dark {
+    color: $color-brand-first-extra-dark;
+  }
+
+  &--interface-content-extra-dark {
+    color: $color-interface-content-extra-dark;
+  }
+
+  &--interface-content-dark {
+    color: $color-interface-content-dark;
+  }
+
+  &--interface-content-medium {
+    color: $color-interface-content-medium;
+  }
+
+  &--interface-content-light {
+    color: $color-interface-content-light;
+  }
+
+  &--interface-positive-extra-dark {
+    color: $color-interface-positive-extra-dark;
+  }
+
+  &--interface-alert-extra-dark {
+    color: $color-interface-alert-extra-dark;
+  }
+
+  &--interface-negative-extra-dark {
+    color: $color-interface-negative-extra-dark;
+  }
+}
+
+.body,
+.caption,
+.quote--s,
+.quote--l {
+  a {
+    color: $color-interface-action-dark;
+  }
+
+  &:hover {
+    color: $color-interface-action-extra-dark;
+  }
 }
