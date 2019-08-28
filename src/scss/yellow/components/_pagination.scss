@@ -25,7 +25,7 @@
 
     a {
       background-color: get-color(air);
-      border: solid 1px get-color((color: rastaGray, opacity: .2));
+      border: solid 1px get-color(color-interface-content-dark);
       border-radius: $size-border-radius-s;
       cursor: inherit;
       display: block;
@@ -62,7 +62,8 @@
     &:hover {
       &:not(.pagination__item--disabled) {
         a {
-          border-color: get-color(serious);
+          background-color: get-color(color-interface-content-dark);
+          color: get-color(color-interface-content-light);
         }
       }
     }
