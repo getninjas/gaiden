@@ -18,14 +18,14 @@ body {
 
 .body {
   font-size: $size-font-xs;
-  line-height: $size-line-height-xs;
   font-weight: $font-style-weight-regular;
+  line-height: $size-line-height-xs;
 }
 
 .caption {
   font-size: $size-font-xxs;
-  line-height: $size-line-height-xxs;
   font-weight: $font-style-weight-regular;
+  line-height: $size-line-height-xxs;
 }
 
 .highlight {
@@ -48,8 +48,8 @@ body {
 }
 
 .quote {
-  font-weight: $font-style-weight-regular;
   font-style: $font-style-quote;
+  font-weight: $font-style-weight-regular;
 
   &--m {
     font-size: $size-font-xs;
@@ -96,11 +96,13 @@ body {
   }
 }
 
-.body a,
-.caption a
-.quote--s a,
-.quote--l a {
-  color: $color-interface-action-dark;
+.body,
+.caption,
+.quote--s,
+.quote--l {
+  a {
+    color: $color-interface-action-dark;
+  }
 
   &:hover {
     color: $color-interface-action-extra-dark;

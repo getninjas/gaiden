@@ -62,9 +62,9 @@
     }
 
     a {
+      color: $color-interface-content-medium;
       font-size: $size-font-xxs;
       line-height: $size-line-height-xxs;
-      color: $color-interface-content-medium;
       transition: transform ease-in-out .3s;
     }
   }

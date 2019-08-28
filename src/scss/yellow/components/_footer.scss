@@ -150,9 +150,11 @@
       }
     }
 
-    a:hover {
-      color: $color-interface-content-medium;
-      display: block;
+    a {
+      :hover {
+        color: $color-interface-content-medium;
+        display: block;
+      }
     }
   }
 

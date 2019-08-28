@@ -130,7 +130,7 @@
 
     &--default {
       background-color: $color-interface-content-light;
-      box-shadow: inset 0px 0px 0px 1px $color-brand-first-extra-dark;
+      box-shadow: inset 0 0 0 1px $color-brand-first-extra-dark;
       color: get-color(color-brand-first-extra-dark);
 
       &:hover {
@@ -141,14 +141,15 @@
   }
 
   &__classic {
-    line-height: $size-line-height-equal;
     border-color: $color-interface-shade-dark;
     font-weight: $font-style-weight-bold;
+    line-height: $size-line-height-equal;
 
     &--small {
       font-size: $size-font-xxs;
       padding: $size-spacing-xxs $size-spacing-s;
     }
+
     &--default {
       background-color: get-color(color-brand-first-extra-dark);
       color: get-color(color-interface-content-light);
