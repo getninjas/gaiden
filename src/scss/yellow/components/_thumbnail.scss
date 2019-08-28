@@ -15,7 +15,7 @@
   height: initial;
   overflow: hidden;
   position: relative;
-  transition: transform .2s ease-in-out;
+  transition: all .2s ease-in-out;
   will-change: transform;
 
   &--action {

@@ -24,12 +24,11 @@
 **/
 
 .card {
-  background-color: get-color(air);
-  border: solid 1px get-color((color: recusaGray, opacity: .5));
-  border-radius: $border-radius;
-  box-shadow: get-shadow(medium) get-color((color: blackNeutral, opacity: .12));
+  background-color: get-color(color-interface-content-light);
+  border: solid 1px get-color(color-interface-shade-dark);
+  border-radius: $size-border-radius-m;
   flex: 1 1 auto;
-  transition: box-shadow ease-in-out .2s, transform ease-in-out .1s;
+  transition: all ease-in-out .2s, transform ease-in-out .1s;
   width: inherit;
 
   > a {
@@ -41,9 +40,13 @@
     padding: 24px;
   }
 
+  &--shadow {
+    box-shadow: $shadow-bottom-level-1;
+  }
+
   &--hover {
     &:hover {
-      box-shadow: get-shadow(large) get-color((color: blackNeutral, opacity: .1));
+      box-shadow: $shadow-bottom-level-2;
       transform: translate(0, -5px);
     }
   }
