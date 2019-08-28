@@ -1,13 +1,16 @@
 .form__message {
   display: inline-block;
-  font-size: 12px;
-  font-style: italic;
+  font-size: $size-font-xxs;
+  font-style: normal;
+  line-height: $size-line-height-xxs;
+  font-weight: $font-style-weight-regular;
+  margin-top: $size-spacing-xxxs;
 
   &:empty {
     display: none;
   }
 
   &--invalid {
-    color: get-color(bloody);
+    color: $color-interface-negative-extra-dark; 
   }
 }

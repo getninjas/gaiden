@@ -194,7 +194,7 @@
   }
 
   &__item {
-    font-size: 12px;
+    font-size: $size-font-xxs;
     opacity: 0;
     text-align: center;
     text-transform: uppercase;
@@ -203,7 +203,7 @@
     transition-delay: .1s;
 
     a {
-      font-weight: 600;
+      font-weight: $font-style-weight-bold;
       margin-left: 24px;
     }
 
@@ -225,7 +225,7 @@
 
     &--wellcome {
       color: get-color(rastaGray);
-      font-weight: 600;
+      font-weight: $font-style-weight-bold;
     }
 
     @include media(normal) {

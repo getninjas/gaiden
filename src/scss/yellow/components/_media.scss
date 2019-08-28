@@ -29,19 +29,6 @@
       border-radius: $border-radius;
       max-height: 170px;
     }
-
-    .media__title,
-    .media__content {
-      font-size: 14px;
-    }
-  }
-
-  &--no-image {
-    .media__title {
-      color: get-color(punch);
-      font-size: 16px;
-      font-style: italic;
-    }
   }
 
   &__image {
@@ -53,16 +40,11 @@
   }
 
   &__title {
-    color: get-color(rastaGray);
     width: 100%;
   }
 
   &__description {
     display: inline-table;
     width: 100%;
-  }
-
-  &__content {
-    color: get-color(blackNeutral, lighter);
   }
 }

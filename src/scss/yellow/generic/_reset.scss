@@ -5,16 +5,16 @@
 }
 
 em {
-  font-style: italic;
+  font-style: $font-style-quote;
 }
 
 strong {
-  font-weight: get-weight(bold);
+  font-weight: get-weight($font-style-weight-regular);
 }
 
 select,
 input,
 button,
 textarea {
-  font-family: inherit;
+  font-family: $font-family-default;
 }
