@@ -1,9 +1,8 @@
 .card-citation {
-  align-content: space-between;
   box-shadow: $shadow-bottom-level-1;
   display: flex;
   flex-direction: column;
-  flex-flow: row wrap;
+  flex-flow: column;
   transition: all .2s linear;
 
   &__header {
@@ -18,6 +17,7 @@
   &__title {
     display: flex;
     flex-wrap: wrap;
+    line-height: $size-line-height-equal;
     margin-bottom: 0;
     width: 100%;
 
@@ -35,6 +35,5 @@
 
   &__text {
     display: block;
-    padding-left: 12px;
   }
 }

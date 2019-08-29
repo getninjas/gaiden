@@ -20,7 +20,7 @@
     font-size: initial;
 
     & + & {
-      margin-left: 6px;
+      margin-left: $size-spacing-xxs;
     }
 
     a {
@@ -32,7 +32,7 @@
       font-size: $size-font-xxs;
       font-weight: $font-style-weight-regular;
       line-height: $size-line-height-equal;
-      padding: 4px 9px;
+      padding: $size-spacing-xxxs;
       transition: background-color .2s, color .2s, border-color .2s;
       width: 100%;
     }
@@ -42,6 +42,11 @@
       display: inline-block;
       font-size: initial;
       padding: 6px 5px;
+
+      &,
+      & a {
+        cursor: default;
+      }
     }
 
     &--disabled {
