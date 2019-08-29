@@ -19,15 +19,16 @@
 .menu {
   background-color: get-color(color-interface-content-light);
   border-bottom: 1px solid get-color(color-interface-shade-dark);
-  @include media(small) {
-    flex-direction: row;
-  }
-
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-shrink: 0;
   justify-content: space-between;
-  padding: 24px;
+  padding: $size-spacing-xxs 0;
+
+  @include media(normal) {
+    flex-direction: column;
+    padding: $size-spacing-xs 0;
+  }
 
   .no-flexbox & {
     @include clearfix;
@@ -161,8 +162,9 @@
   left: 0;
   max-height: 0;
   overflow: hidden;
+  padding: $size-spacing-xs 0 $size-spacing-xxs;
   position: absolute;
-  top: 64px;
+  top: 53px;
   transition: max-height .3s linear;
   width: 100%;
   z-index: 3;
@@ -170,6 +172,7 @@
   @include media(normal) {
     align-content: center;
     max-height: 100%;
+    padding: 0;
     position: relative;
     top: 0;
   }
@@ -217,7 +220,7 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 25px;
+      margin-bottom: $size-spacing-xs;
 
       @include media(normal) {
         margin-bottom: 0;
@@ -237,7 +240,7 @@
 
   &--opened {
     background-color: get-color(air);
-    max-height: 165px;
+    max-height: 85px;
 
     .btn {
       background-color: transparent;
@@ -246,11 +249,7 @@
     }
 
     .nav__wrapper {
-      min-height: 165px;
-    }
-
-    .nav__list {
-      padding: get-space(element, medium) 0;
+      min-height: 85px;
     }
 
     .nav__item {
