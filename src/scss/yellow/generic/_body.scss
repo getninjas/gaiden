@@ -16,10 +16,9 @@ body {
   fill: $color-brand-first-extra-dark;
 }
 
-.body,
-.caption,
-.quote--s,
-.quote--l {
+.typography__size-caption,
+.typography__size-quote--s,
+.typography__size-quote--l {
   a {
     color: $color-interface-action-dark;
   }
