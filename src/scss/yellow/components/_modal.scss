@@ -20,11 +20,11 @@ body {
   z-index: 999;
 
   &__card {
-    background-color: get-color(air);
+    background-color: $color-interface-content-light;
     border-radius: 6px;
     box-shadow: get-color((color: blackNeutral, opacity: .12));
     box-sizing: border-box;
-    color: get-color(rastaGray);
+    color: $color-interface-content-medium;
     left: 50%;
     max-width: 500px;
     opacity: 0;
@@ -49,7 +49,7 @@ body {
   }
 
   &__avatar {
-    background-color: get-color(recusaGray);
+    background-color: $color-interface-shade-dark;
     border-radius: 50%;
     display: block;
     height: 180px;
@@ -92,7 +92,7 @@ body {
   }
 
   &__title {
-    color: get-color(rastaGray);
+    color: $color-interface-content-medium;
     font-size: 36px;
     margin: 0;
   }
