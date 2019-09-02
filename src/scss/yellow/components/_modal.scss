@@ -1,0 +1,140 @@
+$modal-overlay: rgba(0, 0, 0, $opacity-translucent);
+
+body {
+  .opened-modal {
+    overflow-y: hidden;
+  }
+}
+
+.modal {
+  background-color: $modal-overlay;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  padding: 0 12px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity .2s linear;
+  visibility: hidden;
+  width: 100%;
+  z-index: 999;
+
+  &__card {
+    background-color: $color-interface-content-light;
+    border-radius: 6px;
+    box-shadow: $color-interface-content-medium;
+    box-sizing: border-box;
+    color: $color-interface-content-medium;
+    left: 50%;
+    max-width: 500px;
+    opacity: 0;
+    padding: $size-spacing-s;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -25%);
+    transition: opacity .25s linear, transform .3s cubic-bezier(.175, .885, .32, 1.275);
+    transition-delay: .2s;
+    width: 100%;
+    z-index: 0;
+
+    &--small {
+      max-width: 400px;
+      padding: 0 48px 48px;
+    }
+
+    @include media(normal) {
+      padding: $size-spacing-l;
+    }
+  }
+
+  &__avatar {
+    background-color: $color-interface-shade-dark;
+    border-radius: 50%;
+    display: block;
+    height: 180px;
+    left: calc(50% - 90px);
+    margin: 0 auto 24px;
+    position: absolute;
+    top: -90px;
+    width: 180px;
+  }
+
+  &__body {
+    padding-top: calc(100px + #{$size-spacing-xs});
+
+    @include media(normal) {
+      padding-top: calc(47px + #{$size-spacing-m});
+    }
+  }
+
+  &__icon {
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    overflow: hidden;
+    position: absolute;
+    right: 12px;
+    top: 0;
+    width: 25px;
+    z-index: 2;
+  }
+
+  &__close-button {
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+    z-index: -1;
+  }
+
+  &__title {
+    color: $color-interface-content-medium;
+    font-size: 36px;
+    margin: 0;
+  }
+
+  &__text {
+    color: $color-interface-content-medium;
+    font-size: 18px;
+  }
+
+  &__actions {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+
+    a,
+    button {
+      width: 100%;
+    }
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+
+    .modal__card {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &--inactive {
+    opacity: 0;
+    transition: opacity .2s linear, visibility .2s linear;
+    transition-delay: .2s;
+    visibility: hidden;
+
+    .modal__card {
+      opacity: 0;
+      transform: translate(-50%, -25%);
+      transition: opacity .25s linear, transform .3s cubic-bezier(.6, -.28, .735, .045);
+    }
+  }
+}
