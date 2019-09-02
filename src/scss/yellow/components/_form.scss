@@ -35,14 +35,14 @@
     z-index: 102;
 
     &__title {
-      @extend .heading--s;
-      @extend .text-color--brand-first-extra-dark;
+      @extend .typography__size-heading--s; 
+      @extend .typography__color--first-extra-dark;
       border-bottom: 0;
       margin-bottom: 36px;
 
       small {
-        @extend .subtitle--s;
-        @extend .text-color--interface-content-medium;
+        @extend .typography__size-subtitle--s; 
+        @extend .typography__color--content-medium;
         display: block;
       }
     }

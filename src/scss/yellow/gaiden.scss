@@ -81,6 +81,7 @@
 @import 'components/media';
 @import 'components/modal';
 @import 'generic/heading';
+@import 'generic/typography';
 
 @include generate-grid($default-breakpoints);
 @include generate-spaces;

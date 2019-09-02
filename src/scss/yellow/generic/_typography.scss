@@ -1,0 +1,221 @@
+.typography {
+  &__color {
+    &--first-extra-dark {
+      color: $color-brand-first-extra-dark;
+    }
+
+    &--content-extra-dark {
+      color: $color-interface-content-extra-dark;
+    }
+
+    &--content-dark {
+      color: $color-interface-content-dark;
+    }
+
+    &--content-medium {
+      color: $color-interface-content-medium;
+    }
+
+    &--content-light {
+      color: $color-interface-content-light;
+    }
+
+    &--positive-extra-dark {
+      color: $color-interface-positive-extra-dark;
+    }
+
+    &--alert-extra-dark {
+      color: $color-interface-alert-extra-dark;
+    }
+
+    &--negative-extra-dark {
+      color: $color-interface-negative-extra-dark;
+    }
+  }
+
+  &__size {
+    &-heading {
+      &--xl {
+        font-size: $size-font-xl;
+        line-height: $size-line-height-xl;
+        font-weight: $font-style-weight-light;
+
+        @include media(normal) {
+          font-size: $size-font-xxl;
+          line-height: $size-line-height-xxl;
+
+          small {
+            margin-top: $size-spacing-s;
+          }
+        }
+        small {
+          margin-top: $size-spacing-xs;
+        }
+      }
+
+      &--l {
+        font-size: $size-font-l;
+        line-height: $size-line-height-l;
+        font-weight: $font-style-weight-light;
+
+        @include media(normal) {
+          font-size: $size-font-xl;
+          line-height: $size-line-height-xl;
+          small {
+            margin-top: $size-spacing-xs;
+          }
+        }
+
+        small {
+          margin-top: $size-spacing-xxs;
+        }
+      }
+
+      &--m {
+        font-size: $size-font-m;
+        line-height: $size-line-height-m;
+        font-weight: $font-style-weight-light;
+
+        @include media(normal) {
+          font-size: $size-font-l;
+          line-height: $size-line-height-l;
+          small {
+            margin-top: $size-spacing-xxs;
+          }
+        }
+
+        small {
+          margin-top: $size-spacing-xxxs;
+        }
+      }
+
+      &--s {
+        font-size: $size-font-s;
+        line-height: $size-line-height-s;
+        font-weight: $font-style-weight-light;
+
+        @include media(normal) {
+          font-size: $size-font-m;
+          line-height: $size-line-height-m;
+        }
+
+        small {
+          margin-top: $size-spacing-xxxs;
+        }
+      }
+
+      &--xs {
+        font-size: $size-font-xs;
+        line-height: $size-line-height-xs;
+        font-weight: $font-style-weight-regular;
+
+
+        small {
+          margin-top: $size-spacing-xxxs;
+        }
+      }
+    }
+
+    &-subtitle {
+      font-weight: $font-style-weight-regular;
+
+      &--l {
+        font-size: $size-font-s;
+        line-height: $size-line-height-s;
+
+        @include media(normal) {
+          font-size: $size-font-m;
+          line-height: $size-line-height-m;
+        }
+
+      }
+
+      &--m {
+        font-size: $size-font-xs;
+        line-height: $size-line-height-xs;
+
+        @include media(normal) {
+          font-size: $size-font-s;
+          line-height: $size-line-height-s;
+        }
+      }
+
+      &--s {
+        font-size: $size-font-xxs;
+        line-height: $size-line-height-xxs;
+
+        @include media(normal) {
+          font-size: $size-font-xs;
+          line-height: $size-line-height-xs;
+        }
+      }
+    }
+
+    &-caption {
+      font-size: $size-font-xxs;
+      line-height: $size-line-height-xxs;
+      font-weight: $font-style-weight-regular;
+    }
+
+    &-quote {
+      font-weight: $font-style-weight-regular;
+      font-style: $font-style-quote;
+
+      &--m {
+        font-size: $size-font-xs;
+        line-height: $size-line-height-xs;
+
+
+      }
+
+      &--s {
+        font-size: $size-font-xxs;
+        line-height: $size-line-height-xxs;
+      }
+    }
+
+    &-highlight {
+      font-weight: $font-style-weight-bold;
+
+      &--l {
+        font-size: $size-font-l;
+        line-height: $size-line-height-l;
+      }
+
+      &--m {
+        font-size: $size-font-m;
+        line-height: $size-line-height-m;
+      }
+
+      &--s {
+        font-size: $size-font-s;
+        line-height: $size-line-height-s;
+      }
+    }
+
+    &-text-default {
+      font-size: $size-font-xs;
+      font-weight: $font-style-weight-regular;
+      line-height: $size-line-height-xs;
+    }
+  }
+}
+.typography__size-heading--xl,
+.typography__size-heading--l,
+.typography__size-heading--m,
+.typography__size-heading--s {
+  strong {
+    font-weight: $font-style-weight-regular;
+  }
+}
+.typography__size-caption,
+.typography__size-quote--s,
+.typography__size-quote--l {
+  a {
+    color: $color-interface-action-dark;
+
+    &:hover {
+      color: $color-interface-action-extra-dark;
+    }
+  }
+}
