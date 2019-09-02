@@ -24,8 +24,8 @@
 **/
 
 .card {
-  background-color: get-color(color-interface-content-light);
-  border: solid 1px get-color(color-interface-shade-dark);
+  background-color: $color-interface-content-light;
+  border: solid 1px $color-interface-shade-dark;
   border-radius: $size-border-radius-m;
   flex: 1 1 auto;
   transition: all ease-in-out .2s, transform ease-in-out .1s;
@@ -70,7 +70,7 @@
     }
 
     .caption-title {
-      color: get-color((color: blackNeutral, key: darker, opacity: .8));
+      color: $color-interface-content-extra-dark;
       font-size: 12px;
       margin-bottom: 0;
 
@@ -95,13 +95,13 @@
 
   &__footer {
     margin-top: auto;
-    padding-top: 12px;
+    padding-top: $size-spacing-xxs;
     width: -webkit-fill-available;
   }
 
   &--highlighted {
     .card__title {
-      color: get-color(rastaGray);
+      color: $color-interface-content-medium;
       font-style: italic;
     }
   }

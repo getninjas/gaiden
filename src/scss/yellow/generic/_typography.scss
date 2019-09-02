@@ -1,4 +1,5 @@
-.typography {
+.typography,
+%typography {
   &__color {
     &--first-extra-dark {
       color: $color-brand-first-extra-dark;
@@ -37,8 +38,8 @@
     &-heading {
       &--xl {
         font-size: $size-font-xl;
-        line-height: $size-line-height-xl;
         font-weight: $font-style-weight-light;
+        line-height: $size-line-height-xl;
 
         @include media(normal) {
           font-size: $size-font-xxl;
@@ -55,8 +56,8 @@
 
       &--l {
         font-size: $size-font-l;
-        line-height: $size-line-height-l;
         font-weight: $font-style-weight-light;
+        line-height: $size-line-height-l;
 
         @include media(normal) {
           font-size: $size-font-xl;
@@ -73,8 +74,8 @@
 
       &--m {
         font-size: $size-font-m;
-        line-height: $size-line-height-m;
         font-weight: $font-style-weight-light;
+        line-height: $size-line-height-m;
 
         @include media(normal) {
           font-size: $size-font-l;
@@ -91,8 +92,8 @@
 
       &--s {
         font-size: $size-font-s;
-        line-height: $size-line-height-s;
         font-weight: $font-style-weight-light;
+        line-height: $size-line-height-s;
 
         @include media(normal) {
           font-size: $size-font-m;
@@ -106,8 +107,8 @@
 
       &--xs {
         font-size: $size-font-xs;
-        line-height: $size-line-height-xs;
         font-weight: $font-style-weight-regular;
+        line-height: $size-line-height-xs;
 
 
         small {
@@ -153,13 +154,13 @@
 
     &-caption {
       font-size: $size-font-xxs;
-      line-height: $size-line-height-xxs;
       font-weight: $font-style-weight-regular;
+      line-height: $size-line-height-xxs;
     }
 
     &-quote {
-      font-weight: $font-style-weight-regular;
       font-style: $font-style-quote;
+      font-weight: $font-style-weight-regular;
 
       &--m {
         font-size: $size-font-xs;
@@ -200,6 +201,7 @@
     }
   }
 }
+
 .typography__size-heading--xl,
 .typography__size-heading--l,
 .typography__size-heading--m,
@@ -208,6 +210,7 @@
     font-weight: $font-style-weight-regular;
   }
 }
+
 .typography__size-caption,
 .typography__size-quote--s,
 .typography__size-quote--l {
