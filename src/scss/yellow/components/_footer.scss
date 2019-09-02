@@ -8,6 +8,13 @@
 .footer {
   background-color: get-color(color-interface-shade-light);
   height: auto;
+  margin: $size-spacing-xxl 0 0;
+  padding: $size-spacing-xl 0 0;
+
+  @include media(normal) {
+    margin-top: $size-spacing-xxxl;
+    padding: $size-spacing-xxl 0 0;
+  }
 
   &__title {
     display: block;
@@ -17,17 +24,27 @@
   }
 
   &__block {
-    align-content: flex-start;
-    margin-top: get-space(box, small);
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $size-spacing-l;
+
+
+    &:not(:last-child) {
+      @include media(normal) {
+        margin-bottom: 0;
+      }
+    }
 
     &--download {
       margin-left: auto;
     }
 
-    @include media(small) {
-      align-content: flex-start;
-      margin-top: get-space(box, large);
-    }
+  }
+
+  &__block--row {
+    display: flex;
+    flex-direction: row;
   }
 
   &__list {
@@ -47,10 +64,6 @@
       }
     }
 
-    &--line {
-      margin-top: get-space(box, small);
-    }
-
     &--social {
       display: flex;
       flex-grow: 1;
@@ -60,7 +73,7 @@
         height: 48px;
         margin-left: 6%;
         text-indent: -9999px;
-        width: 48px;
+        width: 60px;
 
         img {
           display: block;
