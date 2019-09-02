@@ -6,7 +6,7 @@
   }
 
   &__content {
-    margin-top: get-space(element, medium);
+    margin-top: $size-spacing-xxxs;
   }
 
   &__text {
@@ -16,7 +16,7 @@
   }
 
   &__rating {
-    margin-top: get-space(element, medium);
+    margin-top: $size-spacing-xs;
 
     img {
       height: 12px;
@@ -26,6 +26,6 @@
 
   &__receiver {
     margin-bottom: 0;
-    margin-top: get-space(element, small);
+    margin-top: $size-spacing-xxxs;
   }
 }

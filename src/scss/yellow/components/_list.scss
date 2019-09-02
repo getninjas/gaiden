@@ -36,7 +36,7 @@
 
   &__title {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: $size-spacing-s;
     text-align: left;
     text-transform: uppercase;
   }
@@ -160,6 +160,7 @@
 
   &--link {
     color: get-color(punch);
+    margin-left: 0;
   }
 
   &--link,

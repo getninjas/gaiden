@@ -102,9 +102,9 @@ body {
 .quote--l {
   a {
     color: $color-interface-action-dark;
-  }
 
-  &:hover {
-    color: $color-interface-action-extra-dark;
+    :hover {
+      color: $color-interface-action-extra-dark;
+    }
   }
 }
