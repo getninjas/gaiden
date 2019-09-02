@@ -1,3 +1,5 @@
+$modal-overlay: rgba(0, 0, 0, $opacity-translucent);
+
 body {
   .opened-modal {
     overflow-y: hidden;
@@ -5,7 +7,7 @@ body {
 }
 
 .modal {
-  background-color: get-color((color: rastaGray, opacity: .8));
+  background-color: $modal-overlay;
   bottom: 0;
   height: 100vh;
   left: 0;
@@ -22,7 +24,7 @@ body {
   &__card {
     background-color: $color-interface-content-light;
     border-radius: 6px;
-    box-shadow: get-color((color: blackNeutral, opacity: .12));
+    box-shadow: $color-interface-content-medium;
     box-sizing: border-box;
     color: $color-interface-content-medium;
     left: 50%;
@@ -98,7 +100,7 @@ body {
   }
 
   &__text {
-    color: get-color((color: blackNeutral, opacity: .6));
+    color: $color-interface-content-medium;
     font-size: 18px;
   }
 
