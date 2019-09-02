@@ -6,8 +6,8 @@ body {
   color: $color-interface-content-medium;
   font: {
     family: $font-family-default;
-    font-size: $size-font-xs;
-    font-weight: $font-style-weight-regular;
+    size: $size-font-xs;
+    weight: $font-style-weight-regular;
   };
   line-height: $size-line-height-xs;
 }
