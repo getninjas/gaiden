@@ -49,6 +49,7 @@
             margin-top: $size-spacing-s;
           }
         }
+
         small {
           margin-top: $size-spacing-xs;
         }
@@ -62,6 +63,7 @@
         @include media(normal) {
           font-size: $size-font-xl;
           line-height: $size-line-height-xl;
+
           small {
             margin-top: $size-spacing-xs;
           }
@@ -80,6 +82,7 @@
         @include media(normal) {
           font-size: $size-font-l;
           line-height: $size-line-height-l;
+
           small {
             margin-top: $size-spacing-xxs;
           }
