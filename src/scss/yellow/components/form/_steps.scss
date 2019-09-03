@@ -1,6 +1,6 @@
 .form__steps {
   align-items: center;
-  box-shadow: inset 0 1px 0 0 get-color((color: blackNeutral, opacity: .05));
+  box-shadow: inset 0 1px 0 0 $color-interface-shade-medium;
   color: get-color((color: rastaGray, opacity: .5));
   display: flex;
   flex-direction: row;

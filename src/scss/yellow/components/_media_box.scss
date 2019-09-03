@@ -17,7 +17,7 @@
 **/
 
 .media-box {
-  color: get-color((color: blackNeutral, key: darker, opacity: .8));
+  color: $color-interface-content-dark;
   display: block;
   padding: 0 24px;
 
@@ -27,7 +27,7 @@
     width: 100%;
 
     .card__title {
-      color: get-color((color: blackNeutral, key: darker, opacity: .6));
+      color: $color-interface-content-medium;
       font-size: inherit;
     }
   }
@@ -61,7 +61,7 @@
   }
 
   &__body {
-    color: get-color((color: blackNeutral, key: darker, opacity: .6));
+    color: $color-interface-content-medium;
     font-size: 14px;
     font-style: italic;
     word-wrap: break-word;

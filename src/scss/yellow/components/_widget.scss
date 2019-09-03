@@ -8,7 +8,7 @@
 .widget {
   background-color: get-color(air);
   border-radius: 7px;
-  box-shadow: get-shadow(medium) get-color((color: blackNeutral, opacity: .1));
+  box-shadow: get-shadow(medium) $color-interface-shade-dark;
   margin: 0 auto;
   position: relative;
   z-index: 4;

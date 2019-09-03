@@ -65,7 +65,7 @@
     position: relative;
 
     &:hover {
-      box-shadow: get-shadow(large) get-color((color: blackNeutral, opacity: .1));
+      box-shadow: get-shadow(large) $color-interface-shade-dark;
       transform: translate(0, -5px);
     }
 
