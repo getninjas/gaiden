@@ -53,7 +53,7 @@
   overflow-x: hidden;
 
   &__envelop {
-    background: $color-interface-shade-light;
+    background: $color-interface-positive-dark;
     padding: $size-spacing-m $size-spacing-m $size-spacing-s;
     width: 100%;
   }
@@ -61,7 +61,6 @@
   &__title {
     margin: 0;
     text-align: center;
-    text-transform: capitalize;
   }
 
   &__tie {
@@ -70,8 +69,8 @@
     width: 100%;
 
     polygon {
-      fill: $color-interface-shade-light;
-      stroke: $color-interface-shade-light;
+      fill: $color-interface-positive-dark;
+      stroke: $color-interface-positive-dark;
     }
   }
 
