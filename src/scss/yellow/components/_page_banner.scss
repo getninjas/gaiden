@@ -15,14 +15,14 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    padding: $size-spacing-xl 0;
+    padding: $size-spacing-l 0;
     position: relative;
     text-align: center;
     width: 100%;
     z-index: 2;
 
     @include media(normal) {
-      padding: $size-spacing-xxxl 0;
+      padding: $size-spacing-xxl 0;
     }
 
     [class*='-title'] {
