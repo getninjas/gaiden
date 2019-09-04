@@ -1,5 +1,5 @@
 .breadcrumb {
-  color: get-color((color: blackNeutral, key: darker, opacity: .4));
+  color: $color-interface-shade-extra-dark;
   display: none;
   font-size: $size-font-xxs;
   font-style: normal;
@@ -16,7 +16,7 @@
       }
 
       span {
-        color: get-color((color: blackNeutral, opacity: .5));
+        color: $color-interface-shade-extra-dark;
       }
 
       &:last-child {
