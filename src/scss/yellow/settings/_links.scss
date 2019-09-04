@@ -1,9 +1,9 @@
 a,
 .link {
-  color: get-color(color-brand-first-medium);
+  color: $color-brand-first-medium;
   text-decoration: none;
 
   &:hover {
-    color: get-color(color-brand-first-extra-dark);
+    color: $color-brand-first-extra-dark;
   }
 }

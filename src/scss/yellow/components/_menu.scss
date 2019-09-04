@@ -17,8 +17,8 @@
 **/
 
 .menu {
-  background-color: get-color(color-interface-content-light);
-  border-bottom: 1px solid get-color(color-interface-shade-dark);
+  background-color: $color-interface-content-light;
+  border-bottom: 1px solid $color-interface-shade-dark;
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
@@ -39,8 +39,8 @@
   }
 
   &--over {
-    background-color: get-color(color-interface-content-light);
-    box-shadow: 0 2px 4px 0 get-color(color-interface-shade-dark);
+    background-color: $color-interface-content-light;
+    box-shadow: 0 2px 4px 0 $color-interface-shade-dark;
     position: relative;
     width: 100%;
     z-index: 10;
@@ -67,7 +67,7 @@
     }
 
     &__line {
-      background-color: get-color(color-brand-first-extra-dark);
+      background-color: $color-brand-first-extra-dark;
       border-radius: 9px;
       display: block;
       height: 2px;
@@ -150,7 +150,7 @@
   }
 
   &__title {
-    color: get-color(rastaGray);
+    color: $color-interface-content-medium;
     font-size: 20px;
     font-weight: get-weight(bolder);
     text-align: left;
@@ -232,7 +232,7 @@
     }
 
     &--wellcome {
-      color: get-color(rastaGray);
+      color: $color-interface-content-medium;
       font-weight: $font-style-weight-bold;
     }
 
@@ -248,7 +248,7 @@
     .btn {
       background-color: transparent;
       border: 0;
-      color: get-color(color-brand-first-extra-dark);
+      color: $color-brand-first-extra-dark;
     }
 
     .nav__wrapper {
@@ -279,20 +279,20 @@
 
   &__btn {
     @include media(normal) {
-      background-color: get-color(punch);
+      background-color: $color-brand-first-extra-dark;
       border-radius: 4px;
-      color: get-color(air);
+      color: $color-interface-content-light;
       cursor: pointer;
       display: inline-block;
-      padding: get-space(element, medium) get-space(box, small);
+      padding: $size-spacing-xxs $size-spacing-s;
 
       a {
         color: inherit;
       }
 
       &:hover {
-        background-color: get-color(serious);
-        color: get-color(air);
+        background-color: $color-brand-first-medium;
+        color: $color-interface-content-light;
 
         a {
           color: inherit;
@@ -306,14 +306,14 @@
 
     &--bordered {
       @include media(normal) {
-        background-color: get-color(air);
+        background-color: $color-interface-content-light;
         border-radius: 40px;
-        box-shadow: inset 0 0 0 2px get-color(punch);
-        color: get-color(punch);
+        box-shadow: inset 0 0 0 2px $color-brand-first-extra-dark;
+        color: $color-brand-first-extra-dark;
 
         &:hover {
-          background-color: get-color(color-brand-first-extra-dark);
-          color: get-color(color-brand-first-light);
+          background-color: $color-brand-first-extra-dark;
+          color: $color-brand-first-light;
         }
       }
     }
@@ -324,7 +324,7 @@
       }
 
       &:hover {
-        background-color: get-color(color-brand-first-light);
+        background-color: $color-brand-first-light;
       }
     }
   }

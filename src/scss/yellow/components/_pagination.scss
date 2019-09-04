@@ -24,8 +24,8 @@
     }
 
     a {
-      background-color: get-color(air);
-      border: solid 1px get-color(color-interface-content-dark);
+      background-color: $color-interface-content-light;
+      border: solid 1px $color-interface-content-dark;
       border-radius: $size-border-radius-s;
       cursor: inherit;
       display: block;
@@ -57,9 +57,9 @@
     &--active {
       &:not(.pagination__item--disabled) {
         a {
-          background-color: get-color(punch);
-          border-color: get-color(serious);
-          color: get-color(air);
+          background-color: $color-brand-first-extra-dark;
+          border-color: $color-brand-first-extra-dark;
+          color: $color-interface-content-light;
         }
       }
     }
@@ -67,8 +67,8 @@
     &:hover {
       &:not(.pagination__item--disabled) {
         a {
-          background-color: get-color(color-interface-content-dark);
-          color: get-color(color-interface-content-light);
+          background-color: $color-interface-content-dark;
+          color: $color-interface-content-light;
         }
       }
     }

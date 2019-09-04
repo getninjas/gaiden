@@ -1,6 +1,6 @@
 .card-review {
   &__title {
-    color: get-color(color-brand-first-extra-dark);
+    color: $color-brand-first-extra-dark;
     font-size: 14px;
     font-weight: get-weight(normal);
   }

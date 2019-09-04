@@ -26,7 +26,7 @@
     }
 
     [class*='-title'] {
-      color: get-color(air);
+      color: $color-interface-content-light;
     }
   }
 
@@ -64,7 +64,7 @@
   }
 
   .page-title-header {
-    color: get-color(color-brand-first-extra-dark);
+    color: $color-brand-first-extra-dark;
     font-size: 24px;
 
     @include media(normal) {
@@ -72,7 +72,7 @@
     }
 
     small {
-      color: get-color(color-interface-content-medium);
+      color: $color-interface-content-medium;
       margin-top: $size-spacing-xxs;
     }
 

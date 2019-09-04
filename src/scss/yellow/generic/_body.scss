@@ -2,7 +2,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
-  background-color: get-color(color-brand-first-light);
+  background-color: $color-brand-first-light;
   color: $color-interface-content-medium;
   font: {
     family: $font-family-default;

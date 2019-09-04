@@ -27,7 +27,7 @@ h6,
   };
 
   small {
-    color: $color-interface-shade-extra-dark;
+    color: get-color(blackNeutral);
     display: block;
     font-weight: get-weight(normal);
   }

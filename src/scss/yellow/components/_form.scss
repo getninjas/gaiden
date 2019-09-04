@@ -23,8 +23,8 @@
 }
 
 %focus-style {
-  background-color: get-color(air);
-  border: 1px solid get-color(rastaGray);
+  background-color: $color-interface-content-light;
+  border: 1px solid $color-interface-content-medium;
 }
 
 .section-form {
@@ -53,7 +53,7 @@
   overflow-x: hidden;
 
   &__envelop {
-    background: get-color(color-interface-shade-light);
+    background: $color-interface-shade-light;
     padding: $size-spacing-m $size-spacing-m $size-spacing-s;
     width: 100%;
   }
@@ -70,8 +70,8 @@
     width: 100%;
 
     polygon {
-      fill: get-color(color-interface-shade-light);
-      stroke: get-color(color-interface-shade-light);
+      fill: $color-interface-shade-light;
+      stroke: $color-interface-shade-light;
     }
   }
 
@@ -129,8 +129,8 @@
   }
 
   &__input {
-    background-color: get-color(color-interface-shade-light);
-    border: 1px solid get-color(color-interface-shade-dark);
+    background-color: $color-interface-shade-light;
+    border: 1px solid $color-interface-shade-dark;
     border-radius: $size-border-radius-s;
     color: $color-interface-content-medium;
     display: block;
@@ -151,7 +151,7 @@
     }
 
     &--filled {
-      background-color: get-color(air);
+      background-color: $color-interface-content-light;
       border: 1px solid get-color((color: rastaGray, opacity: .1));
       color: $color-interface-content-medium;
       font-style: normal;

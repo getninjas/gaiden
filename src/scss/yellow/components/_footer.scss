@@ -6,7 +6,7 @@
 **/
 
 .footer {
-  background-color: get-color(color-interface-shade-light);
+  background-color: $color-interface-shade-light;
   height: auto;
   margin: $size-spacing-xxl 0 0;
   padding: $size-spacing-xl 0 0;
@@ -105,7 +105,7 @@
 
             @include media(normal) {
               margin-left: 0;
-              margin-top: get-space(element, small);
+              margin-top: $size-spacing-xxxs;
             }
           }
         }
@@ -127,7 +127,7 @@
   }
 
   &__institutional {
-    border-top: 1px solid get-color(color-interface-shade-dark);
+    border-top: 1px solid $color-interface-shade-dark;
     flex-direction: column;
     margin-top: $size-spacing-l;
     padding: $size-spacing-s $size-spacing-xs;
@@ -170,7 +170,7 @@
   }
 
   &__copyright {
-    background-color: get-color(color-interface-shade-medium);
+    background-color: $color-interface-shade-medium;
     padding: $size-spacing-xxxs $size-spacing-m;
     text-align: center;
   }

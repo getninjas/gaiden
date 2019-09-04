@@ -138,7 +138,7 @@
 
           @include media(normal) {
             margin-left: 0;
-            margin-top: get-space(element, small);
+            margin-top: $size-spacing-xxxs;
           }
         }
 
@@ -159,7 +159,7 @@
   }
 
   &--link {
-    color: get-color(punch);
+    color: $color-brand-first-extra-dark;
     margin-left: 0;
   }
 
@@ -177,7 +177,7 @@
         background-color: get-color((color: breeze, key: darker, opacity: .4));
 
         a {
-          color: get-color(color-brand-first-extra-dark);
+          color: $color-brand-first-extra-dark;
           transform: translateX(8px);
           width: 100%;
         }

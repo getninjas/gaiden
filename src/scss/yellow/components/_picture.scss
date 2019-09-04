@@ -28,7 +28,7 @@
   max-width: 100%;
 
   &__image {
-    background-color: get-color(air);
+    background-color: $color-interface-content-light;
     display: block;
     max-width: 100%;
   }
@@ -37,7 +37,7 @@
     overflow: hidden;
 
     .picture__image {
-      background-color: get-color(recusaGray);
+      background-color: $color-interface-shade-dark;
       border-radius: 50%;
       overflow: hidden;
     }

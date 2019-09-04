@@ -42,8 +42,8 @@
   }
 
   &__button {
-    background-color: get-color(color-brand-first-extra-dark);
-    color: get-color(color-interface-content-light);
+    background-color: $color-brand-first-extra-dark;
+    color: $color-interface-content-light;
     font-size: $size-font-xxs;
     font-weight: get-weight(font-style-weight-bold);
     padding: $size-spacing-xxs;
@@ -55,8 +55,8 @@
     z-index: 1;
 
     &:hover {
-      background-color: get-color(color-brand-first-medium);
-      color: get-color(color-interface-content-light);
+      background-color: $color-brand-first-medium;
+      color: $color-interface-content-light;
     }
   }
 

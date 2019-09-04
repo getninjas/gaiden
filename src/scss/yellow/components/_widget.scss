@@ -6,7 +6,7 @@
 **/
 
 .widget {
-  background-color: get-color(air);
+  background-color: $color-interface-content-light;
   border-radius: 7px;
   box-shadow: get-shadow(medium) $color-interface-shade-dark;
   margin: 0 auto;

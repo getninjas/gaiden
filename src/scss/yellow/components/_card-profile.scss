@@ -52,7 +52,7 @@
   }
 
   &__title {
-    color: get-color(color-brand-first-extra-dark);
+    color: $color-brand-first-extra-dark;
     font-size: 14px;
     font-weight: get-weight(bold);
     margin: 0;
@@ -82,7 +82,7 @@
   }
 
   &__highlight {
-    background-color: get-color(color-interface-shade-light);
+    background-color: $color-interface-shade-light;
     min-height: 108px;
     padding: $size-spacing-xs $size-spacing-s $size-spacing-s;
 
@@ -92,16 +92,16 @@
   }
 
   &__light-title {
-    color: get-color(color-brand-first-extra-dark);
+    color: $color-brand-first-extra-dark;
     font-size: 14px;
     font-style: italic;
     font-weight: get-weight(bold);
   }
 
   &__btn {
-    background-color: get-color(color-brand-first-dark);
+    background-color: $color-brand-first-dark;
     border: 0;
-    color: get-color(color-brand-first-light);
+    color: $color-brand-first-light;
     font-size: $size-font-xxs;
     font-weight: $font-style-weight-bold;
     margin-bottom: 0;
@@ -112,8 +112,8 @@
     z-index: 1;
 
     &:hover {
-      background-color: get-color(color-brand-first-medium);
-      color: get-color(color-brand-first-light);
+      background-color: $color-brand-first-medium;
+      color: $color-brand-first-light;
     }
   }
 
