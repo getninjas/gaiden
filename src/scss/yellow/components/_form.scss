@@ -38,7 +38,7 @@
       @extend %typography__size-heading--s;
       @extend %typography__color--first-extra-dark;
       border-bottom: 0;
-      margin-bottom: 36px;
+      margin-bottom: $size-spacing-m;
 
       small {
         @extend %typography__size-subtitle--s;
@@ -54,7 +54,7 @@
 
   &__envelop {
     background: get-color(color-interface-shade-light);
-    padding: 30px 30px 20px;
+    padding: $size-spacing-m $size-spacing-m $size-spacing-s;
     width: 100%;
   }
 
@@ -76,7 +76,7 @@
   }
 
   input {
-    padding: 10px;
+    padding: $size-spacing-xxxs;
   }
 
   select {
@@ -196,7 +196,7 @@
     font-size: 12px;
 
     &.form__field {
-      margin-top: 5px;
+      margin-top: $size-spacing-xxxs;
     }
   }
 }

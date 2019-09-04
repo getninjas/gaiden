@@ -23,12 +23,12 @@
 
     strong {
       &:nth-child(1) {
-        margin-right: 4px;
+        margin-right: $size-spacing-xxxs;
       }
     }
 
     small {
-      margin-right: 4px;
+      margin-right: $size-spacing-xxxs;
       margin-top: 0;
     }
   }

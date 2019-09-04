@@ -71,7 +71,7 @@
       .footer__item {
         border-radius: 50%;
         height: 48px;
-        margin-left: 6%;
+        margin-left: $size-spacing-xs;
         text-indent: -9999px;
         width: 60px;
 
@@ -129,8 +129,8 @@
   &__institutional {
     border-top: 1px solid get-color(color-interface-shade-dark);
     flex-direction: column;
-    margin-top: 45px;
-    padding: 24px 16px;
+    margin-top: $size-spacing-l;
+    padding: $size-spacing-s $size-spacing-xs;
 
     .footer__image {
       width: 125px;
@@ -140,7 +140,7 @@
       align-items: center;
       flex-direction: row;
       justify-content: space-between;
-      padding: 34px 0;
+      padding: $size-spacing-m 0;
     }
   }
 
@@ -155,14 +155,6 @@
     text-align: right;
     text-transform: uppercase;
 
-    @include media(small) {
-      margin: initial;
-
-      .footer__item {
-        margin: auto auto auto 20px;
-      }
-    }
-
     a {
       :hover {
         color: $color-interface-content-medium;
@@ -173,13 +165,13 @@
 
   &__item {
     &:not(.footer__item--larger) {
-      margin-top: get-space(element, small);
+      margin-top: $size-spacing-xxxs;
     }
   }
 
   &__copyright {
     background-color: get-color(color-interface-shade-medium);
-    padding: 8px 40px;
+    padding: $size-spacing-xxxs $size-spacing-m;
     text-align: center;
   }
 }

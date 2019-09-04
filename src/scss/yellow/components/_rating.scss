@@ -1,7 +1,7 @@
 .rating {
   &__stars {
     display: inline-block;
-    margin-right: 5px;
+    margin-right: $size-spacing-xxxs;
     vertical-align: middle;
   }
 
