@@ -25,8 +25,6 @@
 
 //sass-lint:disable no-url-domains no-url-protocols
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i&display=swap');
-@import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
-
 
 $base-font: $font-family-default;
 
@@ -35,5 +33,3 @@ $font-weight: (
   normal: $font-style-weight-regular,
   bold: $font-style-weight-bold
 )
-
-
