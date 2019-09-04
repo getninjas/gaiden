@@ -19,7 +19,7 @@
     color: $color-brand-first-medium;
     display: none;
     font-style: italic;
-    margin-left: 15px;
+    margin-left: $size-spacing-xs;
 
     @include media(normal) {
       display: inline-block;
@@ -33,7 +33,7 @@
   &__image {
     display: inline-block;
     height: 36px;
-    margin-right: 10px;
+    margin-right: $size-spacing-xxxs;
     vertical-align: top;
     width: 36px;
 
