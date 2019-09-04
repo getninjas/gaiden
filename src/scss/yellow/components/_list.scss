@@ -35,11 +35,8 @@
   flex-direction: column;
 
   &__title {
-    color: get-color(rastaGray);
     display: block;
-    font-size: 12px;
-    font-weight: get-weight(bold);
-    margin-bottom: 20px;
+    margin-bottom: $size-spacing-s;
     text-align: left;
     text-transform: uppercase;
   }
@@ -54,11 +51,9 @@
 
   &__item {
     border-radius: 4px;
-    color: get-color(punch);
     display: flex;
     flex-shrink: 0;
-    font-size: 14px;
-    margin-bottom: get-space(element, small);
+    margin-bottom: $size-spacing-xxxs;
     transition: background-color ease-in-out .3s;
     width: 25%;
 
@@ -67,6 +62,9 @@
     }
 
     a {
+      color: $color-interface-content-medium;
+      font-size: $size-font-xxs;
+      line-height: $size-line-height-xxs;
       transition: transform ease-in-out .3s;
     }
   }
@@ -98,7 +96,7 @@
 
     .list__item {
       height: 48px;
-      margin-left: 12px;
+      margin-left: $size-spacing-xxs;
       text-indent: -9999px;
       width: 48px;
 
@@ -136,11 +134,11 @@
         }
 
         &:last-child {
-          margin-left: 5px;
+          margin-left: $size-spacing-xxxs;
 
           @include media(normal) {
             margin-left: 0;
-            margin-top: get-space(element, small);
+            margin-top: $size-spacing-xxxs;
           }
         }
 
@@ -161,7 +159,8 @@
   }
 
   &--link {
-    color: get-color(punch);
+    color: $color-brand-first-extra-dark;
+    margin-left: 0;
   }
 
   &--link,
@@ -170,7 +169,7 @@
       cursor: pointer;
       flex-wrap: nowrap;
       margin-bottom: 0;
-      padding: 5px 5px 5px 0;
+      padding: $size-spacing-xxxs $size-spacing-xxxs 0 0;
 
       &:hover,
       &:active,
@@ -178,7 +177,7 @@
         background-color: get-color((color: breeze, key: darker, opacity: .4));
 
         a {
-          color: get-color(color-brand-first-extra-dark);
+          color: $color-brand-first-extra-dark;
           transform: translateX(8px);
           width: 100%;
         }

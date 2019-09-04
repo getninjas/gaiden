@@ -6,31 +6,45 @@
 **/
 
 .footer {
-  background-color: get-color(color-interface-shade-light);
+  background-color: $color-interface-shade-light;
   height: auto;
+  margin: $size-spacing-xxl 0 0;
+  padding: $size-spacing-xl 0 0;
+
+  @include media(normal) {
+    margin-top: $size-spacing-xxxl;
+    padding: $size-spacing-xxl 0 0;
+  }
 
   &__title {
-    color: get-color(color-brand-first-extra-dark);
     display: block;
-    font-size: 12px;
-    font-weight: get-weight(bold);
     text-align: left;
     text-transform: uppercase;
     width: 100%;
   }
 
   &__block {
-    align-content: flex-start;
-    margin-top: get-space(box, small);
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $size-spacing-l;
+
+
+    &:not(:last-child) {
+      @include media(normal) {
+        margin-bottom: 0;
+      }
+    }
 
     &--download {
       margin-left: auto;
     }
 
-    @include media(small) {
-      align-content: flex-start;
-      margin-top: get-space(box, large);
-    }
+  }
+
+  &__block--row {
+    display: flex;
+    flex-direction: row;
   }
 
   &__list {
@@ -50,10 +64,6 @@
       }
     }
 
-    &--line {
-      margin-top: get-space(box, small);
-    }
-
     &--social {
       display: flex;
       flex-grow: 1;
@@ -61,9 +71,9 @@
       .footer__item {
         border-radius: 50%;
         height: 48px;
-        margin-left: 6%;
+        margin-left: $size-spacing-xs;
         text-indent: -9999px;
-        width: 48px;
+        width: 60px;
 
         img {
           display: block;
@@ -95,7 +105,7 @@
 
             @include media(normal) {
               margin-left: 0;
-              margin-top: get-space(element, small);
+              margin-top: $size-spacing-xxxs;
             }
           }
         }
@@ -117,10 +127,10 @@
   }
 
   &__institutional {
-    border-top: 1px solid get-color(recusaGray);
+    border-top: 1px solid $color-interface-shade-dark;
     flex-direction: column;
-    margin-top: 45px;
-    padding: 24px 16px;
+    margin-top: $size-spacing-l;
+    padding: $size-spacing-s $size-spacing-xs;
 
     .footer__image {
       width: 125px;
@@ -130,40 +140,38 @@
       align-items: center;
       flex-direction: row;
       justify-content: space-between;
-      padding: 34px 0;
+      padding: $size-spacing-m 0;
     }
   }
 
   &__institutional-list {
     display: flex;
-    font-size: 12px;
-    font-weight: get-weight(bold);
+    font-size: $size-font-xxs;
+    font-weight: $font-style-weight-bold;
     justify-content: space-between;
+    line-height: $size-line-height-xxs;
     padding-left: 0;
     padding-right: 0;
     text-align: right;
     text-transform: uppercase;
 
-    @include media(small) {
-      margin: initial;
-
-      .footer__item {
-        margin: auto auto auto 20px;
+    a {
+      :hover {
+        color: $color-interface-content-medium;
+        display: block;
       }
     }
   }
 
   &__item {
     &:not(.footer__item--larger) {
-      margin-top: get-space(element, small);
+      margin-top: $size-spacing-xxxs;
     }
   }
 
   &__copyright {
-    background-color: get-color(color-interface-shade-medium);
-    color: get-color(color-interface-content-medium);
-    font-size: 12px;
-    padding: 8px 40px;
+    background-color: $color-interface-shade-medium;
+    padding: $size-spacing-xxxs $size-spacing-m;
     text-align: center;
   }
 }

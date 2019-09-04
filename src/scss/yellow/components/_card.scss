@@ -24,12 +24,11 @@
 **/
 
 .card {
-  background-color: get-color(air);
-  border: solid 1px get-color((color: recusaGray, opacity: .5));
-  border-radius: $border-radius;
-  box-shadow: get-shadow(medium) get-color((color: blackNeutral, opacity: .12));
+  background-color: $color-interface-content-light;
+  border: solid 1px $color-interface-shade-dark;
+  border-radius: $size-border-radius-m;
   flex: 1 1 auto;
-  transition: box-shadow ease-in-out .2s, transform ease-in-out .1s;
+  transition: all ease-in-out .2s, transform ease-in-out .1s;
   width: inherit;
 
   > a {
@@ -38,12 +37,16 @@
 
   &,
   &.media-box {
-    padding: 24px;
+    padding: $size-spacing-s;
+  }
+
+  &--shadow {
+    box-shadow: $shadow-bottom-level-1;
   }
 
   &--hover {
     &:hover {
-      box-shadow: get-shadow(large) get-color((color: blackNeutral, opacity: .1));
+      box-shadow: $shadow-bottom-level-2;
       transform: translate(0, -5px);
     }
   }
@@ -62,12 +65,12 @@
     position: relative;
 
     &:hover {
-      box-shadow: get-shadow(large) get-color((color: blackNeutral, opacity: .1));
+      box-shadow: get-shadow(large) $color-interface-shade-dark;
       transform: translate(0, -5px);
     }
 
     .caption-title {
-      color: get-color((color: blackNeutral, key: darker, opacity: .8));
+      color: $color-interface-content-extra-dark;
       font-size: 12px;
       margin-bottom: 0;
 
@@ -79,32 +82,26 @@
 
     .btn--full-card {
       bottom: 0;
-      font-size: 12px;
       left: 0;
       margin-bottom: 0;
-      padding: 14px 0;
       position: absolute;
       width: 100%;
     }
   }
 
   &__content {
-    color: get-color((color: blackNeutral, opacity: .6));
-    font-size: 14px;
-    font-style: italic;
     width: 100%;
   }
 
   &__footer {
-    color: get-color((color: blackNeutral, opacity: .78));
-    font-size: 12px;
     margin-top: auto;
-    padding-top: 12px;
+    padding-top: $size-spacing-xxs;
+    width: -webkit-fill-available;
   }
 
   &--highlighted {
     .card__title {
-      color: get-color(rastaGray);
+      color: $color-interface-content-medium;
       font-style: italic;
     }
   }

@@ -1,12 +1,12 @@
 .card-review {
   &__title {
-    color: get-color(color-brand-first-extra-dark);
+    color: $color-brand-first-extra-dark;
     font-size: 14px;
     font-weight: get-weight(normal);
   }
 
   &__content {
-    margin-top: get-space(element, medium);
+    margin-top: $size-spacing-xxxs;
   }
 
   &__text {
@@ -16,7 +16,7 @@
   }
 
   &__rating {
-    margin-top: get-space(element, medium);
+    margin-top: $size-spacing-xs;
 
     img {
       height: 12px;
@@ -25,11 +25,7 @@
   }
 
   &__receiver {
-    color: get-color(rastaGray);
-    font-size: 14px;
-    font-style: italic;
-    font-weight: get-weight(normal);
     margin-bottom: 0;
-    margin-top: get-space(element, small);
+    margin-top: $size-spacing-xxxs;
   }
 }

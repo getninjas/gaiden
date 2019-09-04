@@ -21,13 +21,13 @@ h6,
 .card-title,
 .info-title,
 .caption-title {
-  color: get-color(color-brand-first-extra-dark);
+  color: $color-brand-first-extra-dark;
   font: {
     weight: get-weight(bolder);
   };
 
   small {
-    color: get-color(color-interface-content-medium);
+    color: $color-interface-content-medium;
     display: block;
     font-weight: get-weight(normal);
   }
@@ -40,7 +40,7 @@ h6,
 .info-title,
 .caption-title {
   &--high-contrast {
-    color: get-color(rastaGray);
+    color: $color-interface-content-medium;
   }
 }
 

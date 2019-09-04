@@ -1,0 +1,12 @@
+.card-price {
+  box-shadow: $shadow-bottom-level-1;
+  font-style: italic;
+  padding: $size-spacing-xs $size-spacing-xs 0;
+  text-align: center;
+  transition: all .2s linear;
+  width: 100%;
+
+  &:hover {
+    box-shadow: $shadow-bottom-level-2;
+  }
+}

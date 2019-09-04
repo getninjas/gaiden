@@ -33,13 +33,17 @@
     width: 100%;
     z-index: 1;
 
+    &:checked ~ label {
+      color: $color-interface-content-dark;
+    }
+
     &:checked ~ label::before {
       background: {
-        color: get-color(punch);
+        color: $color-brand-first-extra-dark;
         position: center center;
         repeat: no-repeat;
       }
-      color: get-color(air);
+      color: $color-interface-content-light;
       content: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%3Crect%20width%3D%2220%22%20height%3D%2220%22%20rx%3D%224%22%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23FFFFFF%22%20points%3D%224%2010.802%206.002%208.763%208.181%2010.98%2014.056%205%2016%206.979%208.123%2015%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E); //sass-lint:disable-line url-quotes
     }
 
@@ -54,15 +58,16 @@
 
   label {
     align-items: center;
-    color: get-color((color: blackNeutral, opacity: .6));
+    color: $color-interface-content-medium;
     display: flex;
-    font-size: 14px;
-    margin-left: 11px;
+    font-size: $size-font-xxs;
+    line-height: $size-line-height-xxs;
+    margin-left: $size-spacing-xxs;
 
     &::before {
-      background-color: get-color(color-interface-shade-light);
-      border-radius: 4px;
-      box-shadow: inset 0 0 0 1px get-color((color: rastaGray, opacity: .3));
+      background-color: $color-interface-shade-medium;
+      border-radius: $size-border-radius-s;
+      box-shadow: inset 0 0 0 1px $color-interface-shade-dark;
       content: '';
       height: 20px;
       left: 0;
@@ -85,22 +90,22 @@
   &--outlined {
     > input {
       &:checked ~ label::before {
-        background-color: get-color(air);
-        color: get-color(air);
+        background-color: $color-interface-content-light;
+        color: $color-interface-content-light;
         content: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%3Crect%20width%3D%2220%22%20height%3D%2220%22%20rx%3D%224%22%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%231393F6%22%20points%3D%228.123%2015%204%2010.802%206.002%208.763%208.181%2010.98%2014.056%205%2016%206.979%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E); //sass-lint:disable-line url-quotes
       }
 
       &:focus ~ label::before {
-        box-shadow: inset 0 0 0 2px get-color(air);
+        box-shadow: inset 0 0 0 2px $color-interface-content-light;
       }
     }
 
     label {
-      color: get-color(air);
+      color: $color-interface-content-light;
 
       &::before {
-        background-color: get-color(punch);
-        box-shadow: inset 0 0 0 2px get-color(air);
+        background-color: $color-brand-first-extra-dark;
+        box-shadow: inset 0 0 0 2px $color-interface-content-light;
       }
     }
   }

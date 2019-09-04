@@ -22,7 +22,6 @@
 @import 'tools/mixins/linear_gradient';
 @import 'tools/mixins/gradient';
 @import 'tools/mixins/radial';
-@import 'tools/mixins/font_family';
 @import 'tools/mixins/media';
 @import 'tools/mixins/multiple_gradients';
 @import '../shared/tools/animations/rotation';
@@ -49,12 +48,14 @@
 @import './generic/body';
 @import '../shared/generic/content_centered';
 @import 'settings/links';
+@import 'components/breadcrumb';
 @import 'components/button';
 @import 'components/media_box';
 @import 'components/picture';
 @import 'components/rating';
 @import 'components/card';
 @import 'components/card-citation';
+@import 'components/card-price';
 @import 'components/card-profile';
 @import 'components/card-review';
 @import 'components/icon';
@@ -78,7 +79,9 @@
 @import 'components/price_tag';
 @import 'components/price_variation';
 @import 'components/media';
+@import 'components/modal';
 @import 'generic/heading';
+@import 'generic/typography';
 
 @include generate-grid($default-breakpoints);
 @include generate-spaces;

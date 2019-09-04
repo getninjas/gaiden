@@ -47,6 +47,7 @@
 *     - get-space(param)
 *
 **/
+
 $spaces: (
   section: (
     small: 60,
@@ -64,6 +65,64 @@ $spaces: (
     large: 16
   )
 );
+
+
+.size-spacing {
+  &-xxxs {
+    margin-top: $size-spacing-xxxs;
+  }
+
+  &-xxs {
+    margin-top: $size-spacing-xxs;
+  }
+
+  &-xs {
+    margin-top: $size-spacing-xs;
+  }
+
+  &-s {
+    margin-top: $size-spacing-s;
+  }
+
+  &-m {
+    margin-top: $size-spacing-m;
+  }
+
+  &-l {
+    margin-top: $size-spacing-l;
+  }
+
+  &-xl {
+    margin-top: $size-spacing-xl;
+  }
+
+  &-xxl {
+    margin-top: $size-spacing-xxl;
+  }
+
+  &-xxxl {
+    margin-top: $size-spacing-xxxl;
+  }
+
+  &-section {
+    margin-top: $size-spacing-xl;
+
+    @media screen and (min-width: 768px) {
+      margin-top: $size-spacing-xxl;
+    }
+  }
+}
+
+
+$size-spacing-xxxs: 8px;
+$size-spacing-xxs: 12px;
+$size-spacing-xs: 16px;
+$size-spacing-s: 24px;
+$size-spacing-m: 36px;
+$size-spacing-l: 48px;
+$size-spacing-xl: 60px;
+$size-spacing-xxl: 84px;
+$size-spacing-xxxl: 148px;
 
 @mixin generate-spaces($spaces: $spaces) {
   @each $group-name, $space-group in $spaces {

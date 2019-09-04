@@ -1,9 +1,46 @@
 .card-profile {
-  align-content: space-between;
+  box-shadow: $shadow-bottom-level-1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  height: 100%;
   padding: 0;
+  transition: all .2s linear;
+  width: 100%;
+
+  &__wrapper-cards {
+    align-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding:  $size-spacing-m $size-spacing-xxxs 0;
+
+    @include media(normal) {
+      padding: 0 $size-spacing-m;
+
+    }
+  }
+
+  &__card {
+    margin: 0 0 $size-spacing-s;
+    width: 100%;
+
+    @include media(normal) {
+      margin: $size-spacing-m $size-spacing-m 0 0;
+      width: calc((100% / 3) - #{$size-spacing-m});
+    }
+
+    &:nth-of-type(3n) {
+      @include media(normal) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: $shadow-bottom-level-2;
+  }
 
   > div {
     width: 100%;
@@ -15,16 +52,14 @@
   }
 
   &__title {
-    color: get-color(color-brand-first-extra-dark);
+    color: $color-brand-first-extra-dark;
     font-size: 14px;
     font-weight: get-weight(bold);
     margin: 0;
   }
 
   &__rating {
-    color: get-color(blackNeutral, lighter);
-    font-size: 12px;
-    margin-top: 8px;
+    margin-top: $size-spacing-xxxs;
 
     img {
       height: 12px;
@@ -33,7 +68,7 @@
   }
 
   &__content {
-    padding: 16px 24px;
+    padding: $size-spacing-xs $size-spacing-s;
     width: 100%;
   }
 
@@ -47,39 +82,43 @@
   }
 
   &__highlight {
-    background-color: get-color(color-interface-shade-light);
+    background-color: $color-interface-shade-light;
     min-height: 108px;
-    padding: 16px 24px;
+    padding: $size-spacing-xs $size-spacing-s $size-spacing-s;
+
+    h4 {
+      margin-bottom: $size-spacing-xxxs;
+    }
   }
 
   &__light-title {
-    color: get-color(color-brand-first-extra-dark);
+    color: $color-brand-first-extra-dark;
     font-size: 14px;
     font-style: italic;
     font-weight: get-weight(bold);
   }
 
   &__btn {
-    background-color: get-color(color-brand-first-light);
+    background-color: $color-brand-first-dark;
     border: 0;
-    color: get-color(color-brand-first-extra-dark);
-    font-size: 12px;
-    font-weight: 700;
+    color: $color-brand-first-light;
+    font-size: $size-font-xxs;
+    font-weight: $font-style-weight-bold;
     margin-bottom: 0;
-    padding: 12px;
+    padding: $size-spacing-xxs $size-spacing-s;
     text-align: center;
     text-transform: uppercase;
-    transition: background-color ease-in-out .2s, color ease-in-out .2s;
     width: 100%;
     z-index: 1;
 
     &:hover {
-      background-color: get-color(color-brand-first-extra-dark);
-      color: get-color(color-brand-first-light);
+      background-color: $color-brand-first-medium;
+      color: $color-brand-first-light;
     }
   }
 
   &__footer {
+    align-self: flex-end;
     width: 100%;
   }
 }

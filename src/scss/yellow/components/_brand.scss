@@ -6,7 +6,7 @@
 **/
 
 .brand {
-  color: get-color(air);
+  color: $color-interface-content-light;
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
@@ -16,10 +16,10 @@
   }
 
   &__complement {
-    color: get-color(color-brand-first-medium);
+    color: $color-brand-first-medium;
     display: none;
     font-style: italic;
-    margin-left: 15px;
+    margin-left: $size-spacing-xs;
 
     @include media(normal) {
       display: inline-block;
@@ -33,7 +33,7 @@
   &__image {
     display: inline-block;
     height: 36px;
-    margin-right: 10px;
+    margin-right: $size-spacing-xxxs;
     vertical-align: top;
     width: 36px;
 
@@ -43,7 +43,7 @@
   }
 
   &__name {
-    color: get-color(color-interface-content-medium);
+    color: $color-interface-content-medium;
     display: inline-block;
     font: {
       size: 20px;
@@ -61,7 +61,7 @@
     }
 
     small {
-      color: get-color(color-interface-content-medium);
+      color: $color-interface-content-medium;
       display: block;
       font: {
         size: 10px;

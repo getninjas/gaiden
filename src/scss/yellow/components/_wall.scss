@@ -19,7 +19,7 @@
   }
 
   &--highlighted {
-    background-color: get-color(breeze);
+    background-color: $color-brand-second-light;
 
     + .wall--highlighted {
       &[class*='space-'] {
@@ -29,7 +29,7 @@
   }
 
   &--inverted {
-    background-color: get-color(air);
+    background-color: $color-interface-content-light;
   }
 
   &--separator {
