@@ -62,10 +62,11 @@
   }
 
   &--action {
+    box-shadow: $shadow-bottom-level-1;
     position: relative;
 
     &:hover {
-      box-shadow: get-shadow(large) $color-interface-shade-dark;
+      box-shadow: $shadow-bottom-level-2;
       transform: translate(0, -5px);
     }
 
