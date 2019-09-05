@@ -161,11 +161,15 @@
         display: block;
       }
     }
+
+    .footer__item {
+      margin-right: $size-spacing-xxxs;
+    }
   }
 
   &__item {
     &:not(.footer__item--larger) {
-      margin: $size-spacing-xxxs $size-spacing-xxxs 0;
+      margin-top: $size-spacing-xxxs;
     }
   }
 
