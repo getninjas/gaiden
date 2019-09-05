@@ -165,7 +165,7 @@
 
   &__item {
     &:not(.footer__item--larger) {
-      margin-top: $size-spacing-xxxs;
+      margin: $size-spacing-xxxs $size-spacing-xxxs 0;
     }
   }
 
