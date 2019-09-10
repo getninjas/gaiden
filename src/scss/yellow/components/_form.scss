@@ -52,6 +52,20 @@
 .form {
   overflow-x: hidden;
 
+  &.container {
+    &.sh-format-content {
+      &.space-box-small {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__steps {
+    &.space-box-medium {
+      margin-top: 0;
+    }
+  }
+
   &__envelop {
     background: $color-interface-positive-dark;
     padding: $size-spacing-m $size-spacing-m $size-spacing-s;
@@ -99,10 +113,7 @@
 
 
   &__container {
-    padding: {
-      left: 10%;
-      right: 10%;
-    }
+    padding: $size-spacing-xxl $size-spacing-xxl;
     width: 100%;
   }
 
@@ -143,10 +154,16 @@
       width: 100%;
     }
 
-    &:hover,
-    &:focus {
-      @extend %focus-style;
+    &:hover {
+      background-color: get-color(color-interface-shade-light);
+      border: 1px solid get-color(color-interface-content-extra-dark);
       outline: none;
+    }
+
+    &:focus {
+      background-color: $color-interface-content-light;
+      border-color: $color-brand-first-extra-dark;
+      color: $color-interface-content-dark;
     }
 
     &--filled {
@@ -157,9 +174,16 @@
     }
 
     &--invalid {
-      &:hover,
-      &:focus {
-        @extend %focus-style;
+      background-color: $color-interface-negative-light;
+      border-color: $color-interface-negative-extra-dark;
+
+      &:hover {
+        background-color: $color-interface-negative-light;
+        border-color: $color-interface-negative-extra-dark;
+      }
+
+      &:not([required]) {
+        border-color: get-color((color: punch, opacity: .8));
       }
     }
   }

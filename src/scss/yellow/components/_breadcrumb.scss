@@ -16,6 +16,8 @@
       }
 
       &:last-child {
+        @extend %typography__color--content-extra-dark;
+        @extend %typography__size-caption;
         font-weight: get-weight(bold);
       }
     }
