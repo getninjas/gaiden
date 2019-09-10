@@ -103,11 +103,6 @@
       background-color: $color-interface-shade-medium;
       cursor: not-allowed;
       opacity: $opacity-translucent;
-
-      &:hover,
-      &:focus {
-        border: 1px solid get-color((color: rastaGray, opacity: .2));
-      }
     }
   }
 
