@@ -29,14 +29,8 @@
 
   &__body {
     height: auto;
-    margin: get-space(box, small) 0 auto;
-    padding-left: 0;
-    padding-right: 0;
+    margin: $size-spacing-s 0 auto;
 
-    @include media(normal) {
-      padding-left: 1.25%;
-      padding-right: 1.25%;
-    }
 
     .container {
       align-items: center;
@@ -47,7 +41,7 @@
       position: relative;
       width: 100%;
 
-      @include media(normal) {
+      @media screen and (min-width: $media-normal) {
         min-height: 480px;
         padding-left: 0;
         padding-right: 0;
@@ -60,14 +54,14 @@
     flex-direction: column;
 
     &.space-box-medium {
-      margin-top: 10px;
+      margin-top: $size-spacing-xxs;
 
-      @include media(normal) {
-        margin-top: 36px;
+      @media screen and (min-width: $media-normal) {
+        margin-top: $size-spacing-m;
       }
     }
 
-    @include media(normal) {
+    @media screen and (min-width: $media-normal) {
       flex-direction: row;
       justify-content: space-between;
       max-width: 600px;
@@ -78,11 +72,11 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    margin-top: get-space(element, medium);
+    margin-top: $size-spacing-xxs;
   }
 
   &__feature-label {
-    color: get-color(rastaGray);
+    color: $color-interface-content-medium;
     font-style: italic;
   }
 
@@ -91,21 +85,21 @@
   }
 
   &__star {
-    @include media(normal) {
+    @media screen and (min-width: $media-normal) {
       margin-top: 5px;
     }
   }
 
   &__content {
-    background-color: get-color(air);
+    background-color: $color-interface-content-light;
     order: 1;
-    padding: get-space(box, small) get-space(element, medium) get-space(section, medium);
+    padding: $size-spacing-s $size-spacing-xxs $size-spacing-xl;
     position: relative;
     text-align: left;
     width: 100%;
 
     &::before {
-      background-color: get-color(air);
+      background-color: $color-interface-content-light;
       border-top-left-radius: 50%;
       border-top-right-radius: 50%;
       content: '';
@@ -120,7 +114,7 @@
 
     }
 
-    @include media(normal) {
+    @media screen and (min-width: $media-normal) {
       background: transparent;
       border-radius: 0;
       margin-top: 0;
@@ -140,9 +134,9 @@
       margin-bottom: 5px;
     }
 
-    @include media(normal) {
+    @media screen and (min-width: $media-normal) {
       max-width: calc(100% - 360px);
-      padding-bottom: 90px;
+      padding-bottom: $size-spacing-xxl;
     }
   }
 
@@ -155,7 +149,7 @@
     picture {
       width: 100%;
 
-      @include media(normal) {
+      @media screen and (min-width: $media-normal) {
         align-items: flex-end;
         width: auto;
       }
@@ -165,17 +159,17 @@
       display: block;
       width: 45%;
 
-      @include media(medium) {
+      @media screen and (min-width: $media-medium) {
         width: 100%;
       }
     }
 
-    @include media(medium) {
+    @media screen and (min-width: $media-medium) {
       display: none;
       min-height: 480px;
     }
 
-    @include media(normal) {
+    @media screen and (min-width: $media-normal) {
       bottom: 0;
       display: flex;
       position: absolute;
@@ -186,7 +180,7 @@
     }
   }
 
-  @include media(normal) {
+  @media screen and (min-width: $media-normal) {
     padding-bottom: 0;
   }
 }

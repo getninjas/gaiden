@@ -113,7 +113,7 @@
 
 
   &__container {
-    padding: $size-spacing-xxl $size-spacing-xxl;
+    padding: $size-spacing-xxl;
     width: 100%;
   }
 
@@ -155,8 +155,8 @@
     }
 
     &:hover {
-      background-color: get-color(color-interface-shade-light);
-      border: 1px solid get-color(color-interface-content-extra-dark);
+      background-color: $color-interface-shade-light;
+      border: 1px solid $color-interface-content-extra-dark;
       outline: none;
     }
 

@@ -73,7 +73,7 @@
   }
 
   &__text {
-    color: get-color(blackNeutral, lighter);
+    color: $color-interface-content-medium;
     font-size: 14px;
 
     &--citation {

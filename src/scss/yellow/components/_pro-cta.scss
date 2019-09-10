@@ -1,6 +1,6 @@
 .pro-cta {
 
-  background-color: get-color(color-interface-shade-light);
+  background-color: $color-interface-shade-light;
   padding: $size-spacing-xl 0;
 
   &__title {
