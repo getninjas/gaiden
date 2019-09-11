@@ -1,3 +1,5 @@
+$box-shadow: rgba(250, 250, 250, 1);
+
 .header-banner {
   display: block;
   height: auto;
@@ -25,6 +27,8 @@
 
   &--border {
     border-bottom: 1px $border-style-default $color-interface-shade-dark;
+    box-shadow: 0 0 23px 0 $box-shadow;
+    position: relative;
   }
 
   &__body {
@@ -93,10 +97,14 @@
   &__content {
     background-color: $color-interface-content-light;
     order: 1;
-    padding: $size-spacing-s $size-spacing-xxs $size-spacing-xl;
+    padding: $size-spacing-s $size-spacing-xxs;
     position: relative;
     text-align: left;
     width: 100%;
+
+    @media screen and (min-width: $media-normal) {
+      padding: $size-spacing-s $size-spacing-xxs $size-spacing-xl;
+    }
 
     &::before {
       background-color: $color-interface-content-light;
