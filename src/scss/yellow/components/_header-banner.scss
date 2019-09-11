@@ -1,6 +1,7 @@
-$box-shadow: rgba(250, 250, 250, 1);
+$box-shadow: rgba($color-interface-content-extra-dark, .04);
 
 .header-banner {
+
   display: block;
   height: auto;
   padding-bottom: $size-spacing-xxl;
@@ -27,7 +28,7 @@ $box-shadow: rgba(250, 250, 250, 1);
 
   &--border {
     border-bottom: 1px $border-style-default $color-interface-shade-dark;
-    box-shadow: 0 0 23px 0 $box-shadow;
+    box-shadow: 0 36px 31px 0 $box-shadow;
     position: relative;
   }
 
@@ -95,7 +96,7 @@ $box-shadow: rgba(250, 250, 250, 1);
   }
 
   &__content {
-    background-color: $color-interface-content-light;
+    background: linear-gradient(180deg, $box-shadow 0%, $color-interface-content-light 40%);
     order: 1;
     padding: $size-spacing-s $size-spacing-xxs;
     position: relative;
@@ -104,22 +105,6 @@ $box-shadow: rgba(250, 250, 250, 1);
 
     @media screen and (min-width: $media-normal) {
       padding: $size-spacing-s $size-spacing-xxs $size-spacing-xl;
-    }
-
-    &::before {
-      background-color: $color-interface-content-light;
-      border-top-left-radius: 50%;
-      border-top-right-radius: 50%;
-      content: '';
-      height: 44px;
-      left: -3%;
-      margin-left: auto;
-      margin-right: auto;
-      position: absolute;
-      right: 0;
-      top: -16px;
-      width: 106%;
-
     }
 
     @media screen and (min-width: $media-normal) {
