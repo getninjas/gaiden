@@ -1,5 +1,6 @@
 $box-shadow: rgba($color-interface-content-extra-dark, .04);
 
+
 .header-banner {
 
   display: block;
@@ -16,7 +17,7 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
 
     small {
       font-size: $size-font-xs;
-      line-height: $size-font-xs;
+      line-height: $size-font-m;
       margin-top: $size-spacing-xxs;
 
       @media screen and (min-width: $media-normal) {
@@ -27,7 +28,6 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
   }
 
   &--border {
-    border-bottom: 1px $border-style-default $color-interface-shade-dark;
     box-shadow: 0 36px 31px 0 $box-shadow;
     position: relative;
   }
@@ -35,7 +35,8 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
   &__body {
     height: auto;
     margin: $size-spacing-s 0 auto;
-
+    padding-right: 0;
+    padding-right: 0;
 
     .container {
       align-items: center;
@@ -45,6 +46,7 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
       padding: 0;
       position: relative;
       width: 100%;
+
 
       @media screen and (min-width: $media-normal) {
         min-height: 480px;
@@ -85,6 +87,11 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
     font-style: italic;
   }
 
+  &__certify {
+    width: 24px;
+    margin-right: 10px;
+  }
+
   &__badge {
     margin-right: 10px;
   }
@@ -92,6 +99,7 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
   &__star {
     @media screen and (min-width: $media-normal) {
       margin-top: 5px;
+      width: 24px;
     }
   }
 
@@ -101,7 +109,6 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
     padding: $size-spacing-s $size-spacing-xxs;
     position: relative;
     text-align: left;
-    width: 100%;
 
     @media screen and (min-width: $media-normal) {
       padding: $size-spacing-s $size-spacing-xxs $size-spacing-xl;
@@ -138,6 +145,8 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
     order: 0;
     text-align: center;
     width: 100%;
+    position: relative;
+    top: 6px;
 
     picture {
       width: 100%;
