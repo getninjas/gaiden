@@ -36,7 +36,6 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
     height: auto;
     margin: $size-spacing-s 0 auto;
     padding-right: 0;
-    padding-right: 0;
 
     .container {
       align-items: center;
@@ -88,8 +87,8 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
   }
 
   &__certify {
-    width: 24px;
     margin-right: 10px;
+    width: 24px;
   }
 
   &__badge {
@@ -143,10 +142,10 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
   &__image {
     display: flex;
     order: 0;
-    text-align: center;
-    width: 100%;
     position: relative;
+    text-align: center;
     top: 6px;
+    width: 100%;
 
     picture {
       width: 100%;
