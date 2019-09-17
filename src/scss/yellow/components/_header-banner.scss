@@ -82,7 +82,7 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
 
   &__feature-label {
     color: $color-interface-content-medium;
-    font-style: italic;
+    font-style: $font-style-quote;
   }
 
   &__certify {
@@ -127,8 +127,8 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
     .localization {
       color: get-color(rastaGray);
       display: block;
-      font-size: 14px;
-      font-style: italic;
+      font-size: $size-font-xxs;
+      font-style: $font-style-quote;
       margin-bottom: 5px;
     }
 

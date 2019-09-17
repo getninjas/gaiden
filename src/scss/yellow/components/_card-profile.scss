@@ -74,7 +74,7 @@
 
   &__text {
     color: $color-interface-content-medium;
-    font-size: 14px;
+    font-size: $size-font-xxs;
 
     &--citation {
       font-style: italic;
