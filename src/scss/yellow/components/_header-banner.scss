@@ -129,7 +129,7 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
       color: get-color(rastaGray);
       display: block;
       font-size: $size-font-xxs;
-      font-style: italic;
+      font-style: $font-style-quote;
       margin-bottom: 5px;
     }
 
