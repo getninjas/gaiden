@@ -128,7 +128,7 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
     .localization {
       color: get-color(rastaGray);
       display: block;
-      font-size: 14px;
+      font-size: $size-font-xxs;
       font-style: italic;
       margin-bottom: 5px;
     }
