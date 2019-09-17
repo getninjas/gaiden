@@ -46,7 +46,6 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
       position: relative;
       width: 100%;
 
-
       @media screen and (min-width: $media-normal) {
         min-height: 480px;
         padding-left: 0;
@@ -97,7 +96,7 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
 
   &__star {
     @media screen and (min-width: $media-normal) {
-      margin-top: 5px;
+      margin-top: $size-spacing-xxxs;
       width: 24px;
     }
   }
