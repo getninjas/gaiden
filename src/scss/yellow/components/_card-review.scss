@@ -12,7 +12,7 @@
   &__text {
     color: $color-interface-content-medium;
     font-size: $size-font-xxs;
-    font-style: italic;
+    font-style: $font-style-quote;
   }
 
   &__rating {
