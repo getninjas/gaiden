@@ -73,8 +73,8 @@
   }
 
   &__text {
-    color: get-color(blackNeutral, lighter);
-    font-size: 14px;
+    color: $color-interface-content-medium;
+    font-size: $size-font-xxs;
 
     &--citation {
       font-style: italic;

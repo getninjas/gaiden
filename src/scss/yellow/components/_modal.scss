@@ -94,14 +94,14 @@ body {
   }
 
   &__title {
-    color: $color-interface-content-medium;
-    font-size: 36px;
+    @extend %typography__size-heading--m;
+    @extend %typography__color--first-extra-dark;
     margin: 0;
   }
 
   &__text {
-    color: $color-interface-content-medium;
-    font-size: 18px;
+    @extend %typography__size-text-default;
+    @extend %typography__color--content-medium;
   }
 
   &__actions {
