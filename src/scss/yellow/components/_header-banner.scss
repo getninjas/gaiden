@@ -158,6 +158,8 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
     img {
       display: block;
       width: 45%;
+      position: relative;
+      top: 6px;
 
       @media screen and (min-width: $media-medium) {
         width: 100%;
