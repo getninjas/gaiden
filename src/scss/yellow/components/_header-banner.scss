@@ -102,7 +102,6 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
   }
 
   &__content {
-    background: linear-gradient(180deg, $box-shadow 0%, $color-interface-content-light 200%);
     order: 1;
     padding: $size-spacing-s $size-spacing-xxs;
     position: relative;
@@ -139,6 +138,7 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
   }
 
   &__image {
+    box-shadow: 0px 36px 31px 0px $box-shadow;
     display: flex;
     order: 0;
     position: relative;
@@ -165,12 +165,14 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
     }
 
     @media screen and (min-width: $media-medium) {
+      box-shadow: none;
       display: none;
       min-height: 480px;
     }
 
     @media screen and (min-width: $media-normal) {
       bottom: 0;
+      box-shadow: none;
       display: flex;
       position: absolute;
       right: 0;
