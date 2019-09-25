@@ -102,7 +102,7 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
   }
 
   &__content {
-    background: linear-gradient(180deg, $box-shadow 0%, $color-interface-content-light 40%);
+    background: linear-gradient(180deg, $box-shadow 0%, $color-interface-content-light 200%);
     order: 1;
     padding: $size-spacing-s $size-spacing-xxs;
     position: relative;
