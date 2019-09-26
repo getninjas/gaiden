@@ -167,7 +167,6 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
     }
 
     @media screen and (min-width: $media-medium) {
-      box-shadow: none;
       display: none;
       min-height: 480px;
     }
