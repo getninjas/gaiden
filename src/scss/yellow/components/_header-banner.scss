@@ -138,7 +138,7 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
   }
 
   &__image {
-    box-shadow: 0px 36px 31px 0px $box-shadow;
+    box-shadow: 0 36px 31px 0 $box-shadow;
     display: flex;
     order: 0;
     position: relative;
