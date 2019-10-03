@@ -10,9 +10,9 @@
   }
 
   &__text {
-    color: get-color(blackNeutral, lighter);
-    font-size: 14px;
-    font-style: italic;
+    color: $color-interface-content-medium;
+    font-size: $size-font-xxs;
+    font-style: $font-style-quote;
   }
 
   &__rating {

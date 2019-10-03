@@ -12,11 +12,12 @@
 
     &-item {
       &-separator {
+        @extend %typography__size-caption;
         letter-spacing: 2px;
       }
 
       &:last-child {
-        font-weight: get-weight(bold);
+        @extend %typography__color--content-extra-dark;
       }
     }
   }

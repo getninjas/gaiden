@@ -10,8 +10,7 @@
 **/
 
 .thumbnail {
-  border-bottom-left-radius: $size-border-radius-m;
-  border-bottom-right-radius: $size-border-radius-m;
+  border-radius: $size-border-radius-m;
   height: initial;
   overflow: hidden;
   position: relative;
@@ -19,38 +18,36 @@
   will-change: transform;
 
   &--action {
+    animation: all .3s linear;
     box-shadow: $shadow-bottom-level-1;
     display: block;
     max-height: 190px;
-    transform: scale(-1);
     width: 98%;
 
     &:hover {
       box-shadow: $shadow-bottom-level-2;
-      transform: translate(0, -5px) scale(-1);
+      transform: translateY(-4px);
     }
 
     .thumbnail__photo {
-      transform: scale(-1);
-
       img {
+        border-radius: $size-border-radius-m;
         height: auto;
         max-height: 100%;
-        width: 100%;
       }
     }
   }
 
   &__button {
     background-color: $color-brand-first-extra-dark;
+    bottom: 0;
     color: $color-interface-content-light;
     font-size: $size-font-xxs;
     font-weight: get-weight(font-style-weight-bold);
     padding: $size-spacing-xxs $size-spacing-s;
+    position: absolute;
     text-align: center;
     text-transform: uppercase;
-    top: 156px;
-    transform: scale(-1);
     width: 100%;
     z-index: 1;
 

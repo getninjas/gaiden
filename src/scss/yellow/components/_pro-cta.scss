@@ -1,0 +1,15 @@
+.pro-cta {
+
+  background-color: $color-interface-shade-light;
+  padding: $size-spacing-xl 0;
+
+  &__title {
+    small {
+      margin-top: $size-spacing-xxxs;
+    }
+  }
+
+  @media screen and(min-width: $media-normal) {
+    padding: $size-spacing-xxl 0;
+  }
+}
