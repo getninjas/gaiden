@@ -9,8 +9,8 @@
       "parent": "gaiden_css"
     },
     "gh_pages": {
-      "static": "theme/static",
-      "templates": "theme/templates",
+      "static": "./theme/static",
+      "templates": "./theme/templates",
       "glob": "src/scss/**/*.{css,scss,md}",
       "dest": "./",
       "parent": "gaiden_css"
