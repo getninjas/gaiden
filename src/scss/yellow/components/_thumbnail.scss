@@ -63,12 +63,12 @@
     display: block;
     width: 100%;
 
-    img { 
+    img {
       width: 100%;
 
       @media screen and (min-width: 960px) {
         width: auto;
-      } 
+      }
     }
   }
 }
