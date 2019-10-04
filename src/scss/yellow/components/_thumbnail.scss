@@ -32,8 +32,9 @@
     .thumbnail__photo {
       img {
         border-radius: $size-border-radius-m;
-        height: auto;
+        bottom: 33px;
         max-height: 100%;
+        position: relative;
       }
     }
   }
@@ -63,7 +64,11 @@
     width: 100%;
 
     img {
-      width: auto;
+      width: 100%;
+
+      @media screen and (min-width: 960px) {
+        width: auto;
+      }
     }
   }
 }
