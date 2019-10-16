@@ -187,6 +187,10 @@ $box-shadow: rgba($color-interface-content-extra-dark, .04);
 }
 
 .header-banner-over {
-  margin-top: -60px;
+  margin-top: 0;
   position: relative;
+
+  @media screen and (min-width: $media-normal) {
+    margin-top: -60px;
+  }
 }
