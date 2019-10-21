@@ -130,7 +130,7 @@
 
     &--default {
       background-color: $color-interface-content-light;
-      box-shadow: inset 0 0 0 1px $color-brand-first-extra-dark;
+      box-shadow: inset 0 0 0 2px $color-brand-first-extra-dark;
       color: $color-brand-first-extra-dark;
 
       &:hover {
@@ -165,12 +165,17 @@
   &--high-contrast,
   &--raised-reversed,
   &--rounded {
-    background-color: $color-brand-first-extra-dark;
     border-radius: $size-border-radius-pill;
-    color: $color-interface-content-light;
     font-size: $size-font-xxs;
     padding: $size-spacing-xxs $size-spacing-s;
     transition: all .2s linear;
+  }
+
+  &--regular,
+  &--high-contrast,
+  &--raised-reversed {
+    background-color: $color-brand-first-extra-dark;
+    color: $color-interface-content-light;
 
     &:hover {
       background-color: $color-brand-first-medium;
