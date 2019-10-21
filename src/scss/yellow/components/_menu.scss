@@ -25,6 +25,7 @@
   padding: $size-spacing-xxs 0;
 
   @include media(normal) {
+    border-bottom: 1px $border-style-default $color-interface-shade-dark;
     flex-direction: column;
     padding: $size-spacing-xs 0;
   }
