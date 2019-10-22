@@ -1,6 +1,6 @@
 {
   "name": "gaiden",
-  "version": "17.6.7",
+  "version": "17.6.8",
   "description": "Styleguide for GetNinjas projects",
   "main": "index.js",
   "scripts": {
