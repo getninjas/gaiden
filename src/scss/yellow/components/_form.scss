@@ -124,6 +124,11 @@
     @media screen and (min-width: $media-normal) {
       padding: $size-spacing-xxl;
     }
+    &--steps {
+      @media screen and (min-with: $media-large) {
+        padding: 0;
+      } 
+    }
   }
 
   &__field {

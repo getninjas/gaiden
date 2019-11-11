@@ -23,6 +23,18 @@
     padding: $size-spacing-xxs;
     text-align: center;
 
+    &:nth-of-type(2) {
+      flex: 2;
+    }
+
+    @media screen and (max-width: $media-medium) {
+      flex: unset;
+    }
+
+    @media screen and (min-width: 360px) {
+      padding: 4px;
+    }
+
     &--active {
       background-color: $color-interface-content-light;
       color: $color-interface-content-extra-dark;
