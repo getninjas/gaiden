@@ -1,7 +1,6 @@
 @import 'node_modules/reset-css/_reset'; //sass-lint:disable-line clean-import-paths
 @import '../shared/niten-tokens';
 @import 'settings/colors';
-@import 'settings/grid';
 @import 'settings/buttons';
 @import 'settings/base_font';
 @import 'settings/spaces';
@@ -24,6 +23,7 @@
 @import 'tools/mixins/radial';
 @import 'tools/mixins/media';
 @import 'tools/mixins/multiple_gradients';
+@import '../shared/settings/grid';
 @import '../shared/tools/animations/rotation';
 @import '../shared/tools/mixins/map_deep_get';
 @import '../shared/tools/mixins/generate_button_sizes';
