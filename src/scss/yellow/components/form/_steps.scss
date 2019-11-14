@@ -24,15 +24,26 @@
     text-align: center;
 
     &:nth-of-type(2) {
-      flex: 2;
-    }
-
-    @media screen and (max-width: $media-medium) {
-      flex: unset;
+      @media screen and (min-width: $media-small) {
+        flex: 2;
+      }
     }
 
     @media screen and (min-width: 360px) {
-      padding: 4px;
+      padding: 17px;
+    }
+
+    @media screen and (min-width: $media-medium) {
+      flex: unset;
+      padding: 17px 20px;
+    }
+
+    @media screen and (min-width: $media-normal) {
+      padding: 17px 36px;
+    }
+
+    @media screen and (min-width: $media-large) {
+      padding: 17px 48px;
     }
 
     &--active {

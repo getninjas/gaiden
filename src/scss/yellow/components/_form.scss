@@ -125,9 +125,9 @@
       padding: $size-spacing-xxl;
     }
     &--steps {
-      @media screen and (min-with: $media-large) {
+      @media screen and (min-width: $media-large) {
         padding: 0;
-      } 
+      }
     }
   }
 
