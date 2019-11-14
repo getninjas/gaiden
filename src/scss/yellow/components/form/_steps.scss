@@ -39,11 +39,11 @@
     }
 
     @media screen and (min-width: $media-normal) {
-      padding: 17px 36px;
+      padding: 17px $size-spacing-m;
     }
 
     @media screen and (min-width: $media-large) {
-      padding: 17px 48px;
+      padding: 17px $size-spacing-l;
     }
 
     &--active {
