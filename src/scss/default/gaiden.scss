@@ -1,12 +1,12 @@
 @import 'node_modules/reset-css/_reset'; //sass-lint:disable-line clean-import-paths
 @import 'settings/colors';
-@import 'settings/grid';
 @import 'settings/buttons';
 @import 'settings/base_font';
 @import 'settings/spaces';
 @import 'settings/shadows';
 @import 'settings/border';
 @import 'settings/banner';
+@import '../shared/settings/grid';
 @import '../shared/tools/animations/rotation';
 @import '../shared/tools/mixins/map_deep_get';
 @import '../shared/tools/mixins/generate_button_sizes';

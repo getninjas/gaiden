@@ -18,6 +18,7 @@
 
 .menu {
   background-color: $color-interface-content-light;
+  border-bottom: 1px $border-style-default $color-interface-shade-dark;
   display: flex;
   flex-direction: row;
   flex-shrink: 0;

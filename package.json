@@ -69,9 +69,5 @@
     "replace": "^1.1.0",
     "reset-css": "^2.2.0",
     "sass-lint": "^1.10.2"
-  },
-  "dependencies": {
-    "install": "^0.13.0",
-    "npm": "^6.10.3"
   }
 }
