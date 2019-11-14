@@ -20,7 +20,7 @@
     flex: 1;
     font-size: $size-font-xxs;
     line-height: $size-line-height-xxs;
-    padding: $size-spacing-xxs;
+    padding: 17px;
     text-align: center;
 
     &:nth-of-type(2) {
@@ -30,7 +30,7 @@
     }
 
     @media screen and (min-width: 360px) {
-      padding: 17px;
+      padding: $size-spacing-xxs;
     }
 
     @media screen and (min-width: $media-medium) {
