@@ -20,31 +20,8 @@
     flex: 1;
     font-size: $size-font-xxs;
     line-height: $size-line-height-xxs;
-    padding: 17px;
+    padding: $size-spacing-xxs;
     text-align: center;
-
-    &:nth-of-type(2) {
-      @media screen and (min-width: $media-small) {
-        flex: 2;
-      }
-    }
-
-    @media screen and (min-width: 360px) {
-      padding: $size-spacing-xxs;
-    }
-
-    @media screen and (min-width: $media-medium) {
-      flex: unset;
-      padding: 17px 20px;
-    }
-
-    @media screen and (min-width: $media-normal) {
-      padding: 17px $size-spacing-m;
-    }
-
-    @media screen and (min-width: $media-large) {
-      padding: 17px $size-spacing-l;
-    }
 
     &--active {
       background-color: $color-interface-content-light;
