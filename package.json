@@ -25,7 +25,9 @@
     "build:dev:image": "./bin/build/dev/image.js",
     "build:prod:css": "./bin/build/prod/css.js",
     "build:prod:html": "./bin/build/prod/html.js",
-    "build:prod:image": "./bin/build/prod/image.js"
+    "build:prod:image": "./bin/build/prod/image.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "browserslist": [
     "last 2 versions",
@@ -50,7 +52,12 @@
   },
   "homepage": "https://github.com/getninjas/gaiden#readme",
   "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.4",
+    "@storybook/html": "^5.2.6",
     "autoprefixer": "^6.7.7",
+    "babel-loader": "^8.0.6",
+    "babel-preset-latest": "^6.24.1",
     "browser-sync": "^2.17.3",
     "css-mqpacker": "^5.0.1",
     "cssnano-cli": "^1.0.5",
