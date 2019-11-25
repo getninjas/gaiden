@@ -31,11 +31,8 @@
   },
   "browserslist": [
     "last 2 versions",
-    "safari >= 7",
-    "ie >= 9",
-    "ff >= 20",
-    "ios >=7",
-    "android >=4"
+    "not dead",
+    "> 2%"
   ],
   "repository": {
     "type": "git",
