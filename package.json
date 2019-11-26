@@ -4,7 +4,8 @@
   "description": "Styleguide for GetNinjas projects",
   "main": "index.js",
   "scripts": {
-    "build:dev": "webpack"
+    "build:dev": "webpack",
+    "build:prod" : "export NODE_ENV=production && webpack"
   },
   "browserslist": [
     "last 2 versions",
@@ -30,20 +31,19 @@
   "homepage": "https://github.com/getninjas/gaiden#readme",
   "devDependencies": {
     "autoprefixer": "^6.7.7",
-    "browser-sync": "^2.17.3",
     "css-mqpacker": "^5.0.1",
-    "cssnano-cli": "^1.0.5",
-    "documentjs": "^0.5.5",
-    "eslint-plugin-react": "^6.10.0",
-    "node-sass": "^3.13.1",
-    "npm-run-all": "^3.1.0",
-    "onchange": "^6.0.0",
-    "postcss-cli": "^6.1.3",
-    "replace": "^1.1.0",
-    "reset-css": "^2.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
     "sass-lint": "^1.10.2"
   },
   "dependencies": {
+    "css-loader": "^3.2.0",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^5.0.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "reset-css": "^5.0.1",
+    "sass-loader": "^8.0.0",
     "webpack": "^5.0.0-beta.7",
     "webpack-cli": "^3.3.10"
   }
