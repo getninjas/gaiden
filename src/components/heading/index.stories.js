@@ -31,3 +31,9 @@ export const Medium = () => '<h3 class="heading heading--m">Hello World</h3>';
 export const Small = () => '<h4 class="heading heading--s">Hello World</h4>';
 
 export const XSmall = () => '<h5 class="heading heading--xs">Hello World</h5>';
+
+export const XLargeInverse = () => `
+  <div style="background-color: #000">
+    <h1 class="heading heading--xl heading--inverse">Hello World</h1>
+  </div>
+`;

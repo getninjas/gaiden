@@ -29,4 +29,8 @@
     font-size: $size-font-xs;
     line-height: $size-line-height-xs;
   }
+
+  &--inverse {
+    color: $color-brand-first-light;
+  }
 }
