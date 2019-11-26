@@ -24,3 +24,9 @@ export const Large = () => '<small class="subtitle subtitle--l">Hello World</sma
 export const Medium = () => '<small class="subtitle subtitle--m">Hello World</small>';
 
 export const Small = () => '<small class="subtitle subtitle--s">Hello World</small>';
+
+export const LargeInverse = () =>`
+  <div style="background-color: #000">
+    <small class="subtitle subtitle--l subtitle--inverse">Hello World</small>
+  </div>
+`;

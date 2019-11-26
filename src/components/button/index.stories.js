@@ -7,9 +7,6 @@ export default {
 
 import './index.scss';
 
-/**
- * Use `Badge` to highlight key info with a predefined status.
- */
 export const allButtons = () => `
   <div style="margin-bottom: 20px">
     <button class="btn btn__primary btn__primary--default btn__primary--small" disabled="true">Hello World</button>

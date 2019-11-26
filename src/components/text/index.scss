@@ -1,0 +1,33 @@
+@import '../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
+
+.text {
+  font-family: $font-family-default;
+  font-size: $size-font-xs;
+  font-weight: $font-style-weight-regular;
+  line-height: $size-line-height-xs;
+
+  &--dark {
+    color: $color-interface-content-dark;
+  }
+
+  &--medium {
+    color: $color-interface-content-medium;
+  }
+
+  &--positive {
+    color: $color-interface-positive-extra-dark;
+  }
+
+  &--alert {
+    color: $color-interface-alert-extra-dark;
+  }
+
+  &--negative {
+    color: $color-interface-negative-extra-dark;
+  }
+
+  &--inverse {
+    color: $color-interface-content-light;
+  }
+
+}
