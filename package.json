@@ -32,7 +32,6 @@
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "css-mqpacker": "^5.0.1",
-    "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
     "sass-lint": "^1.10.2"
   },
