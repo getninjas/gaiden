@@ -1,9 +1,14 @@
 import { configure, addParameters } from '@storybook/html';
 import ninjaTheme from './ninjaTheme';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+
 
 addParameters({
   options: {
     theme: ninjaTheme,
+  },
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
   },
 });
 
