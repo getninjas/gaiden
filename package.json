@@ -1,11 +1,14 @@
 {
   "name": "gaiden",
-  "version": "17.7.0",
+  "version": "17.7.1-0",
   "description": "Styleguide for GetNinjas projects",
   "main": "index.js",
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags",
+    "build": "export NODE_ENV=production && webpack"
   },
   "browserslist": [
     "last 2 versions",
@@ -46,6 +49,15 @@
     "style-loader": "^1.0.0"
   },
   "dependencies": {
-    "@getninjas/niten-tokens": "^1.3.0"
+    "@getninjas/niten-tokens": "^1.3.0",
+    "css-loader": "^3.2.0",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^5.0.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "reset-css": "^5.0.1",
+    "sass-loader": "^8.0.0",
+    "webpack": "^5.0.0-beta.7",
+    "webpack-cli": "^3.3.10"
   }
 }
