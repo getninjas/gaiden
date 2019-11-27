@@ -8,25 +8,25 @@ export default {
 import './index.scss';
 
 export const allSubTitle = () => `
-  <div>
-    <small class="subtitle subtitle--l">Hello World</small>
+  <div class="space-docs">
+    <small class="subtitle subtitle--l">Milhares de profissionais avaliados por clientes, permitindo você negociar apenas com os melhores.</small>
   </div>
-  <div>
-    <small class="subtitle subtitle--m">Hello World</small>
+  <div class="space-docs">
+    <small class="subtitle subtitle--m">Milhares de profissionais avaliados por clientes, permitindo você negociar apenas com os melhores.</small>
   </div>
-  <div>
-    <small class="subtitle subtitle--s">Hello World</small>
+  <div class="space-docs">
+    <small class="subtitle subtitle--s">Milhares de profissionais avaliados por clientes, permitindo você negociar apenas com os melhores.</small>
   </div>
 `;
 
-export const Large = () => '<small class="subtitle subtitle--l">Hello World</small>';
+export const Large = () => '<small class="subtitle subtitle--l">Milhares de profissionais avaliados por clientes, permitindo você negociar apenas com os melhores.</small>';
 
-export const Medium = () => '<small class="subtitle subtitle--m">Hello World</small>';
+export const Medium = () => '<small class="subtitle subtitle--m">Milhares de profissionais avaliados por clientes, permitindo você negociar apenas com os melhores.</small>';
 
-export const Small = () => '<small class="subtitle subtitle--s">Hello World</small>';
+export const Small = () => '<small class="subtitle subtitle--s">Milhares de profissionais avaliados por clientes, permitindo você negociar apenas com os melhores.</small>';
 
 export const LargeInverse = () =>`
   <div style="background-color: #000">
-    <small class="subtitle subtitle--l subtitle--inverse">Hello World</small>
+    <small class="subtitle subtitle--l subtitle--inverse">Milhares de profissionais avaliados por clientes, permitindo você negociar apenas com os melhores.</small>
   </div>
 `;

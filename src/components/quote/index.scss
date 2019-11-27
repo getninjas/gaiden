@@ -20,4 +20,8 @@
   &--inverse {
     color: $color-interface-content-light;
   }
+
+  &--strong {
+    font-weight: $font-style-weight-bold;
+  }
 }

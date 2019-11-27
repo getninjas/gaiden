@@ -26,11 +26,20 @@
   }
 
   &--xs {
+    font-weight: $font-style-weight-regular;
     font-size: $size-font-xs;
     line-height: $size-line-height-xs;
   }
 
   &--inverse {
     color: $color-brand-first-light;
+  }
+
+  &--strong {
+    font-weight: $font-style-weight-regular;
+
+    &[class*="heading--xs"] {
+      font-weight: $font-style-weight-bold;
+    }
   }
 }
