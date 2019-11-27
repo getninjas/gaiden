@@ -6,6 +6,17 @@
   font-weight: $font-style-weight-regular;
   line-height: $size-line-height-xs;
 
+  a {
+    color: $color-interface-action-extra-dark;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+
   &--dark {
     color: $color-interface-content-dark;
   }
@@ -14,16 +25,42 @@
     color: $color-interface-content-medium;
   }
 
+  &--positive,
+  &--alert,
+  &--negative {
+
+    a {
+      text-decoration: underline;
+      font-weight: $font-style-weight-bold;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
   &--positive {
     color: $color-interface-positive-extra-dark;
+
+    a {
+      color: $color-interface-positive-extra-dark;
+    }
   }
 
   &--alert {
     color: $color-interface-alert-extra-dark;
+
+    a {
+      color: $color-interface-alert-extra-dark;
+    }
   }
 
   &--negative {
     color: $color-interface-negative-extra-dark;
+
+    a {
+      color: $color-interface-negative-extra-dark;
+    }
   }
 
   &--inverse {
@@ -34,14 +71,5 @@
     font-weight: $font-style-weight-bold;
   }
 
-  a {
-    color: $color-interface-action-extra-dark;
-    transition: all .3 ease-in-out;
-    text-decoration: none;
-  }
 
-  a:hover,
-  a:focus {
-    text-decoration: underline;
-  }
 }
