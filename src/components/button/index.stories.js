@@ -8,16 +8,16 @@ export default {
 import './index.scss';
 
 export const allButtons = () => `
-  <div style="margin-bottom: 20px">
+  <div class="space-docs">
     <button class="btn btn__primary btn__primary--default btn__primary--small" disabled="true">Continuar</button>
   </div>
-  <div style="margin-bottom: 20px">
+  <div class="space-docs">
     <button class="btn btn__primary btn__primary--default btn__primary--small">Continuar</button>
   </div>
-  <div style="margin-bottom: 20px">
+  <div class="space-docs">
     <button class="btn btn__secondary btn__secondary--default btn__secondary--small">Continuar</button>
   </div>
-  <div style="margin-bottom: 20px">
+  <div class="space-docs">
     <button class="btn btn__classic btn__classic--default btn__classic--small">Continuar</button>
   </div>
 `;

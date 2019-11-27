@@ -8,13 +8,13 @@
 
   a {
     color: $color-interface-action-extra-dark;
-    transition: all .3s ease-in-out;
     text-decoration: none;
-  }
+    transition: all .3s ease-in-out;
 
-  a:hover,
-  a:focus {
-    text-decoration: underline;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 
   &--dark {
@@ -30,8 +30,8 @@
   &--negative {
 
     a {
-      text-decoration: underline;
       font-weight: $font-style-weight-bold;
+      text-decoration: underline;
 
       &:hover {
         text-decoration: none;
@@ -70,6 +70,4 @@
   &--strong {
     font-weight: $font-style-weight-bold;
   }
-
-
 }

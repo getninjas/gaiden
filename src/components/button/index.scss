@@ -97,7 +97,7 @@
   &__clear--default {
     color: $color-interface-content-extra-dark;
     font-size: 12px;
-    padding: 11px 24px;
+    padding: 11px $size-spacing-s;
     transition: all .2s linear;
   }
 
