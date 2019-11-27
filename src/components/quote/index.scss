@@ -1,0 +1,27 @@
+@import '../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
+
+.quote {
+  color: $color-interface-content-medium;
+  font-family: $font-family-default;
+  font-style: $font-style-quote;
+  font-weight: $font-style-weight-regular;
+  line-height: $size-line-height-xxs;
+
+  &--xs {
+    font-size: $size-font-xs;
+    line-height: $size-line-height-xs;
+  }
+
+  &--xxs {
+    font-size: $size-font-xxs;
+    line-height: $size-line-height-xxs;
+  }
+
+  &--inverse {
+    color: $color-interface-content-light;
+  }
+
+  &--strong {
+    font-weight: $font-style-weight-bold;
+  }
+}
