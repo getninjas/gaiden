@@ -9,17 +9,15 @@ GetNinjas Styleguide - https://getninjas.github.io/gaiden
 - Install dependencies with: `npm install`
 - Configure the build links with: `npm run config`
 
-# Run project
-To run project, just `npm start` on terminal!
+# Build Process
 
-The URL of our documents is http://localhost:8000/gaiden-css/index.html.
-
-We have a server build on http://localhost:8001. This `/build` source is a "playground" with same html samples to test. Use and abuse it!
+The `npm run build` command, generated files into the `dist` folder, separated `themes` file.
 
 # Release process
+
 We are using `npm version` to generate our releases. There are 3 kind of releases generally used: major, minor and patch. See the http://semver.org/ for more details.
 
-So, after merge a PR, just execute `npm version major|minor|patch -m "Message of my release"` on master branch. There is no necessity of run `npm run build:prod`. The `npm version` has some webhooks, like `version` and `postversion`, present on our `package.json`.
+So, after merge a PR, just execute `npm run version` after success, run `npm version major|minor|patch -m "Message of my release"` on master branch. There is no necessity of run `npm run build`. The `npm run version` has some webhooks, like `version` and `postversion`, present on our `package.json`.
 
 The process is:
 
@@ -29,16 +27,12 @@ The process is:
 
   1.2 `git pull --tags origin master`;
 
-2. run `npm version major|minor|patch -m "Message of your changes"` (important: you need to be an admin to push on master);
+2. Run `npm run version` command;
 
-3. Now let's publish the package on npm. You need to run `npm adduser` and have the credentials to do this;
+3. run `npm version major|minor|patch -m "Message of your changes"` (important: you need to be an admin to push on master);
 
-  3.1 If nothing fails on `npm version` and you have the credentials of npm GetNinjas account, run `npm publish`.
+4. Now let's publish the package on npm.
+  3.1 If you not have access to Org GetNinjas in NPM, you need ask for users in Org to add you;
+  3.2 If nothing fails on `npm version` and you have the credentials of npm GetNinjas account, run `npm publish`.
 
-4. Done! Now, you can install the package on any project!
-
-# Documentation
-
-All documentation and markup sample are live on docs/demo. We are using documentjs to generate our styleguide page.
-
-The build (`npm run docs`) will run documentjs binary and generate all scaffold files.
+5. Done! Now, you can install the package on any project!
