@@ -36,3 +36,9 @@ The process is:
   3.2 If nothing fails on `npm version` and you have the credentials of npm GetNinjas account, run `npm publish`.
 
 5. Done! Now, you can install the package on any project!
+
+# Deploy to gh-pages
+
+1. Run `npm run deploy-storybook` to publish static site in gh-pages;
+
+2. Access this link https://getninjas.github.io/gaiden/ and enjoy it!

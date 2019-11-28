@@ -1,4 +1,5 @@
 import { create } from '@storybook/theming/create';
+import logo from '../public/images/Logo.png';
 
 export default create({
   base: 'light',
@@ -33,5 +34,5 @@ export default create({
 
   brandTitle: 'GetNinjas Styleguide',
   brandUrl: 'https://www.getninjas.com.br',
-  brandImage: '../public/images/Logo.png',
+  brandImage: logo,
 });
