@@ -3,7 +3,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-  entry: ['./src/scss/yellow/gaiden.scss', './src/scss/default/gaiden.scss'],
+  entry: ['./src/yellow/gaiden.scss', './src/default/gaiden.scss'],
   output: {
     path: path.resolve(__dirname, 'dist'),
   },

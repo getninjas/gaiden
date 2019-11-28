@@ -97,7 +97,7 @@
   &__footer {
     margin-top: auto;
     padding-top: $size-spacing-xxs;
-    width: -webkit-fill-available;
+    width: stretch;
   }
 
   &--highlighted {
