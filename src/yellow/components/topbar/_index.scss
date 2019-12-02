@@ -1,0 +1,34 @@
+@import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
+@import '../../../shared/settings/grid';
+
+.topbar {
+  align-items: center;
+  background-color: $color-brand-first-light;
+  border-bottom: 1px solid $color-interface-shade-dark;
+  display: flex;
+  height: 56px;
+  order: 1;
+  padding: 0 $size-font-xs;
+  width: 100%;
+
+  &__brand {
+    width: 124px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    display: none;
+
+    @media screen and (min-width: $media-medium) {
+      display: flex;
+      margin-left: $size-spacing-m;
+    }
+  }
+
+  &--centered {
+    justify-content: center;
+  }
+}
