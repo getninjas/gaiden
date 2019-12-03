@@ -6,16 +6,20 @@
   background-color: $color-brand-first-light;
   border-bottom: 1px solid $color-interface-shade-dark;
   display: flex;
+  flex-direction: row;
   height: 56px;
   order: 1;
   padding: 0 $size-font-xs;
   width: 100%;
 
   &__brand {
-    width: 124px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
 
     img {
-      width: 100%;
+      width: 124px;
+      height: auto;
     }
   }
 
@@ -26,6 +30,10 @@
       display: flex;
       margin-left: $size-spacing-m;
     }
+  }
+
+  &__buttons {
+    align-self: flex-end;
   }
 
   &--centered {

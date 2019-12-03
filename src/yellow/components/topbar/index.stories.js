@@ -8,8 +8,9 @@ export default {
 }
 
 import './_index.scss';
-import '../heading/_index.scss'
-import '../quote/_index.scss'
+import '../heading/_index.scss';
+import '../quote/_index.scss';
+import '../button/_index.scss';
 
 export const topbarOnlyText = () => `
   <header class="topbar topbar--centered">
@@ -33,11 +34,23 @@ export const topbarOnlyBrandCentered = () => `
   </header>
 `;
 
-export const topbarOnlyBrandWithText = () => `
+export const topbarBrandWithText = () => `
+  <header class="topbar">
+    <div class="topbar__brand">
+      <img src=${Logo} />
+      <h4 class="quote quote--m topbar__text">A maior plataforma de contratação de serviços da América Latina</h4>
+    </div>
+  </header>
+`;
+
+export const topbarBrandWithButton = () => `
   <header class="topbar">
     <div class="topbar__brand">
       <img src=${Logo} />
     </div>
-    <h4 class="quote quote--m topbar__text">A maior plataforma de contratação de serviços da América Latina</h4>
+    <div class="topbar__buttons">
+      <a class="btn btn__primary btn__primary--default btn__primary--small">Solicite um Orçamento</a>
+    </div>
   </header>
 `;
+
