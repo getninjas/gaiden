@@ -48,7 +48,13 @@ export const topbarBrandWithButton = () => `
     <div class="topbar__brand">
       <img src=${Logo} />
     </div>
-    <div class="topbar__buttons">
+    <div class="menu-icon">
+      <span class="menu-icon__line"></span>
+      <span class="menu-icon__line"></span>
+      <span class="menu-icon__line"></span>
+      <span class="menu-icon__line"></span>
+    </div>
+    <div class="topbar__navigation">
       <a class="btn btn__primary btn__primary--default btn__primary--small">Solicite um Orçamento</a>
       <a class="btn btn__primary btn__primary--default btn__primary--small">Solicite um Orçamento</a>
     </div>
