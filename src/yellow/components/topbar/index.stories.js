@@ -50,7 +50,7 @@ export const topbarBrandWithButton = () => `
     </div>
     <div class="topbar__buttons">
       <a class="btn btn__primary btn__primary--default btn__primary--small">Solicite um Orçamento</a>
+      <a class="btn btn__primary btn__primary--default btn__primary--small">Solicite um Orçamento</a>
     </div>
   </header>
 `;
-

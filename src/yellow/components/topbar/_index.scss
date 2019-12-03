@@ -9,17 +9,17 @@
   flex-direction: row;
   height: 56px;
   order: 1;
-  padding: 0 $size-font-xs;
-  width: 100%;
+  padding: 0 16px;
+  justify-content: space-between;
+
 
   &__brand {
-    align-self: stretch;
     display: flex;
     flex-direction: row;
 
     img {
       width: 124px;
-      height: auto;
+      align-self: center;
     }
   }
 
@@ -33,7 +33,7 @@
   }
 
   &__buttons {
-    align-self: flex-end;
+    align-self: center;
   }
 
   &--centered {
