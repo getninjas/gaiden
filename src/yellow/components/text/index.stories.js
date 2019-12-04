@@ -5,7 +5,7 @@ export default {
   },
 };
 
-import './index.scss';
+import './_index.scss';
 
 export const allText = () => `
   <div>
