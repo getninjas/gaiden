@@ -1,6 +1,8 @@
 @import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
 @import '../../../shared/settings/grid';
 
+@import '../topbar/menu-icon';
+
 .topbar {
   align-items: center;
   background-color: $color-brand-first-light;
@@ -32,8 +34,13 @@
     }
   }
 
-  &__buttons {
+  &__navigation {
+    display: none;
     align-self: center;
+
+    @media screen and (min-width: $media-medium) {
+      display: flex;
+    }
   }
 
   &--centered {
