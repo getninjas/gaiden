@@ -1,4 +1,8 @@
 @import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
+<<<<<<< HEAD
+=======
+@import '../../../shared/settings/grid';
+>>>>>>> 9f8b21cc8f983425f0ff8f371847661a5c518b2e
 
 .heading {
   color: $color-brand-first-extra-dark;
@@ -6,23 +10,43 @@
   font-weight: $font-style-weight-light;
 
   &--xl {
-    font-size: $size-font-xxl;
-    line-height: $size-line-height-xxl;
+    font-size: $size-font-l;
+    line-height: $size-line-height-l;
+
+    @media screen and (min-width: $media-normal) {
+      font-size: $size-font-xxl;
+      line-height: $size-line-height-xxl;
+    }
   }
 
   &--l {
-    font-size: $size-font-xl;
-    line-height: $size-line-height-xl;
+    font-size: $size-font-m;
+    line-height: $size-line-height-m;
+
+    @media screen and (min-width: $media-normal) {
+      font-size: $size-font-xl;
+      line-height: $size-line-height-xl;
+    }
   }
 
   &--m {
-    font-size: $size-font-l;
-    line-height: $size-line-height-l;
+    font-size: $size-font-s;
+    line-height: $size-line-height-s;
+
+    @media screen and (min-width: $media-normal) {
+      font-size: $size-font-l;
+      line-height: $size-line-height-l;
+    }
   }
 
   &--s {
-    font-size: $size-font-m;
-    line-height: $size-line-height-m;
+    font-size: $size-font-xs;
+    line-height: $size-line-height-xs;
+
+    @media screen and (min-width: $media-normal) {
+      font-size: $size-font-m;
+      line-height: $size-line-height-m;
+    }
   }
 
   &--xs {
