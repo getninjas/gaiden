@@ -2,7 +2,7 @@ export default {
   title: 'Components | Heading',
 };
 
-import './index.scss';
+import './_index.scss';
 
 export const allHeadings = () => `
   <div>
