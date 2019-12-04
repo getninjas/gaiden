@@ -1,8 +1,5 @@
 @import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
-<<<<<<< HEAD
-=======
 @import '../../../shared/settings/grid';
->>>>>>> 9f8b21cc8f983425f0ff8f371847661a5c518b2e
 
 .heading {
   color: $color-brand-first-extra-dark;
@@ -14,8 +11,8 @@
     line-height: $size-line-height-l;
 
     @media screen and (min-width: $media-normal) {
-      font-size: $size-font-xxl;
-      line-height: $size-line-height-xxl;
+      font-size: $size-font-xl;
+      line-height: $size-line-height-xl;
     }
   }
 
