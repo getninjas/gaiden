@@ -70,6 +70,7 @@
   &__content {
     padding: $size-spacing-xs $size-spacing-s;
     width: 100%;
+    word-wrap: break-word;
   }
 
   &__text {
