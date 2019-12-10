@@ -123,6 +123,28 @@
         }
       }
     }
+
+    &[class*="btn--clear"] {
+      background-color: initial;
+      color: $color-interface-content-light;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $color-interface-content-medium;
+      }
+
+      &[disabled] {
+        color: $color-interface-content-medium;
+        cursor: not-allowed;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: initial;
+        }
+      }
+    }
   }
 
   &--loading {

@@ -124,6 +124,12 @@ export const clearDisabled = () => `
   </div>
 `;
 
+export const clearInverse = () => `
+  <div class="docs docs--inverse">  
+    <button class="btn btn--clear btn--small btn--inverse">Button Clear</button>
+  </div>
+`;
+
 export const ultimate = () => `
   <div class="docs">  
     <button class="btn btn--ultimate btn--small">Button Ultimate</button>
