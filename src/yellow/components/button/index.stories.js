@@ -8,24 +8,54 @@ export default {
 import './_index.scss';
 
 export const allButtons = () => `
-  <div class="space-docs">
-    <button class="btn btn__primary btn__primary--default btn__primary--small" disabled="true">Continuar</button>
+  <div class="docs space-docs">
+    <button class="btn btn--primary btn--small">Continuar</button>
   </div>
-  <div class="space-docs">
-    <button class="btn btn__primary btn__primary--default btn__primary--small">Continuar</button>
-  </div>
-  <div class="space-docs">
-    <button class="btn btn__secondary btn__secondary--default btn__secondary--small">Continuar</button>
-  </div>
-  <div class="space-docs">
-    <button class="btn btn__classic btn__classic--default btn__classic--small">Continuar</button>
+  <div class="docs space-docs">
+    <button class="btn btn--secondary btn--small">Continuar</button>
   </div>
 `;
 
-export const disabled = () => '<button class="btn btn__primary btn__primary--default btn__primary--small" disabled="true">Continuar</button>';
+export const primary = () => `
+  <div class="docs">
+    <button class="btn btn--primary btn--small">Button Primary</button>
+  </div>
+`;
 
-export const primary = () => '<button class="btn btn__primary btn__primary--default btn__primary--small">Continuar</button>';
+export const primaryLarge = () => `
+  <div class="docs">
+    <button class="btn btn--primary btn--large">Button Primary</button>
+  </div>
+`;
 
-export const secondary = () => '<button class="btn btn__secondary btn__secondary--default btn__secondary--small">Continuar</button>';
+export const primaryLoading = () => `
+  <div class="docs">
+    <button class="btn btn--primary btn--large btn--loading">Button Primary</button>
+  </div>
+`;
 
-export const classic = () => '<button class="btn btn__classic btn__classic--default btn__classic--small">Continuar</button>';
+export const primaryDisabled = () => `
+  <div class="docs">
+    <button class="btn btn--primary btn--small" disabled="true">Button Primary</button>
+  </div>
+`;
+
+export const inverse = () => `
+  <div class="docs docs--inverse">
+    <button class="btn btn--inverse btn--small">Button Inverse</button>
+  </div>
+`;
+
+export const inverseLarge = () => `
+  <div class="docs docs--inverse">
+    <button class="btn btn--inverse btn--large">Button Inverse</button>
+  </div>
+`;
+
+export const inverseLoading = () => `
+  <div class="docs docs--inverse">
+    <button class="btn btn--inverse btn--large btn--loading">Button Inverse</button>
+  </div>
+`;
+
+export const secondary = () => '<button class="btn btn--secondary btn--small">Button Secondary</button>';

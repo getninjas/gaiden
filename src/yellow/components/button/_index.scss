@@ -2,126 +2,71 @@
 
 .btn {
   border: 0;
+  border-radius: $size-border-radius-pill;
   cursor: pointer;
-  display: inline-block;
   font-weight: $font-style-weight-bold;
-  letter-spacing: .3px;
-  line-height: 1;
+  min-width: 280px;
   text-align: center;
   text-transform: uppercase;
-  transition: border-color .2s ease-in, box-shadow .2s ease-in, background-color .2s ease-in, color .3s ease;
+  transition: all .2s linear;
 
-  &__primary {
-    border-radius: $size-border-radius-pill;
-    transition: all .2s linear;
-
-    &--small {
-      font-size: $size-font-xxs;
-      padding: $size-spacing-xxs $size-spacing-s;
-    }
-
-    &--default {
-      background-color: $color-brand-first-extra-dark;
-      color: $color-interface-content-light;
-
-      &:hover {
-        background-color: $color-brand-first-medium;
-        color: $color-interface-content-light;
-      }
-    }
-  }
-
-  &__secondary {
-    border-radius: $size-border-radius-pill;
-    transition: all .2s linear;
-
-    &--small {
-      font-size: $size-font-xxs;
-      padding: $size-spacing-xxs $size-spacing-s;
-    }
-
-    &--default {
-      background-color: $color-interface-content-light;
-      box-shadow: inset 0 0 0 2px $color-brand-first-extra-dark;
-      color: $color-brand-first-extra-dark;
-
-      &:hover {
-        background-color: $color-brand-first-extra-dark;
-        color: $color-interface-content-light;
-      }
-    }
-  }
-
-  &__classic {
-    border-color: $color-interface-shade-dark;
-    font-weight: $font-style-weight-bold;
-    line-height: $size-line-height-equal;
-
-    &--small {
-      font-size: $size-font-xxs;
-      padding: $size-spacing-xxs $size-spacing-s;
-    }
-
-    &--default {
-      background-color: $color-brand-first-extra-dark;
-      color: $color-interface-content-light;
-
-      &:hover {
-        background-color: $color-brand-first-medium;
-        color: $color-interface-content-light;
-      }
-    }
-  }
-
-  &--regular,
-  &--high-contrast,
-  &--raised-reversed,
-  &--rounded {
-    border-radius: $size-border-radius-pill;
+  &--small {
     font-size: $size-font-xxs;
-    padding: $size-spacing-xxs $size-spacing-s;
-    transition: all .2s linear;
+    padding: $size-spacing-xxs $size-spacing-m;
   }
 
-  &--regular,
-  &--high-contrast,
-  &--raised-reversed {
+  &--large {
+    font-size: $size-font-xs;
+    padding: $size-spacing-xs $size-spacing-l;
+  }
+
+  &--primary {
     background-color: $color-brand-first-extra-dark;
     color: $color-interface-content-light;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       background-color: $color-brand-first-medium;
+      color: $color-interface-content-light;
+    }
+
+    &[disabled] {
+      background-color: $color-interface-shade-extra-dark;
     }
   }
 
-  &__clear--default {
-    color: $color-interface-content-extra-dark;
-    font-size: 12px;
-    padding: 11px $size-spacing-s;
-    transition: all .2s linear;
+  &--secondary {
+    background-color: $color-interface-content-light;
+    box-shadow: inset 0 0 0 2px $color-brand-first-extra-dark;
+    color: $color-brand-first-extra-dark;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-brand-first-extra-dark;
+      color: $color-interface-content-light;
+    }
   }
 
-  &--high-contrast-reversed {
-    background-color: $color-brand-first-light;
-  }
+  &--inverse {
+    background-color: $color-interface-content-light;
+    color: $color-brand-first-extra-dark;
 
-  &[disabled] {
-    cursor: not-allowed;
-  }
-
-  &--fluid {
-    display: block;
-    width: 100%;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-interface-shade-dark;
+    }
   }
 
   &--loading {
-    background-color: get-color((color: rastaGray, opacity: .2));
-    font-size: 0 !important; //sass-lint:disable-line no-important
     position: relative;
+    font-size: 0;
     transition: all .3s ease;
 
     &::before {
-      animation: rotation 1s linear infinite;
+      animation: spin 1s linear infinite;
       background-color: transparent;
       border-bottom: 3px solid $color-interface-content-light;
       border-left: 3px solid $color-interface-content-light;
@@ -130,24 +75,26 @@
       border-top: 3px solid transparent;
       box-sizing: border-box;
       content: '';
-      height: 20px;
-      left: 50%;
+      height: 18px;
+      width: 18px;
+      margin: -9px 0 0 -9px;
       position: absolute;
       top: 50%;
-      transform-origin: 0 0;
-      width: 20px;
+      left: 50%;
+
+      @keyframes spin { 
+        100% { 
+          transform: rotate(360deg); 
+        }
+      }
     }
-  }
 
-  &--full-card {
-    border-bottom-left-radius: $size-border-radius-m;
-    border-bottom-right-radius: $size-border-radius-m;
-    border-top: get-border(size-border-width-none);
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-
-  &--rounded {
-    border-radius: 30px;
+    &[class*="btn--inverse"] {
+      &::before {
+        border-bottom: 3px solid $color-interface-content-dark;
+        border-left: 3px solid $color-interface-content-dark;
+        border-right: 3px solid $color-interface-content-dark;
+      }
+    }
   }
 }
