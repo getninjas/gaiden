@@ -55,8 +55,26 @@ export const topbarBrandWithButton = () => `
       <span class="menu-icon__line"></span>
     </div>
     <div class="topbar__navigation">
-      <a class="btn btn__primary btn__primary--default btn__primary--small">Solicite um Orçamento</a>
-      <a class="btn btn__primary btn__primary--default btn__primary--small">Solicite um Orçamento</a>
+      <a class="topbar__item btn btn__primary btn__primary--default btn__primary--small">Button 1</a>
+      <a class="topbar__item btn btn__primary btn__primary--default btn__primary--small">Button 2</a>
+    </div>
+  </header>
+`;
+
+export const topbarBrandWithButtonAndLink = () => `
+  <header class="topbar">
+    <div class="topbar__brand">
+      <img src=${Logo} />
+    </div>
+    <div class="menu-icon">
+      <span class="menu-icon__line"></span>
+      <span class="menu-icon__line"></span>
+      <span class="menu-icon__line"></span>
+      <span class="menu-icon__line"></span>
+    </div>
+    <div class="topbar__navigation">
+      <a class="topbar__item ">Link</a>
+      <a class="topbar__item btn btn__primary btn__primary--default btn__primary--small">Button</a>
     </div>
   </header>
 `;
