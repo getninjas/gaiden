@@ -9,10 +9,28 @@ import './_index.scss';
 
 export const allButtons = () => `
   <div class="docs space-docs">
-    <button class="btn btn--primary btn--small">Continuar</button>
+    <button class="btn btn--primary btn--small">Button Primary</button>
+  </div>
+  <div class="docs space-docs docs--inverse">
+    <button class="btn btn--primary btn--small btn--inverse">Button Primary</button>
   </div>
   <div class="docs space-docs">
-    <button class="btn btn--secondary btn--small">Continuar</button>
+    <button class="btn btn--secondary btn--small">Button Secondary</button>
+  </div>
+  <div class="docs space-docs docs--inverse">
+    <button class="btn btn--secondary btn--small btn--inverse">Button Secondary</button>
+  </div>
+  <div class="docs space-docs">
+    <button class="btn btn--clear btn--small">Button Clear</button>
+  </div>
+  <div class="docs space-docs docs--inverse">
+    <button class="btn btn--clear btn--small btn--inverse">Button Clear</button>
+  </div>
+  <div class="docs space-docs">
+    <button class="btn btn--ultimate btn--small">Button Ultimate</button>
+  </div>
+  <div class="docs space-docs docs--inverse">
+    <button class="btn btn--ultimate btn--small">Button Ultimate</button>
   </div>
 `;
 
