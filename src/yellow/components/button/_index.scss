@@ -148,8 +148,8 @@
   }
 
   &--loading {
-    position: relative;
     font-size: 0;
+    position: relative;
     transition: all .3s ease;
 
     &::before {
@@ -171,7 +171,7 @@
 
       @keyframes spin {
         100% {
-          transform: rotate(360deg); 
+          transform: rotate(360deg);
         }
       }
     }
