@@ -98,7 +98,7 @@
       background-color: $color-interface-shade-dark;
     }
 
-    &[class*="btn--secondary"] {
+    &[class*='btn--secondary'] {
       background-color: $color-brand-first-extra-dark;
       border-color: $color-interface-content-light;
       color: $color-interface-content-light;
@@ -124,7 +124,7 @@
       }
     }
 
-    &[class*="btn--clear"] {
+    &[class*='btn--clear'] {
       background-color: initial;
       color: $color-interface-content-light;
 
@@ -163,21 +163,21 @@
       box-sizing: border-box;
       content: '';
       height: 18px;
-      width: 18px;
+      left: 50%;
       margin: -9px 0 0 -9px;
       position: absolute;
       top: 50%;
-      left: 50%;
+      width: 18px;
 
-      @keyframes spin { 
-        100% { 
+      @keyframes spin {
+        100% {
           transform: rotate(360deg); 
         }
       }
     }
 
-    &[class~="btn--inverse"],
-    &[class~="btn--secondary"] {
+    &[class~='btn--inverse'],
+    &[class~='btn--secondary'] {
       &::before {
         border-bottom: 3px solid $color-interface-content-dark;
         border-left: 3px solid $color-interface-content-dark;
@@ -185,7 +185,7 @@
       }
     }
 
-    &[class~="btn--inverse"][class~="btn--secondary"] {
+    &[class~='btn--inverse'][class~='btn--secondary'] {
       &::before {
         border-bottom: 3px solid $color-interface-content-light;
         border-left: 3px solid $color-interface-content-light;
