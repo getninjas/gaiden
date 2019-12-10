@@ -45,7 +45,12 @@
   }
 
   &__item {
-    margin-left: $size-spacing-l;
+    margin-bottom: $size-spacing-s;
+
+    @media screen and (min-width: $media-medium) {
+      margin-bottom: 0;
+      margin-left: $size-spacing-l;
+    }
   }
 
   &--centered {
