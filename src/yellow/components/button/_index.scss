@@ -98,6 +98,7 @@
     &:focus,
     &:active {
       background-color: $color-interface-shade-dark;
+      color: $color-brand-first-extra-dark;
     }
 
     &[class*='btn--secondary'] {
