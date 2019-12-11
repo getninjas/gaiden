@@ -4,8 +4,10 @@
   border: 0;
   border-radius: $size-border-radius-pill;
   cursor: pointer;
+  font-size: $size-font-xxs;
   font-weight: $font-style-weight-bold;
   min-width: 280px;
+  padding: $size-spacing-xxs $size-spacing-m;
   text-align: center;
   text-transform: uppercase;
   transition: all .2s linear;
