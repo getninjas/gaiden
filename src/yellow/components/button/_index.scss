@@ -158,11 +158,11 @@
     &::before {
       animation: spin 1s linear infinite;
       background-color: transparent;
-      border-width: 3px;
       border-color: $color-interface-content-light;
       border-radius: 15px;
       border-style: solid;
       border-top-color: transparent;
+      border-width: 3px;
       box-sizing: border-box;
       content: '';
       height: 18px;
