@@ -46,7 +46,7 @@ The process is:
 
 Here are a description of the scripts that we have in the project:
 
-| **Script**       | **Description **                                                                                            |
+| **Script**       | **Description**                                                                                            |
 |------------------|-------------------------------------------------------------------------------------------------------------|
 | storybook        | Start storybook for development purposes                                                                    |
 | build-storybook  | Build storybook for deploy. The output is in `docs` folder                                                     |
