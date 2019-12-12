@@ -191,6 +191,7 @@
       &:active {
         &::before {
           border-color: $color-interface-content-light;
+          border-top-color: transparent;
         }
       }
     }
@@ -206,6 +207,7 @@
       &:active {
         &::before {
           border-color: $color-interface-content-dark;
+          border-top-color: transparent;
         }
       }
     }
