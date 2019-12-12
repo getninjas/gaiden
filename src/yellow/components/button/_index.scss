@@ -158,13 +158,11 @@
     &::before {
       animation: spin 1s linear infinite;
       background-color: transparent;
-      border-bottom-width: 3px;
+      border-width: 3px;
       border-color: $color-interface-content-light;
-      border-left-width: 3px;
       border-radius: 15px;
-      border-right-width: 3px;
       border-style: solid;
-      border-top: 3px solid transparent;
+      border-top-color: transparent;
       box-sizing: border-box;
       content: '';
       height: 18px;
@@ -185,12 +183,22 @@
     &[class~='btn--secondary'] {
       &::before {
         border-color: $color-interface-content-dark;
+        border-top-color: transparent;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        &::before {
+          border-color: $color-interface-content-light;
+        }
       }
     }
 
     &[class~='btn--inverse'][class~='btn--secondary'] {
       &::before {
         border-color:  $color-interface-content-light;
+        border-top-color: transparent;
       }
 
       &:hover,
