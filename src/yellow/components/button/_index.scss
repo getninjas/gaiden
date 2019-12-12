@@ -179,7 +179,22 @@
       }
     }
 
-    &[class~='btn--inverse'],
+    &[class~='btn--inverse'] {
+      &::before {
+        border-color: $color-interface-content-dark;
+        border-top-color: transparent;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        &::before {
+          border-color: $color-interface-content-dark;
+          border-top-color: transparent;
+        }
+      }
+    }
+
     &[class~='btn--secondary'] {
       &::before {
         border-color: $color-interface-content-dark;
