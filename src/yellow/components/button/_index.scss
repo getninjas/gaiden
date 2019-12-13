@@ -6,7 +6,7 @@
   cursor: pointer;
   font-size: $size-font-xxs;
   font-weight: $font-style-weight-bold;
-  min-width: 280px;
+  min-width: 160px;
   padding: $size-spacing-xxs $size-spacing-m;
   text-align: center;
   text-transform: uppercase;
@@ -20,6 +20,10 @@
   &--large {
     font-size: $size-font-xs;
     padding: $size-spacing-xs $size-spacing-l;
+  }
+
+  &--fluid {
+    width: 100%;
   }
 
   &--primary {
