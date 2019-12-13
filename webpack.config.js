@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
-    extensions: ['.scss']
+    extensions: ['.js', '.scss']
   },
   optimization: {
     minimizer: [new OptimizeCSSAssetsPlugin({})],
