@@ -55,8 +55,8 @@ export const topbarBrandWithButton = () => `
       <span class="menu-icon__line"></span>
     </div>
     <div class="topbar__navigation">
-      <a class="topbar__item btn btn__primary btn__primary--default btn__primary--small">Button 1</a>
-      <a class="topbar__item btn btn__primary btn__primary--default btn__primary--small">Button 2</a>
+      <a class="topbar__item btn btn--primary btn--small">Button 1</a>
+      <a class="topbar__item btn btn--primary btn--small">Button 2</a>
     </div>
   </header>
 `;
@@ -73,8 +73,8 @@ export const topbarBrandWithButtonAndLink = () => `
       <span class="menu-icon__line"></span>
     </div>
     <div class="topbar__navigation">
-      <a class="topbar__item ">Link</a>
-      <a class="topbar__item btn btn__primary btn__primary--default btn__primary--small">Button</a>
+      <a class="topbar__item btn btn--clear btn--small">Button Clear</a>
+      <a class="topbar__item btn btn--primary btn--small">Button</a>
     </div>
   </header>
 `;
