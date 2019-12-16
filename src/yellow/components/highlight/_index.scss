@@ -7,8 +7,8 @@
   font-weight: $font-style-weight-bold;
 
   &--l {
-    font-size: $size-font-m;
-    line-height: $size-line-height-m;
+    font-size: $size-font-l;
+    line-height: $size-line-height-l;
 
     @media screen and (min-width: $media-normal) {
       font-size: $size-font-l;
@@ -17,8 +17,8 @@
   }
 
   &--m {
-    font-size: $size-font-s;
-    line-height: $size-line-height-s;
+    font-size: $size-font-m;
+    line-height: $size-line-height-m;
 
     @media screen and (min-width: $media-normal) {
       font-size: $size-font-m;
@@ -27,8 +27,8 @@
   }
 
   &--s {
-    font-size: $size-font-xs;
-    line-height: $size-line-height-xs;
+    font-size: $size-font-s;
+    line-height: $size-line-height-s;
 
     @media screen and (min-width: $media-normal) {
       font-size: $size-font-s;
