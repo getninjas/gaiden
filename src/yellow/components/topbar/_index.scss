@@ -37,15 +37,41 @@
   &__navigation {
     align-items: center;
     align-self: center;
+    background-color: $color-brand-first-light;
+    border-bottom: 1px solid $color-interface-shade-dark;
+    box-sizing: border-box;
     display: none;
+    flex-direction: column;
+    left: 0;
+    overflow: hidden;
+    padding: $size-spacing-s;
+    position: absolute;
+    top: 56px;
+    width: 100%;
+    z-index: 1;
+
+    &--opened {
+      display: flex;
+    }
 
     @media screen and (min-width: $media-medium) {
+      background-color: none;
+      border: none;
       display: flex;
+      flex-direction: row;
+      padding: 0;
+      position: relative;
+      top: initial;
+      width: initial;
     }
   }
 
   &__item {
-    margin-bottom: $size-spacing-s;
+    margin-bottom: $size-spacing-xs;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @media screen and (min-width: $media-medium) {
       margin-bottom: 0;
