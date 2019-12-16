@@ -11,8 +11,8 @@
     line-height: $size-line-height-l;
 
     @media screen and (min-width: $media-normal) {
-      font-size: $size-font-xl;
-      line-height: $size-line-height-xl;
+      font-size: $size-font-xxl;
+      line-height: $size-line-height-xxl;
     }
   }
 
@@ -21,8 +21,8 @@
     line-height: $size-line-height-m;
 
     @media screen and (min-width: $media-normal) {
-      font-size: $size-font-l;
-      line-height: $size-line-height-l;
+      font-size: $size-font-xl;
+      line-height: $size-line-height-xl;
     }
   }
 
@@ -31,8 +31,8 @@
     line-height: $size-line-height-s;
 
     @media screen and (min-width: $media-normal) {
-      font-size: $size-font-m;
-      line-height: $size-line-height-m;
+      font-size: $size-font-l;
+      line-height: $size-line-height-l;
     }
   }
 
@@ -41,8 +41,8 @@
     line-height: $size-line-height-xs;
 
     @media screen and (min-width: $media-normal) {
-      font-size: $size-font-s;
-      line-height: $size-line-height-s;
+      font-size: $size-font-m;
+      line-height: $size-line-height-m;
     }
   }
 
