@@ -1,0 +1,42 @@
+@import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
+@import '../../../shared/settings/grid';
+
+.highlight {
+  color: $color-interface-content-dark;
+  font-family: $font-family-default;
+  font-weight: $font-style-weight-bold;
+
+  &--l {
+    font-size: $size-font-m;
+    line-height: $size-line-height-m;
+
+    @media screen and (min-width: $media-normal) {
+      font-size: $size-font-l;
+      line-height: $size-line-height-l;
+    }
+  }
+
+  &--m {
+    font-size: $size-font-s;
+    line-height: $size-line-height-s;
+
+    @media screen and (min-width: $media-normal) {
+      font-size: $size-font-m;
+      line-height: $size-line-height-m;
+    }
+  }
+
+  &--s {
+    font-size: $size-font-xs;
+    line-height: $size-line-height-xs;
+
+    @media screen and (min-width: $media-normal) {
+      font-size: $size-font-s;
+      line-height: $size-line-height-s;
+    }
+  }
+
+  &--inverse {
+    color: $color-interface-content-light;
+  }
+}

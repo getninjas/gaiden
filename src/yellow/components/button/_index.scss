@@ -1,0 +1,234 @@
+@import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
+
+.btn {
+  border: 0;
+  border-radius: $size-border-radius-pill;
+  cursor: pointer;
+  font-size: $size-font-xxs;
+  font-weight: $font-style-weight-bold;
+  min-width: 160px;
+  padding: $size-spacing-xxs $size-spacing-m;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .2s linear;
+
+  &--small {
+    font-size: $size-font-xxs;
+    padding: $size-spacing-xxs $size-spacing-m;
+  }
+
+  &--large {
+    font-size: $size-font-xs;
+    padding: $size-spacing-xs $size-spacing-l;
+  }
+
+  &--fluid {
+    width: 100%;
+  }
+
+  &--primary {
+    background-color: $color-brand-first-extra-dark;
+    color: $color-interface-content-light;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-brand-first-medium;
+      color: $color-interface-content-light;
+    }
+
+    &[disabled] {
+      background-color: $color-interface-shade-extra-dark;
+      cursor: not-allowed;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-interface-content-light;
+    border: 2px solid $color-brand-first-extra-dark;
+    color: $color-brand-first-extra-dark;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-brand-first-extra-dark;
+      color: $color-interface-content-light;
+    }
+
+    &[disabled] {
+      background-color: $color-interface-content-light;
+      border-color: $color-interface-shade-extra-dark;
+      color: $color-interface-shade-extra-dark;
+      cursor: not-allowed;
+    }
+  }
+
+  &--clear {
+    background-color: initial;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-brand-second-light;
+    }
+
+    &[disabled] {
+      color: $color-interface-shade-extra-dark;
+      cursor: not-allowed;
+    }
+  }
+
+  &--ultimate {
+    background-color: $color-interface-positive-dark;
+    color: $color-brand-first-light;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-interface-positive-extra-dark;
+    }
+
+    &[disabled] {
+      background-color: $color-interface-positive-medium;
+      cursor: not-allowed;
+    }
+  }
+
+  &--inverse {
+    background-color: $color-interface-content-light;
+    color: $color-brand-first-extra-dark;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-interface-shade-dark;
+      color: $color-brand-first-extra-dark;
+    }
+
+    &[class*='btn--secondary'] {
+      background-color: $color-brand-first-extra-dark;
+      border-color: $color-interface-content-light;
+      color: $color-interface-content-light;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $color-interface-content-light;
+        border-color: $color-interface-content-light;
+        color: $color-interface-content-dark;
+      }
+
+      &[disabled] {
+        border-color: $color-interface-shade-extra-dark;
+        color: $color-interface-shade-extra-dark;
+        cursor: not-allowed;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: initial;
+        }
+      }
+    }
+
+    &[class*='btn--clear'] {
+      background-color: initial;
+      color: $color-interface-content-light;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $color-interface-content-medium;
+      }
+
+      &[disabled] {
+        color: $color-interface-content-medium;
+        cursor: not-allowed;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: initial;
+        }
+      }
+    }
+  }
+
+  &--loading {
+    font-size: 0;
+    position: relative;
+    transition: all .3s ease;
+
+    &::before {
+      animation: spin 1s linear infinite;
+      background-color: transparent;
+      border-color: $color-interface-content-light;
+      border-radius: 15px;
+      border-style: solid;
+      border-top-color: transparent;
+      border-width: 3px;
+      box-sizing: border-box;
+      content: '';
+      height: 18px;
+      left: 50%;
+      margin: -9px 0 0 -9px;
+      position: absolute;
+      top: 50%;
+      width: 18px;
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+
+    &[class~='btn--inverse'] {
+      &::before {
+        border-color: $color-interface-content-dark;
+        border-top-color: transparent;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        &::before {
+          border-color: $color-interface-content-dark;
+          border-top-color: transparent;
+        }
+      }
+    }
+
+    &[class~='btn--secondary'] {
+      &::before {
+        border-color: $color-interface-content-dark;
+        border-top-color: transparent;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        &::before {
+          border-color: $color-interface-content-light;
+          border-top-color: transparent;
+        }
+      }
+    }
+
+    &[class~='btn--inverse'][class~='btn--secondary'] {
+      &::before {
+        border-color:  $color-interface-content-light;
+        border-top-color: transparent;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        &::before {
+          border-color: $color-interface-content-dark;
+          border-top-color: transparent;
+        }
+      }
+    }
+  }
+}

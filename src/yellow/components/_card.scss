@@ -1,0 +1,109 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.card.css Cards
+**/
+
+/**
+  * @styles card-action Action
+  * @demo demo/gaiden-css/components/card/action.html
+**/
+
+/**
+  * @styles card-citation Citation
+  * @demo demo/gaiden-css/components/card/citation.html
+**/
+
+/**
+  * @styles card-profile Profile
+  * @demo demo/gaiden-css/components/card/profile.html
+**/
+
+/**
+  * @styles card-review Review
+  * @demo demo/gaiden-css/components/card/review.html
+**/
+
+.card {
+  background-color: $color-interface-content-light;
+  border: solid 1px $color-interface-shade-dark;
+  border-radius: $size-border-radius-m;
+  flex: 1 1 auto;
+  transition: all ease-in-out .2s, transform ease-in-out .1s;
+  width: inherit;
+
+  > a {
+    width: 100%;
+  }
+
+  &,
+  &.media-box {
+    padding: $size-spacing-s;
+  }
+
+  &--shadow {
+    box-shadow: $shadow-bottom-level-1;
+  }
+
+  &--hover {
+    &:hover {
+      box-shadow: $shadow-bottom-level-2;
+      transform: translate(0, -5px);
+    }
+  }
+
+  &--profile {
+    display: flex;
+    flex-direction: column;
+
+    &,
+    &.media-box {
+      padding-bottom: 44 + map-deep-get($spaces, element, large) + px;
+    }
+  }
+
+  &--action {
+    box-shadow: $shadow-bottom-level-1;
+    position: relative;
+
+    &:hover {
+      box-shadow: $shadow-bottom-level-2;
+      transform: translate(0, -5px);
+    }
+
+    .caption-title {
+      color: $color-interface-content-extra-dark;
+      font-size: 12px;
+      margin-bottom: 0;
+
+      small {
+        font-size: inherit;
+        margin-top: 0;
+      }
+    }
+
+    .btn--full-card {
+      bottom: 0;
+      left: 0;
+      margin-bottom: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding-top: $size-spacing-xxs;
+    width: stretch;
+  }
+
+  &--highlighted {
+    .card__title {
+      color: $color-interface-content-medium;
+      font-style: italic;
+    }
+  }
+}

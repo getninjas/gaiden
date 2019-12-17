@@ -1,0 +1,181 @@
+/**
+  * @parent gaiden_css.components
+  * @stylesheet gaiden_css.components.form.css Form
+  *
+  * ## Form
+  * @demo demo/gaiden-css/components/form/demo.html
+**/
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: get-color((color: blackNeutral, key: darker, opacity: .5));
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: get-color((color: blackNeutral, key: darker, opacity: .5));
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  color: get-color((color: blackNeutral, key: darker, opacity: .5));
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: get-color((color: blackNeutral, key: darker, opacity: .5));
+}
+
+%focus-style {
+  background-color: get-color(air);
+  border: 1px solid get-color(rastaGray);
+}
+
+.form {
+  overflow-x: hidden;
+
+  &__envelop {
+    background: get-color(reward);
+    padding: 30px 30px 20px;
+    width: 100%;
+  }
+
+  &__title {
+    color: get-color(air);
+    font-size: 14px;
+    font-weight: get-weight(bolder);
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__tie {
+    height: 20px;
+    margin-top: -1px; //FIREFOX HACK TO OMMIT BLANK 1px line
+    width: 100%;
+
+    polygon {
+      fill: get-color(reward);
+      stroke: get-color(reward);
+    }
+  }
+
+  input {
+    padding: 10px;
+  }
+
+  select {
+    height: 45px;
+  }
+
+
+  input,
+  select {
+    &[disabled] {
+      background-color: get-color((color: blackNeutral, key: darker, opacity: .05));
+      cursor: not-allowed;
+      opacity: .5;
+
+      &:hover,
+      &:focus {
+        border: 1px solid get-color((color: rastaGray, opacity: .2));
+      }
+    }
+  }
+
+  &__container {
+    padding: {
+      left: 10%;
+      right: 10%;
+    }
+    width: 100%;
+  }
+
+  &__field {
+    display: block;
+
+    & + & {
+      margin-top: 16px;
+    }
+
+    &--disabled {
+      > label,
+      > span {
+        opacity: .5;
+      }
+
+      > label {
+        a {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__input {
+    background-color: get-color((color: blackNeutral, key: darker, opacity: .05));
+    border: 1px solid get-color((color: rastaGray, opacity: .2));
+    border-radius: $border-radius-button;
+    color: get-color((color: blackNeutral, key: darker, opacity: .5));
+    display: block;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.3;
+    padding: 11px;
+    transition: border-color .15s ease-in, background-color .15s ease-in;
+
+    .form__field--fluid & {
+      width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      @extend %focus-style;
+      outline: none;
+    }
+
+    &--filled {
+      background-color: get-color(air);
+      border: 1px solid get-color((color: rastaGray, opacity: .1));
+      color: get-color((color: blackNeutral, key: darker, opacity: .8));
+      font-style: normal;
+    }
+
+    &--invalid {
+      &:hover,
+      &:focus {
+        @extend %focus-style;
+      }
+    }
+  }
+
+  &__text {
+    height: auto;
+    min-height: 80px;
+  }
+
+  &__label {
+    color: get-color((color: blackNeutral, key: darker, opacity: .8));
+    display: block;
+    font-size: 13px;
+    font-weight: get-weight(bold);
+    margin-bottom: 6px;
+  }
+
+  &__label-link {
+    @include clearfix;
+    float: right;
+    font: {
+      size: 13px;
+      style: italic;
+      weight: get-weight(bold);
+    };
+    line-height: 1.15;
+    margin-left: 10px;
+  }
+
+  &__description {
+    color: get-color((color: blackNeutral, opacity: .5));
+    font-size: 12px;
+
+    &.form__field {
+      margin-top: 5px;
+    }
+  }
+}
