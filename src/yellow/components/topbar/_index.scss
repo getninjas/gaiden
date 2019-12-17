@@ -60,10 +60,8 @@
   }
 
   &__item {
-    margin-bottom: $size-spacing-xs;
-
-    &:last-child {
-      margin-bottom: 0;
+    &:not(:last-child) {
+      margin-bottom: $size-spacing-xs;
     }
 
     @media screen and (min-width: $media-medium) {
