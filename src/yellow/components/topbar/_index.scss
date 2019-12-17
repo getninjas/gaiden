@@ -37,32 +37,26 @@
   &__navigation {
     align-items: center;
     align-self: center;
-    background-color: $color-brand-first-light;
-    border-bottom: 1px solid $color-interface-shade-dark;
-    box-sizing: border-box;
     display: none;
     flex-direction: column;
-    left: 0;
-    overflow: hidden;
-    padding: $size-spacing-s;
-    position: absolute;
-    top: 56px;
-    width: 100%;
-    z-index: 1;
 
-    &--opened {
+    &--open {
+      background-color: $color-brand-first-light;
+      border-bottom: 1px solid $color-interface-shade-dark;
+      box-sizing: border-box;
       display: flex;
+      left: 0;
+      overflow: hidden;
+      padding: $size-spacing-s;
+      position: absolute;
+      top: 56px;
+      width: 100%;
+      z-index: 1;
     }
 
     @media screen and (min-width: $media-medium) {
-      background-color: none;
-      border: none;
       display: flex;
       flex-direction: row;
-      padding: 0;
-      position: relative;
-      top: initial;
-      width: initial;
     }
   }
 
