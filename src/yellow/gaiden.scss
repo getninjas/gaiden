@@ -1,5 +1,6 @@
-@import '../../node_modules/reset-css/sass/reset'; //sass-lint:disable-line clean-import-paths
-@import '../shared/niten-tokens';
+@import '../../node_modules/reset-css/sass/reset';
+@import '../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
+
 @import 'settings/colors';
 @import 'settings/buttons';
 @import 'settings/base_font';
@@ -7,6 +8,8 @@
 @import 'settings/shadows';
 @import 'settings/border';
 @import 'settings/banner';
+@import 'settings/links';
+
 @import 'tools/animations/rotation';
 @import 'tools/mixins/map_deep_get';
 @import 'tools/mixins/generate_button_sizes';
@@ -23,6 +26,7 @@
 @import 'tools/mixins/radial';
 @import 'tools/mixins/media';
 @import 'tools/mixins/multiple_gradients';
+
 @import '../shared/settings/grid';
 @import '../shared/tools/animations/rotation';
 @import '../shared/tools/mixins/map_deep_get';
@@ -47,7 +51,7 @@
 @import '../shared/generic/html';
 @import './generic/body';
 @import '../shared/generic/content_centered';
-@import 'settings/links';
+
 @import 'components/breadcrumb';
 @import 'components/button';
 @import 'components/media_box';
@@ -83,6 +87,9 @@
 @import 'components/media';
 @import 'components/modal';
 
+@import 'generic/heading';
+@import 'generic/typography';
+
 @import 'components/button/index';
 @import 'components/caption/index';
 @import 'components/heading/index';
@@ -90,9 +97,7 @@
 @import 'components/quote/index';
 @import 'components/subtitle/index';
 @import 'components/text/index';
-
-@import 'generic/heading';
-@import 'generic/typography';
+@import 'components/topbar/index';
 
 @include generate-grid($default-breakpoints);
 @include generate-spaces;
