@@ -1,0 +1,18 @@
+@import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
+
+.link {
+  color: $color-interface-action-dark;
+  cursor: pointer;
+  font-size: $size-font-xxs;
+  line-height: $size-line-height-xxs;
+  text-decoration-line: underline;
+
+  &--large {
+    font-size: $size-font-xs;
+    line-height: $size-line-height-xs;
+  }
+
+  &--inverse {
+    color: $color-interface-content-light;
+  }
+}
