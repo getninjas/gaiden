@@ -1,0 +1,48 @@
+@import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
+
+.shape {
+  border-color: $color-interface-shade-dark;
+  border-radius: $size-border-radius-s;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  transition: border .3s ease-in-out;
+
+  &:hover {
+    border-color: $color-brand-first-extra-dark;
+    border-width: 2px;
+  }
+
+  &--clickable {
+    box-shadow: $shadow-bottom-level-1;
+    cursor: pointer;
+  }
+
+  &--positive {
+    border-color: $color-interface-positive-dark;
+
+    &:hover {
+      border-color: $color-interface-positive-dark;
+    }
+  }
+
+  &--alert {
+    border-color: $color-interface-alert-dark;
+
+    &:hover {
+      border-color: $color-interface-alert-dark;
+    }
+  }
+
+  &--negative {
+    border-color: $color-interface-negative-dark;
+
+    &:hover {
+      border-color: $color-interface-negative-dark;
+    }
+  }
+
+  &--medium-radius {
+    border-radius: $size-border-radius-m;
+  }
+}
