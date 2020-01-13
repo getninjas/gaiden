@@ -10,20 +10,11 @@
     font-size: $size-font-m;
     line-height: $size-line-height-m;
 
-    @media screen and (min-width: $media-normal) {
-      font-size: $size-font-l;
-      line-height: $size-line-height-l;
-    }
   }
 
   &--m {
     font-size: $size-font-s;
     line-height: $size-line-height-s;
-
-    // @media screen and (min-width: $media-normal) {
-    //   font-size: $size-font-m;
-    //   line-height: $size-line-height-m;
-    // }
   }
 
   &--s {
