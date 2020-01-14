@@ -12,38 +12,23 @@
   }
 
   &--l {
-    font-size: $size-font-l;
-    line-height: $size-line-height-l;
+    font-size: $size-font-m;
+    line-height: $size-line-height-m;
 
-    @media screen and (min-width: $media-normal) {
+    @media screen and (min-width: $media-large) {
       font-size: $size-font-xl;
       line-height: $size-line-height-xl;
     }
   }
 
   &--m {
-    font-size: $size-font-m;
-    line-height: $size-line-height-m;
-
-    @media screen and (min-width: $media-normal) {
-      font-size: $size-font-l;
-      line-height: $size-line-height-l;
-    }
+    font-size: $size-font-l;
+    line-height: $size-line-height-l;
   }
 
   &--s {
-    font-size: $size-font-s;
-    line-height: $size-line-height-s;
-
-    @media screen and (min-width: $media-medium) {
-      font-size: $size-font-m;
-      line-height: $size-line-height-m;
-    }
-
-    @media screen and (min-width: $media-large) {
-      font-size: $size-font-l;
-      line-height: $size-line-height-l;
-    }
+    font-size: $size-font-m;
+    line-height: $size-line-height-m;
   }
 
   &--xs {

@@ -9,7 +9,6 @@
   &--l {
     font-size: $size-font-m;
     line-height: $size-line-height-m;
-
   }
 
   &--m {
@@ -20,6 +19,11 @@
   &--s {
     font-size: $size-font-xs;
     line-height: $size-line-height-xs;
+
+    @media screen and (min-width: $media-large) {
+      font-size: $size-font-m;
+      line-height: $size-line-height-m;
+    }
   }
 
   &--inverse {
