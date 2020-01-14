@@ -4,7 +4,6 @@
 @import '../topbar/menu-icon';
 
 .topbar {
-  align-items: center;
   background-color: $color-brand-first-light;
   border-bottom: 1px solid $color-interface-shade-dark;
   height: 56px;
@@ -16,7 +15,6 @@
     flex-direction: row;
     height: 100%;
     justify-content: space-between;
-  order: 1;
     padding: 0 16px;
 
     &--centered {
@@ -75,12 +73,11 @@
     }
 
     @media screen and (min-width: $media-medium) {
-      margin-bottom: 0;
       margin-left: $size-spacing-s;
-    }
-  }
 
-  &--centered {
-    justify-content: center;
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
   }
 }
