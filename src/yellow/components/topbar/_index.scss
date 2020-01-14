@@ -1,0 +1,83 @@
+@import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
+@import '../../../shared/settings/grid';
+
+@import '../topbar/menu-icon';
+
+.topbar {
+  background-color: $color-brand-first-light;
+  border-bottom: 1px solid $color-interface-shade-dark;
+  height: 56px;
+  order: 1;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    &--centered {
+      justify-content: center;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: row;
+
+    img {
+      align-self: center;
+      width: 124px;
+    }
+  }
+
+  &__text {
+    display: none;
+
+    @media screen and (min-width: $media-medium) {
+      display: flex;
+      margin-left: $size-spacing-m;
+    }
+  }
+
+  &__navigation {
+    align-items: center;
+    align-self: center;
+    display: none;
+    flex-direction: column;
+
+    &--open {
+      background-color: $color-brand-first-light;
+      border-bottom: 1px solid $color-interface-shade-dark;
+      box-sizing: border-box;
+      display: flex;
+      left: 0;
+      overflow: hidden;
+      padding: $size-spacing-s;
+      position: absolute;
+      top: 56px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    @media screen and (min-width: $media-medium) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: $size-spacing-xs;
+    }
+
+    @media screen and (min-width: $media-medium) {
+      margin-left: $size-spacing-s;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

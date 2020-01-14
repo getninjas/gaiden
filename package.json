@@ -1,6 +1,6 @@
 {
   "name": "gaiden",
-  "version": "21.0.0",
+  "version": "21.2.0",
   "description": "Styleguide for GetNinjas projects",
   "main": "index.js",
   "scripts": {
@@ -34,9 +34,9 @@
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.4",
-    "@storybook/addon-docs": "^5.2.6",
-    "@storybook/addon-viewport": "^5.2.6",
-    "@storybook/html": "^5.2.6",
+    "@storybook/addon-docs": "^5.2.8",
+    "@storybook/addon-viewport": "^5.2.8",
+    "@storybook/html": "^5.2.8",
     "@storybook/preset-scss": "^1.0.2",
     "@storybook/storybook-deployer": "^2.8.1",
     "autoprefixer": "^6.7.7",
