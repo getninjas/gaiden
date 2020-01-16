@@ -1,7 +1,7 @@
 export default {
   title: 'Components | List Link',
   parameters: {
-    componentSubtitle: 'Quote give italic attribute to font.',
+    componentSubtitle: 'Set of link list with hover',
   },
 };
 
