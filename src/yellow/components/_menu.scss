@@ -169,7 +169,7 @@
   width: 100%;
   z-index: 3;
 
-  @include media(normal) {
+  @media screen and (min-width: $media-normal) {
     align-content: center;
     max-height: 100%;
     padding: 0;
