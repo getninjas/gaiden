@@ -8,11 +8,9 @@
 .footer {
   background-color: $color-interface-shade-light;
   height: auto;
-  margin: $size-spacing-xxl 0 0;
   padding: $size-spacing-xl 0 0;
 
   @include media(normal) {
-    margin-top: $size-spacing-xxxl;
     padding: $size-spacing-xxl 0 0;
   }
 
