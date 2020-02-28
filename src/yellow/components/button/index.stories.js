@@ -15,16 +15,22 @@ export const allButtons = () => `
     <button class="btn btn--primary btn--small btn--inverse">Button Primary</button>
   </div>
   <div class="docs space-docs">
-    <button class="btn btn--secondary btn--small">Button Secondary</button>
+  <button class="btn btn--secondary btn--small">Button Secondary</button>
   </div>
   <div class="docs space-docs docs--inverse">
-    <button class="btn btn--secondary btn--small btn--inverse">Button Secondary</button>
+  <button class="btn btn--secondary btn--small btn--inverse">Button Secondary</button>
   </div>
   <div class="docs space-docs">
-    <button class="btn btn--clear btn--small">Button Clear</button>
+  <button class="btn btn--clear btn--small">Button Clear</button>
   </div>
   <div class="docs space-docs docs--inverse">
-    <button class="btn btn--clear btn--small btn--inverse">Button Clear</button>
+  <button class="btn btn--clear btn--small btn--inverse">Button Clear</button>
+  </div>
+  <div class="docs space-docs">
+    <button class="btn btn--brand btn--small">Button Brand</button>
+  </div>
+  <div class="docs space-docs docs--inverse">
+    <button class="btn btn--brand btn--small">Button Brand</button>
   </div>
   <div class="docs space-docs">
     <button class="btn btn--ultimate btn--small">Button Ultimate</button>
@@ -58,6 +64,12 @@ export const primaryDisabled = () => `
   </div>
 `;
 
+export const brand = () => `
+  <div class="docs">
+    <button class="btn btn--brand btn--small">Button Brand</button>
+  </div>
+`;
+
 export const inverse = () => `
   <div class="docs docs--inverse">
     <button class="btn btn--inverse btn--small">Button Inverse</button>
@@ -77,97 +89,97 @@ export const inverseLoading = () => `
 `;
 
 export const secondary = () => `
-  <div class="docs">  
+  <div class="docs">
     <button class="btn btn--secondary btn--small">Button Secondary</button>
   </div>
 `;
 
 export const secondaryLarge = () => `
-  <div class="docs">  
+  <div class="docs">
     <button class="btn btn--secondary btn--large">Button Secondary</button>
   </div>
 `;
 
 export const secondaryDisabled = () => `
-  <div class="docs">  
+  <div class="docs">
     <button class="btn btn--secondary btn--small" disabled="true">Button Secondary</button>
   </div>
 `;
 
 export const secondaryLoading = () => `
-  <div class="docs">  
+  <div class="docs">
     <button class="btn btn--secondary btn--small btn--loading">Button Secondary</button>
   </div>
 `;
 
 export const secondaryLargeLoading = () => `
-  <div class="docs">  
+  <div class="docs">
     <button class="btn btn--secondary btn--large btn--loading">Button Secondary</button>
   </div>
 `;
 
 export const secondaryInverse = () => `
-  <div class="docs docs--inverse">  
+  <div class="docs docs--inverse">
     <button class="btn btn--secondary btn--small btn--inverse">Button Secondary</button>
   </div>
 `;
 
 export const secondaryInverseDisabled = () => `
-  <div class="docs docs--inverse">  
+  <div class="docs docs--inverse">
     <button class="btn btn--secondary btn--small btn--inverse" disabled="true">Button Secondary</button>
   </div>
 `;
 
 export const secondaryInverseLoading = () => `
-  <div class="docs docs--inverse">  
+  <div class="docs docs--inverse">
     <button class="btn btn--secondary btn--small btn--inverse btn--loading">Button Secondary</button>
   </div>
 `;
 
 export const clear = () => `
-  <div class="docs">  
+  <div class="docs">
     <button class="btn btn--clear btn--small">Button Clear</button>
   </div>
 `;
 
 export const clearLarge = () => `
-  <div class="docs">  
+  <div class="docs">
     <button class="btn btn--clear btn--large">Button Clear</button>
   </div>
 `;
 
 export const clearDisabled = () => `
-  <div class="docs">  
+  <div class="docs">
     <button class="btn btn--clear btn--small" disabled="true">Button Clear</button>
   </div>
 `;
 
 export const clearInverse = () => `
-  <div class="docs docs--inverse">  
+  <div class="docs docs--inverse">
     <button class="btn btn--clear btn--small btn--inverse">Button Clear</button>
   </div>
 `;
 
 export const ultimate = () => `
-  <div class="docs">  
+  <div class="docs">
     <button class="btn btn--ultimate btn--small">Button Ultimate</button>
   </div>
 `;
 
 export const ultimateLarge = () => `
-  <div class="docs">  
+  <div class="docs">
     <button class="btn btn--ultimate btn--large">Button Ultimate</button>
   </div>
 `;
 
 export const ultimateDisabled = () => `
-  <div class="docs">  
+  <div class="docs">
     <button class="btn btn--ultimate btn--small" disabled="true">Button Ultimate</button>
   </div>
 `;
 
 export const ultimateLoading = () => `
-  <div class="docs">  
+  <div class="docs">
     <button class="btn btn--ultimate btn--small btn--loading">Button Ultimate</button>
   </div>
 `;

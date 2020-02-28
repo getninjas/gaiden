@@ -26,6 +26,11 @@
     width: 100%;
   }
 
+  &--brand {
+    background-color: $color-brand-second-dark;
+    color: $color-interface-content-extra-dark;
+  }
+
   &--primary {
     background-color: $color-brand-first-extra-dark;
     color: $color-interface-content-light;
