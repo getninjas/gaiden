@@ -1,0 +1,24 @@
+@import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
+@import '../../../shared/settings/grid';
+
+
+.footer {
+  background-color: $color-interface-shade-light;
+  margin-top: $size-spacing-xl;
+  padding: 0 $size-spacing-xs;
+  height: auto;
+
+  @media screen and (min-width: $media-large) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &--press {
+    align-items: center;
+    border: $size-border-width-thin $border-style-default $color-interface-shade-medium;
+    margin-top: 36px;
+    padding: 24px 16px;
+  }
+
+
+}
