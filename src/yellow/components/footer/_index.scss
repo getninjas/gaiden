@@ -4,9 +4,9 @@
 
 .footer {
   background-color: $color-interface-shade-light;
+  height: auto;
   margin-top: $size-spacing-xl;
   padding: 0 $size-spacing-xs;
-  height: auto;
 
   @media screen and (min-width: $media-large) {
     display: flex;
