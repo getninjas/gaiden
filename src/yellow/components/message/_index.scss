@@ -1,0 +1,48 @@
+@import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
+
+.message {
+  display: flex;
+  flex-direction: row;
+  padding: $size-spacing-xs;
+
+  &__icon {
+    height: 20px;
+    margin-right: $size-spacing-xxs;
+    width: 20px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: $color-interface-content-dark;
+    font-size: $size-font-xs;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    color: $color-interface-content-medium;
+    font-size: $size-font-xs;
+    margin: 0;
+  }
+
+  &--positive {
+    .message__title {
+      color: $color-interface-positive-extra-dark;
+    }
+  }
+
+  &--alert {
+    .message__title {
+      color: $color-interface-alert-extra-dark;
+    }
+  }
+
+  &--negative {
+    .message__title {
+      color: $color-interface-negative-extra-dark;
+    }
+  }
+}
