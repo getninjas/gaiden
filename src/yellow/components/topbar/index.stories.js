@@ -1,4 +1,4 @@
-import Logo from '../../../../public/images/Logo.png';
+import Logo from '../../../../public/images/Logo_brand.png';
 
 export default {
   title: 'Components | Topbar',
