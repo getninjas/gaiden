@@ -43,23 +43,23 @@
 }
 
 .list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-left: 0;
-  width: 100%;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // margin-left: 0;
+  // width: 100%;
 
   &__item {
     border-radius: 4px;
     display: flex;
+    flex-direction: column;
     flex-shrink: 0;
     margin-bottom: $size-spacing-xxxs;
     transition: background-color ease-in-out .3s;
-    width: 25%;
 
-    &:last-child {
-      margin-bottom: 0;
-    }
+    // &:last-child {
+    //   margin-bottom: 0;
+    // }
 
     a {
       color: $color-interface-content-medium;

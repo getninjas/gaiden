@@ -8,18 +8,19 @@
 .footer {
   background-color: $color-interface-shade-light;
   height: auto;
-  padding: $size-spacing-xl 0 0;
+  order: 9;
+  // padding: $size-spacing-xl 0 0;
 
   @include media(normal) {
     padding: $size-spacing-xxl 0 0;
   }
 
-  &__title {
-    display: block;
-    text-align: left;
-    text-transform: uppercase;
-    width: 100%;
-  }
+  // &__title {
+  //   display: block;
+  //   text-align: left;
+  //   text-transform: uppercase;
+  //   width: 100%;
+  // }
 
   &__block {
     align-items: flex-start;
@@ -40,27 +41,27 @@
 
   }
 
-  &__block--row {
+  &__block--column {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
   &__list {
     font-size: 14px;
     text-align: left;
 
-    &--on-column {
-      &[class*='col-'] {
-        display: inline-block;
-        margin-left: 0;
-        text-align: left;
+    // &--on-column {
+    //   &[class*='col-'] {
+    //     display: inline-block;
+    //     margin-left: 0;
+    //     text-align: left;
 
-        + & {
-          margin-left: auto;
-          margin-right: 0;
-        }
-      }
-    }
+    //     + & {
+    //       margin-left: auto;
+    //       margin-right: 0;
+    //     }
+    //   }
+    // }
 
     &--social {
       display: flex;
@@ -131,19 +132,26 @@
 
   &__institutional {
     border-top: 1px solid $color-interface-shade-dark;
-    flex-direction: column;
-    margin-top: $size-spacing-l;
-    padding: $size-spacing-s $size-spacing-xs;
+    // align-items: center;
+    // flex-direction: row;
+    // justify-content: space-between;
+    padding: $size-spacing-m 0;
+
+    &--items {
+      display: block;
+      margin-bottom: 48px;
+      text-align: center;
+    }
 
     .footer__image {
       width: 125px;
     }
 
-    @include media(small) {
-      align-items: center;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: $size-spacing-m 0;
+    @include media(large) {
+      flex-direction: column;
+      margin-top: $size-spacing-l;
+      padding: $size-spacing-s $size-spacing-xs;
+
     }
   }
 

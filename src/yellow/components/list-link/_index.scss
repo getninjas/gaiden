@@ -1,4 +1,6 @@
 @import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
+@import '../../../shared/settings/grid';
+
 
 .listing {
   &__title {
@@ -12,10 +14,15 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
+    margin-bottom: 48px;
     width: 100%;
 
-    &--stacked {
-      flex-direction: column;
+    @media screen and (min-width: $media-medium) {
+      flex-direction: row;
+
+      &:first-child {
+        margin-right: 48px;
+      }
     }
   }
 }
@@ -23,24 +30,30 @@
 .list {
   list-style: none;
   padding: 0;
-  width: 100%;
 
-  &--half {
-    width: 50%;
+  &--flex {
+    display: flex;
+  }
 
-    &:not(:last-child) {
-      margin-right: $size-spacing-xs;
-    }
+  &--figure,
+  &--downloads {
+    margin-top: 48px;
   }
 
   &__item {
+    border-radius: 4px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-bottom: $size-spacing-xxxs;
     padding: 8px 0;
     transition: background-color .3s ease-in-out;
 
-    &:not(:last-child) {
-      margin-bottom: 8px;
-    }
+    // &:not(:last-child) {
+    //   margin-bottom: 0;
+    //   padding-bottom: 0;
+    // }
 
     &:hover {
       background-color: $color-interface-alert-light;
@@ -48,6 +61,36 @@
       .list__link {
         color: $color-interface-content-extra-dark;
         margin-left: 8px;
+      }
+    }
+  }
+
+  &__media {
+    border-radius: 50%;
+    height: 48px;
+    margin-left: $size-spacing-xxxs;
+    text-indent: -9999px;
+    width: 40px;
+
+
+    &--social {
+      align-items: flex-start;
+      display: flex;
+      flex-grow: 1;
+
+      a {
+        // display: block;
+        margin-right: 8px;
+        width: 40px;
+      }
+
+      img {
+        // display: block;
+        width: 100%;
+      }
+
+      &:first-child {
+        margin-left: 0;
       }
     }
   }
