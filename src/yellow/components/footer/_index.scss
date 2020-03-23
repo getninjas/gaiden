@@ -6,26 +6,26 @@
   background-color: $color-interface-shade-light;
   height: auto;
   order: 9;
-  padding: $size-spacing-l $size-spacing-xs 0;
+  padding: 0;
 
-  &__title {
-    display: block;
-    margin-bottom: $size-spacing-s;
-    text-align: left;
-    text-transform: uppercase;
-    width: 100%;
+//Used just in Storybook context
+  &__container {
+    max-width: 1200px;
+  }
+
+  &__box {
+    padding: $size-spacing-xl $size-spacing-xs 0;
   }
 
   &__block {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    margin: 0 8px 48px;
+    margin: 0 $size-spacing-xxxs $size-spacing-l;
 
-    @media screen and (min-width: $media-normal) {
-      &:not(:last-child) {
-        margin-bottom: 0;
-      }
+    @media screen and (min-width: $media-large) {
+      flex-direction: row;
+      justify-content: center;
     }
   }
 
@@ -35,37 +35,76 @@
     }
   }
 
-  &--download {
-    margin-top: $size-spacing-l;
-  }
-
-  &__block--column {
+  &__links {
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: $media-medium) {
+      flex-direction: row;
+    }
+
+    &-press{
+      @media screen and (min-width: $media-large) {
+        margin-left: $size-spacing-s;
+      }
+    }
   }
 
-  &__institutional {
-    border-top: 1px solid $color-interface-shade-dark;
+  &__foundation {
+    border-top: $size-border-width-thin $border-style-default $color-interface-shade-dark;
     padding: $size-spacing-m 0;
-
-    &--items {
-      display: block;
-      margin-bottom: $size-spacing-xxs;
-      text-align: center;
-    }
+    display: block;
+    text-align: center;
 
     .footer__image {
       width: 125px;
     }
 
+    &-tools {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    @media screen and (min-width: $media-medium) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
     @media screen and (min-width: $media-large) {
-      flex-direction: column;
+      flex-direction: row;
       margin-top: $size-spacing-l;
       padding: $size-spacing-s $size-spacing-xs;
     }
   }
 
+  &__element {
+    margin-bottom: $size-spacing-s;
+
+    @media screen and (min-width: $media-medium) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__channels {
+    display: flex;
+    text-transform: uppercase;
+    padding: 0;
+
+    .footer__item {
+      margin-right: 16px;
+      list-style: none;
+
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $color-brand-first-extra-dark;
+      }
+    }
+  }
+
   &__country {
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -76,13 +115,19 @@
 
     a {
       text-transform: uppercase;
+      text-decoration: none;
+      color: $color-brand-first-extra-dark;
     }
   }
 }
 
 .copyright {
   background-color: $color-interface-shade-medium;
+  order: 10;
   padding: $size-spacing-xxxs $size-spacing-xs;
   text-align: center;
-  order: 10;
+
+  @media screen and (min-width: $media-normal) {
+    margin-bottom: 97px;
+  }
 }
