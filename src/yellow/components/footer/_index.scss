@@ -8,7 +8,7 @@
   order: 9;
   padding: 0;
 
-//Used just in Storybook context
+  //Used just in Storybook context
   &__container {
     max-width: 1200px;
   }
@@ -43,7 +43,7 @@
       flex-direction: row;
     }
 
-    &-press{
+    &-press {
       @media screen and (min-width: $media-large) {
         margin-left: $size-spacing-s;
       }
@@ -52,8 +52,8 @@
 
   &__foundation {
     border-top: $size-border-width-thin $border-style-default $color-interface-shade-dark;
-    padding: $size-spacing-m 0;
     display: block;
+    padding: $size-spacing-m 0;
     text-align: center;
 
     .footer__image {
@@ -66,9 +66,9 @@
     }
 
     @media screen and (min-width: $media-medium) {
+      align-items: center;
       display: flex;
       justify-content: space-around;
-      align-items: center;
     }
 
     @media screen and (min-width: $media-large) {
@@ -88,17 +88,17 @@
 
   &__channels {
     display: flex;
-    text-transform: uppercase;
     padding: 0;
+    text-transform: uppercase;
 
     .footer__item {
-      margin-right: 16px;
       list-style: none;
+      margin-right: 16px;
 
       a {
-        text-transform: uppercase;
-        text-decoration: none;
         color: $color-brand-first-extra-dark;
+        text-decoration: none;
+        text-transform: uppercase;
       }
     }
   }
