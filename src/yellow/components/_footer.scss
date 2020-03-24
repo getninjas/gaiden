@@ -47,7 +47,7 @@
   }
 
   &__list {
-    font-size: 14px;
+    font-size: $size-font-xxs;
     text-align: left;
 
     &--on-column {
@@ -132,14 +132,14 @@
 
   &__institutional {
     align-items: center;
-    border-top: 1px solid $color-interface-shade-dark;
+    border-top: $size-border-width-thin $border-style-default $color-interface-shade-dark;
     flex-direction: row;
     justify-content: space-between;
     padding: $size-spacing-m 0;
 
     &--items {
       display: block;
-      margin-bottom: 48px;
+      margin-bottom: $size-spacing-l;
       text-align: center;
     }
 

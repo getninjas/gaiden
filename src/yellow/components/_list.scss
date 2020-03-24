@@ -50,7 +50,7 @@
   width: 100%;
 
   &__item {
-    border-radius: 4px;
+    border-radius: $size-border-radius-s;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;

@@ -13,7 +13,7 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    margin-bottom: 48px;
+    margin-bottom: $size-spacing-l;
     width: 100%;
 
     @media screen and (min-width: $media-medium) {
@@ -33,7 +33,7 @@
     flex-direction: column;
     flex-shrink: 0;
     margin-bottom: $size-spacing-xxxs;
-    padding: 8px 0;
+    padding: $size-spacing-xxxs 0;
     transition: background-color ease-in-out .3s;
 
     &:hover {
@@ -41,7 +41,7 @@
 
       .lists__link {
         color: $color-interface-content-extra-dark;
-        margin-left: 8px;
+        margin-left: $size-spacing-xxxs;
         transition: transform ease-in-out .3s;
       }
     }
@@ -82,7 +82,7 @@
     flex-grow: 1;
 
     a {
-      margin-right: 8px;
+      margin-right: $size-spacing-xxxs;
       width: 40px;
     }
 
