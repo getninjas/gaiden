@@ -5,20 +5,129 @@
 .footer {
   background-color: $color-interface-shade-light;
   height: auto;
-  margin-top: $size-spacing-xl;
-  padding: 0 $size-spacing-xs;
+  order: 9;
+  padding: 0;
 
-  @media screen and (min-width: $media-large) {
+  //Used just in Storybook context
+  &__container {
+    max-width: 1200px;
+  }
+
+  &__box {
+    padding: $size-spacing-xl $size-spacing-xs 0;
+  }
+
+  &__block {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin: 0 $size-spacing-xxxs $size-spacing-l;
+
+    @media screen and (min-width: $media-large) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    @media screen and (min-width: $media-medium) {
+      display: flex;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $media-medium) {
+      flex-direction: row;
+    }
+
+    &-press {
+      @media screen and (min-width: $media-large) {
+        margin-left: $size-spacing-s;
+      }
+    }
+  }
+
+  &__foundation {
+    border-top: $size-border-width-thin $border-style-default $color-interface-shade-dark;
+    display: block;
+    padding: $size-spacing-m 0;
+    text-align: center;
+
+    .footer__image {
+      width: 125px;
+    }
+
+    &-tools {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    @media screen and (min-width: $media-medium) {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    @media screen and (min-width: $media-large) {
+      flex-direction: row;
+      margin-top: $size-spacing-l;
+      padding: $size-spacing-s $size-spacing-xs;
+    }
+  }
+
+  &__element {
+    margin-bottom: $size-spacing-s;
+
+    @media screen and (min-width: $media-medium) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__channels {
+    display: flex;
+    padding: 0;
+    text-transform: uppercase;
+
+    .footer__item {
+      list-style: none;
+      margin-right: $size-spacing-xs;
+
+      a {
+        color: $color-brand-first-extra-dark;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__country {
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+
+    img {
+      margin: 0 $size-spacing-xxs;
+    }
+
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color-brand-first-extra-dark;
+    }
   }
+}
 
-  &--press {
-    align-items: center;
-    border: $size-border-width-thin $border-style-default $color-interface-shade-medium;
-    margin-top: 36px;
-    padding: 24px 16px;
+.copyright {
+  background-color: $color-interface-shade-medium;
+  order: 10;
+  padding: $size-spacing-xxxs $size-spacing-xs;
+  text-align: center;
+
+  @media screen and (min-width: $media-normal) {
+    margin-bottom: 97px;
   }
-
-
 }

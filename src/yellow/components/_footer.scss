@@ -8,6 +8,7 @@
 .footer {
   background-color: $color-interface-shade-light;
   height: auto;
+  order: 9;
   padding: $size-spacing-xl 0 0;
 
   @include media(normal) {
@@ -40,13 +41,13 @@
 
   }
 
-  &__block--row {
+  &__block--column {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
   &__list {
-    font-size: 14px;
+    font-size: $size-font-xxs;
     text-align: left;
 
     &--on-column {
@@ -130,20 +131,27 @@
   }
 
   &__institutional {
-    border-top: 1px solid $color-interface-shade-dark;
-    flex-direction: column;
-    margin-top: $size-spacing-l;
-    padding: $size-spacing-s $size-spacing-xs;
+    align-items: center;
+    border-top: $size-border-width-thin $border-style-default $color-interface-shade-dark;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $size-spacing-m 0;
+
+    &--items {
+      display: block;
+      margin-bottom: $size-spacing-l;
+      text-align: center;
+    }
 
     .footer__image {
       width: 125px;
     }
 
-    @include media(small) {
-      align-items: center;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: $size-spacing-m 0;
+    @include media(large) {
+      flex-direction: column;
+      margin-top: $size-spacing-l;
+      padding: $size-spacing-s $size-spacing-xs;
+
     }
   }
 
