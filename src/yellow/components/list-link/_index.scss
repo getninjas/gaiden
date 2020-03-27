@@ -23,7 +23,7 @@
 }
 
 .lists {
-  margin-right: $size-spacing-xxxs;
+  margin-right: $size-spacing-xs;
   padding: 0;
 
   &__item {
@@ -58,18 +58,20 @@
     line-height: $size-line-height-xs;
     text-decoration: none;
 
-    @media screen and (min-width: $media-medium) {
-      margin-right: $size-spacing-xxl;
-    }
 
     @media screen and (min-width: $media-large) {
-      margin-right: $size-spacing-xl;
+      margin-right: $size-spacing-l;
     }
   }
 
   &__group {
     list-style: none;
+    margin-right: $size-spacing-l;
     padding: 0;
+
+    @media screen and (min-width: $media-large) {
+      margin-right: $size-spacing-s;
+    }
   }
 
   &--flex {
