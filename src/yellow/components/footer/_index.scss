@@ -119,15 +119,21 @@
       color: $color-brand-first-extra-dark;
     }
   }
-}
 
-.copyright {
-  background-color: $color-interface-shade-medium;
-  order: 10;
-  padding: $size-spacing-xxxs $size-spacing-xs;
-  text-align: center;
+  .copyright {
+    background-color: $color-interface-shade-medium;
+    order: 10;
+    padding: $size-spacing-xxxs $size-spacing-xs;
+    text-align: center;
 
-  @media screen and (min-width: $media-normal) {
-    margin-bottom: 97px;
+    @media screen and (min-width: $media-normal) {
+      margin-bottom: 97px;
+    }
+
+    &--mx {
+      @media screen and (min-width: $media-medium) {
+        margin-bottom: 0;
+      }
+    }
   }
 }

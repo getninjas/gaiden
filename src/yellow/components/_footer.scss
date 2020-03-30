@@ -30,7 +30,7 @@
 
 
     &:not(:last-child) {
-      @include media(normal) {
+      @include media(large) {
         margin-bottom: 0;
       }
     }
