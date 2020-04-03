@@ -49,6 +49,16 @@
       }
     }
 
+    &--mx {
+      &:hover {
+        background-color: $color-interface-alert-light;
+
+        @media screen and (min-width: $media-large) {
+          width: 241px;
+        }
+      }
+    }
+
     &--app {
       margin-left: 0;
     }
@@ -70,6 +80,12 @@
     list-style: none;
     padding: 0;
     width: 218px;
+
+    &--mx {
+      @media screen and (min-width: $media-large) {
+        width: 241px;
+      }
+    }
   }
 
   &--flex {
