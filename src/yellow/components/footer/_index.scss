@@ -33,6 +33,15 @@
     @media screen and (min-width: $media-medium) {
       display: flex;
     }
+
+    &--mx {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: $media-normal) {
+        flex-direction: row;
+      }
+    }
   }
 
   &__links {
