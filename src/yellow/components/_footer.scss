@@ -9,11 +9,6 @@
   background-color: $color-interface-shade-light;
   height: auto;
   order: 9;
-  padding: $size-spacing-xl 0 0;
-
-  @include media(normal) {
-    padding: $size-spacing-xxl 0 0;
-  }
 
   &__title {
     display: block;
