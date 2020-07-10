@@ -12,6 +12,10 @@
   text-transform: uppercase;
   transition: all .2s linear;
 
+  &--thin {
+    padding: $size-spacing-xxs $size-spacing-s;
+  }
+
   &--small {
     font-size: $size-font-xxs;
     padding: $size-spacing-xxs $size-spacing-m;
