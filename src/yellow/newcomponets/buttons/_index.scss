@@ -1,5 +1,4 @@
 @import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
-@import '../global/color';
 
 .button {
   cursor: pointer;
@@ -11,7 +10,7 @@
   -webkit-box-pack: center;
   justify-content: center;
   margin-bottom: 10px;
-  color: #e5f7ff;
+  color: $color-interface-action-light;
   position: relative;
   transform: translate3d(0px, 0px, 0px);
   border-width: 2px;
@@ -33,7 +32,7 @@
     top: 0px;
     left: 0px;
     pointer-events: none;
-    background-image: radial-gradient(circle, rgb(0, 0, 0) 10%, transparent 10.01%);
+    background-image: radial-gradient(circle, $color-interface-content-extra-dark 10%, transparent 10.01%);
     transform: scale(10, 10);
     opacity: 0;
     background-repeat: no-repeat;
@@ -44,8 +43,8 @@
 
   .spinner {
     display: inline-block;
-    border: 2px solid var(--action-300);
-    border-left-color: #fff;
+    border: 2px solid $color-interface-action-extra-dark;
+    border-left-color: $color-brand-first-light;
     border-radius: 50%;
     width: 14px;
     height: 14px;
@@ -65,54 +64,54 @@
   }
 
   &--primary {
-    background-color: var(--action-300);
+    background-color: $color-interface-action-extra-dark;
   &:hover{
-    background-color: var(--action-500);
+    background-color: $color-interface-action-dark;
   }
     &[disabled] {
-      color: #fff;
-      background-color: #dbdbdb;
+      color: $color-interface-content-light;
+      background-color: $color-interface-shade-dark;
       cursor: not-allowed;
     }
   }
 
   &--secondary {
     background-color: transparent;
-    border-color: var(--action-300);
-    color: var(--action-300);
+    border-color: $color-interface-action-extra-dark;
+    color: $color-interface-action-extra-dark;
     &:hover{
-      background-color: var(--action-500);
+      background-color: $color-brand-first-light;
     }
     &:hover {
-      background-color: #e5f7ff;
+      background-color: $color-interface-action-light;
     }
     &[disabled] {
-      color: #dbdbdb;
+      color: $color-interface-shade-dark;
       background-color: transparent;
-      border-color: #dbdbdb;
+      border-color: $color-interface-shade-dark;
       cursor: not-allowed;
     }
   }
 
   &--highlight {
-      background-color: var(--positive-500);
+      background-color: $color-interface-positive-dark;
 
       &:hover {
-        background-color: var(--positive-300);
+        background-color: $color-interface-positive-extra-dark;
       }
 
       .spinner {
-        border: 2px solid var(--positive-500);
-        border-left-color: #fff;
+        border: 2px solid $color-interface-positive-dark;
+        border-left-color: $color-brand-first-light;
       }
   }
 
   &--clear {
     background-color: transparent;
-    color: #009ded;
+    color: $color-interface-action-dark;
 
     &[disabled] {
-      color: #dbdbdb;
+      color: $color-interface-shade-dark;
       background-color: transparent;
       cursor: not-allowed;
     }
