@@ -1,54 +1,59 @@
 @import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
 
 .button {
-  cursor: pointer;
-  font-size: $size-font-s;
-  width: 100%;
-  display: flex;
   -webkit-box-align: center;
-  align-items: center;
   -webkit-box-pack: center;
-  justify-content: center;
-  margin-bottom: 10px;
-  color: $color-interface-action-light;
-  position: relative;
-  transform: translate3d(0px, 0px, 0px);
-  border-width: $size-border-width-thick;
-  border-style: $border-style-default;
+  align-items: center;
+  border-color: transparent;
   border-image: initial;
   border-radius: $size-border-radius-m;
-  padding: $size-spacing-xs $size-spacing-s;
+  border-style: $border-style-default;
+  border-width: $size-border-width-thick;
+  color: $color-interface-action-light;
+  cursor: pointer;
+  display: flex;
+  font-size: $size-font-s;
+  justify-content: center;
+  margin-bottom: 10px;
   outline: none;
-  transition: all 0.2s ease 0s;
-  border-color: transparent;
   overflow: hidden;
+  padding: $size-spacing-xs $size-spacing-s;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+  transition: all .2s ease 0s;
+  width: 100%;
 
   &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    pointer-events: none;
     background-image: radial-gradient(circle, $color-interface-content-extra-dark 10%, transparent 10.01%);
-    transform: scale(10, 10);
-    opacity: 0;
-    background-repeat: no-repeat;
     background-position: 50% center;
-    transition: transform 0.5s ease 0s, opacity 1s ease 0s;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: scale(10, 10);
+    transition: transform .5s ease 0s, opacity 1s ease 0s;
+    width: 100%;
   }
 
+  &:active::after {
+    opacity: .2;
+    transform: scale(0, 0);
+    transition: 0s;
+  }
 
   .spinner {
-    display: inline-block;
+    animation: spin 1s linear infinite;
     border: $size-border-width-thick $border-style-default $color-interface-action-extra-dark;
     border-left-color: $color-brand-first-light;
     border-radius: 50%;
-    width: 14px;
+    display: inline-block;
     height: 14px;
-    animation: spin 1s linear infinite;
+    width: 14px;
   }
   @keyframes spin {
     to {
@@ -57,20 +62,17 @@
   }
 
 
-  &:active::after {
-    transform: scale(0, 0);
-    opacity: 0.2;
-    transition: 0s;
-  }
 
   &--primary {
     background-color: $color-interface-action-extra-dark;
-  &:hover{
-    background-color: $color-interface-action-dark;
-  }
+
+    &:hover {
+      background-color: $color-interface-action-dark;
+    }
+
     &[disabled] {
-      color: $color-interface-content-light;
       background-color: $color-interface-shade-dark;
+      color: $color-interface-content-light;
       cursor: not-allowed;
     }
   }
@@ -79,30 +81,29 @@
     background-color: transparent;
     border-color: $color-interface-action-extra-dark;
     color: $color-interface-action-extra-dark;
-    &:hover{
-      background-color: $color-brand-first-light;
-    }
+
     &:hover {
       background-color: $color-interface-action-light;
     }
+
     &[disabled] {
-      color: $color-interface-shade-dark;
       background-color: transparent;
       border-color: $color-interface-shade-dark;
+      color: $color-interface-shade-dark;
       cursor: not-allowed;
     }
   }
 
   &--highlight {
-      background-color: $color-interface-positive-dark;
+    background-color: $color-interface-positive-dark;
 
-      &:hover {
-        background-color: $color-interface-positive-extra-dark;
-      }
+    &:hover {
+      background-color: $color-interface-positive-extra-dark;
+    }
 
-      .spinner {
-        border: $size-border-width-thick $border-style-default $color-interface-positive-dark;
-        border-left-color: $color-brand-first-light;
+    .spinner {
+      border: $size-border-width-thick $border-style-default $color-interface-positive-dark;
+      border-left-color: $color-brand-first-light;
       }
   }
 
@@ -111,12 +112,9 @@
     color: $color-interface-action-dark;
 
     &[disabled] {
-      color: $color-interface-shade-dark;
       background-color: transparent;
+      color: $color-interface-shade-dark;
       cursor: not-allowed;
     }
-
   }
-
-
 }
