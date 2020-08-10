@@ -40,10 +40,12 @@
     width: 100%;
   }
 
-  &:active::after {
-    opacity: .2;
-    transform: scale(0, 0);
-    transition: 0s;
+  &:active {
+    &::after {
+      opacity: .2;
+      transform: scale(0, 0);
+      transition: 0s;
+    }
   }
 
   .spinner {
