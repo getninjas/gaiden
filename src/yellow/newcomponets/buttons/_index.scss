@@ -2,7 +2,7 @@
 
 .button {
   cursor: pointer;
-  font-size: 20px;
+  font-size: $size-font-s;
   width: 100%;
   display: flex;
   -webkit-box-align: center;
@@ -13,11 +13,11 @@
   color: $color-interface-action-light;
   position: relative;
   transform: translate3d(0px, 0px, 0px);
-  border-width: 2px;
-  border-style: solid;
+  border-width: $size-border-width-thick;
+  border-style: $border-style-default;
   border-image: initial;
-  border-radius: 8px;
-  padding: 16px 24px;
+  border-radius: $size-border-radius-m;
+  padding: $size-spacing-xs $size-spacing-s;
   outline: none;
   transition: all 0.2s ease 0s;
   border-color: transparent;
@@ -43,7 +43,7 @@
 
   .spinner {
     display: inline-block;
-    border: 2px solid $color-interface-action-extra-dark;
+    border: $size-border-width-thick $border-style-default $color-interface-action-extra-dark;
     border-left-color: $color-brand-first-light;
     border-radius: 50%;
     width: 14px;
@@ -101,7 +101,7 @@
       }
 
       .spinner {
-        border: 2px solid $color-interface-positive-dark;
+        border: $size-border-width-thick $border-style-default $color-interface-positive-dark;
         border-left-color: $color-brand-first-light;
       }
   }
