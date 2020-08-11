@@ -1,0 +1,119 @@
+@import '../../../../node_modules/@getninjas/niten-tokens/build/web/niten-tokens';
+
+.button {
+  align-items: center;
+  border-color: transparent;
+  border-image: initial;
+  border-radius: $size-border-radius-m;
+  border-style: $border-style-default;
+  border-width: $size-border-width-thick;
+  color: $color-interface-action-light;
+  cursor: pointer;
+  display: flex;
+  font-size: $size-font-s;
+  justify-content: center;
+  outline: none;
+  overflow: hidden;
+  padding: $size-spacing-xs $size-spacing-s;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+  transition: all .2s ease 0s;
+  width: 100%;
+
+  &::after {
+    background-image: radial-gradient(circle, $color-interface-content-extra-dark 10%, transparent 10.01%);
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: scale(10, 10);
+    transition: transform .5s ease 0s, opacity 1s ease 0s;
+    width: 100%;
+  }
+
+  &:active {
+    &::after {
+      opacity: .2;
+      transform: scale(0, 0);
+      transition: 0s;
+    }
+  }
+
+  .spinner {
+    animation: spin 1s linear infinite;
+    border: $size-border-width-thick $border-style-default $color-interface-action-extra-dark;
+    border-left-color: $color-brand-first-light;
+    border-radius: 50%;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+  &--primary {
+    background-color: $color-interface-action-extra-dark;
+
+    &:hover {
+      background-color: $color-interface-action-dark;
+    }
+
+    &[disabled] {
+      background-color: $color-interface-shade-dark;
+      color: $color-interface-content-light;
+      cursor: not-allowed;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border-color: $color-interface-action-extra-dark;
+    color: $color-interface-action-extra-dark;
+
+    &:hover {
+      background-color: $color-interface-action-light;
+    }
+
+    &[disabled] {
+      background-color: transparent;
+      border-color: $color-interface-shade-dark;
+      color: $color-interface-shade-dark;
+      cursor: not-allowed;
+    }
+  }
+
+  &--highlight {
+    background-color: $color-interface-positive-dark;
+
+    &:hover {
+      background-color: $color-interface-positive-extra-dark;
+    }
+
+    .spinner {
+      border: $size-border-width-thick $border-style-default $color-interface-positive-dark;
+      border-left-color: $color-brand-first-light;
+      }
+  }
+
+  &--clear {
+    background-color: transparent;
+    color: $color-interface-action-dark;
+
+    &[disabled] {
+      background-color: transparent;
+      color: $color-interface-shade-dark;
+      cursor: not-allowed;
+    }
+  }
+}
