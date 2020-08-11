@@ -11,7 +11,9 @@
   cursor: pointer;
   display: flex;
   font-size: $size-font-s;
+  font-weight: $font-style-weight-bold;
   justify-content: center;
+  line-height: 20px;
   outline: none;
   overflow: hidden;
   padding: $size-spacing-xs $size-spacing-s;
