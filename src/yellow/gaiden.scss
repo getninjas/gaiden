@@ -103,6 +103,7 @@
 @import 'components/subtitle/index';
 @import 'components/text/index';
 @import 'components/topbar/index';
+@import 'newcomponents/buttons';
 
 @include generate-grid($default-breakpoints);
 @include generate-spaces;
