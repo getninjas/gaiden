@@ -69,6 +69,7 @@
 
     &:hover {
       background-color: $color-interface-action-dark;
+      color: $color-brand-first-light;
     }
 
     &[disabled] {
@@ -85,6 +86,7 @@
 
     &:hover {
       background-color: $color-interface-action-light;
+      color: $color-interface-action-extra-dark;
     }
 
     &[disabled] {
@@ -100,6 +102,7 @@
 
     &:hover {
       background-color: $color-interface-positive-extra-dark;
+      color: $color-brand-first-light;
     }
 
     .spinner {
@@ -110,7 +113,11 @@
 
   &--clear {
     background-color: transparent;
-    color: $color-interface-action-dark;
+    color: $color-interface-action-extra-dark;
+
+    &:hover {
+      color: $color-interface-action-dark;
+    }
 
     &[disabled] {
       background-color: transparent;
