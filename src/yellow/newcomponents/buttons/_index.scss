@@ -114,9 +114,11 @@
   &--clear {
     background-color: transparent;
     color: $color-interface-action-extra-dark;
+
     &:hover {
       color: $color-interface-action-dark;
     }
+
     &[disabled] {
       background-color: transparent;
       color: $color-interface-shade-dark;
