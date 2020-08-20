@@ -95,6 +95,10 @@
       color: $color-interface-shade-dark;
       cursor: not-allowed;
     }
+
+    &-mobile {
+      font-size: $size-font-xs;
+    }
   }
 
   &--highlight {
