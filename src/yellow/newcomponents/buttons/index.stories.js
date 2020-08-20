@@ -13,7 +13,6 @@ export const primary = () => `
 </div>
 `
 
-
 export const primaryDisabled = () => `
 <div class="docs">
   <button disabled class="button button--primary" >Button disable</button>
@@ -32,6 +31,12 @@ export const primaryLoading = () => `
 export const secondary = () => `
 <div class="docs">
   <button class="button button--secondary">Contratar Profissional</button>
+</div>
+`
+
+export const secondaryMobile = () => `
+<div class="docs">
+  <button class="button button--secondary button--secondary-mobile">Contratar Profissional</button>
 </div>
 `
 
